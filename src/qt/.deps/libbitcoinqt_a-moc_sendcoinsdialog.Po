@@ -209,7 +209,7 @@ qt/libbitcoinqt_a-moc_sendcoinsdialog.o: qt/moc_sendcoinsdialog.cpp \
   /usr/local/Cellar/protobuf/3.5.1_1/include/google/protobuf/stubs/shared_ptr.h \
   /usr/local/Cellar/protobuf/3.5.1_1/include/google/protobuf/extension_set.h \
   base58.h chainparams.h chainparamsbase.h consensus/params.h uint256.h \
-  crypto/common.h ../src/config/moondex-config.h compat/endian.h \
+  crypto/common.h ../src/config/SMScoin-config.h compat/endian.h \
   compat/byteswap.h primitives/block.h primitives/transaction.h amount.h \
   serialize.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/list \
@@ -1746,7 +1746,7 @@ uint256.h:
 
 crypto/common.h:
 
-../src/config/moondex-config.h:
+../src/config/SMScoin-config.h:
 
 compat/endian.h:
 

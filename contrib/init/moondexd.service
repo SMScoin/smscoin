@@ -3,13 +3,13 @@ Description=SMScoin's distributed currency daemon
 After=network.target
 
 [Service]
-User=moondexcore
-Group=moondexcore
+User=SMScoincore
+Group=SMScoincore
 
 Type=forking
-PIDFile=/var/lib/moondexd/moondexd.pid
-ExecStart=/usr/bin/moondexd -daemon -pid=/var/lib/moondexd/moondexd.pid \
--conf=/etc/moondexcore/moondex.conf -datadir=/var/lib/moondexd -disablewallet
+PIDFile=/var/lib/SMScoind/SMScoind.pid
+ExecStart=/usr/bin/SMScoind -daemon -pid=/var/lib/SMScoind/SMScoind.pid \
+-conf=/etc/SMScoincore/SMScoin.conf -datadir=/var/lib/SMScoind -disablewallet
 
 Restart=always
 PrivateTmp=true

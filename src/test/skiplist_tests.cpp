@@ -5,7 +5,7 @@
 #include "chain.h"
 #include "random.h"
 #include "util.h"
-#include "test/test_moondex.h"
+#include "test/test_SMScoin.h"
 
 #include <vector>
 

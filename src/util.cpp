@@ -6,7 +6,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/moondex-config.h"
+#include "config/SMScoin-config.h"
 #endif
 
 #include "util.h"
@@ -115,8 +115,8 @@ bool fLiteMode = false;
 */
 int nWalletBackups = 10;
 
-const char * const BITCOIN_CONF_FILENAME = "moondex.conf";
-const char * const BITCOIN_PID_FILENAME = "moondexd.pid";
+const char * const BITCOIN_CONF_FILENAME = "SMScoin.conf";
+const char * const BITCOIN_PID_FILENAME = "SMScoind.pid";
 
 map<string, string> mapArgs;
 map<string, vector<string> > mapMultiArgs;
@@ -270,8 +270,8 @@ bool LogAcceptCategory(const char* category)
             const vector<string>& categories = mapMultiArgs["-debug"];
             ptrCategory.reset(new set<string>(categories.begin(), categories.end()));
             // thread_specific_ptr automatically deletes the set when the thread ends.
-            // "moondex" is a composite category enabling all SMScoin-related debug output
-            if(ptrCategory->count(string("moondex"))) {
+            // "SMScoin" is a composite category enabling all SMScoin-related debug output
+            if(ptrCategory->count(string("SMScoin"))) {
                 ptrCategory->insert(string("privatesend"));
                 ptrCategory->insert(string("instantsend"));
                 ptrCategory->insert(string("masternode"));
@@ -495,7 +495,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "moondex";
+    const char* pszModule = "SMScoin";
 #endif
     if (pex)
         return strprintf(
@@ -518,7 +518,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Windows < Vista: C:\Documents and Settings\Username\Application Data\SMScoinCore
     // Windows >= Vista: C:\Users\Username\AppData\Roaming\SMScoinCore
     // Mac: ~/Library/Application Support/SMScoinCore
-    // Unix: ~/.moondexcore
+    // Unix: ~/.SMScoincore
 #ifdef WIN32
     // Windows
     return GetSpecialFolderPath(CSIDL_APPDATA) / "SMScoinCore";
@@ -534,7 +534,7 @@ boost::filesystem::path GetDefaultDataDir()
     return pathRet / "Library/Application Support/SMScoinCore";
 #else
     // Unix
-    return pathRet / ".moondexcore";
+    return pathRet / ".SMScoincore";
 #endif
 #endif
 }
@@ -628,7 +628,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 {
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good()){
-        // Create empty moondex.conf if it does not excist
+        // Create empty SMScoin.conf if it does not excist
         FILE* configFile = fopen(GetConfigFile().string().c_str(), "a");
         if (configFile != NULL)
             fclose(configFile);
@@ -640,7 +640,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
     for (boost::program_options::detail::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it)
     {
-        // Don't overwrite existing settings so command line settings override moondex.conf
+        // Don't overwrite existing settings so command line settings override SMScoin.conf
         string strKey = string("-") + it->string_key;
         string strValue = it->value[0];
         InterpretNegativeSetting(strKey, strValue);

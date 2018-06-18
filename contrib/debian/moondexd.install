@@ -1,2 +1,2 @@
-usr/local/bin/moondexd usr/bin
-usr/local/bin/moondex-cli usr/bin
+usr/local/bin/SMScoind usr/bin
+usr/local/bin/SMScoin-cli usr/bin

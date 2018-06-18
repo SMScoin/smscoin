@@ -76,7 +76,7 @@
         <bool>false</bool>
        </property>
        <property name="pixmap">
-        <pixmap resource="../moondex.qrc">:/images/drkblue/about</pixmap>
+        <pixmap resource="../SMScoin.qrc">:/images/drkblue/about</pixmap>
        </property>
        <property name="scaledContents">
         <bool>false</bool>
@@ -172,7 +172,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="../moondex.qrc"/>
+  <include location="../SMScoin.qrc"/>
  </resources>
  <connections>
   <connection>

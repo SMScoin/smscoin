@@ -6,13 +6,13 @@ and tests weren't explicitly disabled.
 
 After configuring, they can be run with `make check`.
 
-To run the moondexd tests manually, launch `src/test/test_moondex`.
+To run the SMScoind tests manually, launch `src/test/test_SMScoin`.
 
-To add more moondexd tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
+To add more SMScoind tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
 .cpp files in the `test/` directory or add new .cpp files that
 implement new BOOST_AUTO_TEST_SUITE sections.
 
-To run the moondex-qt tests manually, launch `src/qt/test/test_moondex-qt`
+To run the SMScoin-qt tests manually, launch `src/qt/test/test_SMScoin-qt`
 
-To add more moondex-qt tests, add them to the `src/qt/test/` directory and
+To add more SMScoin-qt tests, add them to the `src/qt/test/` directory and
 the `src/qt/test/test_main.cpp` file.

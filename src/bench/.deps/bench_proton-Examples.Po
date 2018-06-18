@@ -1,4 +1,4 @@
-bench/bench_moondex-Examples.o: bench/Examples.cpp bench/bench.h \
+bench/bench_SMScoin-Examples.o: bench/Examples.cpp bench/bench.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/map \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__tree \
@@ -304,7 +304,7 @@ bench/bench_moondex-Examples.o: bench/Examples.cpp bench/bench.h \
   /usr/local/include/boost/detail/no_exceptions_support.hpp \
   /usr/local/include/boost/core/no_exceptions_support.hpp \
   /usr/local/include/boost/preprocessor/stringize.hpp main.h \
-  config/moondex-config.h amount.h serialize.h compat/endian.h \
+  config/SMScoin-config.h amount.h serialize.h compat/endian.h \
   compat/byteswap.h /usr/include/libkern/OSByteOrder.h \
   /usr/include/libkern/i386/OSByteOrder.h \
   /usr/include/sys/_types/_os_inline.h \
@@ -1734,7 +1734,7 @@ bench/bench.h:
 
 main.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 amount.h:
 

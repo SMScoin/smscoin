@@ -9,7 +9,7 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between moondex-cli and moondexd)
+ * CBaseChainParams defines the base parameters (shared between SMScoin-cli and SMScoind)
  * of a given instance of the SMScoin system.
  */
 class CBaseChainParams

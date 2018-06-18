@@ -153,7 +153,7 @@ qt/libbitcoinqt_a-clientmodel.o: qt/clientmodel.cpp qt/clientmodel.h \
   /usr/local/Cellar/qt/5.10.1/include/QtCore/qdatetime.h \
   /usr/local/Cellar/qt/5.10.1/include/QtCore/qshareddata.h \
   /usr/local/Cellar/qt/5.10.1/include/QtCore/qhash.h qt/bantablemodel.h \
-  net.h bloom.h serialize.h compat/endian.h config/moondex-config.h \
+  net.h bloom.h serialize.h compat/endian.h config/SMScoin-config.h \
   compat/byteswap.h /usr/include/libkern/OSByteOrder.h \
   /usr/include/libkern/i386/OSByteOrder.h \
   /usr/include/sys/_types/_os_inline.h /usr/include/assert.h \
@@ -1696,7 +1696,7 @@ serialize.h:
 
 compat/endian.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 compat/byteswap.h:
 

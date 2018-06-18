@@ -1,4 +1,4 @@
-bench/bench_bench_moondex-bench.o: bench/bench.cpp \
+bench/bench_bench_SMScoin-bench.o: bench/bench.cpp \
  /usr/include/stdc-predef.h bench/bench.h /usr/include/c++/5/map \
  /usr/include/c++/5/bits/stl_tree.h \
  /usr/include/c++/5/bits/stl_algobase.h \

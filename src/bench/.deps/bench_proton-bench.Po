@@ -1,4 +1,4 @@
-bench/bench_moondex-bench.o: bench/bench.cpp bench/bench.h \
+bench/bench_SMScoin-bench.o: bench/bench.cpp bench/bench.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/map \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__tree \

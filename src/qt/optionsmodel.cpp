@@ -5,7 +5,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/moondex-config.h"
+#include "config/SMScoin-config.h"
 #endif
 
 #include "optionsmodel.h"
@@ -193,7 +193,7 @@ void OptionsModel::Reset()
 
     // Remove all entries from our QSettings object
     settings.clear();
-    resetSettings = true; // Needed in moondex.cpp during shotdown to also remove the window positions
+    resetSettings = true; // Needed in SMScoin.cpp during shotdown to also remove the window positions
 
     // default setting for OptionsModel::StartAtStartup - disabled
     if (GUIUtil::GetStartOnSystemStartup())

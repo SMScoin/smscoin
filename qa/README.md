@@ -31,9 +31,9 @@ Possible options:
 
 ```
   -h, --help            show this help message and exit
-  --nocleanup           Leave moondexds and test.* datadir on exit or error
-  --noshutdown          Don't stop moondexds after the test execution
-  --srcdir=SRCDIR       Source directory containing moondexd/moondex-cli
+  --nocleanup           Leave SMScoinds and test.* datadir on exit or error
+  --noshutdown          Don't stop SMScoinds after the test execution
+  --srcdir=SRCDIR       Source directory containing SMScoind/SMScoin-cli
                         (default: ../../src)
   --tmpdir=TMPDIR       Root directory for datadirs
   --tracerpc            Print out all RPC calls as they are made
@@ -58,7 +58,7 @@ to recover with:
 
 ```bash
 rm -rf cache
-killall moondexd
+killall SMScoind
 ```
 
 Writing tests

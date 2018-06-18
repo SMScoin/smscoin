@@ -1,6 +1,6 @@
 all:
-	$(MAKE) -C .. moondex_test
+	$(MAKE) -C .. SMScoin_test
 clean:
-	$(MAKE) -C .. moondex_test_clean
+	$(MAKE) -C .. SMScoin_test_clean
 check:
-	$(MAKE) -C .. moondex_test_check
+	$(MAKE) -C .. SMScoin_test_check

@@ -1,5 +1,5 @@
-/* src/config/moondex-config.h.  Generated from moondex-config.h.in by configure.  */
-/* src/config/moondex-config.h.in.  Generated from configure.ac by autoheader.  */
+/* src/config/SMScoin-config.h.  Generated from SMScoin-config.h.in by configure.  */
+/* src/config/SMScoin-config.h.in.  Generated from configure.ac by autoheader.  */
 
 #ifndef SMSC_CONFIG_H
 
@@ -350,7 +350,7 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "https://github.com/moondexcoin/moondexcoin/issues"
+#define PACKAGE_BUGREPORT "https://github.com/SMScoin/smscoin/issues"
 
 /* Define to the full name of this package. */
 #define PACKAGE_NAME "SMScoin"
@@ -359,10 +359,10 @@
 #define PACKAGE_STRING "SMScoin 2.0.0"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "moondexcore"
+#define PACKAGE_TARNAME "SMScoincore"
 
 /* Define to the home page for this package. */
-#define PACKAGE_URL ""
+#define PACKAGE_URL "https://github.com/SMScoin/smscoin"
 
 /* Define to the version of this package. */
 #define PACKAGE_VERSION "2.0.0"

@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/SMScoin_bg.qm</file>
+        <file alias="de">locale/SMScoin_de.qm</file>
+        <file alias="en">locale/SMScoin_en.qm</file>
+        <file alias="es">locale/SMScoin_es.qm</file>
+        <file alias="fi">locale/SMScoin_fi.qm</file>
+        <file alias="fr">locale/SMScoin_fr.qm</file>
+        <file alias="it">locale/SMScoin_it.qm</file>
+        <file alias="ja">locale/SMScoin_ja.qm</file>
+        <file alias="pl">locale/SMScoin_pl.qm</file>
+        <file alias="pt">locale/SMScoin_pt.qm</file>
+        <file alias="ru">locale/SMScoin_ru.qm</file>
+        <file alias="sk">locale/SMScoin_sk.qm</file>
+        <file alias="sv">locale/SMScoin_sv.qm</file>
+        <file alias="vi">locale/SMScoin_vi.qm</file>
+        <file alias="zh_CN">locale/SMScoin_zh_CN.qm</file>
+        <file alias="zh_TW">locale/SMScoin_zh_TW.qm</file>
+    </qresource>
+</RCC>

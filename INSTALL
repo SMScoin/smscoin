@@ -6,11 +6,10 @@ Use the autogen script to prepare the build environment.
     ./configure
     make
 
-Precompiled binaries are available at github, see
-https://github.com/moondexcoin/moondexcoin/releases
+Precompiled binaries are available at github, see https://github.com/SMScoin/smscoin
 
 Always verify the signatures and checksums.
 
-See doc/build-*.md for instructions on building moondexd,
+See doc/build-*.md for instructions on building SMScoind,
 the intended-for-services, no-graphical-interface, reference
 implementation of SMScoin.

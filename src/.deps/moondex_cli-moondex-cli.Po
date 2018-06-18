@@ -1,4 +1,4 @@
-moondex_cli-moondex-cli.o: moondex-cli.cpp /usr/include/stdc-predef.h \
+SMScoin_cli-SMScoin-cli.o: SMScoin-cli.cpp /usr/include/stdc-predef.h \
  chainparamsbase.h /usr/include/c++/5/string \
  /usr/include/x86_64-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/5/bits/os_defines.h \
@@ -92,7 +92,7 @@ moondex_cli-moondex-cli.o: moondex-cli.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/5/bits/stl_uninitialized.h \
  /usr/include/c++/5/bits/stl_vector.h \
  /usr/include/c++/5/bits/stl_bvector.h /usr/include/c++/5/bits/vector.tcc \
- clientversion.h config/moondex-config.h rpcclient.h \
+ clientversion.h config/SMScoin-config.h rpcclient.h \
  univalue/include/univalue.h /usr/include/c++/5/map \
  /usr/include/c++/5/bits/stl_tree.h \
  /usr/include/c++/5/ext/aligned_buffer.h \
@@ -628,7 +628,7 @@ moondex_cli-moondex-cli.o: moondex-cli.cpp /usr/include/stdc-predef.h \
  /usr/include/rpc/netdb.h /usr/include/x86_64-linux-gnu/bits/siginfo.h \
  /usr/include/x86_64-linux-gnu/bits/netdb.h tinyformat.h \
  /usr/include/c++/5/iostream utiltime.h amount.h serialize.h \
- compat/endian.h config/moondex-config.h compat/byteswap.h \
+ compat/endian.h config/SMScoin-config.h compat/byteswap.h \
  /usr/include/byteswap.h /usr/include/c++/5/set \
  /usr/include/c++/5/bits/stl_set.h /usr/include/c++/5/bits/stl_multiset.h \
  prevector.h /usr/include/boost/signals2/signal.hpp \
@@ -1168,7 +1168,7 @@ chainparamsbase.h:
 
 clientversion.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 rpcclient.h:
 
@@ -2382,7 +2382,7 @@ serialize.h:
 
 compat/endian.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 compat/byteswap.h:
 

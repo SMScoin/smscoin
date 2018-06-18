@@ -247,7 +247,7 @@ qt/libbitcoinqt_a-openuridialog.o: qt/openuridialog.cpp \
   /usr/local/Cellar/qt/5.10.1/include/QtGui/qtextformat.h \
   /usr/local/Cellar/qt/5.10.1/include/QtGui/qpen.h \
   /usr/local/Cellar/qt/5.10.1/include/QtGui/qtextoption.h qt/guiutil.h \
-  amount.h serialize.h compat/endian.h config/moondex-config.h \
+  amount.h serialize.h compat/endian.h config/SMScoin-config.h \
   compat/byteswap.h /usr/include/libkern/OSByteOrder.h \
   /usr/include/libkern/i386/OSByteOrder.h \
   /usr/include/sys/_types/_os_inline.h /usr/include/assert.h \
@@ -1849,7 +1849,7 @@ serialize.h:
 
 compat/endian.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 compat/byteswap.h:
 

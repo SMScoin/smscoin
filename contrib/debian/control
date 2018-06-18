@@ -1,8 +1,8 @@
-Source: moondex
+Source: SMScoin
 Section: utils
 Priority: optional
-Maintainer: Holger Schinzel <holger@moondexcoin.info>
-Uploaders: Holger Schinzel <holger@moondexcoin.info>
+Maintainer: Holger Schinzel <holger@SMScoincoin.info>
+Uploaders: Holger Schinzel <holger@SMScoincoin.info>
 Build-Depends: debhelper,
  devscripts,
  automake,
@@ -24,11 +24,11 @@ Build-Depends: debhelper,
  libprotobuf-dev, protobuf-compiler,
  python
 Standards-Version: 3.9.2
-Homepage: https://moondexcoin.io/
-Vcs-Git: git://github.com/moondexcoin/moondexcoin.git
-Vcs-Browser: https://github.com/moondexcoin/moondexcoin
+Homepage: https://SMScoincoin.io/
+Vcs-Git: git://github.com/SMScoincoin/SMScoincoin.git
+Vcs-Browser: https://github.com/SMScoincoin/SMScoincoin
 
-Package: moondexd
+Package: SMScoind
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
@@ -38,10 +38,10 @@ Description: peer-to-peer network based digital currency - daemon
  and issuing money are carried out collectively by the network. SMScoin
  is the name of the open source software which enables the use of this currency.
  .
- This package provides the daemon, moondexd, and the CLI tool
- moondex-cli to interact with the daemon.
+ This package provides the daemon, SMScoind, and the CLI tool
+ SMScoin-cli to interact with the daemon.
 
-Package: moondex-qt
+Package: SMScoin-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
@@ -53,7 +53,7 @@ Description: peer-to-peer network based digital currency - Qt GUI
  .
  This package provides SMScoin-Qt, a GUI for SMScoin based on Qt.
 
-Package: moondex-tx
+Package: SMScoin-tx
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer digital currency - standalone transaction tool
@@ -63,6 +63,6 @@ Description: peer-to-peer digital currency - standalone transaction tool
  and issuing money are carried out collectively by the network. SMScoin
  is the name of the open source software which enables the use of this currency.
  .
- This package provides moondex-tx, a command-line transaction creation
- tool which can be used without a moondex daemon.  Some means of
+ This package provides SMScoin-tx, a command-line transaction creation
+ tool which can be used without a SMScoin daemon.  Some means of
  exchanging minimal transaction data with peers is still required.

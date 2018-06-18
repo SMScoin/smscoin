@@ -1,4 +1,4 @@
-qt/moondex_qt-macdockiconhandler.o: qt/macdockiconhandler.mm \
+qt/SMScoin_qt-macdockiconhandler.o: qt/macdockiconhandler.mm \
   qt/macdockiconhandler.h \
   /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QMainWindow \
   /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qmainwindow.h \

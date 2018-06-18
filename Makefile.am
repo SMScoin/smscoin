@@ -15,9 +15,9 @@ pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = libbitcoinconsensus.pc
 endif
 
-BITCOIND_BIN=$(top_builddir)/src/moondexd$(EXEEXT)
-BITCOIN_QT_BIN=$(top_builddir)/src/qt/moondex-qt$(EXEEXT)
-BITCOIN_CLI_BIN=$(top_builddir)/src/moondex-cli$(EXEEXT)
+BITCOIND_BIN=$(top_builddir)/src/SMScoind$(EXEEXT)
+BITCOIN_QT_BIN=$(top_builddir)/src/qt/SMScoin-qt$(EXEEXT)
+BITCOIN_CLI_BIN=$(top_builddir)/src/SMScoin-cli$(EXEEXT)
 BITCOIN_WIN_INSTALLER=$(PACKAGE)-$(PACKAGE_VERSION)-win$(WINDOWS_BITS)-setup$(EXEEXT)
 
 OSX_APP=SMScoin-Qt.app
@@ -47,9 +47,9 @@ OSX_PACKAGING = $(OSX_DEPLOY_SCRIPT) $(OSX_FANCY_PLIST) $(OSX_INSTALLER_ICONS) $
   $(top_srcdir)/contrib/macdeploy/detached-sig-create.sh
 
 COVERAGE_INFO = baseline_filtered_combined.info baseline.info block_test.info \
-  leveldb_baseline.info test_moondex_filtered.info total_coverage.info \
+  leveldb_baseline.info test_SMScoin_filtered.info total_coverage.info \
   baseline_filtered.info block_test_filtered.info rpc_test.info rpc_test_filtered.info \
-  leveldb_baseline_filtered.info test_moondex_coverage.info test_moondex.info
+  leveldb_baseline_filtered.info test_SMScoin_coverage.info test_SMScoin.info
 
 dist-hook:
 	-$(MAKE) -C $(top_distdir)/src/leveldb clean
@@ -168,16 +168,16 @@ leveldb_baseline_filtered.info: leveldb_baseline.info
 baseline_filtered_combined.info: leveldb_baseline_filtered.info baseline_filtered.info
 	$(LCOV) -a leveldb_baseline_filtered.info -a baseline_filtered.info -o $@
 
-test_moondex.info: baseline_filtered_combined.info
+test_SMScoin.info: baseline_filtered_combined.info
 	$(MAKE) -C src/ check
-	$(LCOV) -c -d $(abs_builddir)/src -t test_moondex -o $@
+	$(LCOV) -c -d $(abs_builddir)/src -t test_SMScoin -o $@
 	$(LCOV) -z -d $(abs_builddir)/src
 	$(LCOV) -z -d $(abs_builddir)/src/leveldb
 
-test_moondex_filtered.info: test_moondex.info
+test_SMScoin_filtered.info: test_SMScoin.info
 	$(LCOV) -r $< "/usr/include/*" -o $@
 
-block_test.info: test_moondex_filtered.info
+block_test.info: test_SMScoin_filtered.info
 	$(MKDIR_P) qa/tmp
 	-@TIMEOUT=15 qa/pull-tester/run-bitcoind-for-test.sh $(JAVA) -jar $(JAVA_COMPARISON_TOOL) qa/tmp/compTool $(COMPARISON_TOOL_REORG_TESTS)
 	$(LCOV) -c -d $(abs_builddir)/src --t BitcoinJBlockTest -o $@
@@ -187,7 +187,7 @@ block_test.info: test_moondex_filtered.info
 block_test_filtered.info: block_test.info
 	$(LCOV) -r $< "/usr/include/*" -o $@
 
-rpc_test.info: test_moondex_filtered.info
+rpc_test.info: test_SMScoin_filtered.info
 	-@TIMEOUT=15 python qa/pull-tester/rpc-tests.py $(EXTENDED_RPC_TESTS)
 	$(LCOV) -c -d $(abs_builddir)/src --t rpc-tests -o $@
 	$(LCOV) -z -d $(abs_builddir)/src
@@ -196,13 +196,13 @@ rpc_test.info: test_moondex_filtered.info
 rpc_test_filtered.info: rpc_test.info
 	$(LCOV) -r $< "/usr/include/*" -o $@
 
-test_moondex_coverage.info: baseline_filtered_combined.info test_moondex_filtered.info
-	$(LCOV) -a baseline_filtered.info -a leveldb_baseline_filtered.info -a test_moondex_filtered.info -o $@
+test_SMScoin_coverage.info: baseline_filtered_combined.info test_SMScoin_filtered.info
+	$(LCOV) -a baseline_filtered.info -a leveldb_baseline_filtered.info -a test_SMScoin_filtered.info -o $@
 
-total_coverage.info: baseline_filtered_combined.info test_moondex_filtered.info block_test_filtered.info rpc_test_filtered.info
-	$(LCOV) -a baseline_filtered.info -a leveldb_baseline_filtered.info -a test_moondex_filtered.info -a block_test_filtered.info -a rpc_test_filtered.info -o $@ | $(GREP) "\%" | $(AWK) '{ print substr($$3,2,50) "/" $$5 }' > coverage_percent.txt
+total_coverage.info: baseline_filtered_combined.info test_SMScoin_filtered.info block_test_filtered.info rpc_test_filtered.info
+	$(LCOV) -a baseline_filtered.info -a leveldb_baseline_filtered.info -a test_SMScoin_filtered.info -a block_test_filtered.info -a rpc_test_filtered.info -o $@ | $(GREP) "\%" | $(AWK) '{ print substr($$3,2,50) "/" $$5 }' > coverage_percent.txt
 
-test_moondex.coverage/.dirstamp:  test_moondex_coverage.info
+test_SMScoin.coverage/.dirstamp:  test_SMScoin_coverage.info
 	$(GENHTML) -s $< -o $(@D)
 	@touch $@
 
@@ -210,7 +210,7 @@ total.coverage/.dirstamp: total_coverage.info
 	$(GENHTML) -s $< -o $(@D)
 	@touch $@
 
-cov: test_moondex.coverage/.dirstamp total.coverage/.dirstamp
+cov: test_SMScoin.coverage/.dirstamp total.coverage/.dirstamp
 
 endif
 
@@ -223,4 +223,4 @@ CLEANFILES = $(OSX_DMG) $(BITCOIN_WIN_INSTALLER)
 .INTERMEDIATE: $(COVERAGE_INFO)
 
 clean-local:
-	rm -rf coverage_percent.txt test_moondex.coverage/ total.coverage/ qa/tmp/ cache/ $(OSX_APP)
+	rm -rf coverage_percent.txt test_SMScoin.coverage/ total.coverage/ qa/tmp/ cache/ $(OSX_APP)

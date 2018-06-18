@@ -1,5 +1,5 @@
 qt/libbitcoinqt_a-peertablemodel.o: qt/peertablemodel.cpp \
-  qt/peertablemodel.h main.h config/moondex-config.h amount.h \
+  qt/peertablemodel.h main.h config/SMScoin-config.h amount.h \
   serialize.h compat/endian.h compat/byteswap.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stdint.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__config \
@@ -1174,7 +1174,7 @@ qt/peertablemodel.h:
 
 main.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 amount.h:
 

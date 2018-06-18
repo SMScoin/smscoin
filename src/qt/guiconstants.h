@@ -49,7 +49,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "SMScoin"
-#define QAPP_ORG_DOMAIN "moondexcoin.io"
+#define QAPP_ORG_DOMAIN "SMScoincoin.io"
 #define QAPP_APP_NAME_DEFAULT "SMScoin-Qt"
 #define QAPP_APP_NAME_TESTNET "SMScoin-Qt-testnet"
 

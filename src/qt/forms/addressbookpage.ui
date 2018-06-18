@@ -137,7 +137,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="../moondex.qrc"/>
+  <include location="../SMScoin.qrc"/>
  </resources>
  <connections/>
 </ui>

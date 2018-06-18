@@ -2,7 +2,7 @@
 
 #include "cachemultimap.h"
 
-#include "test/test_moondex.h"
+#include "test/test_SMScoin.h"
 
 #include <algorithm>
 #include <iostream>

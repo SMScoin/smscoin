@@ -1,6 +1,6 @@
 Mac OS X Build Instructions and Notes
 ====================================
-This guide will show you how to build moondexd (headless client) for OSX.
+This guide will show you how to build SMScoind (headless client) for OSX.
 
 Notes
 -----
@@ -41,11 +41,11 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
 
 1. Clone the GitHub tree to get the source code and go into the directory.
 
-        git clone https://github.com/moondexcoin/moondexcoin.git
-        cd moondex
+        git clone https://github.com/SMScoincoin/SMScoincoin.git
+        cd SMScoin
 
 2.  Build SMScoin:
-    This will configure and build the headless moondex binaries as well as the gui (if Qt is found).
+    This will configure and build the headless SMScoin binaries as well as the gui (if Qt is found).
     You can disable the gui build by passing `--without-gui` to configure.
 
         export CXXFLAGS=-std=c++11
@@ -57,7 +57,7 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
 
         make check
 
-4.  (Optional) You can also install moondexd to your path:
+4.  (Optional) You can also install SMScoind to your path:
 
         make install
 
@@ -69,7 +69,7 @@ Download Qt Creator from https://www.qt.io/download/. Download the "community ed
 1. Make sure you installed everything through Homebrew mentioned above
 2. Do a proper ./configure --enable-debug
 3. In Qt Creator do "New Project" -> Import Project -> Import Existing Project
-4. Enter "moondex-qt" as project name, enter src/qt as location
+4. Enter "SMScoin-qt" as project name, enter src/qt as location
 5. Leave the file selection as it is
 6. Confirm the "summary page"
 7. In the "Projects" tab select "Manage Kits..."
@@ -79,11 +79,11 @@ Download Qt Creator from https://www.qt.io/download/. Download the "community ed
 
 Creating a release build
 ------------------------
-You can ignore this section if you are building `moondexd` for your own use.
+You can ignore this section if you are building `SMScoind` for your own use.
 
-moondexd/moondex-cli binaries are not included in the SMScoin-Qt.app bundle.
+SMScoind/SMScoin-cli binaries are not included in the SMScoin-Qt.app bundle.
 
-If you are building `moondexd` or `SMScoin` for others, your build machine should be set up
+If you are building `SMScoind` or `SMScoin` for others, your build machine should be set up
 as follows for maximum compatibility:
 
 All dependencies should be compiled with these flags:
@@ -98,14 +98,14 @@ bundle is packaged and signed to create the .dmg disk image that is distributed.
 Running
 -------
 
-It's now available at `./moondexd`, provided that you are still in the `src`
+It's now available at `./SMScoind`, provided that you are still in the `src`
 directory. We have to first create the RPC configuration file, though.
 
-Run `./moondexd` to get the filename where it should be put, or just try these
+Run `./SMScoind` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=moondexrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/SMScoinCore/moondex.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/SMScoinCore/moondex.conf"
+    echo -e "rpcuser=SMScoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/SMScoinCore/SMScoin.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/SMScoinCore/SMScoin.conf"
 
 The next time you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours;
@@ -116,6 +116,6 @@ you can monitor its process by looking at the debug.log file, like this:
 Other commands:
 -------
 
-    ./moondexd -daemon # to start the moondex daemon.
-    ./moondex-cli --help  # for a list of command-line options.
-    ./moondex-cli help    # When the daemon is running, to get a list of RPC commands
+    ./SMScoind -daemon # to start the SMScoin daemon.
+    ./SMScoin-cli --help  # for a list of command-line options.
+    ./SMScoin-cli help    # When the daemon is running, to get a list of RPC commands

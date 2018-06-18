@@ -1,5 +1,5 @@
 crypto/libbitcoin_crypto_a-chacha20.o: crypto/chacha20.cpp \
-  crypto/common.h ../src/config/moondex-config.h \
+  crypto/common.h ../src/config/SMScoin-config.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stdint.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include/stdint.h \
@@ -48,7 +48,7 @@ crypto/libbitcoin_crypto_a-chacha20.o: crypto/chacha20.cpp \
 
 crypto/common.h:
 
-../src/config/moondex-config.h:
+../src/config/SMScoin-config.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stdint.h:
 

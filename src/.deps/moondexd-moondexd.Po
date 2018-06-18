@@ -1,4 +1,4 @@
-moondexd-moondexd.o: moondexd.cpp /usr/include/stdc-predef.h \
+SMScoind-SMScoind.o: SMScoind.cpp /usr/include/stdc-predef.h \
  chainparams.h chainparamsbase.h /usr/include/c++/5/string \
  /usr/include/x86_64-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/5/bits/os_defines.h \
@@ -96,7 +96,7 @@ moondexd-moondexd.o: moondexd.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/5/cstring /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/string3.h \
  /usr/include/c++/5/stdexcept crypto/common.h \
- ../src/config/moondex-config.h compat/endian.h config/moondex-config.h \
+ ../src/config/SMScoin-config.h compat/endian.h config/SMScoin-config.h \
  compat/byteswap.h /usr/include/byteswap.h /usr/include/c++/5/map \
  /usr/include/c++/5/bits/stl_tree.h \
  /usr/include/c++/5/ext/aligned_buffer.h \
@@ -206,7 +206,7 @@ moondexd-moondexd.o: moondexd.cpp /usr/include/stdc-predef.h \
  /usr/include/linux/limits.h \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h serialize.h protocol.h \
- netbase.h config/moondex-config.h compat.h \
+ netbase.h config/SMScoin-config.h compat.h \
  /usr/include/x86_64-linux-gnu/sys/fcntl.h /usr/include/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
@@ -1433,11 +1433,11 @@ uint256.h:
 
 crypto/common.h:
 
-../src/config/moondex-config.h:
+../src/config/SMScoin-config.h:
 
 compat/endian.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 compat/byteswap.h:
 
@@ -1719,7 +1719,7 @@ protocol.h:
 
 netbase.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 compat.h:
 

@@ -1,1 +1,1 @@
-qt/libbitcoinqt_a-qrc_moondex_locale.o: qt/qrc_moondex_locale.cpp
+qt/libbitcoinqt_a-qrc_SMScoin_locale.o: qt/qrc_SMScoin_locale.cpp

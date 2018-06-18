@@ -1,4 +1,4 @@
-Name "SMScoin (-bit)"
+Name "SMScoin (64-bit)"
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
@@ -7,28 +7,28 @@ SetCompressor /SOLID lzma
 !define REGKEY "SOFTWARE\$(^Name)"
 !define VERSION 2.0.0
 !define COMPANY "SMScoin project"
-!define URL https://moondexcoin.io/
+!define URL https://SMScoincoin.io/
 
 # MUI Symbol Definitions
-!define MUI_ICON "/home/wijnand/MoonDEX/share/pixmaps/bitcoin.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/wijnand/MoonDEX/share/pixmaps/nsis-wizard.bmp"
+!define MUI_ICON "/home/wijnand/SMScoin/share/pixmaps/bitcoin.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/wijnand/SMScoin/share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "/home/wijnand/MoonDEX/share/pixmaps/nsis-header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "/home/wijnand/SMScoin/share/pixmaps/nsis-header.bmp"
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
 !define MUI_STARTMENUPAGE_DEFAULTFOLDER "SMScoin"
-!define MUI_FINISHPAGE_RUN $INSTDIR\moondex-qt.exe
+!define MUI_FINISHPAGE_RUN $INSTDIR\SMScoin-qt.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/wijnand/MoonDEX/share/pixmaps/nsis-wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/wijnand/SMScoin/share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
 
 # Included files
 !include Sections.nsh
 !include MUI2.nsh
-!if "" == "64"
+!if "64" == "64"
 !include x64.nsh
 !endif
 
@@ -48,8 +48,8 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile /home/wijnand/MoonDEX/moondexcore-${VERSION}-win-setup.exe
-!if "" == "64"
+OutFile /home/wijnand/SMScoin/SMScoincore-${VERSION}-win64-setup.exe
+!if "64" == "64"
 InstallDir $PROGRAMFILES64\SMScoinCore
 !else
 InstallDir $PROGRAMFILES\SMScoinCore
@@ -73,19 +73,19 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File /home/wijnand/MoonDEX/release/moondex-qt.exe
-    File /oname=COPYING.txt /home/wijnand/MoonDEX/COPYING
-    File /oname=readme.txt /home/wijnand/MoonDEX/doc/README_windows.txt
+    File /home/wijnand/SMScoin/release/SMScoin-qt.exe
+    File /oname=COPYING.txt /home/wijnand/SMScoin/COPYING
+    File /oname=readme.txt /home/wijnand/SMScoin/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File /home/wijnand/MoonDEX/release/moondexd.exe
-    File /home/wijnand/MoonDEX/release/moondex-cli.exe
+    File /home/wijnand/SMScoin/release/SMScoind.exe
+    File /home/wijnand/SMScoin/release/SMScoin-cli.exe
     SetOutPath $INSTDIR\doc
-    File /r /home/wijnand/MoonDEX/doc\*.*
+    File /r /home/wijnand/SMScoin/doc\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 
-    # Remove old wxwidgets-based-moondex executable and locales:
-    Delete /REBOOTOK $INSTDIR\moondex.exe
+    # Remove old wxwidgets-based-SMScoin executable and locales:
+    Delete /REBOOTOK $INSTDIR\SMScoin.exe
     RMDir /r /REBOOTOK $INSTDIR\locale
 SectionEnd
 
@@ -95,7 +95,7 @@ Section -post SEC0001
     WriteUninstaller $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk" $INSTDIR\moondex-qt.exe
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk" $INSTDIR\SMScoin-qt.exe
     CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall $(^Name).lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
@@ -106,10 +106,10 @@ Section -post SEC0001
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" UninstallString $INSTDIR\uninstall.exe
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoModify 1
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
-    WriteRegStr HKCR "moondexcore" "URL Protocol" ""
-    WriteRegStr HKCR "moondexcore" "" "URL:SMScoin"
-    WriteRegStr HKCR "moondexcore\DefaultIcon" "" $INSTDIR\moondex-qt.exe
-    WriteRegStr HKCR "moondexcore\shell\open\command" "" '"$INSTDIR\moondex-qt.exe" "%1"'
+    WriteRegStr HKCR "SMScoincore" "URL Protocol" ""
+    WriteRegStr HKCR "SMScoincore" "" "URL:SMScoin"
+    WriteRegStr HKCR "SMScoincore\DefaultIcon" "" $INSTDIR\SMScoin-qt.exe
+    WriteRegStr HKCR "SMScoincore\shell\open\command" "" '"$INSTDIR\SMScoin-qt.exe" "%1"'
 SectionEnd
 
 # Macro for selecting uninstaller sections
@@ -127,7 +127,7 @@ done${UNSECTION_ID}:
 
 # Uninstaller sections
 Section /o -un.Main UNSEC0000
-    Delete /REBOOTOK $INSTDIR\moondex-qt.exe
+    Delete /REBOOTOK $INSTDIR\SMScoin-qt.exe
     Delete /REBOOTOK $INSTDIR\COPYING.txt
     Delete /REBOOTOK $INSTDIR\readme.txt
     RMDir /r /REBOOTOK $INSTDIR\daemon
@@ -147,7 +147,7 @@ Section -un.post UNSEC0001
     DeleteRegValue HKCU "${REGKEY}" Path
     DeleteRegKey /IfEmpty HKCU "${REGKEY}\Components"
     DeleteRegKey /IfEmpty HKCU "${REGKEY}"
-    DeleteRegKey HKCR "moondexcore"
+    DeleteRegKey HKCR "SMScoincore"
     RmDir /REBOOTOK $SMPROGRAMS\$StartMenuGroup
     RmDir /REBOOTOK $INSTDIR
     Push $R0
@@ -160,7 +160,7 @@ SectionEnd
 # Installer functions
 Function .onInit
     InitPluginsDir
-!if "" == "64"
+!if "64" == "64"
     ${If} ${RunningX64}
       ; disable registry redirection (enable access to 64-bit portion of registry)
       SetRegView 64

@@ -10,7 +10,7 @@
 #include "sync.h"
 #include "utilstrencodings.h"
 #include "utilmoneystr.h"
-#include "test/test_moondex.h"
+#include "test/test_SMScoin.h"
 
 #include <stdint.h>
 #include <vector>

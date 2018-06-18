@@ -55,11 +55,11 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += moondexd
+  bin_PROGRAMS += SMScoind
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += moondex-cli moondex-tx
+  bin_PROGRAMS += SMScoin-cli SMScoin-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
@@ -191,7 +191,7 @@ obj/build.h: FORCE
 	  $(abs_top_srcdir)
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between moondexd and moondex-qt
+# server: shared between SMScoind and SMScoin-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -249,7 +249,7 @@ libbitcoin_zmq_a_SOURCES = \
 endif
 
 
-# wallet: shared between moondexd and moondex-qt, but only linked
+# wallet: shared between SMScoind and SMScoin-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -338,7 +338,7 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/sha512.cpp \
   crypto/sha512.h
 
-# common: shared between moondexd, and moondex-qt and non-server tools
+# common: shared between SMScoind, and SMScoin-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -395,7 +395,7 @@ if GLIBC_BACK_COMPAT
 libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
-# cli: shared between moondex-cli and moondex-qt
+# cli: shared between SMScoin-cli and SMScoin-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -406,16 +406,16 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-moondexd_SOURCES = moondexd.cpp
-moondexd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-moondexd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-moondexd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+SMScoind_SOURCES = SMScoind.cpp
+SMScoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+SMScoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+SMScoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-moondexd_SOURCES += moondexd-res.rc
+SMScoind_SOURCES += SMScoind-res.rc
 endif
 
-moondexd_LDADD = \
+SMScoind_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -426,50 +426,50 @@ moondexd_LDADD = \
   $(LIBSECP256K1)
 
 if ENABLE_ZMQ
-moondexd_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+SMScoind_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
 
 if ENABLE_WALLET
-moondexd_LDADD += libbitcoin_wallet.a
+SMScoind_LDADD += libbitcoin_wallet.a
 endif
 
-moondexd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
+SMScoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
 
-# moondex-cli binary #
-moondex_cli_SOURCES = moondex-cli.cpp
-moondex_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-moondex_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-moondex_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# SMScoin-cli binary #
+SMScoin_cli_SOURCES = SMScoin-cli.cpp
+SMScoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+SMScoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+SMScoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-moondex_cli_SOURCES += moondex-cli-res.rc
+SMScoin_cli_SOURCES += SMScoin-cli-res.rc
 endif
 
-moondex_cli_LDADD = \
+SMScoin_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL)
-moondex_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+SMScoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# moondex-tx binary #
-moondex_tx_SOURCES = moondex-tx.cpp
-moondex_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-moondex_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-moondex_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# SMScoin-tx binary #
+SMScoin_tx_SOURCES = SMScoin-tx.cpp
+SMScoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+SMScoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+SMScoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-moondex_tx_SOURCES += moondex-tx-res.rc
+SMScoin_tx_SOURCES += SMScoin-tx-res.rc
 endif
 
-moondex_tx_LDADD = \
+SMScoin_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-moondex_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+SMScoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #

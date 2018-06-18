@@ -344,18 +344,18 @@ static const CRPCCommand vRPCCommands[] =
 #endif
 
     /* SMScoin features */
-    { "moondex",               "masternode",             &masternode,             true  },
-    { "moondex",               "masternodelist",         &masternodelist,         true  },
-    { "moondex",               "masternodebroadcast",    &masternodebroadcast,    true  },
-    { "moondex",               "gobject",                &gobject,                true  },
-    { "moondex",               "getgovernanceinfo",      &getgovernanceinfo,      true  },
-    { "moondex",               "getsuperblockbudget",    &getsuperblockbudget,    true  },
-    { "moondex",               "voteraw",                &voteraw,                true  },
-    { "moondex",               "mnsync",                 &mnsync,                 true  },
-    { "moondex",               "spork",                  &spork,                  true  },
-    { "moondex",               "getpoolinfo",            &getpoolinfo,            true  },
+    { "SMScoin",               "masternode",             &masternode,             true  },
+    { "SMScoin",               "masternodelist",         &masternodelist,         true  },
+    { "SMScoin",               "masternodebroadcast",    &masternodebroadcast,    true  },
+    { "SMScoin",               "gobject",                &gobject,                true  },
+    { "SMScoin",               "getgovernanceinfo",      &getgovernanceinfo,      true  },
+    { "SMScoin",               "getsuperblockbudget",    &getsuperblockbudget,    true  },
+    { "SMScoin",               "voteraw",                &voteraw,                true  },
+    { "SMScoin",               "mnsync",                 &mnsync,                 true  },
+    { "SMScoin",               "spork",                  &spork,                  true  },
+    { "SMScoin",               "getpoolinfo",            &getpoolinfo,            true  },
 #ifdef ENABLE_WALLET
-    { "moondex",               "privatesend",            &privatesend,            false },
+    { "SMScoin",               "privatesend",            &privatesend,            false },
 
     /* Wallet */
     { "wallet",             "keepass",                &keepass,                true },
@@ -578,7 +578,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(const std::string& methodname, const std::string& args)
 {
-    return "> moondex-cli " + methodname + " " + args + "\n";
+    return "> SMScoin-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(const std::string& methodname, const std::string& args)

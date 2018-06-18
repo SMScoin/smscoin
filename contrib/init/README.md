@@ -1,11 +1,11 @@
 Sample configuration files for:
 
-SystemD: moondexd.service
-Upstart: moondexd.conf
-OpenRC:  moondexd.openrc
-         moondexd.openrcconf
-CentOS:  moondexd.init
-OS X:    org.moondex.moondexd.plist
+SystemD: SMScoind.service
+Upstart: SMScoind.conf
+OpenRC:  SMScoind.openrc
+         SMScoind.openrcconf
+CentOS:  SMScoind.init
+OS X:    org.SMScoin.SMScoind.plist
 
 have been made available to assist packagers in creating node packages here.
 

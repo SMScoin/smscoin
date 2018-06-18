@@ -271,7 +271,7 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qradiobutton.h \
   /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QSpacerItem \
   /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QVBoxLayout qt/guiutil.h \
-  amount.h serialize.h compat/endian.h config/moondex-config.h \
+  amount.h serialize.h compat/endian.h config/SMScoin-config.h \
   compat/byteswap.h /usr/include/libkern/OSByteOrder.h \
   /usr/include/libkern/i386/OSByteOrder.h \
   /usr/include/sys/_types/_os_inline.h /usr/include/assert.h \
@@ -1682,7 +1682,7 @@ serialize.h:
 
 compat/endian.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 compat/byteswap.h:
 

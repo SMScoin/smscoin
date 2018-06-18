@@ -1,5 +1,5 @@
 qt/libbitcoinqt_a-optionsdialog.o: qt/optionsdialog.cpp \
-  config/moondex-config.h qt/optionsdialog.h \
+  config/SMScoin-config.h qt/optionsdialog.h \
   /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QDialog \
   /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qdialog.h \
   /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qtwidgetsglobal.h \
@@ -1314,7 +1314,7 @@ qt/libbitcoinqt_a-optionsdialog.o: qt/optionsdialog.cpp \
   /usr/local/Cellar/qt/5.10.1/include/QtCore/qtimer.h \
   /usr/local/Cellar/qt/5.10.1/include/QtCore/qbasictimer.h
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 qt/optionsdialog.h:
 

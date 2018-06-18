@@ -1,5 +1,5 @@
 qt/libbitcoinqt_a-addressbookpage.o: qt/addressbookpage.cpp \
-  config/moondex-config.h qt/addressbookpage.h \
+  config/SMScoin-config.h qt/addressbookpage.h \
   /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QDialog \
   /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qdialog.h \
   /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qtwidgetsglobal.h \
@@ -725,7 +725,7 @@ qt/libbitcoinqt_a-addressbookpage.o: qt/addressbookpage.cpp \
   /usr/local/Cellar/qt/5.10.1/include/QtCore/qsortfilterproxymodel.h \
   /usr/local/Cellar/qt/5.10.1/include/QtCore/qabstractproxymodel.h
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 qt/addressbookpage.h:
 

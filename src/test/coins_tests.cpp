@@ -5,7 +5,7 @@
 #include "coins.h"
 #include "random.h"
 #include "uint256.h"
-#include "test/test_moondex.h"
+#include "test/test_SMScoin.h"
 #include "main.h"
 #include "consensus/validation.h"
 

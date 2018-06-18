@@ -842,13 +842,13 @@ zmq/libbitcoin_zmq_a-zmqnotificationinterface.o: \
  /usr/include/boost/type_traits/function_traits.hpp \
  /usr/include/boost/signals2/detail/signal_template.hpp \
  zmq/zmqpublishnotifier.h zmq/zmqabstractnotifier.h zmq/zmqconfig.h \
- config/moondex-config.h /usr/include/zmq.h primitives/block.h \
+ config/SMScoin-config.h /usr/include/zmq.h primitives/block.h \
  primitives/transaction.h amount.h serialize.h compat/endian.h \
  compat/byteswap.h /usr/include/byteswap.h /usr/include/c++/5/set \
  /usr/include/c++/5/bits/stl_set.h /usr/include/c++/5/bits/stl_multiset.h \
  prevector.h script/script.h crypto/common.h \
- ../src/config/moondex-config.h compat/endian.h prevector.h serialize.h \
- uint256.h crypto/common.h version.h main.h config/moondex-config.h \
+ ../src/config/SMScoin-config.h compat/endian.h prevector.h serialize.h \
+ uint256.h crypto/common.h version.h main.h config/SMScoin-config.h \
  amount.h chain.h arith_uint256.h primitives/block.h pow.h \
  consensus/params.h tinyformat.h /usr/include/c++/5/iostream \
  /usr/include/c++/5/sstream /usr/include/c++/5/bits/sstream.tcc uint256.h \
@@ -2947,7 +2947,7 @@ zmq/zmqabstractnotifier.h:
 
 zmq/zmqconfig.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 /usr/include/zmq.h:
 
@@ -2977,7 +2977,7 @@ script/script.h:
 
 crypto/common.h:
 
-../src/config/moondex-config.h:
+../src/config/SMScoin-config.h:
 
 compat/endian.h:
 
@@ -2993,7 +2993,7 @@ version.h:
 
 main.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 amount.h:
 

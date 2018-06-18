@@ -160,7 +160,7 @@ qt/libbitcoinqt_a-bitcoinaddressvalidator.o: \
   /usr/local/Cellar/qt/5.10.1/include/QtCore/qmap.h \
   /usr/local/Cellar/qt/5.10.1/include/QtCore/qlocale.h base58.h \
   chainparams.h chainparamsbase.h consensus/params.h uint256.h \
-  /usr/include/assert.h crypto/common.h ../src/config/moondex-config.h \
+  /usr/include/assert.h crypto/common.h ../src/config/SMScoin-config.h \
   compat/endian.h compat/byteswap.h /usr/include/libkern/OSByteOrder.h \
   /usr/include/libkern/i386/OSByteOrder.h \
   /usr/include/sys/_types/_os_inline.h primitives/block.h \
@@ -1370,7 +1370,7 @@ uint256.h:
 
 crypto/common.h:
 
-../src/config/moondex-config.h:
+../src/config/SMScoin-config.h:
 
 compat/endian.h:
 

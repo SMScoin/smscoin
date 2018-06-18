@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.moondex.SMScoin-Qt";
+        return @"org.SMScoin.SMScoin-Qt";
     } else {
         return [self __bundleIdentifier];
     }

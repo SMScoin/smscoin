@@ -1,4 +1,4 @@
-bench/bench_bench_moondex-Examples.o: bench/Examples.cpp \
+bench/bench_bench_SMScoin-Examples.o: bench/Examples.cpp \
  /usr/include/stdc-predef.h bench/bench.h /usr/include/c++/5/map \
  /usr/include/c++/5/bits/stl_tree.h \
  /usr/include/c++/5/bits/stl_algobase.h \
@@ -381,8 +381,8 @@ bench/bench_bench_moondex-Examples.o: bench/Examples.cpp \
  /usr/include/boost/move/detail/meta_utils.hpp \
  /usr/include/boost/move/detail/meta_utils_core.hpp \
  /usr/include/boost/preprocessor/stringize.hpp main.h \
- config/moondex-config.h amount.h serialize.h compat/endian.h \
- config/moondex-config.h compat/byteswap.h /usr/include/byteswap.h \
+ config/SMScoin-config.h amount.h serialize.h compat/endian.h \
+ config/SMScoin-config.h compat/byteswap.h /usr/include/byteswap.h \
  /usr/include/c++/5/ios /usr/include/c++/5/bits/ios_base.h \
  /usr/include/c++/5/bits/locale_classes.h \
  /usr/include/c++/5/bits/locale_classes.tcc \
@@ -405,7 +405,7 @@ bench/bench_bench_moondex-Examples.o: bench/Examples.cpp \
  /usr/include/c++/5/bits/istream.tcc \
  /usr/include/c++/5/bits/stream_iterator.h chain.h arith_uint256.h \
  primitives/block.h primitives/transaction.h amount.h script/script.h \
- crypto/common.h ../src/config/moondex-config.h compat/endian.h \
+ crypto/common.h ../src/config/SMScoin-config.h compat/endian.h \
  prevector.h serialize.h uint256.h crypto/common.h pow.h \
  consensus/params.h tinyformat.h /usr/include/c++/5/iostream \
  /usr/include/c++/5/sstream /usr/include/c++/5/bits/sstream.tcc uint256.h \
@@ -1942,7 +1942,7 @@ bench/bench.h:
 
 main.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 amount.h:
 
@@ -1950,7 +1950,7 @@ serialize.h:
 
 compat/endian.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 compat/byteswap.h:
 
@@ -2030,7 +2030,7 @@ script/script.h:
 
 crypto/common.h:
 
-../src/config/moondex-config.h:
+../src/config/SMScoin-config.h:
 
 compat/endian.h:
 

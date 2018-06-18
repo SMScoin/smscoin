@@ -188,7 +188,7 @@ qt/libbitcoinqt_a-splashscreen.o: qt/splashscreen.cpp qt/splashscreen.h \
   /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qsizepolicy.h \
   /usr/local/Cellar/qt/5.10.1/include/QtGui/qcursor.h \
   /usr/local/Cellar/qt/5.10.1/include/QtGui/qkeysequence.h qt/guiutil.h \
-  amount.h serialize.h compat/endian.h config/moondex-config.h \
+  amount.h serialize.h compat/endian.h config/SMScoin-config.h \
   compat/byteswap.h /usr/include/libkern/OSByteOrder.h \
   /usr/include/libkern/i386/OSByteOrder.h \
   /usr/include/sys/_types/_os_inline.h /usr/include/assert.h \
@@ -1638,7 +1638,7 @@ serialize.h:
 
 compat/endian.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 compat/byteswap.h:
 

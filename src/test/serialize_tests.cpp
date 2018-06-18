@@ -5,7 +5,7 @@
 #include "serialize.h"
 #include "streams.h"
 #include "hash.h"
-#include "test/test_moondex.h"
+#include "test/test_SMScoin.h"
 
 #include <stdint.h>
 

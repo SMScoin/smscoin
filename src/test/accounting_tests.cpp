@@ -5,7 +5,7 @@
 #include "wallet/wallet.h"
 #include "wallet/walletdb.h"
 
-#include "test/test_moondex.h"
+#include "test/test_SMScoin.h"
 
 #include <stdint.h>
 

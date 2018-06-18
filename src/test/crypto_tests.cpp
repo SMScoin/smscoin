@@ -10,7 +10,7 @@
 #include "crypto/hmac_sha512.h"
 #include "random.h"
 #include "utilstrencodings.h"
-#include "test/test_moondex.h"
+#include "test/test_SMScoin.h"
 
 #include <vector>
 

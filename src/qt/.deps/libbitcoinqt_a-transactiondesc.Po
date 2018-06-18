@@ -151,7 +151,7 @@ qt/libbitcoinqt_a-transactiondesc.o: qt/transactiondesc.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional \
   /usr/local/Cellar/qt/5.10.1/include/QtCore/qobject_impl.h \
   /usr/local/Cellar/qt/5.10.1/include/QtCore/QString qt/bitcoinunits.h \
-  amount.h serialize.h compat/endian.h config/moondex-config.h \
+  amount.h serialize.h compat/endian.h config/SMScoin-config.h \
   compat/byteswap.h /usr/include/libkern/OSByteOrder.h \
   /usr/include/libkern/i386/OSByteOrder.h \
   /usr/include/sys/_types/_os_inline.h /usr/include/assert.h \
@@ -1676,7 +1676,7 @@ serialize.h:
 
 compat/endian.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 compat/byteswap.h:
 

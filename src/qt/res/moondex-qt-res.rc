@@ -21,10 +21,10 @@ BEGIN
             VALUE "CompanyName",        "SMScoin"
             VALUE "FileDescription",    "SMScoin (GUI node for SMScoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "moondex-qt"
+            VALUE "InternalName",       "SMScoin-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "moondex-qt.exe"
+            VALUE "OriginalFilename",   "SMScoin-qt.exe"
             VALUE "ProductName",        "SMScoin"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END

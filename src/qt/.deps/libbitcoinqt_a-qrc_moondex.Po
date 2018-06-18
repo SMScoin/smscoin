@@ -1,1 +1,1 @@
-qt/libbitcoinqt_a-qrc_moondex.o: qt/qrc_moondex.cpp
+qt/libbitcoinqt_a-qrc_SMScoin.o: qt/qrc_SMScoin.cpp

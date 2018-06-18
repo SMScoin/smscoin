@@ -1,6 +1,6 @@
 zmq/libbitcoin_zmq_a-zmqabstractnotifier.o: zmq/zmqabstractnotifier.cpp \
  /usr/include/stdc-predef.h zmq/zmqabstractnotifier.h zmq/zmqconfig.h \
- config/moondex-config.h /usr/lib/gcc/x86_64-linux-gnu/5/include/stdarg.h \
+ config/SMScoin-config.h /usr/lib/gcc/x86_64-linux-gnu/5/include/stdarg.h \
  /usr/include/c++/5/string \
  /usr/include/x86_64-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/5/bits/os_defines.h \
@@ -195,7 +195,7 @@ zmq/libbitcoin_zmq_a-zmqabstractnotifier.o: zmq/zmqabstractnotifier.cpp \
  /usr/include/c++/5/bits/ostream.tcc /usr/include/c++/5/istream \
  /usr/include/c++/5/bits/istream.tcc \
  /usr/include/c++/5/bits/stream_iterator.h script/script.h \
- crypto/common.h ../src/config/moondex-config.h compat/endian.h \
+ crypto/common.h ../src/config/SMScoin-config.h compat/endian.h \
  prevector.h /usr/include/c++/5/climits \
  /usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/syslimits.h \
@@ -205,7 +205,7 @@ zmq/libbitcoin_zmq_a-zmqabstractnotifier.o: zmq/zmqabstractnotifier.cpp \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h serialize.h uint256.h \
  /usr/include/c++/5/cstring crypto/common.h util.h \
- config/moondex-config.h compat.h \
+ config/SMScoin-config.h compat.h \
  /usr/include/x86_64-linux-gnu/sys/fcntl.h /usr/include/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
@@ -907,7 +907,7 @@ zmq/zmqabstractnotifier.h:
 
 zmq/zmqconfig.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/5/include/stdarg.h:
 
@@ -1415,7 +1415,7 @@ script/script.h:
 
 crypto/common.h:
 
-../src/config/moondex-config.h:
+../src/config/SMScoin-config.h:
 
 compat/endian.h:
 
@@ -1449,7 +1449,7 @@ crypto/common.h:
 
 util.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 compat.h:
 

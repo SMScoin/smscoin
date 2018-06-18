@@ -2,10 +2,10 @@
 Encoding=UTF-8
 Name=SMScoin
 Comment=SMScoin P2P Cryptocurrency
-Exec=moondex-qt %u
+Exec=SMScoin-qt %u
 Terminal=false
 Type=Application
-Icon=moondex128
-MimeType=x-scheme-handler/moondex;
+Icon=SMScoin128
+MimeType=x-scheme-handler/SMScoin;
 Categories=Office;Finance;
-Name[en_US]=moondex-qt.desktop
+Name[en_US]=SMScoin-qt.desktop

@@ -233,7 +233,7 @@ qt/libbitcoinqt_a-darksendconfig.o: qt/darksendconfig.cpp \
   /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qpushbutton.h \
   /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qabstractbutton.h \
   qt/bitcoinunits.h amount.h serialize.h compat/endian.h \
-  config/moondex-config.h compat/byteswap.h \
+  config/SMScoin-config.h compat/byteswap.h \
   /usr/include/libkern/OSByteOrder.h \
   /usr/include/libkern/i386/OSByteOrder.h \
   /usr/include/sys/_types/_os_inline.h /usr/include/assert.h \
@@ -1852,7 +1852,7 @@ serialize.h:
 
 compat/endian.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 compat/byteswap.h:
 

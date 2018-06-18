@@ -1,6 +1,6 @@
 [Protocol]
-exec=moondex-qt '%u'
-protocol=moondex
+exec=SMScoin-qt '%u'
+protocol=SMScoin
 input=none
 output=none
 helper=true

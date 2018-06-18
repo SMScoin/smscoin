@@ -1,7 +1,7 @@
 Release Process
 ====================
 
-* Update translations, see [translation_process.md](https://github.com/moondexcoin/moondex/blob/master/doc/translation_process.md#syncing-with-transifex)
+* Update translations, see [translation_process.md](https://github.com/SMScoincoin/SMScoin/blob/master/doc/translation_process.md#syncing-with-transifex)
 * Update hardcoded [seeds](/contrib/seeds)
 
 * * *
@@ -10,14 +10,14 @@ Release Process
 Check out the source code in the following directory hierarchy.
 
 	cd /path/to/your/toplevel/build
-	git clone https://github.com/moondexcoin/gitian.sigs.git
-	git clone https://github.com/moondexcoin/moondexcoin-detached-sigs.git
+	git clone https://github.com/SMScoincoin/gitian.sigs.git
+	git clone https://github.com/SMScoincoin/SMScoincoin-detached-sigs.git
 	git clone https://github.com/devrandom/gitian-builder.git
-	git clone https://github.com/moondexcoin/moondexcoin.git
+	git clone https://github.com/SMScoincoin/SMScoincoin.git
 
 ###SMScoin maintainers/release engineers, update (commit) version in sources
 
-	pushd ./moondex
+	pushd ./SMScoin
 	contrib/verifysfbinaries/verify.sh
 	configure.ac
 	doc/README*
@@ -40,7 +40,7 @@ Check out the source code in the following directory hierarchy.
 
  Setup Gitian descriptors:
 
-	pushd ./moondex
+	pushd ./SMScoin
 	export SIGNER=(your Gitian key, ie bluematt, sipa, etc)
 	export VERSION=(new version, e.g. 0.8.0)
 	git fetch
@@ -76,52 +76,52 @@ Check out the source code in the following directory hierarchy.
 
 By default, Gitian will fetch source files as needed. To cache them ahead of time:
 
-	make -C ../moondex/depends download SOURCES_PATH=`pwd`/cache/common
+	make -C ../SMScoin/depends download SOURCES_PATH=`pwd`/cache/common
 
 Only missing files will be fetched, so this is safe to re-run for each build.
 
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 ```
-./bin/gbuild --url moondex=/path/to/moondex,signature=/path/to/sigs {rest of arguments}
+./bin/gbuild --url SMScoin=/path/to/SMScoin,signature=/path/to/sigs {rest of arguments}
 ```
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
 ###Build and sign SMScoin for Linux, Windows, and OS X:
 
-	./bin/gbuild --commit moondex=v${VERSION} ../moondex/contrib/gitian-descriptors/gitian-linux.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../moondex/contrib/gitian-descriptors/gitian-linux.yml
-	mv build/out/moondex-*.tar.gz build/out/src/moondex-*.tar.gz ../
+	./bin/gbuild --commit SMScoin=v${VERSION} ../SMScoin/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../SMScoin/contrib/gitian-descriptors/gitian-linux.yml
+	mv build/out/SMScoin-*.tar.gz build/out/src/SMScoin-*.tar.gz ../
 
-	./bin/gbuild --commit moondex=v${VERSION} ../moondex/contrib/gitian-descriptors/gitian-win.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../moondex/contrib/gitian-descriptors/gitian-win.yml
-	mv build/out/moondex-*-win-unsigned.tar.gz inputs/moondex-win-unsigned.tar.gz
-	mv build/out/moondex-*.zip build/out/moondex-*.exe ../
+	./bin/gbuild --commit SMScoin=v${VERSION} ../SMScoin/contrib/gitian-descriptors/gitian-win.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../SMScoin/contrib/gitian-descriptors/gitian-win.yml
+	mv build/out/SMScoin-*-win-unsigned.tar.gz inputs/SMScoin-win-unsigned.tar.gz
+	mv build/out/SMScoin-*.zip build/out/SMScoin-*.exe ../
 
-	./bin/gbuild --commit moondex=v${VERSION} ../moondex/contrib/gitian-descriptors/gitian-osx.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../moondex/contrib/gitian-descriptors/gitian-osx.yml
-	mv build/out/moondex-*-osx-unsigned.tar.gz inputs/moondex-osx-unsigned.tar.gz
-	mv build/out/moondex-*.tar.gz build/out/moondex-*.dmg ../
+	./bin/gbuild --commit SMScoin=v${VERSION} ../SMScoin/contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../SMScoin/contrib/gitian-descriptors/gitian-osx.yml
+	mv build/out/SMScoin-*-osx-unsigned.tar.gz inputs/SMScoin-osx-unsigned.tar.gz
+	mv build/out/SMScoin-*.tar.gz build/out/SMScoin-*.dmg ../
 	popd
 
   Build output expected:
 
-  1. source tarball (moondex-${VERSION}.tar.gz)
-  2. linux 32-bit and 64-bit dist tarballs (moondex-${VERSION}-linux[32|64].tar.gz)
-  3. windows 32-bit and 64-bit unsigned installers and dist zips (moondex-${VERSION}-win[32|64]-setup-unsigned.exe, moondex-${VERSION}-win[32|64].zip)
-  4. OS X unsigned installer and dist tarball (moondex-${VERSION}-osx-unsigned.dmg, moondex-${VERSION}-osx64.tar.gz)
+  1. source tarball (SMScoin-${VERSION}.tar.gz)
+  2. linux 32-bit and 64-bit dist tarballs (SMScoin-${VERSION}-linux[32|64].tar.gz)
+  3. windows 32-bit and 64-bit unsigned installers and dist zips (SMScoin-${VERSION}-win[32|64]-setup-unsigned.exe, SMScoin-${VERSION}-win[32|64].zip)
+  4. OS X unsigned installer and dist tarball (SMScoin-${VERSION}-osx-unsigned.dmg, SMScoin-${VERSION}-osx64.tar.gz)
   5. Gitian signatures (in gitian.sigs/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/
 
 ###Verify other gitian builders signatures to your own. (Optional)
 
   Add other gitian builders keys to your gpg keyring
 
-	gpg --import ../moondex/contrib/gitian-downloader/*.pgp
+	gpg --import ../SMScoin/contrib/gitian-downloader/*.pgp
 
   Verify the signatures
 
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../moondex/contrib/gitian-descriptors/gitian-linux.yml
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../moondex/contrib/gitian-descriptors/gitian-win.yml
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../moondex/contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../SMScoin/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../SMScoin/contrib/gitian-descriptors/gitian-win.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../SMScoin/contrib/gitian-descriptors/gitian-osx.yml
 
 	popd
 
@@ -139,25 +139,25 @@ Commit your signature to gitian.sigs:
 
   Wait for Windows/OS X detached signatures:
 	Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-	Detached signatures will then be committed to the [moondexcoin-detached-sigs](https://github.com/moondexcoin/moondexcoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+	Detached signatures will then be committed to the [SMScoincoin-detached-sigs](https://github.com/SMScoincoin/SMScoincoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
   Create (and optionally verify) the signed OS X binary:
 
 	pushd ./gitian-builder
-	./bin/gbuild -i --commit signature=v${VERSION} ../moondex/contrib/gitian-descriptors/gitian-osx-signer.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../moondex/contrib/gitian-descriptors/gitian-osx-signer.yml
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../moondex/contrib/gitian-descriptors/gitian-osx-signer.yml
-	mv build/out/moondex-osx-signed.dmg ../moondex-${VERSION}-osx.dmg
+	./bin/gbuild -i --commit signature=v${VERSION} ../SMScoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../SMScoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../SMScoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+	mv build/out/SMScoin-osx-signed.dmg ../SMScoin-${VERSION}-osx.dmg
 	popd
 
   Create (and optionally verify) the signed Windows binaries:
 
 	pushd ./gitian-builder
-	./bin/gbuild -i --commit signature=v${VERSION} ../moondex/contrib/gitian-descriptors/gitian-win-signer.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../moondex/contrib/gitian-descriptors/gitian-win-signer.yml
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../moondex/contrib/gitian-descriptors/gitian-win-signer.yml
-	mv build/out/moondex-*win64-setup.exe ../moondex-${VERSION}-win64-setup.exe
-	mv build/out/moondex-*win32-setup.exe ../moondex-${VERSION}-win32-setup.exe
+	./bin/gbuild -i --commit signature=v${VERSION} ../SMScoin/contrib/gitian-descriptors/gitian-win-signer.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../SMScoin/contrib/gitian-descriptors/gitian-win-signer.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../SMScoin/contrib/gitian-descriptors/gitian-win-signer.yml
+	mv build/out/SMScoin-*win64-setup.exe ../SMScoin-${VERSION}-win64-setup.exe
+	mv build/out/SMScoin-*win32-setup.exe ../SMScoin-${VERSION}-win32-setup.exe
 	popd
 
 Commit your signature for the signed OS X/Windows binaries:
@@ -182,18 +182,18 @@ rm SHA256SUMS
 (the digest algorithm is forced to sha256 to avoid confusion of the `Hash:` header that GPG adds with the SHA256 used for the files)
 Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spurious/nonsensical entry.
 
-- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the moondexcoin.info server
+- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the SMScoincoin.info server
 
-- Update moondexcoin.info
+- Update SMScoincoin.info
 
 - Announce the release:
   - SMScoin-development mailing list
 
-  - Update title of #moondexcoin on Freenode IRC
+  - Update title of #SMScoincoin on Freenode IRC
 
   - Optionally reddit /r/SMScoinpay, ... but this will usually sort out itself
 
-- Notify flare so that he can start building [the PPAs](https://launchpad.net/~moondexcoin.info/+archive/ubuntu/moondex)
+- Notify flare so that he can start building [the PPAs](https://launchpad.net/~SMScoincoin.info/+archive/ubuntu/SMScoin)
 
 - Add release notes for the new version to the directory `doc/release-notes` in git master
 

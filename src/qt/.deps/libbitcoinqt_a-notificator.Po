@@ -1,5 +1,5 @@
 qt/libbitcoinqt_a-notificator.o: qt/notificator.cpp qt/notificator.h \
-  config/moondex-config.h \
+  config/SMScoin-config.h \
   /usr/local/Cellar/qt/5.10.1/include/QtGui/QIcon \
   /usr/local/Cellar/qt/5.10.1/include/QtGui/qicon.h \
   /usr/local/Cellar/qt/5.10.1/include/QtGui/qtguiglobal.h \
@@ -855,7 +855,7 @@ qt/libbitcoinqt_a-notificator.o: qt/notificator.cpp qt/notificator.h \
 
 qt/notificator.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 /usr/local/Cellar/qt/5.10.1/include/QtGui/QIcon:
 

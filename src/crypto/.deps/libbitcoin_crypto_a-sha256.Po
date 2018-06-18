@@ -87,7 +87,7 @@ crypto/libbitcoin_crypto_a-sha256.o: crypto/sha256.cpp crypto/sha256.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cctype \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/wctype.h \
   /usr/include/wctype.h /usr/include/_types/_wctrans_t.h crypto/common.h \
-  ../src/config/moondex-config.h compat/endian.h compat/byteswap.h \
+  ../src/config/SMScoin-config.h compat/endian.h compat/byteswap.h \
   /usr/include/libkern/OSByteOrder.h \
   /usr/include/libkern/i386/OSByteOrder.h \
   /usr/include/sys/_types/_os_inline.h /usr/include/assert.h \
@@ -341,7 +341,7 @@ crypto/sha256.h:
 
 crypto/common.h:
 
-../src/config/moondex-config.h:
+../src/config/SMScoin-config.h:
 
 compat/endian.h:
 

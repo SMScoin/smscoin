@@ -1,5 +1,5 @@
 ---
-name: "moondex-dmg-signer"
+name: "SMScoin-dmg-signer"
 suites:
 - "trusty"
 architectures:
@@ -8,10 +8,10 @@ packages:
 - "faketime"
 reference_datetime: "2017-01-01 00:00:00"
 remotes:
-- "url": "https://github.com/moondexcoin/moondexcoin-detached-sigs.git"
+- "url": "https://github.com/SMScoincoin/SMScoincoin-detached-sigs.git"
   "dir": "signature"
 files:
-- "moondex-osx-unsigned.tar.gz"
+- "SMScoin-osx-unsigned.tar.gz"
 script: |
   WRAP_DIR=$HOME/wrapped
   mkdir -p ${WRAP_DIR}
@@ -28,8 +28,8 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=moondex-osx-unsigned.tar.gz
-  SIGNED=moondex-osx-signed.dmg
+  UNSIGNED=SMScoin-osx-unsigned.tar.gz
+  SIGNED=SMScoin-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   ./detached-sig-apply.sh ${UNSIGNED} signature/osx

@@ -1,7 +1,7 @@
 SMScoin 1.0.0
 =====================
 
-This is the official reference wallet for SMScoin digital currency and comprises the backbone of the SMScoin peer-to-peer network. You can [download SMScoin](https://moondexcoin.io) or [build it yourself](#building) using the guides below.
+This is the official reference wallet for SMScoin digital currency and comprises the backbone of the SMScoin peer-to-peer network. You can [download SMScoin](https://SMScoincoin.io) or [build it yourself](#building) using the guides below.
 
 Running
 ---------------------
@@ -16,7 +16,7 @@ Unpack the files into a directory and run:
 
 ### Windows
 
-Unpack the files into a directory, and then run moondex-qt.exe.
+Unpack the files into a directory, and then run SMScoin-qt.exe.
 
 ### OS X
 
@@ -24,10 +24,10 @@ Drag SMScoin-Qt to your applications folder, and then run SMScoin-Qt.
 
 ### Need Help?
 
-* See the [SMScoin documentation](https://moondexcoin.atlassian.net/wiki/display/DOC)
+* See the [SMScoin documentation](https://SMScoincoin.atlassian.net/wiki/display/DOC)
 for help and more information.
-* Ask for help on [#moondexcoin](http://webchat.freenode.net?channels=moondexcoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=moondexcoin).
-* Ask for help on the [SMScoinTalk](https://moondextalk.org/) forums.
+* Ask for help on [#SMScoincoin](http://webchat.freenode.net?channels=SMScoincoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=SMScoincoin).
+* Ask for help on the [SMScoinTalk](https://SMScointalk.org/) forums.
 
 Building
 ---------------------
@@ -57,8 +57,8 @@ The SMScoin repo's [root README](/README.md) contains relevant information on th
 - [Dnsseed Policy](dnsseed-policy.md)
 
 ### Resources
-* Discuss on the [SMScoinTalk](https://moondextalk.org/) forums, in the Development & Technical Discussion board.
-* Discuss on [#moondexcoin](http://webchat.freenode.net/?channels=moondexcoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=moondexcoin).
+* Discuss on the [SMScoinTalk](https://SMScointalk.org/) forums, in the Development & Technical Discussion board.
+* Discuss on [#SMScoincoin](http://webchat.freenode.net/?channels=SMScoincoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=SMScoincoin).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

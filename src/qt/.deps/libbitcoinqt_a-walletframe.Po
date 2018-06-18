@@ -190,7 +190,7 @@ qt/libbitcoinqt_a-walletframe.o: qt/walletframe.cpp qt/walletframe.h \
   /usr/local/Cellar/qt/5.10.1/include/QtGui/qkeysequence.h \
   /usr/local/Cellar/qt/5.10.1/include/QtCore/QMap \
   /usr/local/Cellar/qt/5.10.1/include/QtCore/qmap.h qt/bitcoingui.h \
-  config/moondex-config.h amount.h serialize.h compat/endian.h \
+  config/SMScoin-config.h amount.h serialize.h compat/endian.h \
   compat/byteswap.h /usr/include/libkern/OSByteOrder.h \
   /usr/include/libkern/i386/OSByteOrder.h \
   /usr/include/sys/_types/_os_inline.h /usr/include/assert.h \
@@ -1642,7 +1642,7 @@ qt/walletframe.h:
 
 qt/bitcoingui.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 amount.h:
 

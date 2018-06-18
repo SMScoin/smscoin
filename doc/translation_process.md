@@ -8,21 +8,21 @@ Transifex is setup to monitor the Github repo for updates, and when code contain
 
 Multiple language support is critical in assisting SMScoin’s global adoption, and growth. One of SMScoin’s greatest strengths is cross-boarder money transfers, any help making that easier is greatly appreciated.
 
-See the [Transifex SMScoin project](https://www.transifex.com/projects/p/moondex/) to assist in translations. You should also join the translation mailing list for announcements - see details below.
+See the [Transifex SMScoin project](https://www.transifex.com/projects/p/SMScoin/) to assist in translations. You should also join the translation mailing list for announcements - see details below.
 
 ### Writing code with translations
 We use automated scripts to help extract translations in both Qt, and non-Qt source files. It is rarely necessary to manually edit the files in `src/qt/locale/`. The translation source files must adhere to the following format:
-`moondex_xx_YY.ts or moondex_xx.ts`
+`SMScoin_xx_YY.ts or SMScoin_xx.ts`
 
-`src/qt/locale/moondex_en.ts` is treated in a special way. It is used as the source for all other translations. Whenever a string in the source code is changed, this file must be updated to reflect those changes. A custom script is used to extract strings from the non-Qt parts. This script makes use of `gettext`, so make sure that utility is installed (ie, `apt-get install gettext` on Ubuntu/Debian). Once this has been updated, `lupdate` (included in the Qt SDK) is used to update `moondex_en.ts`.
+`src/qt/locale/SMScoin_en.ts` is treated in a special way. It is used as the source for all other translations. Whenever a string in the source code is changed, this file must be updated to reflect those changes. A custom script is used to extract strings from the non-Qt parts. This script makes use of `gettext`, so make sure that utility is installed (ie, `apt-get install gettext` on Ubuntu/Debian). Once this has been updated, `lupdate` (included in the Qt SDK) is used to update `SMScoin_en.ts`.
 
-To automatically regenerate the `moondex_en.ts` file, run the following commands:
+To automatically regenerate the `SMScoin_en.ts` file, run the following commands:
 ```sh
 cd src/
 make translate
 ```
 
-`contrib/moondex-qt.pro` takes care of generating `.qm` (binary compiled) files from `.ts` (source files) files. It’s mostly automated, and you shouldn’t need to worry about it.
+`contrib/SMScoin-qt.pro` takes care of generating `.qm` (binary compiled) files from `.ts` (source files) files. It’s mostly automated, and you shouldn’t need to worry about it.
 
 **Example Qt translation**
 ```cpp
@@ -36,7 +36,7 @@ When an updated source file is merged into the Github repo, Transifex will autom
 
 To create the pull-request, use the following commands:
 ```
-git add src/qt/moondexstrings.cpp src/qt/locale/moondex_en.ts
+git add src/qt/SMScoinstrings.cpp src/qt/locale/SMScoin_en.ts
 git commit
 ```
 
@@ -44,7 +44,7 @@ git commit
 ### Creating a Transifex account
 Visit the [Transifex Signup](https://www.transifex.com/signup/) page to create an account. Take note of your username and password, as they will be required to configure the command-line tool.
 
-You can find the SMScoin translation project at [https://www.transifex.com/projects/p/moondex/](https://www.transifex.com/projects/p/moondex/).
+You can find the SMScoin translation project at [https://www.transifex.com/projects/p/SMScoin/](https://www.transifex.com/projects/p/SMScoin/).
 
 ### Installing the Transifex client command-line tool
 The client it used to fetch updated translations. If you are having problems, or need more details, see [http://docs.transifex.com/developer/client/setup](http://docs.transifex.com/developer/client/setup)
@@ -75,10 +75,10 @@ The Transifex SMScoin project config file is included as part of the repo. It ca
 To assist in updating translations, we have created a script to help.
 
 1. `python contrib/devtools/update-translations.py`
-2. Update `src/qt/moondex_locale.qrc` manually or via
-   `ls src/qt/locale/*ts|xargs -n1 basename|sed 's/\(moondex_\(.*\)\).ts/<file alias="\2">locale\/\1.qm<\/file>/'`
+2. Update `src/qt/SMScoin_locale.qrc` manually or via
+   `ls src/qt/locale/*ts|xargs -n1 basename|sed 's/\(SMScoin_\(.*\)\).ts/<file alias="\2">locale\/\1.qm<\/file>/'`
 3. Update `src/Makefile.qt.include` manually or via
-   `ls src/qt/locale/*ts|xargs -n1 basename|sed 's/\(moondex_\(.*\)\).ts/  qt\/locale\/\1.ts \\/'`
+   `ls src/qt/locale/*ts|xargs -n1 basename|sed 's/\(SMScoin_\(.*\)\).ts/  qt\/locale\/\1.ts \\/'`
 4. `git add` new translations from `src/qt/locale/`
 
 **Do not directly download translations** one by one from the Transifex website, as we do a few post-processing steps before committing the translations.
@@ -86,7 +86,7 @@ To assist in updating translations, we have created a script to help.
 ### Handling Plurals (in source files)
 When new plurals are added to the source file, it's important to do the following steps:
 
-1. Open `moondex_en.ts` in Qt Linguist (included in the Qt SDK)
+1. Open `SMScoin_en.ts` in Qt Linguist (included in the Qt SDK)
 2. Search for `%n`, which will take you to the parts in the translation that use plurals
 3. Look for empty `English Translation (Singular)` and `English Translation (Plural)` fields
 4. Add the appropriate strings for the singular and plural form of the base string
@@ -99,7 +99,7 @@ To create a new language template, you will need to edit the languages manifest 
 
 ```xml
 <qresource prefix="/translations">
-    <file alias="en">locale/moondex_en.qm</file>
+    <file alias="en">locale/SMScoin_en.qm</file>
     ...
 </qresource>
 ```
@@ -107,4 +107,4 @@ To create a new language template, you will need to edit the languages manifest 
 **Note:** that the language translation file **must end in `.qm`** (the compiled extension), and not `.ts`.
 
 ### Questions and general assistance
-Check official forum at [https://moondextalk.org/forums/moondex-worldwide-collaboration.88/](https://moondextalk.org/forums/moondex-worldwide-collaboration.88/).
+Check official forum at [https://SMScointalk.org/forums/SMScoin-worldwide-collaboration.88/](https://SMScointalk.org/forums/SMScoin-worldwide-collaboration.88/).

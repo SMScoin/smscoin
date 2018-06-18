@@ -2369,7 +2369,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("moondex-scriptch");
+    RenameThread("SMScoin-scriptch");
     scriptcheckqueue.Thread();
 }
 

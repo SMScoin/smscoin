@@ -1,4 +1,4 @@
-qt/moondex_qt-macnotificationhandler.o: qt/macnotificationhandler.mm \
+qt/SMScoin_qt-macnotificationhandler.o: qt/macnotificationhandler.mm \
   qt/macnotificationhandler.h \
   /usr/local/Cellar/qt/5.10.1/include/QtCore/QObject \
   /usr/local/Cellar/qt/5.10.1/include/QtCore/qobject.h \

@@ -72,10 +72,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/moondexcore
-pkgincludedir = $(includedir)/moondexcore
-pkglibdir = $(libdir)/moondexcore
-pkglibexecdir = $(libexecdir)/moondexcore
+pkgdatadir = $(datadir)/SMScoin
+pkgincludedir = $(includedir)/SMScoin
+pkglibdir = $(libdir)/SMScoin
+pkglibexecdir = $(libexecdir)/SMScoin
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -89,21 +89,21 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
-host_triplet = x86_64-pc-linux-gnu
+host_triplet = x86_64-w64-mingw32
 am__append_1 = $(BDB_CPPFLAGS)
 am__append_2 = libbitcoin_wallet.a
 #am__append_3 = libbitcoin_zmq.a
 bin_PROGRAMS = $(am__EXEEXT_1) $(am__EXEEXT_2) $(am__EXEEXT_3) \
 	$(am__EXEEXT_4) $(am__EXEEXT_5) $(am__EXEEXT_6)
 TESTS = $(am__EXEEXT_3) $(am__EXEEXT_6)
-am__append_4 = moondexd
-am__append_5 = moondex-cli moondex-tx
+am__append_4 = SMScoind
+am__append_5 = SMScoin-cli SMScoin-tx
 #am__append_6 = compat/glibc_compat.cpp
-#am__append_7 = moondexd-res.rc
+am__append_7 = SMScoind-res.rc
 #am__append_8 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_9 = libbitcoin_wallet.a
-#am__append_10 = moondex-cli-res.rc
-#am__append_11 = moondex-tx-res.rc
+am__append_10 = SMScoin-cli-res.rc
+am__append_11 = SMScoin-tx-res.rc
 #am__append_12 = compat/glibc_compat.cpp
 am__append_13 = $(LIBLEVELDB_INT) \
 	$(LIBMEMENV_INT)
@@ -111,13 +111,13 @@ am__append_14 = $(LIBLEVELDB_INT)
 am__append_15 = $(LIBMEMENV_INT)
 am__append_16 = -I$(srcdir)/leveldb/include \
 	-I$(srcdir)/leveldb/helpers/memenv
-#am__append_17 = -DLEVELDB_PLATFORM_WINDOWS -DWINVER=0x0500 -D__USE_MINGW_ANSI_STDIO=1
-am__append_18 = -DLEVELDB_PLATFORM_POSIX
-#am__append_19 = leveldb/util/env_win.cc \
-#	leveldb/port/port_win.cc
-am__append_20 = leveldb/port/port_posix.cc
-#am__append_21 = test/test_moondex
-#am__append_22 = test/test_moondex
+am__append_17 = -DLEVELDB_PLATFORM_WINDOWS -DWINVER=0x0500 -D__USE_MINGW_ANSI_STDIO=1
+#am__append_18 = -DLEVELDB_PLATFORM_POSIX
+am__append_19 = leveldb/util/env_win.cc \
+	leveldb/port/port_win.cc
+#am__append_20 = leveldb/port/port_posix.cc
+#am__append_21 = test/test_SMScoin
+#am__append_22 = test/test_SMScoin
 #am__append_23 = \
 #	test/bctest.py \
 #	test/bitcoin-util-test.py \
@@ -141,50 +141,50 @@ am__append_20 = leveldb/port/port_posix.cc
 #am__append_25 = $(LIBBITCOIN_WALLET)
 ##am__append_26 = $(ZMQ_LIBS)
 #am__append_27 = $(CLEAN_BITCOIN_TEST)
-am__append_28 = bench/bench_moondex
+am__append_28 = bench/bench_SMScoin
 #am__append_29 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_30 = $(LIBBITCOIN_WALLET)
 am__append_31 = $(CLEAN_BITCOIN_BENCH)
-#am__append_32 = qt/moondex-qt
-#am__append_33 = qt/libbitcoinqt.a
-##am__append_34 = qt/winshutdownmonitor.cpp
-#am__append_35 = \
-#  qt/addressbookpage.cpp \
-#  qt/addresstablemodel.cpp \
-#  qt/askpassphrasedialog.cpp \
-#  qt/coincontroldialog.cpp \
-#  qt/coincontroltreewidget.cpp \
-#  qt/darksendconfig.cpp \
-#  qt/editaddressdialog.cpp \
-#  qt/masternodelist.cpp \
-#  qt/openuridialog.cpp \
-#  qt/overviewpage.cpp \
-#  qt/paymentrequestplus.cpp \
-#  qt/paymentserver.cpp \
-#  qt/receivecoinsdialog.cpp \
-#  qt/receiverequestdialog.cpp \
-#  qt/recentrequeststablemodel.cpp \
-#  qt/sendcoinsdialog.cpp \
-#  qt/sendcoinsentry.cpp \
-#  qt/signverifymessagedialog.cpp \
-#  qt/transactiondesc.cpp \
-#  qt/transactiondescdialog.cpp \
-#  qt/transactionfilterproxy.cpp \
-#  qt/transactionrecord.cpp \
-#  qt/transactiontablemodel.cpp \
-#  qt/transactionview.cpp \
-#  qt/walletframe.cpp \
-#  qt/walletmodel.cpp \
-#  qt/walletmodeltransaction.cpp \
-#  qt/walletview.cpp
+am__append_32 = qt/SMScoin-qt
+am__append_33 = qt/libbitcoinqt.a
+am__append_34 = qt/winshutdownmonitor.cpp
+am__append_35 = \
+  qt/addressbookpage.cpp \
+  qt/addresstablemodel.cpp \
+  qt/askpassphrasedialog.cpp \
+  qt/coincontroldialog.cpp \
+  qt/coincontroltreewidget.cpp \
+  qt/darksendconfig.cpp \
+  qt/editaddressdialog.cpp \
+  qt/masternodelist.cpp \
+  qt/openuridialog.cpp \
+  qt/overviewpage.cpp \
+  qt/paymentrequestplus.cpp \
+  qt/paymentserver.cpp \
+  qt/receivecoinsdialog.cpp \
+  qt/receiverequestdialog.cpp \
+  qt/recentrequeststablemodel.cpp \
+  qt/sendcoinsdialog.cpp \
+  qt/sendcoinsentry.cpp \
+  qt/signverifymessagedialog.cpp \
+  qt/transactiondesc.cpp \
+  qt/transactiondescdialog.cpp \
+  qt/transactionfilterproxy.cpp \
+  qt/transactionrecord.cpp \
+  qt/transactiontablemodel.cpp \
+  qt/transactionview.cpp \
+  qt/walletframe.cpp \
+  qt/walletmodel.cpp \
+  qt/walletmodeltransaction.cpp \
+  qt/walletview.cpp
 
-##am__append_36 = $(BITCOIN_MM)
-##am__append_37 = $(BITCOIN_RC)
-#am__append_38 = $(LIBBITCOIN_WALLET)
-##am__append_39 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
-#am__append_40 = $(CLEAN_QT)
-#am__append_41 = qt/test/test_moondex-qt
-#am__append_42 = qt/test/test_moondex-qt
+#am__append_36 = $(BITCOIN_MM)
+am__append_37 = $(BITCOIN_RC)
+am__append_38 = $(LIBBITCOIN_WALLET)
+#am__append_39 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+am__append_40 = $(CLEAN_QT)
+#am__append_41 = qt/test/test_SMScoin-qt
+#am__append_42 = qt/test/test_SMScoin-qt
 #am__append_43 = qt/test/moc_paymentservertests.cpp
 #am__append_44 = \
 #  qt/test/paymentservertests.cpp
@@ -223,7 +223,7 @@ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 DIST_COMMON = $(srcdir)/Makefile.am $(am__include_HEADERS_DIST) \
 	$(am__DIST_COMMON)
 mkinstalldirs = $(install_sh) -d
-CONFIG_HEADER = $(top_builddir)/src/config/moondex-config.h
+CONFIG_HEADER = $(top_builddir)/src/config/SMScoin-config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 AM_V_AR = $(am__v_AR_$(V))
@@ -288,9 +288,9 @@ am__leveldb_libleveldb_a_SOURCES_DIST = leveldb/db/builder.cc \
 	leveldb/util/logging.cc leveldb/util/options.cc \
 	leveldb/util/status.cc leveldb/port/port_win.cc \
 	leveldb/port/port_posix.cc
-#am__objects_1 = leveldb/util/leveldb_libleveldb_a-env_win.$(OBJEXT) \
-#	leveldb/port/leveldb_libleveldb_a-port_win.$(OBJEXT)
-am__objects_2 = leveldb/port/leveldb_libleveldb_a-port_posix.$(OBJEXT)
+am__objects_1 = leveldb/util/leveldb_libleveldb_a-env_win.$(OBJEXT) \
+	leveldb/port/leveldb_libleveldb_a-port_win.$(OBJEXT)
+#am__objects_2 = leveldb/port/leveldb_libleveldb_a-port_posix.$(OBJEXT)
 am_leveldb_libleveldb_a_OBJECTS = leveldb/db/leveldb_libleveldb_a-builder.$(OBJEXT) \
 	leveldb/db/leveldb_libleveldb_a-c.$(OBJEXT) \
 	leveldb/db/leveldb_libleveldb_a-dbformat.$(OBJEXT) \
@@ -562,16 +562,16 @@ am__qt_libbitcoinqt_a_SOURCES_DIST = qt/bantablemodel.cpp \
 	qt/forms/receiverequestdialog.ui qt/forms/debugwindow.ui \
 	qt/forms/sendcoinsdialog.ui qt/forms/sendcoinsentry.ui \
 	qt/forms/signverifymessagedialog.ui \
-	qt/forms/transactiondescdialog.ui qt/moondex.qrc \
-	qt/moondex_locale.qrc qt/locale/moondex_bg.ts \
-	qt/locale/moondex_de.ts qt/locale/moondex_en.ts \
-	qt/locale/moondex_es.ts qt/locale/moondex_fi.ts \
-	qt/locale/moondex_fr.ts qt/locale/moondex_it.ts \
-	qt/locale/moondex_ja.ts qt/locale/moondex_pl.ts \
-	qt/locale/moondex_pt.ts qt/locale/moondex_ru.ts \
-	qt/locale/moondex_sk.ts qt/locale/moondex_sv.ts \
-	qt/locale/moondex_vi.ts qt/locale/moondex_zh_CN.ts \
-	qt/locale/moondex_zh_TW.ts qt/paymentrequest.proto \
+	qt/forms/transactiondescdialog.ui qt/SMScoin.qrc \
+	qt/SMScoin_locale.qrc qt/locale/SMScoin_bg.ts \
+	qt/locale/SMScoin_de.ts qt/locale/SMScoin_en.ts \
+	qt/locale/SMScoin_es.ts qt/locale/SMScoin_fi.ts \
+	qt/locale/SMScoin_fr.ts qt/locale/SMScoin_it.ts \
+	qt/locale/SMScoin_ja.ts qt/locale/SMScoin_pl.ts \
+	qt/locale/SMScoin_pt.ts qt/locale/SMScoin_ru.ts \
+	qt/locale/SMScoin_sk.ts qt/locale/SMScoin_sv.ts \
+	qt/locale/SMScoin_vi.ts qt/locale/SMScoin_zh_CN.ts \
+	qt/locale/SMScoin_zh_TW.ts qt/paymentrequest.proto \
 	qt/res/icons/bitcoin.ico qt/res/icons/bitcoin.png \
 	qt/res/icons/drkblue/add.png \
 	qt/res/icons/drkblue/address-book.png \
@@ -732,7 +732,7 @@ am__qt_libbitcoinqt_a_SOURCES_DIST = qt/bantablemodel.cpp \
 	qt/res/icons/trad/verify.png qt/res/images/drkblue/about.png \
 	qt/res/images/drkblue/splash.png \
 	qt/res/images/drkblue/splash_testnet.png \
-	qt/res/images/drkblue/moondex_logo_horizontal.png \
+	qt/res/images/drkblue/SMScoin_logo_horizontal.png \
 	qt/res/images/drkblue/unchecked.png \
 	qt/res/images/drkblue/checked.png \
 	qt/res/images/drkblue/drkblue_downArrow.png \
@@ -745,7 +745,7 @@ am__qt_libbitcoinqt_a_SOURCES_DIST = qt/bantablemodel.cpp \
 	qt/res/images/crownium/about.png \
 	qt/res/images/crownium/splash.png \
 	qt/res/images/crownium/splash_testnet.png \
-	qt/res/images/crownium/moondex_logo_horizontal.png \
+	qt/res/images/crownium/SMScoin_logo_horizontal.png \
 	qt/res/images/crownium/unchecked.png \
 	qt/res/images/crownium/checked.png \
 	qt/res/images/crownium/drkblue_downArrow.png \
@@ -757,7 +757,7 @@ am__qt_libbitcoinqt_a_SOURCES_DIST = qt/bantablemodel.cpp \
 	qt/res/images/crownium/drkblue_walletFrame_bg.png \
 	qt/res/images/light/about.png qt/res/images/light/splash.png \
 	qt/res/images/light/splash_testnet.png \
-	qt/res/images/light/moondex_logo_horizontal.png \
+	qt/res/images/light/SMScoin_logo_horizontal.png \
 	qt/res/images/light/unchecked.png \
 	qt/res/images/light/checked.png \
 	qt/res/images/light/drkblue_downArrow.png \
@@ -769,7 +769,7 @@ am__qt_libbitcoinqt_a_SOURCES_DIST = qt/bantablemodel.cpp \
 	qt/res/images/light/drkblue_walletFrame_bg.png \
 	qt/res/images/trad/about.png qt/res/images/trad/splash.png \
 	qt/res/images/trad/splash_testnet.png \
-	qt/res/images/trad/moondex_logo_horizontal.png \
+	qt/res/images/trad/SMScoin_logo_horizontal.png \
 	qt/res/images/trad/drkblue_downArrow.png \
 	qt/res/images/trad/drkblue_downArrow_small.png \
 	qt/res/images/trad/drkblue_upArrow_small.png \
@@ -779,118 +779,118 @@ am__qt_libbitcoinqt_a_SOURCES_DIST = qt/bantablemodel.cpp \
 	qt/res/images/trad/drkblue_walletFrame_bg.png \
 	qt/res/css/drkblue.css qt/res/css/crownium.css \
 	qt/res/css/light.css $(wildcard qt/res/movies/spinner-*.png)
-##am__objects_5 = qt/qt_libbitcoinqt_a-winshutdownmonitor.$(OBJEXT)
-#am__objects_6 = qt/qt_libbitcoinqt_a-addressbookpage.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-addresstablemodel.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-askpassphrasedialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-coincontroldialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-coincontroltreewidget.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-darksendconfig.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-editaddressdialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-masternodelist.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-openuridialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-overviewpage.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-paymentrequestplus.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-paymentserver.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-receivecoinsdialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-receiverequestdialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-recentrequeststablemodel.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-sendcoinsdialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-sendcoinsentry.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-signverifymessagedialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-transactiondesc.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-transactiondescdialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-transactionfilterproxy.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-transactionrecord.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-transactiontablemodel.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-transactionview.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-walletframe.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-walletmodel.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-walletmodeltransaction.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-walletview.$(OBJEXT)
-#am__objects_7 =  \
-#	qt/qt_libbitcoinqt_a-bantablemodel.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-bitcoinaddressvalidator.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-bitcoinamountfield.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-bitcoingui.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-bitcoinunits.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-clientmodel.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-csvmodelwriter.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-guiutil.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-intro.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-networkstyle.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-notificator.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-optionsdialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-optionsmodel.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-peertablemodel.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-platformstyle.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-qvalidatedlineedit.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-qvaluecombobox.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-rpcconsole.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-splashscreen.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-trafficgraphwidget.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-utilitydialog.$(OBJEXT) \
-#	$(am__objects_5) $(am__objects_6)
-#am_qt_libbitcoinqt_a_OBJECTS = $(am__objects_7) \
-#	$(am__objects_3) $(am__objects_3) \
-#	$(am__objects_3) $(am__objects_3) \
-#	$(am__objects_3) $(am__objects_3) \
-#	$(am__objects_3) $(am__objects_3) \
-#	$(am__objects_3) $(am__objects_3)
-#am__objects_8 = qt/qt_libbitcoinqt_a-moc_addressbookpage.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_addresstablemodel.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_askpassphrasedialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_bantablemodel.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_bitcoinaddressvalidator.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_bitcoinamountfield.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_bitcoingui.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_bitcoinunits.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_clientmodel.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_coincontroldialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_coincontroltreewidget.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_csvmodelwriter.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_darksendconfig.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_editaddressdialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_guiutil.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_intro.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_macdockiconhandler.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_macnotificationhandler.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_masternodelist.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_notificator.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_openuridialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_optionsdialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_optionsmodel.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_overviewpage.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_peertablemodel.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_paymentserver.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_qvalidatedlineedit.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_qvaluecombobox.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_receivecoinsdialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_receiverequestdialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_recentrequeststablemodel.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_rpcconsole.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_sendcoinsdialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_sendcoinsentry.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_signverifymessagedialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_splashscreen.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_trafficgraphwidget.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_transactiondesc.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_transactiondescdialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_transactionfilterproxy.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_transactiontablemodel.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_transactionview.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_utilitydialog.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_walletframe.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_walletmodel.$(OBJEXT) \
-#	qt/qt_libbitcoinqt_a-moc_walletview.$(OBJEXT)
-#am__objects_9 = qt/qt_libbitcoinqt_a-paymentrequest.pb.$(OBJEXT)
-#am__objects_10 =  \
-#	qt/qt_libbitcoinqt_a-qrc_moondex.$(OBJEXT)
-#am__objects_11 = qt/qt_libbitcoinqt_a-qrc_moondex_locale.$(OBJEXT)
-#nodist_qt_libbitcoinqt_a_OBJECTS = $(am__objects_8) \
-#	$(am__objects_3) $(am__objects_9) \
-#	$(am__objects_3) $(am__objects_10) \
-#	$(am__objects_11)
+am__objects_5 = qt/qt_libbitcoinqt_a-winshutdownmonitor.$(OBJEXT)
+am__objects_6 = qt/qt_libbitcoinqt_a-addressbookpage.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-addresstablemodel.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-askpassphrasedialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-coincontroldialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-coincontroltreewidget.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-darksendconfig.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-editaddressdialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-masternodelist.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-openuridialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-overviewpage.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-paymentrequestplus.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-paymentserver.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-receivecoinsdialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-receiverequestdialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-recentrequeststablemodel.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-sendcoinsdialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-sendcoinsentry.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-signverifymessagedialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-transactiondesc.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-transactiondescdialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-transactionfilterproxy.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-transactionrecord.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-transactiontablemodel.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-transactionview.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-walletframe.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-walletmodel.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-walletmodeltransaction.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-walletview.$(OBJEXT)
+am__objects_7 =  \
+	qt/qt_libbitcoinqt_a-bantablemodel.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-bitcoinaddressvalidator.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-bitcoinamountfield.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-bitcoingui.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-bitcoinunits.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-clientmodel.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-csvmodelwriter.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-guiutil.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-intro.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-networkstyle.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-notificator.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-optionsdialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-optionsmodel.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-peertablemodel.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-platformstyle.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-qvalidatedlineedit.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-qvaluecombobox.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-rpcconsole.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-splashscreen.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-trafficgraphwidget.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-utilitydialog.$(OBJEXT) \
+	$(am__objects_5) $(am__objects_6)
+am_qt_libbitcoinqt_a_OBJECTS = $(am__objects_7) \
+	$(am__objects_3) $(am__objects_3) \
+	$(am__objects_3) $(am__objects_3) \
+	$(am__objects_3) $(am__objects_3) \
+	$(am__objects_3) $(am__objects_3) \
+	$(am__objects_3) $(am__objects_3)
+am__objects_8 = qt/qt_libbitcoinqt_a-moc_addressbookpage.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_addresstablemodel.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_askpassphrasedialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_bantablemodel.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_bitcoinaddressvalidator.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_bitcoinamountfield.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_bitcoingui.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_bitcoinunits.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_clientmodel.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_coincontroldialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_coincontroltreewidget.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_csvmodelwriter.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_darksendconfig.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_editaddressdialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_guiutil.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_intro.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_macdockiconhandler.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_macnotificationhandler.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_masternodelist.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_notificator.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_openuridialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_optionsdialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_optionsmodel.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_overviewpage.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_peertablemodel.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_paymentserver.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_qvalidatedlineedit.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_qvaluecombobox.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_receivecoinsdialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_receiverequestdialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_recentrequeststablemodel.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_rpcconsole.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_sendcoinsdialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_sendcoinsentry.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_signverifymessagedialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_splashscreen.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_trafficgraphwidget.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_transactiondesc.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_transactiondescdialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_transactionfilterproxy.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_transactiontablemodel.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_transactionview.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_utilitydialog.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_walletframe.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_walletmodel.$(OBJEXT) \
+	qt/qt_libbitcoinqt_a-moc_walletview.$(OBJEXT)
+am__objects_9 = qt/qt_libbitcoinqt_a-paymentrequest.pb.$(OBJEXT)
+am__objects_10 =  \
+	qt/qt_libbitcoinqt_a-qrc_SMScoin.$(OBJEXT)
+am__objects_11 = qt/qt_libbitcoinqt_a-qrc_SMScoin_locale.$(OBJEXT)
+nodist_qt_libbitcoinqt_a_OBJECTS = $(am__objects_8) \
+	$(am__objects_3) $(am__objects_9) \
+	$(am__objects_3) $(am__objects_10) \
+	$(am__objects_11)
 qt_libbitcoinqt_a_OBJECTS = $(am_qt_libbitcoinqt_a_OBJECTS) \
 	$(nodist_qt_libbitcoinqt_a_OBJECTS)
 am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
@@ -957,157 +957,157 @@ libbitcoinconsensus_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(libbitcoinconsensus_la_LDFLAGS) $(LDFLAGS) -o $@
 am_libbitcoinconsensus_la_rpath = -rpath \
 	$(libdir)
-am__EXEEXT_1 = moondexd$(EXEEXT)
-am__EXEEXT_2 = moondex-cli$(EXEEXT) \
-	moondex-tx$(EXEEXT)
-#am__EXEEXT_3 = test/test_moondex$(EXEEXT)
-am__EXEEXT_4 = bench/bench_moondex$(EXEEXT)
-#am__EXEEXT_5 = qt/moondex-qt$(EXEEXT)
-#am__EXEEXT_6 = qt/test/test_moondex-qt$(EXEEXT)
+am__EXEEXT_1 = SMScoind$(EXEEXT)
+am__EXEEXT_2 = SMScoin-cli$(EXEEXT) \
+	SMScoin-tx$(EXEEXT)
+#am__EXEEXT_3 = test/test_SMScoin$(EXEEXT)
+am__EXEEXT_4 = bench/bench_SMScoin$(EXEEXT)
+am__EXEEXT_5 = qt/SMScoin-qt$(EXEEXT)
+#am__EXEEXT_6 = qt/test/test_SMScoin-qt$(EXEEXT)
 PROGRAMS = $(bin_PROGRAMS)
-am__bench_bench_moondex_SOURCES_DIST = bench/bench_moondex.cpp \
+am__SMScoin_cli_SOURCES_DIST = SMScoin-cli.cpp SMScoin-cli-res.rc
+am__objects_13 = SMScoin-cli-res.$(OBJEXT)
+am_SMScoin_cli_OBJECTS = SMScoin_cli-SMScoin-cli.$(OBJEXT) \
+	$(am__objects_13)
+SMScoin_cli_OBJECTS = $(am_SMScoin_cli_OBJECTS)
+am__DEPENDENCIES_1 =
+SMScoin_cli_DEPENDENCIES = $(LIBBITCOIN_CLI) $(LIBUNIVALUE) \
+	$(LIBBITCOIN_UTIL) $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+SMScoin_cli_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(SMScoin_cli_CXXFLAGS) \
+	$(CXXFLAGS) $(SMScoin_cli_LDFLAGS) $(LDFLAGS) -o $@
+am__SMScoin_tx_SOURCES_DIST = SMScoin-tx.cpp SMScoin-tx-res.rc
+am__objects_14 = SMScoin-tx-res.$(OBJEXT)
+am_SMScoin_tx_OBJECTS = SMScoin_tx-SMScoin-tx.$(OBJEXT) \
+	$(am__objects_14)
+SMScoin_tx_OBJECTS = $(am_SMScoin_tx_OBJECTS)
+SMScoin_tx_DEPENDENCIES = $(LIBUNIVALUE) $(LIBBITCOIN_COMMON) \
+	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBSECP256K1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+SMScoin_tx_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(SMScoin_tx_CXXFLAGS) \
+	$(CXXFLAGS) $(SMScoin_tx_LDFLAGS) $(LDFLAGS) -o $@
+am__SMScoind_SOURCES_DIST = SMScoind.cpp SMScoind-res.rc
+am__objects_15 = SMScoind-res.$(OBJEXT)
+am_SMScoind_OBJECTS = SMScoind-SMScoind.$(OBJEXT) $(am__objects_15)
+SMScoind_OBJECTS = $(am_SMScoind_OBJECTS)
+am__DEPENDENCIES_2 = $(am__append_14)
+am__DEPENDENCIES_3 = $(am__append_15)
+#am__DEPENDENCIES_4 = $(LIBBITCOIN_ZMQ) \
+#	$(am__DEPENDENCIES_1)
+SMScoind_DEPENDENCIES = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
+	$(LIBUNIVALUE) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
+	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_3) $(LIBSECP256K1) \
+	$(am__DEPENDENCIES_4) $(am__append_9) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+SMScoind_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(SMScoind_CXXFLAGS) \
+	$(CXXFLAGS) $(SMScoind_LDFLAGS) $(LDFLAGS) -o $@
+am__bench_bench_SMScoin_SOURCES_DIST = bench/bench_SMScoin.cpp \
 	bench/bench.cpp bench/bench.h bench/Examples.cpp
-am_bench_bench_moondex_OBJECTS = bench/bench_bench_moondex-bench_moondex.$(OBJEXT) \
-	bench/bench_bench_moondex-bench.$(OBJEXT) \
-	bench/bench_bench_moondex-Examples.$(OBJEXT)
-bench_bench_moondex_OBJECTS = $(am_bench_bench_moondex_OBJECTS)
-am__DEPENDENCIES_1 = $(am__append_14)
-am__DEPENDENCIES_2 = $(am__append_15)
-am__DEPENDENCIES_3 =
-#am__DEPENDENCIES_4 =  \
+am_bench_bench_SMScoin_OBJECTS = bench/bench_bench_SMScoin-bench_SMScoin.$(OBJEXT) \
+	bench/bench_bench_SMScoin-bench.$(OBJEXT) \
+	bench/bench_bench_SMScoin-Examples.$(OBJEXT)
+bench_bench_SMScoin_OBJECTS = $(am_bench_bench_SMScoin_OBJECTS)
+#am__DEPENDENCIES_5 =  \
 #	$(LIBBITCOIN_ZMQ) \
-#	$(am__DEPENDENCIES_3)
-bench_bench_moondex_DEPENDENCIES =  \
+#	$(am__DEPENDENCIES_1)
+bench_bench_SMScoin_DEPENDENCIES =  \
 	$(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_2) \
-	$(LIBSECP256K1) $(am__DEPENDENCIES_4) \
-	$(am__append_30) $(am__DEPENDENCIES_3) \
-	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3) \
-	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3) \
-	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3)
-bench_bench_moondex_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_3) \
+	$(LIBSECP256K1) $(am__DEPENDENCIES_5) \
+	$(am__append_30) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+bench_bench_SMScoin_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(bench_bench_moondex_CXXFLAGS) $(CXXFLAGS) \
-	$(bench_bench_moondex_LDFLAGS) $(LDFLAGS) -o $@
-am__moondex_cli_SOURCES_DIST = moondex-cli.cpp moondex-cli-res.rc
-#am__objects_13 = moondex-cli-res.$(OBJEXT)
-am_moondex_cli_OBJECTS = moondex_cli-moondex-cli.$(OBJEXT) \
-	$(am__objects_13)
-moondex_cli_OBJECTS = $(am_moondex_cli_OBJECTS)
-moondex_cli_DEPENDENCIES = $(LIBBITCOIN_CLI) $(LIBUNIVALUE) \
-	$(LIBBITCOIN_UTIL) $(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3) \
-	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3)
-moondex_cli_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(moondex_cli_CXXFLAGS) \
-	$(CXXFLAGS) $(moondex_cli_LDFLAGS) $(LDFLAGS) -o $@
-am__moondex_tx_SOURCES_DIST = moondex-tx.cpp moondex-tx-res.rc
-#am__objects_14 = moondex-tx-res.$(OBJEXT)
-am_moondex_tx_OBJECTS = moondex_tx-moondex-tx.$(OBJEXT) \
-	$(am__objects_14)
-moondex_tx_OBJECTS = $(am_moondex_tx_OBJECTS)
-moondex_tx_DEPENDENCIES = $(LIBUNIVALUE) $(LIBBITCOIN_COMMON) \
-	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBSECP256K1) \
-	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3)
-moondex_tx_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(moondex_tx_CXXFLAGS) \
-	$(CXXFLAGS) $(moondex_tx_LDFLAGS) $(LDFLAGS) -o $@
-am__moondexd_SOURCES_DIST = moondexd.cpp moondexd-res.rc
-#am__objects_15 = moondexd-res.$(OBJEXT)
-am_moondexd_OBJECTS = moondexd-moondexd.$(OBJEXT) $(am__objects_15)
-moondexd_OBJECTS = $(am_moondexd_OBJECTS)
-#am__DEPENDENCIES_5 = $(LIBBITCOIN_ZMQ) \
-#	$(am__DEPENDENCIES_3)
-moondexd_DEPENDENCIES = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
-	$(LIBUNIVALUE) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_2) $(LIBSECP256K1) \
-	$(am__DEPENDENCIES_5) $(am__append_9) $(am__DEPENDENCIES_3) \
-	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3) \
-	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3) \
-	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3)
-moondexd_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(moondexd_CXXFLAGS) \
-	$(CXXFLAGS) $(moondexd_LDFLAGS) $(LDFLAGS) -o $@
-am__qt_moondex_qt_SOURCES_DIST = qt/moondex.cpp \
+	$(bench_bench_SMScoin_CXXFLAGS) $(CXXFLAGS) \
+	$(bench_bench_SMScoin_LDFLAGS) $(LDFLAGS) -o $@
+am__qt_SMScoin_qt_SOURCES_DIST = qt/SMScoin.cpp \
 	qt/macdockiconhandler.mm qt/macnotificationhandler.mm \
-	qt/res/moondex-qt-res.rc
-#am__objects_16 =  \
-#	qt/qt_moondex_qt-macdockiconhandler.$(OBJEXT) \
-#	qt/qt_moondex_qt-macnotificationhandler.$(OBJEXT)
-##am__objects_17 =  \
-##	$(am__objects_16)
-#am__objects_18 = qt/res/moondex-qt-res.$(OBJEXT)
-##am__objects_19 =  \
-##	$(am__objects_18)
-#am_qt_moondex_qt_OBJECTS =  \
-#	qt/qt_moondex_qt-moondex.$(OBJEXT) \
-#	$(am__objects_17) $(am__objects_19)
-qt_moondex_qt_OBJECTS = $(am_qt_moondex_qt_OBJECTS)
-##am__DEPENDENCIES_6 =  \
-##	$(LIBBITCOIN_ZMQ) \
-##	$(am__DEPENDENCIES_3)
-#qt_moondex_qt_DEPENDENCIES = qt/libbitcoinqt.a \
-#	$(LIBBITCOIN_SERVER) $(am__append_38) \
-#	$(am__DEPENDENCIES_6) $(LIBBITCOIN_CLI) \
-#	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
-#	$(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) \
-#	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_2) \
-#	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3) $(LIBSECP256K1) \
-#	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3)
-qt_moondex_qt_LINK = $(LIBTOOL) $(AM_V_lt) \
-	$(qt_moondex_qt_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link \
+	qt/res/SMScoin-qt-res.rc
+am__objects_16 =  \
+	qt/qt_SMScoin_qt-macdockiconhandler.$(OBJEXT) \
+	qt/qt_SMScoin_qt-macnotificationhandler.$(OBJEXT)
+#am__objects_17 =  \
+#	$(am__objects_16)
+am__objects_18 = qt/res/SMScoin-qt-res.$(OBJEXT)
+am__objects_19 =  \
+	$(am__objects_18)
+am_qt_SMScoin_qt_OBJECTS =  \
+	qt/qt_SMScoin_qt-SMScoin.$(OBJEXT) \
+	$(am__objects_17) $(am__objects_19)
+qt_SMScoin_qt_OBJECTS = $(am_qt_SMScoin_qt_OBJECTS)
+#am__DEPENDENCIES_6 =  \
+#	$(LIBBITCOIN_ZMQ) \
+#	$(am__DEPENDENCIES_1)
+qt_SMScoin_qt_DEPENDENCIES = qt/libbitcoinqt.a \
+	$(LIBBITCOIN_SERVER) $(am__append_38) \
+	$(am__DEPENDENCIES_6) $(LIBBITCOIN_CLI) \
+	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
+	$(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) \
+	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_3) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(LIBSECP256K1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+qt_SMScoin_qt_LINK = $(LIBTOOL) $(AM_V_lt) \
+	$(qt_SMScoin_qt_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link \
 	$(OBJCXXLD) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) \
-	$(qt_moondex_qt_LDFLAGS) $(LDFLAGS) -o $@
-am__qt_test_test_moondex_qt_SOURCES_DIST = qt/test/compattests.cpp \
+	$(qt_SMScoin_qt_LDFLAGS) $(LDFLAGS) -o $@
+am__qt_test_test_SMScoin_qt_SOURCES_DIST = qt/test/compattests.cpp \
 	qt/test/test_main.cpp qt/test/uritests.cpp \
 	qt/test/compattests.h qt/test/uritests.h \
 	qt/test/paymentrequestdata.h qt/test/paymentservertests.h \
 	qt/test/paymentservertests.cpp
-#am__objects_20 = qt/test/qt_test_test_moondex_qt-paymentservertests.$(OBJEXT)
-#am_qt_test_test_moondex_qt_OBJECTS = qt/test/qt_test_test_moondex_qt-compattests.$(OBJEXT) \
-#	qt/test/qt_test_test_moondex_qt-test_main.$(OBJEXT) \
-#	qt/test/qt_test_test_moondex_qt-uritests.$(OBJEXT) \
+#am__objects_20 = qt/test/qt_test_test_SMScoin_qt-paymentservertests.$(OBJEXT)
+#am_qt_test_test_SMScoin_qt_OBJECTS = qt/test/qt_test_test_SMScoin_qt-compattests.$(OBJEXT) \
+#	qt/test/qt_test_test_SMScoin_qt-test_main.$(OBJEXT) \
+#	qt/test/qt_test_test_SMScoin_qt-uritests.$(OBJEXT) \
 #	$(am__objects_3) $(am__objects_20)
-#am__objects_21 = qt/test/qt_test_test_moondex_qt-moc_paymentservertests.$(OBJEXT)
-#am__objects_22 = qt/test/qt_test_test_moondex_qt-moc_compattests.$(OBJEXT) \
-#	qt/test/qt_test_test_moondex_qt-moc_uritests.$(OBJEXT) \
+#am__objects_21 = qt/test/qt_test_test_SMScoin_qt-moc_paymentservertests.$(OBJEXT)
+#am__objects_22 = qt/test/qt_test_test_SMScoin_qt-moc_compattests.$(OBJEXT) \
+#	qt/test/qt_test_test_SMScoin_qt-moc_uritests.$(OBJEXT) \
 #	$(am__objects_21)
-#nodist_qt_test_test_moondex_qt_OBJECTS =  \
+#nodist_qt_test_test_SMScoin_qt_OBJECTS =  \
 #	$(am__objects_22)
-qt_test_test_moondex_qt_OBJECTS =  \
-	$(am_qt_test_test_moondex_qt_OBJECTS) \
-	$(nodist_qt_test_test_moondex_qt_OBJECTS)
+qt_test_test_SMScoin_qt_OBJECTS =  \
+	$(am_qt_test_test_SMScoin_qt_OBJECTS) \
+	$(nodist_qt_test_test_SMScoin_qt_OBJECTS)
 ##am__DEPENDENCIES_7 =  \
 ##	$(LIBBITCOIN_ZMQ) \
-##	$(am__DEPENDENCIES_3)
-#qt_test_test_moondex_qt_DEPENDENCIES =  \
+##	$(am__DEPENDENCIES_1)
+#qt_test_test_SMScoin_qt_DEPENDENCIES =  \
 #	$(LIBBITCOINQT) $(LIBBITCOIN_SERVER) \
 #	$(am__append_45) $(am__DEPENDENCIES_7) \
 #	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
 #	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
-#	$(LIBUNIVALUE) $(am__DEPENDENCIES_1) \
-#	$(am__DEPENDENCIES_2) \
+#	$(LIBUNIVALUE) $(am__DEPENDENCIES_2) \
 #	$(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3) $(LIBSECP256K1) \
-#	$(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3)
-qt_test_test_moondex_qt_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) $(LIBSECP256K1) \
+#	$(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1)
+qt_test_test_SMScoin_qt_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) \
-	$(qt_test_test_moondex_qt_LDFLAGS) $(LDFLAGS) -o $@
-am__test_test_moondex_SOURCES_DIST = test/arith_uint256_tests.cpp \
+	$(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) \
+	$(qt_test_test_SMScoin_qt_LDFLAGS) $(LDFLAGS) -o $@
+am__test_test_SMScoin_SOURCES_DIST = test/arith_uint256_tests.cpp \
 	test/scriptnum10.h test/addrman_tests.cpp test/alert_tests.cpp \
 	test/allocator_tests.cpp test/base32_tests.cpp \
 	test/base58_tests.cpp test/base64_tests.cpp \
@@ -1130,7 +1130,7 @@ am__test_test_moondex_SOURCES_DIST = test/arith_uint256_tests.cpp \
 	test/scriptnum_tests.cpp test/serialize_tests.cpp \
 	test/sighash_tests.cpp test/sigopcount_tests.cpp \
 	test/skiplist_tests.cpp test/streams_tests.cpp \
-	test/test_moondex.cpp test/test_moondex.h \
+	test/test_SMScoin.cpp test/test_SMScoin.h \
 	test/timedata_tests.cpp test/transaction_tests.cpp \
 	test/txvalidationcache_tests.cpp test/versionbits_tests.cpp \
 	test/uint256_tests.cpp test/univalue_tests.cpp \
@@ -1141,90 +1141,90 @@ am__test_test_moondex_SOURCES_DIST = test/arith_uint256_tests.cpp \
 	test/data/base58_keys_invalid.json test/data/tx_invalid.json \
 	test/data/tx_valid.json test/data/sighash.json \
 	test/data/alertTests.raw
-#am__objects_23 = test/test_test_moondex-accounting_tests.$(OBJEXT) \
-#	wallet/test/test_test_moondex-wallet_tests.$(OBJEXT) \
-#	test/test_test_moondex-rpc_wallet_tests.$(OBJEXT)
-#am__objects_24 = test/test_test_moondex-arith_uint256_tests.$(OBJEXT) \
-#	test/test_test_moondex-addrman_tests.$(OBJEXT) \
-#	test/test_test_moondex-alert_tests.$(OBJEXT) \
-#	test/test_test_moondex-allocator_tests.$(OBJEXT) \
-#	test/test_test_moondex-base32_tests.$(OBJEXT) \
-#	test/test_test_moondex-base58_tests.$(OBJEXT) \
-#	test/test_test_moondex-base64_tests.$(OBJEXT) \
-#	test/test_test_moondex-bip32_tests.$(OBJEXT) \
-#	test/test_test_moondex-bloom_tests.$(OBJEXT) \
-#	test/test_test_moondex-bswap_tests.$(OBJEXT) \
-#	test/test_test_moondex-cachemap_tests.$(OBJEXT) \
-#	test/test_test_moondex-cachemultimap_tests.$(OBJEXT) \
-#	test/test_test_moondex-checkblock_tests.$(OBJEXT) \
-#	test/test_test_moondex-Checkpoints_tests.$(OBJEXT) \
-#	test/test_test_moondex-coins_tests.$(OBJEXT) \
-#	test/test_test_moondex-compress_tests.$(OBJEXT) \
-#	test/test_test_moondex-crypto_tests.$(OBJEXT) \
-#	test/test_test_moondex-DoS_tests.$(OBJEXT) \
-#	test/test_test_moondex-getarg_tests.$(OBJEXT) \
-#	test/test_test_moondex-hash_tests.$(OBJEXT) \
-#	test/test_test_moondex-key_tests.$(OBJEXT) \
-#	test/test_test_moondex-limitedmap_tests.$(OBJEXT) \
-#	test/test_test_moondex-dbwrapper_tests.$(OBJEXT) \
-#	test/test_test_moondex-main_tests.$(OBJEXT) \
-#	test/test_test_moondex-mempool_tests.$(OBJEXT) \
-#	test/test_test_moondex-merkle_tests.$(OBJEXT) \
-#	test/test_test_moondex-miner_tests.$(OBJEXT) \
-#	test/test_test_moondex-multisig_tests.$(OBJEXT) \
-#	test/test_test_moondex-netbase_tests.$(OBJEXT) \
-#	test/test_test_moondex-pmt_tests.$(OBJEXT) \
-#	test/test_test_moondex-policyestimator_tests.$(OBJEXT) \
-#	test/test_test_moondex-pow_tests.$(OBJEXT) \
-#	test/test_test_moondex-prevector_tests.$(OBJEXT) \
-#	test/test_test_moondex-ratecheck_tests.$(OBJEXT) \
-#	test/test_test_moondex-reverselock_tests.$(OBJEXT) \
-#	test/test_test_moondex-rpc_tests.$(OBJEXT) \
-#	test/test_test_moondex-sanity_tests.$(OBJEXT) \
-#	test/test_test_moondex-scheduler_tests.$(OBJEXT) \
-#	test/test_test_moondex-script_P2SH_tests.$(OBJEXT) \
-#	test/test_test_moondex-script_P2PKH_tests.$(OBJEXT) \
-#	test/test_test_moondex-script_tests.$(OBJEXT) \
-#	test/test_test_moondex-scriptnum_tests.$(OBJEXT) \
-#	test/test_test_moondex-serialize_tests.$(OBJEXT) \
-#	test/test_test_moondex-sighash_tests.$(OBJEXT) \
-#	test/test_test_moondex-sigopcount_tests.$(OBJEXT) \
-#	test/test_test_moondex-skiplist_tests.$(OBJEXT) \
-#	test/test_test_moondex-streams_tests.$(OBJEXT) \
-#	test/test_test_moondex-test_moondex.$(OBJEXT) \
-#	test/test_test_moondex-timedata_tests.$(OBJEXT) \
-#	test/test_test_moondex-transaction_tests.$(OBJEXT) \
-#	test/test_test_moondex-txvalidationcache_tests.$(OBJEXT) \
-#	test/test_test_moondex-versionbits_tests.$(OBJEXT) \
-#	test/test_test_moondex-uint256_tests.$(OBJEXT) \
-#	test/test_test_moondex-univalue_tests.$(OBJEXT) \
-#	test/test_test_moondex-util_tests.$(OBJEXT) \
+#am__objects_23 = test/test_test_SMScoin-accounting_tests.$(OBJEXT) \
+#	wallet/test/test_test_SMScoin-wallet_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-rpc_wallet_tests.$(OBJEXT)
+#am__objects_24 = test/test_test_SMScoin-arith_uint256_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-addrman_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-alert_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-allocator_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-base32_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-base58_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-base64_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-bip32_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-bloom_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-bswap_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-cachemap_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-cachemultimap_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-checkblock_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-Checkpoints_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-coins_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-compress_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-crypto_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-DoS_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-getarg_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-hash_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-key_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-limitedmap_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-dbwrapper_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-main_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-mempool_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-merkle_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-miner_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-multisig_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-netbase_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-pmt_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-policyestimator_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-pow_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-prevector_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-ratecheck_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-reverselock_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-rpc_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-sanity_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-scheduler_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-script_P2SH_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-script_P2PKH_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-script_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-scriptnum_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-serialize_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-sighash_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-sigopcount_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-skiplist_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-streams_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-test_SMScoin.$(OBJEXT) \
+#	test/test_test_SMScoin-timedata_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-transaction_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-txvalidationcache_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-versionbits_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-uint256_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-univalue_tests.$(OBJEXT) \
+#	test/test_test_SMScoin-util_tests.$(OBJEXT) \
 #	$(am__objects_23)
-#am_test_test_moondex_OBJECTS = $(am__objects_24) \
+#am_test_test_SMScoin_OBJECTS = $(am__objects_24) \
 #	$(am__objects_3) $(am__objects_3)
 #am__objects_25 = $(am__objects_3) $(am__objects_3)
-#nodist_test_test_moondex_OBJECTS =  \
+#nodist_test_test_SMScoin_OBJECTS =  \
 #	$(am__objects_25)
-test_test_moondex_OBJECTS = $(am_test_test_moondex_OBJECTS) \
-	$(nodist_test_test_moondex_OBJECTS)
+test_test_SMScoin_OBJECTS = $(am_test_test_SMScoin_OBJECTS) \
+	$(nodist_test_test_SMScoin_OBJECTS)
 am__DEPENDENCIES_8 = libbitcoinconsensus.la
 ##am__DEPENDENCIES_9 =  \
-##	$(am__DEPENDENCIES_3)
-#test_test_moondex_DEPENDENCIES =  \
+##	$(am__DEPENDENCIES_1)
+#test_test_SMScoin_DEPENDENCIES =  \
 #	$(LIBBITCOIN_SERVER) $(LIBBITCOIN_CLI) \
 #	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
 #	$(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) \
-#	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_2) \
-#	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3) \
+#	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_3) \
+#	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 #	$(LIBSECP256K1) $(am__append_25) \
-#	$(am__DEPENDENCIES_8) $(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_9)
-test_test_moondex_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+#	$(am__DEPENDENCIES_8) $(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_9)
+test_test_SMScoin_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(test_test_moondex_CXXFLAGS) $(CXXFLAGS) \
-	$(test_test_moondex_LDFLAGS) $(LDFLAGS) -o $@
+	$(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) \
+	$(test_test_SMScoin_LDFLAGS) $(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
@@ -1303,13 +1303,13 @@ SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) \
 	$(libbitcoin_wallet_a_SOURCES) $(libbitcoin_zmq_a_SOURCES) \
 	$(qt_libbitcoinqt_a_SOURCES) \
 	$(nodist_qt_libbitcoinqt_a_SOURCES) \
-	$(libbitcoinconsensus_la_SOURCES) \
-	$(bench_bench_moondex_SOURCES) $(moondex_cli_SOURCES) \
-	$(moondex_tx_SOURCES) $(moondexd_SOURCES) \
-	$(qt_moondex_qt_SOURCES) $(qt_test_test_moondex_qt_SOURCES) \
-	$(nodist_qt_test_test_moondex_qt_SOURCES) \
-	$(test_test_moondex_SOURCES) \
-	$(nodist_test_test_moondex_SOURCES)
+	$(libbitcoinconsensus_la_SOURCES) $(SMScoin_cli_SOURCES) \
+	$(SMScoin_tx_SOURCES) $(SMScoind_SOURCES) \
+	$(bench_bench_SMScoin_SOURCES) $(qt_SMScoin_qt_SOURCES) \
+	$(qt_test_test_SMScoin_qt_SOURCES) \
+	$(nodist_qt_test_test_SMScoin_qt_SOURCES) \
+	$(test_test_SMScoin_SOURCES) \
+	$(nodist_test_test_SMScoin_SOURCES)
 DIST_SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) \
 	$(am__leveldb_libleveldb_a_SOURCES_DIST) \
 	$(am__leveldb_libmemenv_a_SOURCES_DIST) \
@@ -1320,11 +1320,12 @@ DIST_SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) \
 	$(am__libbitcoin_zmq_a_SOURCES_DIST) \
 	$(am__qt_libbitcoinqt_a_SOURCES_DIST) \
 	$(am__libbitcoinconsensus_la_SOURCES_DIST) \
-	$(am__bench_bench_moondex_SOURCES_DIST) \
-	$(am__moondex_cli_SOURCES_DIST) $(am__moondex_tx_SOURCES_DIST) \
-	$(am__moondexd_SOURCES_DIST) $(am__qt_moondex_qt_SOURCES_DIST) \
-	$(am__qt_test_test_moondex_qt_SOURCES_DIST) \
-	$(am__test_test_moondex_SOURCES_DIST)
+	$(am__SMScoin_cli_SOURCES_DIST) $(am__SMScoin_tx_SOURCES_DIST) \
+	$(am__SMScoind_SOURCES_DIST) \
+	$(am__bench_bench_SMScoin_SOURCES_DIST) \
+	$(am__qt_SMScoin_qt_SOURCES_DIST) \
+	$(am__qt_test_test_SMScoin_qt_SOURCES_DIST) \
+	$(am__test_test_SMScoin_SOURCES_DIST)
 RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
 	ctags-recursive dvi-recursive html-recursive info-recursive \
 	install-data-recursive install-dvi-recursive \
@@ -1524,7 +1525,7 @@ am__set_TESTS_bases = \
   bases=`echo $$bases`
 RECHECK_LOGS = $(TEST_LOGS)
 TEST_SUITE_LOG = test-suite.log
-TEST_EXTENSIONS =  .test
+TEST_EXTENSIONS = .exe .test
 LOG_DRIVER = $(SHELL) $(top_srcdir)/build-aux/test-driver
 LOG_COMPILE = $(LOG_COMPILER) $(AM_LOG_FLAGS) $(LOG_FLAGS)
 am__set_b = \
@@ -1538,7 +1539,7 @@ am__set_b = \
       b='$*';; \
   esac
 am__test_logs1 = $(TESTS:=.log)
-am__test_logs2 = $(am__test_logs1:.log=.log)
+am__test_logs2 = $(am__test_logs1:.exe.log=.log)
 TEST_LOGS = $(am__test_logs2:.test.log=.log)
 TEST_LOG_DRIVER = $(SHELL) $(top_srcdir)/build-aux/test-driver
 TEST_LOG_COMPILE = $(TEST_LOG_COMPILER) $(AM_TEST_LOG_FLAGS) \
@@ -1576,36 +1577,36 @@ am__relativize = \
     dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
   done; \
   reldir="$$dir2"
-ACLOCAL = ${SHELL} /home/wijnand/MoonDEX/build-aux/missing aclocal-1.15
+ACLOCAL = ${SHELL} /home/wijnand/SMScoin/build-aux/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
-AR = /usr/bin/ar
+AR = /usr/bin/x86_64-w64-mingw32-ar
 ARFLAGS = cr
-AUTOCONF = ${SHELL} /home/wijnand/MoonDEX/build-aux/missing autoconf
-AUTOHEADER = ${SHELL} /home/wijnand/MoonDEX/build-aux/missing autoheader
-AUTOMAKE = ${SHELL} /home/wijnand/MoonDEX/build-aux/missing automake-1.15
+AUTOCONF = ${SHELL} /home/wijnand/SMScoin/build-aux/missing autoconf
+AUTOHEADER = ${SHELL} /home/wijnand/SMScoin/build-aux/missing autoheader
+AUTOMAKE = ${SHELL} /home/wijnand/SMScoin/build-aux/missing automake-1.15
 AWK = mawk
 BDB_CFLAGS = 
 BDB_CPPFLAGS = 
 BDB_LIBS = -ldb_cxx-4.8
-BITCOIN_CLI_NAME = moondex-cli
-BITCOIN_DAEMON_NAME = moondexd
-BITCOIN_GUI_NAME = moondex-qt
-BITCOIN_TX_NAME = moondex-tx
-BOOST_CHRONO_LIB = -lboost_chrono
-BOOST_CPPFLAGS = -DBOOST_SP_USE_STD_ATOMIC -DBOOST_AC_USE_STD_ATOMIC -pthread -I/usr/include
-BOOST_FILESYSTEM_LIB = -lboost_filesystem
-BOOST_LDFLAGS = -L/usr/lib/x86_64-linux-gnu
-BOOST_LIBS = -L/usr/lib/x86_64-linux-gnu -lboost_system -lboost_filesystem -lboost_program_options -lboost_thread -lboost_chrono
-BOOST_PROGRAM_OPTIONS_LIB = -lboost_program_options
-BOOST_SYSTEM_LIB = -lboost_system
-BOOST_THREAD_LIB = -lboost_thread
+BITCOIN_CLI_NAME = SMScoin-cli
+BITCOIN_DAEMON_NAME = SMScoind
+BITCOIN_GUI_NAME = SMScoin-qt
+BITCOIN_TX_NAME = SMScoin-tx
+BOOST_CHRONO_LIB = -lboost_chrono-mt-s
+BOOST_CPPFLAGS = -DBOOST_SP_USE_STD_ATOMIC -DBOOST_AC_USE_STD_ATOMIC -mthreads -I/home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../include
+BOOST_FILESYSTEM_LIB = -lboost_filesystem-mt-s
+BOOST_LDFLAGS = -L/home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../lib
+BOOST_LIBS = -L/home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../lib -lboost_system-mt-s -lboost_filesystem-mt-s -lboost_program_options-mt-s -lboost_thread_win32-mt-s -lboost_chrono-mt-s
+BOOST_PROGRAM_OPTIONS_LIB = -lboost_program_options-mt-s
+BOOST_SYSTEM_LIB = -lboost_system-mt-s
+BOOST_THREAD_LIB = -lboost_thread_win32-mt-s
 BOOST_UNIT_TEST_FRAMEWORK_LIB = 
 BREW = 
-CC = gcc
-CCACHE = 
+CC = /home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../native/bin/ccache x86_64-w64-mingw32-gcc
+CCACHE = /home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../native/bin/ccache
 CCDEPMODE = depmode=gcc3
-CFLAGS = -g -O2
+CFLAGS = -pipe -O2 
 CLIENT_VERSION_BUILD = 1
 CLIENT_VERSION_IS_RELEASE = true
 CLIENT_VERSION_MAJOR = 2
@@ -1615,19 +1616,19 @@ COPYRIGHT_HOLDERS = The %s developers
 COPYRIGHT_HOLDERS_FINAL = The SMScoin developers
 COPYRIGHT_HOLDERS_SUBSTITUTION = SMScoin
 COPYRIGHT_YEAR = 2018
-CPP = gcc -E
-CPPFILT = /usr/bin/c++filt
-CPPFLAGS =  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS
+CPP = x86_64-w64-mingw32-gcc -E
+CPPFILT = /usr/bin/x86_64-w64-mingw32-c++filt
+CPPFLAGS = -I/home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../include/  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64
 CRYPTO_CFLAGS = 
 CRYPTO_LIBS = -lcrypto
-CXX = g++ -std=c++11
-CXXCPP = g++ -std=c++11 -E
+CXX = /home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../native/bin/ccache x86_64-w64-mingw32-g++ -std=c++11
+CXXCPP = x86_64-w64-mingw32-g++ -std=c++11 -E
 CXXDEPMODE = depmode=gcc3
-CXXFLAGS = -g -O2 -Wall -Wextra -Wformat -Wvla -Wformat-security -Wno-unused-parameter
+CXXFLAGS = -pipe -O2 
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
-DLLTOOL = false
+DLLTOOL = x86_64-w64-mingw32-dlltool
 DSYMUTIL = 
 DUMPBIN = 
 ECHO_C = 
@@ -1637,19 +1638,19 @@ EGREP = /bin/grep -E
 ERROR_CXXFLAGS = 
 EVENT_CFLAGS = 
 EVENT_LIBS = -levent
-EVENT_PTHREADS_CFLAGS = -pthread
-EVENT_PTHREADS_LIBS = -levent_pthreads -levent
-EXEEXT = 
+EVENT_PTHREADS_CFLAGS = 
+EVENT_PTHREADS_LIBS = 
+EXEEXT = .exe
 EXTENDED_RPC_TESTS = 
 FGREP = /bin/grep -F
-GCOV = /usr/bin/gcov
+GCOV = /usr/bin/x86_64-w64-mingw32-gcov
 GENHTML = 
 GENISOIMAGE = 
 GIT = /usr/bin/git
 GREP = /bin/grep
 HARDENED_CPPFLAGS =  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
 HARDENED_CXXFLAGS =  -Wstack-protector -fstack-protector-all
-HARDENED_LDFLAGS =  -Wl,-z,relro -Wl,-z,now -pie
+HARDENED_LDFLAGS =  -Wl,--dynamicbase -Wl,--nxcompat -Wl,--high-entropy-va
 HAVE_CXX11 = 1
 HEXDUMP = /usr/bin/hexdump
 IMAGEMAGICK_CONVERT = 
@@ -1661,67 +1662,67 @@ INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LCOV = 
 LCOV_OPTS = 
-LD = /usr/bin/ld -m elf_x86_64
-LDFLAGS = 
+LD = /usr/bin/x86_64-w64-mingw32-ld
+LDFLAGS = -L/home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../lib 
 LEVELDB_ATOMIC_CPPFLAGS = -DLEVELDB_ATOMIC_PRESENT
 LEVELDB_ATOMIC_CXXFLAGS = -std=c++0x
 LEVELDB_CPPFLAGS =  $(am__append_16)
-LEVELDB_TARGET_FLAGS = -DOS_LINUX
+LEVELDB_TARGET_FLAGS = -DOS_WINDOWS
 LIBLEVELDB =  $(am__append_14)
 LIBMEMENV =  $(am__append_15)
 LIBOBJS = 
-LIBS = -lanl 
+LIBS = -lssp -lcrypt32 -liphlpapi -lshlwapi -lmswsock -lws2_32 -ladvapi32 -lrpcrt4 -luuid -loleaut32 -lole32 -lcomctl32 -lshell32 -lwinmm -lwinspool -lcomdlg32 -lgdi32 -luser32 -lkernel32 -lmingwthrd 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
-LIBTOOL_APP_LDFLAGS = 
+LIBTOOL_APP_LDFLAGS =  -all-static
 LIPO = 
 LN_S = ln -s
-LRELEASE = 
+LRELEASE = /home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../native/bin/lrelease
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
 LUPDATE = 
 MAINT = 
-MAKEINFO = ${SHELL} /home/wijnand/MoonDEX/build-aux/missing makeinfo
-MAKENSIS = 
+MAKEINFO = ${SHELL} /home/wijnand/SMScoin/build-aux/missing makeinfo
+MAKENSIS = none
 MANIFEST_TOOL = :
-MINIUPNPC_CPPFLAGS = 
+MINIUPNPC_CPPFLAGS = -DSTATICLIB -DMINIUPNP_STATICLIB
 MINIUPNPC_LIBS = -lminiupnpc
 MKDIR_P = /bin/mkdir -p
-MOC = 
+MOC = /home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../native/bin/moc
 MOC_DEFS = -DHAVE_CONFIG_H -I$(srcdir)
-NM = /usr/bin/nm -B
+NM = x86_64-w64-mingw32-nm
 NMEDIT = 
-OBJCOPY = /usr/bin/objcopy
-OBJCXX = g++
+OBJCOPY = /usr/bin/x86_64-w64-mingw32-objcopy
+OBJCXX = x86_64-w64-mingw32-g++
 OBJCXXDEPMODE = depmode=gcc3
 OBJCXXFLAGS = 
-OBJDUMP = objdump
+OBJDUMP = x86_64-w64-mingw32-objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
-PACKAGE = moondexcore
-PACKAGE_BUGREPORT = https://github.com/moondexcoin/moondexcoin/issues
+PACKAGE = SMScoin
+PACKAGE_BUGREPORT = https://github.com/SMScoin/smscoin
 PACKAGE_NAME = SMScoin
 PACKAGE_STRING = SMScoin 2.0.0
-PACKAGE_TARNAME = moondexcore
+PACKAGE_TARNAME = SMScoin
 PACKAGE_URL = 
 PACKAGE_VERSION = 2.0.0
 PATH_SEPARATOR = :
-PIC_FLAGS = -fPIC
-PIE_FLAGS = -fPIE
-PKG_CONFIG = /usr/bin/pkg-config
-PKG_CONFIG_LIBDIR = 
-PKG_CONFIG_PATH = 
+PIC_FLAGS = 
+PIE_FLAGS = 
+PKG_CONFIG = /usr/bin/pkg-config --static
+PKG_CONFIG_LIBDIR = /home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../lib/pkgconfig
+PKG_CONFIG_PATH = /home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../share/pkgconfig
 PORT = 
 PROTOBUF_CFLAGS = 
-PROTOBUF_LIBS = 
-PROTOC = 
-PTHREAD_CC = gcc
+PROTOBUF_LIBS = -lprotobuf
+PROTOC = /home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../native/bin/protoc
+PTHREAD_CC = x86_64-w64-mingw32-gcc
 PTHREAD_CFLAGS = -pthread
 PTHREAD_LIBS = 
-PYTHON = /usr/bin/python3.5
-PYTHONPATH = 
+PYTHON = /usr/bin/python3.6
+PYTHONPATH = /home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../native/lib/python/dist-packages:
 QR_CFLAGS = 
-QR_LIBS = 
+QR_LIBS = -lqrencode
 QT4_CFLAGS = 
 QT4_LIBS = 
 QT5_CFLAGS = 
@@ -1734,19 +1735,19 @@ QTXCBQPA_CFLAGS =
 QTXCBQPA_LIBS = 
 QT_DBUS_CFLAGS = 
 QT_DBUS_INCLUDES = 
-QT_DBUS_LIBS = 
-QT_INCLUDES = 
-QT_LDFLAGS = 
-QT_LIBS = 
+QT_DBUS_LIBS = -lQt5DBus -L/home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../lib
+QT_INCLUDES = -I/home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../include -I/home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../include/QtCore -I/home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../include/QtGui -I/home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../include/QtWidgets -I/home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../include/QtNetwork -I/home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../include/QtTest -I/home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../include/QtDBus
+QT_LDFLAGS =  -mwindows
+QT_LIBS = -lqwindows -lqminimal -lQt5Widgets -lQt5Network -lQt5Gui     -lQt5Core    -lqtharfbuzzng -lqtpcre -limm32  -L/home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../lib -L/home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../plugins/platforms
 QT_PIE_FLAGS = 
-QT_SELECT = qt
+QT_SELECT = qt5
 QT_TEST_CFLAGS = 
 QT_TEST_INCLUDES = 
-QT_TEST_LIBS = 
-QT_TRANSLATION_DIR = 
-RANLIB = /usr/bin/ranlib
-RCC = 
-READELF = /usr/bin/readelf
+QT_TEST_LIBS = -lQt5Test -L/home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../lib
+QT_TRANSLATION_DIR = /home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../translations
+RANLIB = /usr/bin/x86_64-w64-mingw32-ranlib
+RCC = /home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../native/bin/rcc
+READELF = /usr/bin/x86_64-w64-mingw32-readelf
 RELDFLAGS = 
 RSVG_CONVERT = 
 SED = /bin/sed
@@ -1755,31 +1756,31 @@ SHELL = /bin/bash
 SSE42_CXXFLAGS = -msse4.2
 SSL_CFLAGS = 
 SSL_LIBS = -lssl
-STRIP = /usr/bin/strip
+STRIP = /usr/bin/x86_64-w64-mingw32-strip
 TESTDEFS = 
 TIFFCP = 
-UIC = 
+UIC = /home/wijnand/SMScoin/depends/x86_64-w64-mingw32/share/../native/bin/uic
 UNIVALUE_CFLAGS = -I$(srcdir)/univalue/include
 UNIVALUE_LIBS = univalue/libunivalue.la
 USE_QRCODE = 
 USE_UPNP = 
 VERSION = 2.0.0
-WINDOWS_BITS = 
-WINDRES = 
+WINDOWS_BITS = 64
+WINDRES = /usr/bin/x86_64-w64-mingw32-windres
 X11XCB_CFLAGS = 
 X11XCB_LIBS = 
 XGETTEXT = /usr/bin/xgettext
 ZMQ_CFLAGS = 
 ZMQ_LIBS = 
-abs_builddir = /home/wijnand/MoonDEX/src
-abs_srcdir = /home/wijnand/MoonDEX/src
-abs_top_builddir = /home/wijnand/MoonDEX
-abs_top_srcdir = /home/wijnand/MoonDEX
-ac_ct_AR = ar
-ac_ct_CC = gcc
-ac_ct_CXX = g++
+abs_builddir = /home/wijnand/SMScoin/src
+abs_srcdir = /home/wijnand/SMScoin/src
+abs_top_builddir = /home/wijnand/SMScoin
+abs_top_srcdir = /home/wijnand/SMScoin
+ac_ct_AR = 
+ac_ct_CC = 
+ac_ct_CXX = 
 ac_ct_DUMPBIN = 
-ac_ct_OBJCXX = g++
+ac_ct_OBJCXX = 
 am__include = include
 am__leading_dot = .
 am__quote = 
@@ -1798,15 +1799,15 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = x86_64-pc-linux-gnu
-host_alias = 
+host = x86_64-w64-mingw32
+host_alias = x86_64-w64-mingw32
 host_cpu = x86_64
-host_os = linux-gnu
-host_vendor = pc
+host_os = mingw32
+host_vendor = w64
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/wijnand/MoonDEX/build-aux/install-sh
+install_sh = ${SHELL} /home/wijnand/SMScoin/build-aux/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -1815,7 +1816,7 @@ mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /usr/local
+prefix = /home/wijnand/SMScoin/depends/x86_64-w64-mingw32
 program_transform_name = s,x,x,
 psdir = ${docdir}
 runstatedir = ${localstatedir}/run
@@ -1979,7 +1980,7 @@ BITCOIN_CORE_H = \
   zmq/zmqpublishnotifier.h
 
 
-# server: shared between moondexd and moondex-qt
+# server: shared between SMScoind and SMScoin-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -2034,7 +2035,7 @@ libbitcoin_server_a_SOURCES = \
 #  zmq/zmqpublishnotifier.cpp
 
 
-# wallet: shared between moondexd and moondex-qt, but only linked
+# wallet: shared between SMScoind and SMScoin-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -2125,7 +2126,7 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/sha512.h
 
 
-# common: shared between moondexd, and moondex-qt and non-server tools
+# common: shared between SMScoind, and SMScoin-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -2168,7 +2169,7 @@ libbitcoin_util_a_SOURCES = support/pagelocker.cpp chainparamsbase.cpp \
 	util.cpp utilmoneystr.cpp utilstrencodings.cpp utiltime.cpp \
 	$(BITCOIN_CORE_H) $(am__append_6)
 
-# cli: shared between moondex-cli and moondex-qt
+# cli: shared between SMScoin-cli and SMScoin-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -2179,33 +2180,33 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-moondexd_SOURCES = moondexd.cpp $(am__append_7)
-moondexd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-moondexd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-moondexd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-moondexd_LDADD = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
+SMScoind_SOURCES = SMScoind.cpp $(am__append_7)
+SMScoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+SMScoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+SMScoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+SMScoind_LDADD = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 	$(LIBUNIVALUE) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
 	$(LIBLEVELDB) $(LIBMEMENV) $(LIBSECP256K1) $(am__append_8) \
 	$(am__append_9) $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) \
 	$(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) \
 	$(EVENT_LIBS)
 
-# moondex-cli binary #
-moondex_cli_SOURCES = moondex-cli.cpp $(am__append_10)
-moondex_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-moondex_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-moondex_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-moondex_cli_LDADD = $(LIBBITCOIN_CLI) $(LIBUNIVALUE) \
+# SMScoin-cli binary #
+SMScoin_cli_SOURCES = SMScoin-cli.cpp $(am__append_10)
+SMScoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+SMScoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+SMScoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+SMScoin_cli_LDADD = $(LIBBITCOIN_CLI) $(LIBUNIVALUE) \
 	$(LIBBITCOIN_UTIL) $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) \
 	$(EVENT_LIBS)
 #
 
-# moondex-tx binary #
-moondex_tx_SOURCES = moondex-tx.cpp $(am__append_11)
-moondex_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-moondex_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-moondex_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-moondex_tx_LDADD = $(LIBUNIVALUE) $(LIBBITCOIN_COMMON) \
+# SMScoin-tx binary #
+SMScoin_tx_SOURCES = SMScoin-tx.cpp $(am__append_11)
+SMScoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+SMScoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+SMScoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+SMScoin_tx_LDADD = $(LIBUNIVALUE) $(LIBBITCOIN_COMMON) \
 	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBSECP256K1) \
 	$(BOOST_LIBS) $(CRYPTO_LIBS)
 #
@@ -2297,7 +2298,7 @@ leveldb_libmemenv_a_CPPFLAGS = $(leveldb_libleveldb_a_CPPFLAGS)
 leveldb_libmemenv_a_CXXFLAGS = $(leveldb_libleveldb_a_CXXFLAGS)
 leveldb_libmemenv_a_SOURCES = leveldb/helpers/memenv/memenv.cc
 #TEST_SRCDIR = test
-#TEST_BINARY = test/test_moondex$(EXEEXT)
+#TEST_BINARY = test/test_SMScoin$(EXEEXT)
 #JSON_TEST_FILES = \
 #  test/data/script_tests.json \
 #  test/data/base58_keys_valid.json \
@@ -2346,7 +2347,7 @@ leveldb_libmemenv_a_SOURCES = leveldb/helpers/memenv/memenv.cc
 #	test/sigopcount_tests.cpp \
 #	test/skiplist_tests.cpp \
 #	test/streams_tests.cpp \
-#	test/test_moondex.cpp test/test_moondex.h \
+#	test/test_SMScoin.cpp test/test_SMScoin.h \
 #	test/timedata_tests.cpp \
 #	test/transaction_tests.cpp \
 #	test/txvalidationcache_tests.cpp \
@@ -2354,9 +2355,9 @@ leveldb_libmemenv_a_SOURCES = leveldb/helpers/memenv/memenv.cc
 #	test/uint256_tests.cpp \
 #	test/univalue_tests.cpp test/util_tests.cpp \
 #	$(am__append_24)
-#test_test_moondex_SOURCES = $(BITCOIN_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
-#test_test_moondex_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) -I$(builddir)/test/ $(TESTDEFS) $(EVENT_CFLAGS)
-#test_test_moondex_LDADD = $(LIBBITCOIN_SERVER) \
+#test_test_SMScoin_SOURCES = $(BITCOIN_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
+#test_test_SMScoin_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) -I$(builddir)/test/ $(TESTDEFS) $(EVENT_CFLAGS)
+#test_test_SMScoin_LDADD = $(LIBBITCOIN_SERVER) \
 #	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
 #	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
 #	$(LIBUNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) \
@@ -2367,21 +2368,21 @@ leveldb_libmemenv_a_SOURCES = leveldb/helpers/memenv/memenv.cc
 #	$(SSL_LIBS) $(CRYPTO_LIBS) \
 #	$(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) \
 #	$(EVENT_LIBS) $(am__append_26)
-#test_test_moondex_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-#test_test_moondex_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) -static
-#nodist_test_test_moondex_SOURCES = $(GENERATED_TEST_FILES)
+#test_test_SMScoin_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+#test_test_SMScoin_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) -static
+#nodist_test_test_SMScoin_SOURCES = $(GENERATED_TEST_FILES)
 #CLEAN_BITCOIN_TEST = test/*.gcda test/*.gcno $(GENERATED_TEST_FILES)
 BENCH_SRCDIR = bench
-BENCH_BINARY = bench/bench_moondex$(EXEEXT)
-bench_bench_moondex_SOURCES = \
-  bench/bench_moondex.cpp \
+BENCH_BINARY = bench/bench_SMScoin$(EXEEXT)
+bench_bench_SMScoin_SOURCES = \
+  bench/bench_SMScoin.cpp \
   bench/bench.cpp \
   bench/bench.h \
   bench/Examples.cpp
 
-bench_bench_moondex_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CLFAGS) $(EVENT_PTHREADS_CFLAGS) -I$(builddir)/bench/
-bench_bench_moondex_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bench_bench_moondex_LDADD = $(LIBBITCOIN_SERVER) \
+bench_bench_SMScoin_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CLFAGS) $(EVENT_PTHREADS_CFLAGS) -I$(builddir)/bench/
+bench_bench_SMScoin_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+bench_bench_SMScoin_LDADD = $(LIBBITCOIN_SERVER) \
 	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UNIVALUE) \
 	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
 	$(LIBLEVELDB) $(LIBMEMENV) $(LIBSECP256K1) \
@@ -2389,478 +2390,478 @@ bench_bench_moondex_LDADD = $(LIBBITCOIN_SERVER) \
 	$(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) \
 	$(CRYPTO_LIBS) $(MINIUPNPC_LIBS) \
 	$(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-bench_bench_moondex_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+bench_bench_SMScoin_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 CLEAN_BITCOIN_BENCH = bench/*.gcda bench/*.gcno
 
-# moondex qt core #
-#QT_TS = \
-#  qt/locale/moondex_bg.ts \
-#  qt/locale/moondex_de.ts \
-#  qt/locale/moondex_en.ts \
-#  qt/locale/moondex_es.ts \
-#  qt/locale/moondex_fi.ts \
-#  qt/locale/moondex_fr.ts \
-#  qt/locale/moondex_it.ts \
-#  qt/locale/moondex_ja.ts \
-#  qt/locale/moondex_pl.ts \
-#  qt/locale/moondex_pt.ts \
-#  qt/locale/moondex_ru.ts \
-#  qt/locale/moondex_sk.ts \
-#  qt/locale/moondex_sv.ts \
-#  qt/locale/moondex_vi.ts \
-#  qt/locale/moondex_zh_CN.ts \
-#  qt/locale/moondex_zh_TW.ts
+# SMScoin qt core #
+QT_TS = \
+  qt/locale/SMScoin_bg.ts \
+  qt/locale/SMScoin_de.ts \
+  qt/locale/SMScoin_en.ts \
+  qt/locale/SMScoin_es.ts \
+  qt/locale/SMScoin_fi.ts \
+  qt/locale/SMScoin_fr.ts \
+  qt/locale/SMScoin_it.ts \
+  qt/locale/SMScoin_ja.ts \
+  qt/locale/SMScoin_pl.ts \
+  qt/locale/SMScoin_pt.ts \
+  qt/locale/SMScoin_ru.ts \
+  qt/locale/SMScoin_sk.ts \
+  qt/locale/SMScoin_sv.ts \
+  qt/locale/SMScoin_vi.ts \
+  qt/locale/SMScoin_zh_CN.ts \
+  qt/locale/SMScoin_zh_TW.ts
 
-#QT_FORMS_UI = \
-#  qt/forms/addressbookpage.ui \
-#  qt/forms/askpassphrasedialog.ui \
-#  qt/forms/coincontroldialog.ui \
-#  qt/forms/darksendconfig.ui \
-#  qt/forms/editaddressdialog.ui \
-#  qt/forms/helpmessagedialog.ui \
-#  qt/forms/intro.ui \
-#  qt/forms/masternodelist.ui \
-#  qt/forms/openuridialog.ui \
-#  qt/forms/optionsdialog.ui \
-#  qt/forms/overviewpage.ui \
-#  qt/forms/receivecoinsdialog.ui \
-#  qt/forms/receiverequestdialog.ui \
-#  qt/forms/debugwindow.ui \
-#  qt/forms/sendcoinsdialog.ui \
-#  qt/forms/sendcoinsentry.ui \
-#  qt/forms/signverifymessagedialog.ui \
-#  qt/forms/transactiondescdialog.ui
+QT_FORMS_UI = \
+  qt/forms/addressbookpage.ui \
+  qt/forms/askpassphrasedialog.ui \
+  qt/forms/coincontroldialog.ui \
+  qt/forms/darksendconfig.ui \
+  qt/forms/editaddressdialog.ui \
+  qt/forms/helpmessagedialog.ui \
+  qt/forms/intro.ui \
+  qt/forms/masternodelist.ui \
+  qt/forms/openuridialog.ui \
+  qt/forms/optionsdialog.ui \
+  qt/forms/overviewpage.ui \
+  qt/forms/receivecoinsdialog.ui \
+  qt/forms/receiverequestdialog.ui \
+  qt/forms/debugwindow.ui \
+  qt/forms/sendcoinsdialog.ui \
+  qt/forms/sendcoinsentry.ui \
+  qt/forms/signverifymessagedialog.ui \
+  qt/forms/transactiondescdialog.ui
 
-#QT_MOC_CPP = \
-#  qt/moc_addressbookpage.cpp \
-#  qt/moc_addresstablemodel.cpp \
-#  qt/moc_askpassphrasedialog.cpp \
-#  qt/moc_bantablemodel.cpp \
-#  qt/moc_bitcoinaddressvalidator.cpp \
-#  qt/moc_bitcoinamountfield.cpp \
-#  qt/moc_bitcoingui.cpp \
-#  qt/moc_bitcoinunits.cpp \
-#  qt/moc_clientmodel.cpp \
-#  qt/moc_coincontroldialog.cpp \
-#  qt/moc_coincontroltreewidget.cpp \
-#  qt/moc_csvmodelwriter.cpp \
-#  qt/moc_darksendconfig.cpp \
-#  qt/moc_editaddressdialog.cpp \
-#  qt/moc_guiutil.cpp \
-#  qt/moc_intro.cpp \
-#  qt/moc_macdockiconhandler.cpp \
-#  qt/moc_macnotificationhandler.cpp \
-#  qt/moc_masternodelist.cpp \
-#  qt/moc_notificator.cpp \
-#  qt/moc_openuridialog.cpp \
-#  qt/moc_optionsdialog.cpp \
-#  qt/moc_optionsmodel.cpp \
-#  qt/moc_overviewpage.cpp \
-#  qt/moc_peertablemodel.cpp \
-#  qt/moc_paymentserver.cpp \
-#  qt/moc_qvalidatedlineedit.cpp \
-#  qt/moc_qvaluecombobox.cpp \
-#  qt/moc_receivecoinsdialog.cpp \
-#  qt/moc_receiverequestdialog.cpp \
-#  qt/moc_recentrequeststablemodel.cpp \
-#  qt/moc_rpcconsole.cpp \
-#  qt/moc_sendcoinsdialog.cpp \
-#  qt/moc_sendcoinsentry.cpp \
-#  qt/moc_signverifymessagedialog.cpp \
-#  qt/moc_splashscreen.cpp \
-#  qt/moc_trafficgraphwidget.cpp \
-#  qt/moc_transactiondesc.cpp \
-#  qt/moc_transactiondescdialog.cpp \
-#  qt/moc_transactionfilterproxy.cpp \
-#  qt/moc_transactiontablemodel.cpp \
-#  qt/moc_transactionview.cpp \
-#  qt/moc_utilitydialog.cpp \
-#  qt/moc_walletframe.cpp \
-#  qt/moc_walletmodel.cpp \
-#  qt/moc_walletview.cpp
+QT_MOC_CPP = \
+  qt/moc_addressbookpage.cpp \
+  qt/moc_addresstablemodel.cpp \
+  qt/moc_askpassphrasedialog.cpp \
+  qt/moc_bantablemodel.cpp \
+  qt/moc_bitcoinaddressvalidator.cpp \
+  qt/moc_bitcoinamountfield.cpp \
+  qt/moc_bitcoingui.cpp \
+  qt/moc_bitcoinunits.cpp \
+  qt/moc_clientmodel.cpp \
+  qt/moc_coincontroldialog.cpp \
+  qt/moc_coincontroltreewidget.cpp \
+  qt/moc_csvmodelwriter.cpp \
+  qt/moc_darksendconfig.cpp \
+  qt/moc_editaddressdialog.cpp \
+  qt/moc_guiutil.cpp \
+  qt/moc_intro.cpp \
+  qt/moc_macdockiconhandler.cpp \
+  qt/moc_macnotificationhandler.cpp \
+  qt/moc_masternodelist.cpp \
+  qt/moc_notificator.cpp \
+  qt/moc_openuridialog.cpp \
+  qt/moc_optionsdialog.cpp \
+  qt/moc_optionsmodel.cpp \
+  qt/moc_overviewpage.cpp \
+  qt/moc_peertablemodel.cpp \
+  qt/moc_paymentserver.cpp \
+  qt/moc_qvalidatedlineedit.cpp \
+  qt/moc_qvaluecombobox.cpp \
+  qt/moc_receivecoinsdialog.cpp \
+  qt/moc_receiverequestdialog.cpp \
+  qt/moc_recentrequeststablemodel.cpp \
+  qt/moc_rpcconsole.cpp \
+  qt/moc_sendcoinsdialog.cpp \
+  qt/moc_sendcoinsentry.cpp \
+  qt/moc_signverifymessagedialog.cpp \
+  qt/moc_splashscreen.cpp \
+  qt/moc_trafficgraphwidget.cpp \
+  qt/moc_transactiondesc.cpp \
+  qt/moc_transactiondescdialog.cpp \
+  qt/moc_transactionfilterproxy.cpp \
+  qt/moc_transactiontablemodel.cpp \
+  qt/moc_transactionview.cpp \
+  qt/moc_utilitydialog.cpp \
+  qt/moc_walletframe.cpp \
+  qt/moc_walletmodel.cpp \
+  qt/moc_walletview.cpp
 
-#BITCOIN_MM = \
-#  qt/macdockiconhandler.mm \
-#  qt/macnotificationhandler.mm
+BITCOIN_MM = \
+  qt/macdockiconhandler.mm \
+  qt/macnotificationhandler.mm
 
-#QT_MOC = \
-#  qt/moondex.moc \
-#  qt/bitcoinamountfield.moc \
-#  qt/intro.moc \
-#  qt/overviewpage.moc \
-#  qt/rpcconsole.moc
+QT_MOC = \
+  qt/SMScoin.moc \
+  qt/bitcoinamountfield.moc \
+  qt/intro.moc \
+  qt/overviewpage.moc \
+  qt/rpcconsole.moc
 
-#QT_QRC_CPP = qt/qrc_moondex.cpp
-#QT_QRC = qt/moondex.qrc
-#QT_QRC_LOCALE_CPP = qt/qrc_moondex_locale.cpp
-#QT_QRC_LOCALE = qt/moondex_locale.qrc
-#PROTOBUF_CC = qt/paymentrequest.pb.cc
-#PROTOBUF_H = qt/paymentrequest.pb.h
-#PROTOBUF_PROTO = qt/paymentrequest.proto
-#BITCOIN_QT_H = \
-#  qt/addressbookpage.h \
-#  qt/addresstablemodel.h \
-#  qt/askpassphrasedialog.h \
-#  qt/bantablemodel.h \
-#  qt/bitcoinaddressvalidator.h \
-#  qt/bitcoinamountfield.h \
-#  qt/bitcoingui.h \
-#  qt/bitcoinunits.h \
-#  qt/clientmodel.h \
-#  qt/coincontroldialog.h \
-#  qt/coincontroltreewidget.h \
-#  qt/csvmodelwriter.h \
-#  qt/darksendconfig.h \
-#  qt/editaddressdialog.h \
-#  qt/guiconstants.h \
-#  qt/guiutil.h \
-#  qt/intro.h \
-#  qt/macdockiconhandler.h \
-#  qt/macnotificationhandler.h \
-#  qt/masternodelist.h \
-#  qt/networkstyle.h \
-#  qt/notificator.h \
-#  qt/openuridialog.h \
-#  qt/optionsdialog.h \
-#  qt/optionsmodel.h \
-#  qt/overviewpage.h \
-#  qt/paymentrequestplus.h \
-#  qt/paymentserver.h \
-#  qt/peertablemodel.h \
-#  qt/platformstyle.h \
-#  qt/qvalidatedlineedit.h \
-#  qt/qvaluecombobox.h \
-#  qt/receivecoinsdialog.h \
-#  qt/receiverequestdialog.h \
-#  qt/recentrequeststablemodel.h \
-#  qt/rpcconsole.h \
-#  qt/sendcoinsdialog.h \
-#  qt/sendcoinsentry.h \
-#  qt/signverifymessagedialog.h \
-#  qt/splashscreen.h \
-#  qt/trafficgraphwidget.h \
-#  qt/transactiondesc.h \
-#  qt/transactiondescdialog.h \
-#  qt/transactionfilterproxy.h \
-#  qt/transactionrecord.h \
-#  qt/transactiontablemodel.h \
-#  qt/transactionview.h \
-#  qt/utilitydialog.h \
-#  qt/walletframe.h \
-#  qt/walletmodel.h \
-#  qt/walletmodeltransaction.h \
-#  qt/walletview.h \
-#  qt/winshutdownmonitor.h
+QT_QRC_CPP = qt/qrc_SMScoin.cpp
+QT_QRC = qt/SMScoin.qrc
+QT_QRC_LOCALE_CPP = qt/qrc_SMScoin_locale.cpp
+QT_QRC_LOCALE = qt/SMScoin_locale.qrc
+PROTOBUF_CC = qt/paymentrequest.pb.cc
+PROTOBUF_H = qt/paymentrequest.pb.h
+PROTOBUF_PROTO = qt/paymentrequest.proto
+BITCOIN_QT_H = \
+  qt/addressbookpage.h \
+  qt/addresstablemodel.h \
+  qt/askpassphrasedialog.h \
+  qt/bantablemodel.h \
+  qt/bitcoinaddressvalidator.h \
+  qt/bitcoinamountfield.h \
+  qt/bitcoingui.h \
+  qt/bitcoinunits.h \
+  qt/clientmodel.h \
+  qt/coincontroldialog.h \
+  qt/coincontroltreewidget.h \
+  qt/csvmodelwriter.h \
+  qt/darksendconfig.h \
+  qt/editaddressdialog.h \
+  qt/guiconstants.h \
+  qt/guiutil.h \
+  qt/intro.h \
+  qt/macdockiconhandler.h \
+  qt/macnotificationhandler.h \
+  qt/masternodelist.h \
+  qt/networkstyle.h \
+  qt/notificator.h \
+  qt/openuridialog.h \
+  qt/optionsdialog.h \
+  qt/optionsmodel.h \
+  qt/overviewpage.h \
+  qt/paymentrequestplus.h \
+  qt/paymentserver.h \
+  qt/peertablemodel.h \
+  qt/platformstyle.h \
+  qt/qvalidatedlineedit.h \
+  qt/qvaluecombobox.h \
+  qt/receivecoinsdialog.h \
+  qt/receiverequestdialog.h \
+  qt/recentrequeststablemodel.h \
+  qt/rpcconsole.h \
+  qt/sendcoinsdialog.h \
+  qt/sendcoinsentry.h \
+  qt/signverifymessagedialog.h \
+  qt/splashscreen.h \
+  qt/trafficgraphwidget.h \
+  qt/transactiondesc.h \
+  qt/transactiondescdialog.h \
+  qt/transactionfilterproxy.h \
+  qt/transactionrecord.h \
+  qt/transactiontablemodel.h \
+  qt/transactionview.h \
+  qt/utilitydialog.h \
+  qt/walletframe.h \
+  qt/walletmodel.h \
+  qt/walletmodeltransaction.h \
+  qt/walletview.h \
+  qt/winshutdownmonitor.h
 
-#RES_ICONS = \
-#  qt/res/icons/bitcoin.ico \
-#  qt/res/icons/bitcoin.png \
-#  qt/res/icons/drkblue/add.png \
-#  qt/res/icons/drkblue/address-book.png \
-#  qt/res/icons/drkblue/browse.png \
-#  qt/res/icons/drkblue/clock1.png \
-#  qt/res/icons/drkblue/clock2.png \
-#  qt/res/icons/drkblue/clock3.png \
-#  qt/res/icons/drkblue/clock4.png \
-#  qt/res/icons/drkblue/clock5.png \
-#  qt/res/icons/drkblue/configure.png \
-#  qt/res/icons/drkblue/connect0_16.png \
-#  qt/res/icons/drkblue/connect1_16.png \
-#  qt/res/icons/drkblue/connect2_16.png \
-#  qt/res/icons/drkblue/connect3_16.png \
-#  qt/res/icons/drkblue/connect4_16.png \
-#  qt/res/icons/drkblue/debugwindow.png \
-#  qt/res/icons/drkblue/drkblue_editpaste.png \
-#  qt/res/icons/drkblue/drkblue_address-book.png \
-#  qt/res/icons/drkblue/drkblue_editcopy.png \
-#  qt/res/icons/drkblue/drkblue_remove.png \
-#  qt/res/icons/drkblue/edit.png \
-#  qt/res/icons/drkblue/editcopy.png \
-#  qt/res/icons/drkblue/editpaste.png \
-#  qt/res/icons/drkblue/export.png \
-#  qt/res/icons/drkblue/eye.png \
-#  qt/res/icons/drkblue/eye_minus.png \
-#  qt/res/icons/drkblue/eye_plus.png \
-#  qt/res/icons/drkblue/filesave.png \
-#  qt/res/icons/drkblue/history.png \
-#  qt/res/icons/drkblue/key.png \
-#  qt/res/icons/drkblue/lock_closed.png \
-#  qt/res/icons/drkblue/lock_open.png \
-#  qt/res/icons/drkblue/masternodes.png \
-#  qt/res/icons/drkblue/overview.png \
-#  qt/res/icons/drkblue/quit.png \
-#  qt/res/icons/drkblue/receive.png \
-#  qt/res/icons/drkblue/remove.png \
-#  qt/res/icons/drkblue/send.png \
-#  qt/res/icons/drkblue/synced.png \
-#  qt/res/icons/drkblue/transaction0.png \
-#  qt/res/icons/drkblue/transaction2.png \
-#  qt/res/icons/drkblue/transaction_conflicted.png \
-#  qt/res/icons/drkblue/tx_inout.png \
-#  qt/res/icons/drkblue/tx_input.png \
-#  qt/res/icons/drkblue/tx_output.png \
-#  qt/res/icons/drkblue/tx_mined.png \
-#  qt/res/icons/drkblue/about.png \
-#  qt/res/icons/drkblue/about_qt.png \
-#  qt/res/icons/drkblue/verify.png \
-#  qt/res/icons/crownium/add.png \
-#  qt/res/icons/crownium/address-book.png \
-#  qt/res/icons/crownium/browse.png \
-#  qt/res/icons/crownium/clock1.png \
-#  qt/res/icons/crownium/clock2.png \
-#  qt/res/icons/crownium/clock3.png \
-#  qt/res/icons/crownium/clock4.png \
-#  qt/res/icons/crownium/clock5.png \
-#  qt/res/icons/crownium/configure.png \
-#  qt/res/icons/crownium/connect0_16.png \
-#  qt/res/icons/crownium/connect1_16.png \
-#  qt/res/icons/crownium/connect2_16.png \
-#  qt/res/icons/crownium/connect3_16.png \
-#  qt/res/icons/crownium/connect4_16.png \
-#  qt/res/icons/crownium/debugwindow.png \
-#  qt/res/icons/crownium/drkblue_editpaste.png \
-#  qt/res/icons/crownium/drkblue_address-book.png \
-#  qt/res/icons/crownium/drkblue_editcopy.png \
-#  qt/res/icons/crownium/drkblue_remove.png \
-#  qt/res/icons/crownium/edit.png \
-#  qt/res/icons/crownium/editcopy.png \
-#  qt/res/icons/crownium/editpaste.png \
-#  qt/res/icons/crownium/export.png \
-#  qt/res/icons/crownium/eye.png \
-#  qt/res/icons/crownium/eye_minus.png \
-#  qt/res/icons/crownium/eye_plus.png \
-#  qt/res/icons/crownium/filesave.png \
-#  qt/res/icons/crownium/history.png \
-#  qt/res/icons/crownium/key.png \
-#  qt/res/icons/crownium/lock_closed.png \
-#  qt/res/icons/crownium/lock_open.png \
-#  qt/res/icons/crownium/masternodes.png \
-#  qt/res/icons/crownium/overview.png \
-#  qt/res/icons/crownium/quit.png \
-#  qt/res/icons/crownium/receive.png \
-#  qt/res/icons/crownium/remove.png \
-#  qt/res/icons/crownium/send.png \
-#  qt/res/icons/crownium/synced.png \
-#  qt/res/icons/crownium/transaction0.png \
-#  qt/res/icons/crownium/transaction2.png \
-#  qt/res/icons/crownium/transaction_conflicted.png \
-#  qt/res/icons/crownium/tx_inout.png \
-#  qt/res/icons/crownium/tx_input.png \
-#  qt/res/icons/crownium/tx_output.png \
-#  qt/res/icons/crownium/tx_mined.png \
-#  qt/res/icons/crownium/about.png \
-#  qt/res/icons/crownium/about_qt.png \
-#  qt/res/icons/crownium/verify.png \
-#  qt/res/icons/light/add.png \
-#  qt/res/icons/light/address-book.png \
-#  qt/res/icons/light/browse.png \
-#  qt/res/icons/light/clock1.png \
-#  qt/res/icons/light/clock2.png \
-#  qt/res/icons/light/clock3.png \
-#  qt/res/icons/light/clock4.png \
-#  qt/res/icons/light/clock5.png \
-#  qt/res/icons/light/configure.png \
-#  qt/res/icons/light/connect0_16.png \
-#  qt/res/icons/light/connect1_16.png \
-#  qt/res/icons/light/connect2_16.png \
-#  qt/res/icons/light/connect3_16.png \
-#  qt/res/icons/light/connect4_16.png \
-#  qt/res/icons/light/debugwindow.png \
-#  qt/res/icons/light/drkblue_editpaste.png \
-#  qt/res/icons/light/drkblue_address-book.png \
-#  qt/res/icons/light/drkblue_editcopy.png \
-#  qt/res/icons/light/drkblue_remove.png \
-#  qt/res/icons/light/edit.png \
-#  qt/res/icons/light/editcopy.png \
-#  qt/res/icons/light/editpaste.png \
-#  qt/res/icons/light/export.png \
-#  qt/res/icons/light/eye.png \
-#  qt/res/icons/light/eye_minus.png \
-#  qt/res/icons/light/eye_plus.png \
-#  qt/res/icons/light/filesave.png \
-#  qt/res/icons/light/history.png \
-#  qt/res/icons/light/key.png \
-#  qt/res/icons/light/lock_closed.png \
-#  qt/res/icons/light/lock_open.png \
-#  qt/res/icons/light/masternodes.png \
-#  qt/res/icons/light/overview.png \
-#  qt/res/icons/light/quit.png \
-#  qt/res/icons/light/receive.png \
-#  qt/res/icons/light/remove.png \
-#  qt/res/icons/light/send.png \
-#  qt/res/icons/light/synced.png \
-#  qt/res/icons/light/transaction0.png \
-#  qt/res/icons/light/transaction2.png \
-#  qt/res/icons/light/transaction_conflicted.png \
-#  qt/res/icons/light/tx_inout.png \
-#  qt/res/icons/light/tx_input.png \
-#  qt/res/icons/light/tx_output.png \
-#  qt/res/icons/light/tx_mined.png \
-#  qt/res/icons/light/about.png \
-#  qt/res/icons/light/about_qt.png \
-#  qt/res/icons/light/verify.png \
-#  qt/res/icons/trad/add.png \
-#  qt/res/icons/trad/address-book.png \
-#  qt/res/icons/trad/browse.png \
-#  qt/res/icons/trad/clock1.png \
-#  qt/res/icons/trad/clock2.png \
-#  qt/res/icons/trad/clock3.png \
-#  qt/res/icons/trad/clock4.png \
-#  qt/res/icons/trad/clock5.png \
-#  qt/res/icons/trad/configure.png \
-#  qt/res/icons/trad/connect0_16.png \
-#  qt/res/icons/trad/connect1_16.png \
-#  qt/res/icons/trad/connect2_16.png \
-#  qt/res/icons/trad/connect3_16.png \
-#  qt/res/icons/trad/connect4_16.png \
-#  qt/res/icons/trad/debugwindow.png \
-#  qt/res/icons/trad/drkblue_editpaste.png \
-#  qt/res/icons/trad/drkblue_address-book.png \
-#  qt/res/icons/trad/drkblue_editcopy.png \
-#  qt/res/icons/trad/drkblue_remove.png \
-#  qt/res/icons/trad/edit.png \
-#  qt/res/icons/trad/editcopy.png \
-#  qt/res/icons/trad/editpaste.png \
-#  qt/res/icons/trad/export.png \
-#  qt/res/icons/trad/eye.png \
-#  qt/res/icons/trad/eye_minus.png \
-#  qt/res/icons/trad/eye_plus.png \
-#  qt/res/icons/trad/filesave.png \
-#  qt/res/icons/trad/history.png \
-#  qt/res/icons/trad/key.png \
-#  qt/res/icons/trad/lock_closed.png \
-#  qt/res/icons/trad/lock_open.png \
-#  qt/res/icons/trad/masternodes.png \
-#  qt/res/icons/trad/overview.png \
-#  qt/res/icons/trad/quit.png \
-#  qt/res/icons/trad/receive.png \
-#  qt/res/icons/trad/remove.png \
-#  qt/res/icons/trad/send.png \
-#  qt/res/icons/trad/synced.png \
-#  qt/res/icons/trad/transaction0.png \
-#  qt/res/icons/trad/transaction2.png \
-#  qt/res/icons/trad/transaction_conflicted.png \
-#  qt/res/icons/trad/tx_inout.png \
-#  qt/res/icons/trad/tx_input.png \
-#  qt/res/icons/trad/tx_output.png \
-#  qt/res/icons/trad/tx_mined.png \
-#  qt/res/icons/trad/about.png \
-#  qt/res/icons/trad/about_qt.png \
-#  qt/res/icons/trad/verify.png
+RES_ICONS = \
+  qt/res/icons/bitcoin.ico \
+  qt/res/icons/bitcoin.png \
+  qt/res/icons/drkblue/add.png \
+  qt/res/icons/drkblue/address-book.png \
+  qt/res/icons/drkblue/browse.png \
+  qt/res/icons/drkblue/clock1.png \
+  qt/res/icons/drkblue/clock2.png \
+  qt/res/icons/drkblue/clock3.png \
+  qt/res/icons/drkblue/clock4.png \
+  qt/res/icons/drkblue/clock5.png \
+  qt/res/icons/drkblue/configure.png \
+  qt/res/icons/drkblue/connect0_16.png \
+  qt/res/icons/drkblue/connect1_16.png \
+  qt/res/icons/drkblue/connect2_16.png \
+  qt/res/icons/drkblue/connect3_16.png \
+  qt/res/icons/drkblue/connect4_16.png \
+  qt/res/icons/drkblue/debugwindow.png \
+  qt/res/icons/drkblue/drkblue_editpaste.png \
+  qt/res/icons/drkblue/drkblue_address-book.png \
+  qt/res/icons/drkblue/drkblue_editcopy.png \
+  qt/res/icons/drkblue/drkblue_remove.png \
+  qt/res/icons/drkblue/edit.png \
+  qt/res/icons/drkblue/editcopy.png \
+  qt/res/icons/drkblue/editpaste.png \
+  qt/res/icons/drkblue/export.png \
+  qt/res/icons/drkblue/eye.png \
+  qt/res/icons/drkblue/eye_minus.png \
+  qt/res/icons/drkblue/eye_plus.png \
+  qt/res/icons/drkblue/filesave.png \
+  qt/res/icons/drkblue/history.png \
+  qt/res/icons/drkblue/key.png \
+  qt/res/icons/drkblue/lock_closed.png \
+  qt/res/icons/drkblue/lock_open.png \
+  qt/res/icons/drkblue/masternodes.png \
+  qt/res/icons/drkblue/overview.png \
+  qt/res/icons/drkblue/quit.png \
+  qt/res/icons/drkblue/receive.png \
+  qt/res/icons/drkblue/remove.png \
+  qt/res/icons/drkblue/send.png \
+  qt/res/icons/drkblue/synced.png \
+  qt/res/icons/drkblue/transaction0.png \
+  qt/res/icons/drkblue/transaction2.png \
+  qt/res/icons/drkblue/transaction_conflicted.png \
+  qt/res/icons/drkblue/tx_inout.png \
+  qt/res/icons/drkblue/tx_input.png \
+  qt/res/icons/drkblue/tx_output.png \
+  qt/res/icons/drkblue/tx_mined.png \
+  qt/res/icons/drkblue/about.png \
+  qt/res/icons/drkblue/about_qt.png \
+  qt/res/icons/drkblue/verify.png \
+  qt/res/icons/crownium/add.png \
+  qt/res/icons/crownium/address-book.png \
+  qt/res/icons/crownium/browse.png \
+  qt/res/icons/crownium/clock1.png \
+  qt/res/icons/crownium/clock2.png \
+  qt/res/icons/crownium/clock3.png \
+  qt/res/icons/crownium/clock4.png \
+  qt/res/icons/crownium/clock5.png \
+  qt/res/icons/crownium/configure.png \
+  qt/res/icons/crownium/connect0_16.png \
+  qt/res/icons/crownium/connect1_16.png \
+  qt/res/icons/crownium/connect2_16.png \
+  qt/res/icons/crownium/connect3_16.png \
+  qt/res/icons/crownium/connect4_16.png \
+  qt/res/icons/crownium/debugwindow.png \
+  qt/res/icons/crownium/drkblue_editpaste.png \
+  qt/res/icons/crownium/drkblue_address-book.png \
+  qt/res/icons/crownium/drkblue_editcopy.png \
+  qt/res/icons/crownium/drkblue_remove.png \
+  qt/res/icons/crownium/edit.png \
+  qt/res/icons/crownium/editcopy.png \
+  qt/res/icons/crownium/editpaste.png \
+  qt/res/icons/crownium/export.png \
+  qt/res/icons/crownium/eye.png \
+  qt/res/icons/crownium/eye_minus.png \
+  qt/res/icons/crownium/eye_plus.png \
+  qt/res/icons/crownium/filesave.png \
+  qt/res/icons/crownium/history.png \
+  qt/res/icons/crownium/key.png \
+  qt/res/icons/crownium/lock_closed.png \
+  qt/res/icons/crownium/lock_open.png \
+  qt/res/icons/crownium/masternodes.png \
+  qt/res/icons/crownium/overview.png \
+  qt/res/icons/crownium/quit.png \
+  qt/res/icons/crownium/receive.png \
+  qt/res/icons/crownium/remove.png \
+  qt/res/icons/crownium/send.png \
+  qt/res/icons/crownium/synced.png \
+  qt/res/icons/crownium/transaction0.png \
+  qt/res/icons/crownium/transaction2.png \
+  qt/res/icons/crownium/transaction_conflicted.png \
+  qt/res/icons/crownium/tx_inout.png \
+  qt/res/icons/crownium/tx_input.png \
+  qt/res/icons/crownium/tx_output.png \
+  qt/res/icons/crownium/tx_mined.png \
+  qt/res/icons/crownium/about.png \
+  qt/res/icons/crownium/about_qt.png \
+  qt/res/icons/crownium/verify.png \
+  qt/res/icons/light/add.png \
+  qt/res/icons/light/address-book.png \
+  qt/res/icons/light/browse.png \
+  qt/res/icons/light/clock1.png \
+  qt/res/icons/light/clock2.png \
+  qt/res/icons/light/clock3.png \
+  qt/res/icons/light/clock4.png \
+  qt/res/icons/light/clock5.png \
+  qt/res/icons/light/configure.png \
+  qt/res/icons/light/connect0_16.png \
+  qt/res/icons/light/connect1_16.png \
+  qt/res/icons/light/connect2_16.png \
+  qt/res/icons/light/connect3_16.png \
+  qt/res/icons/light/connect4_16.png \
+  qt/res/icons/light/debugwindow.png \
+  qt/res/icons/light/drkblue_editpaste.png \
+  qt/res/icons/light/drkblue_address-book.png \
+  qt/res/icons/light/drkblue_editcopy.png \
+  qt/res/icons/light/drkblue_remove.png \
+  qt/res/icons/light/edit.png \
+  qt/res/icons/light/editcopy.png \
+  qt/res/icons/light/editpaste.png \
+  qt/res/icons/light/export.png \
+  qt/res/icons/light/eye.png \
+  qt/res/icons/light/eye_minus.png \
+  qt/res/icons/light/eye_plus.png \
+  qt/res/icons/light/filesave.png \
+  qt/res/icons/light/history.png \
+  qt/res/icons/light/key.png \
+  qt/res/icons/light/lock_closed.png \
+  qt/res/icons/light/lock_open.png \
+  qt/res/icons/light/masternodes.png \
+  qt/res/icons/light/overview.png \
+  qt/res/icons/light/quit.png \
+  qt/res/icons/light/receive.png \
+  qt/res/icons/light/remove.png \
+  qt/res/icons/light/send.png \
+  qt/res/icons/light/synced.png \
+  qt/res/icons/light/transaction0.png \
+  qt/res/icons/light/transaction2.png \
+  qt/res/icons/light/transaction_conflicted.png \
+  qt/res/icons/light/tx_inout.png \
+  qt/res/icons/light/tx_input.png \
+  qt/res/icons/light/tx_output.png \
+  qt/res/icons/light/tx_mined.png \
+  qt/res/icons/light/about.png \
+  qt/res/icons/light/about_qt.png \
+  qt/res/icons/light/verify.png \
+  qt/res/icons/trad/add.png \
+  qt/res/icons/trad/address-book.png \
+  qt/res/icons/trad/browse.png \
+  qt/res/icons/trad/clock1.png \
+  qt/res/icons/trad/clock2.png \
+  qt/res/icons/trad/clock3.png \
+  qt/res/icons/trad/clock4.png \
+  qt/res/icons/trad/clock5.png \
+  qt/res/icons/trad/configure.png \
+  qt/res/icons/trad/connect0_16.png \
+  qt/res/icons/trad/connect1_16.png \
+  qt/res/icons/trad/connect2_16.png \
+  qt/res/icons/trad/connect3_16.png \
+  qt/res/icons/trad/connect4_16.png \
+  qt/res/icons/trad/debugwindow.png \
+  qt/res/icons/trad/drkblue_editpaste.png \
+  qt/res/icons/trad/drkblue_address-book.png \
+  qt/res/icons/trad/drkblue_editcopy.png \
+  qt/res/icons/trad/drkblue_remove.png \
+  qt/res/icons/trad/edit.png \
+  qt/res/icons/trad/editcopy.png \
+  qt/res/icons/trad/editpaste.png \
+  qt/res/icons/trad/export.png \
+  qt/res/icons/trad/eye.png \
+  qt/res/icons/trad/eye_minus.png \
+  qt/res/icons/trad/eye_plus.png \
+  qt/res/icons/trad/filesave.png \
+  qt/res/icons/trad/history.png \
+  qt/res/icons/trad/key.png \
+  qt/res/icons/trad/lock_closed.png \
+  qt/res/icons/trad/lock_open.png \
+  qt/res/icons/trad/masternodes.png \
+  qt/res/icons/trad/overview.png \
+  qt/res/icons/trad/quit.png \
+  qt/res/icons/trad/receive.png \
+  qt/res/icons/trad/remove.png \
+  qt/res/icons/trad/send.png \
+  qt/res/icons/trad/synced.png \
+  qt/res/icons/trad/transaction0.png \
+  qt/res/icons/trad/transaction2.png \
+  qt/res/icons/trad/transaction_conflicted.png \
+  qt/res/icons/trad/tx_inout.png \
+  qt/res/icons/trad/tx_input.png \
+  qt/res/icons/trad/tx_output.png \
+  qt/res/icons/trad/tx_mined.png \
+  qt/res/icons/trad/about.png \
+  qt/res/icons/trad/about_qt.png \
+  qt/res/icons/trad/verify.png
 
-#BITCOIN_QT_CPP = qt/bantablemodel.cpp \
-#	qt/bitcoinaddressvalidator.cpp \
-#	qt/bitcoinamountfield.cpp qt/bitcoingui.cpp \
-#	qt/bitcoinunits.cpp qt/clientmodel.cpp \
-#	qt/csvmodelwriter.cpp qt/guiutil.cpp \
-#	qt/intro.cpp qt/networkstyle.cpp \
-#	qt/notificator.cpp qt/optionsdialog.cpp \
-#	qt/optionsmodel.cpp qt/peertablemodel.cpp \
-#	qt/platformstyle.cpp qt/qvalidatedlineedit.cpp \
-#	qt/qvaluecombobox.cpp qt/rpcconsole.cpp \
-#	qt/splashscreen.cpp qt/trafficgraphwidget.cpp \
-#	qt/utilitydialog.cpp $(am__append_34) \
-#	$(am__append_35)
-#RES_IMAGES = \
-#  qt/res/images/drkblue/about.png \
-#  qt/res/images/drkblue/splash.png \
-#  qt/res/images/drkblue/splash_testnet.png \
-#  qt/res/images/drkblue/moondex_logo_horizontal.png \
-#  qt/res/images/drkblue/unchecked.png \
-#  qt/res/images/drkblue/checked.png \
-#  qt/res/images/drkblue/drkblue_downArrow.png \
-#  qt/res/images/drkblue/drkblue_downArrow_small.png \
-#  qt/res/images/drkblue/drkblue_upArrow_small.png \
-#  qt/res/images/drkblue/drkblue_leftArrow_small.png \
-#  qt/res/images/drkblue/drkblue_rightArrow_small.png \
-#  qt/res/images/drkblue/drkblue_qtreeview_selected.png \
-#  qt/res/images/drkblue/drkblue_walletFrame_bg.png \
-#  qt/res/images/crownium/about.png \
-#  qt/res/images/crownium/splash.png \
-#  qt/res/images/crownium/splash_testnet.png \
-#  qt/res/images/crownium/moondex_logo_horizontal.png \
-#  qt/res/images/crownium/unchecked.png \
-#  qt/res/images/crownium/checked.png \
-#  qt/res/images/crownium/drkblue_downArrow.png \
-#  qt/res/images/crownium/drkblue_downArrow_small.png \
-#  qt/res/images/crownium/drkblue_upArrow_small.png \
-#  qt/res/images/crownium/drkblue_leftArrow_small.png \
-#  qt/res/images/crownium/drkblue_rightArrow_small.png \
-#  qt/res/images/crownium/drkblue_qtreeview_selected.png \
-#  qt/res/images/crownium/drkblue_walletFrame_bg.png \
-#  qt/res/images/light/about.png \
-#  qt/res/images/light/splash.png \
-#  qt/res/images/light/splash_testnet.png \
-#  qt/res/images/light/moondex_logo_horizontal.png \
-#  qt/res/images/light/unchecked.png \
-#  qt/res/images/light/checked.png \
-#  qt/res/images/light/drkblue_downArrow.png \
-#  qt/res/images/light/drkblue_downArrow_small.png \
-#  qt/res/images/light/drkblue_upArrow_small.png \
-#  qt/res/images/light/drkblue_leftArrow_small.png \
-#  qt/res/images/light/drkblue_rightArrow_small.png \
-#  qt/res/images/light/drkblue_qtreeview_selected.png \
-#  qt/res/images/light/drkblue_walletFrame_bg.png \
-#  qt/res/images/trad/about.png \
-#  qt/res/images/trad/splash.png \
-#  qt/res/images/trad/splash_testnet.png \
-#  qt/res/images/trad/moondex_logo_horizontal.png \
-#  qt/res/images/trad/drkblue_downArrow.png \
-#  qt/res/images/trad/drkblue_downArrow_small.png \
-#  qt/res/images/trad/drkblue_upArrow_small.png \
-#  qt/res/images/trad/drkblue_leftArrow_small.png \
-#  qt/res/images/trad/drkblue_rightArrow_small.png \
-#  qt/res/images/trad/drkblue_qtreeview_selected.png \
-#  qt/res/images/trad/drkblue_walletFrame_bg.png
+BITCOIN_QT_CPP = qt/bantablemodel.cpp \
+	qt/bitcoinaddressvalidator.cpp \
+	qt/bitcoinamountfield.cpp qt/bitcoingui.cpp \
+	qt/bitcoinunits.cpp qt/clientmodel.cpp \
+	qt/csvmodelwriter.cpp qt/guiutil.cpp \
+	qt/intro.cpp qt/networkstyle.cpp \
+	qt/notificator.cpp qt/optionsdialog.cpp \
+	qt/optionsmodel.cpp qt/peertablemodel.cpp \
+	qt/platformstyle.cpp qt/qvalidatedlineedit.cpp \
+	qt/qvaluecombobox.cpp qt/rpcconsole.cpp \
+	qt/splashscreen.cpp qt/trafficgraphwidget.cpp \
+	qt/utilitydialog.cpp $(am__append_34) \
+	$(am__append_35)
+RES_IMAGES = \
+  qt/res/images/drkblue/about.png \
+  qt/res/images/drkblue/splash.png \
+  qt/res/images/drkblue/splash_testnet.png \
+  qt/res/images/drkblue/SMScoin_logo_horizontal.png \
+  qt/res/images/drkblue/unchecked.png \
+  qt/res/images/drkblue/checked.png \
+  qt/res/images/drkblue/drkblue_downArrow.png \
+  qt/res/images/drkblue/drkblue_downArrow_small.png \
+  qt/res/images/drkblue/drkblue_upArrow_small.png \
+  qt/res/images/drkblue/drkblue_leftArrow_small.png \
+  qt/res/images/drkblue/drkblue_rightArrow_small.png \
+  qt/res/images/drkblue/drkblue_qtreeview_selected.png \
+  qt/res/images/drkblue/drkblue_walletFrame_bg.png \
+  qt/res/images/crownium/about.png \
+  qt/res/images/crownium/splash.png \
+  qt/res/images/crownium/splash_testnet.png \
+  qt/res/images/crownium/SMScoin_logo_horizontal.png \
+  qt/res/images/crownium/unchecked.png \
+  qt/res/images/crownium/checked.png \
+  qt/res/images/crownium/drkblue_downArrow.png \
+  qt/res/images/crownium/drkblue_downArrow_small.png \
+  qt/res/images/crownium/drkblue_upArrow_small.png \
+  qt/res/images/crownium/drkblue_leftArrow_small.png \
+  qt/res/images/crownium/drkblue_rightArrow_small.png \
+  qt/res/images/crownium/drkblue_qtreeview_selected.png \
+  qt/res/images/crownium/drkblue_walletFrame_bg.png \
+  qt/res/images/light/about.png \
+  qt/res/images/light/splash.png \
+  qt/res/images/light/splash_testnet.png \
+  qt/res/images/light/SMScoin_logo_horizontal.png \
+  qt/res/images/light/unchecked.png \
+  qt/res/images/light/checked.png \
+  qt/res/images/light/drkblue_downArrow.png \
+  qt/res/images/light/drkblue_downArrow_small.png \
+  qt/res/images/light/drkblue_upArrow_small.png \
+  qt/res/images/light/drkblue_leftArrow_small.png \
+  qt/res/images/light/drkblue_rightArrow_small.png \
+  qt/res/images/light/drkblue_qtreeview_selected.png \
+  qt/res/images/light/drkblue_walletFrame_bg.png \
+  qt/res/images/trad/about.png \
+  qt/res/images/trad/splash.png \
+  qt/res/images/trad/splash_testnet.png \
+  qt/res/images/trad/SMScoin_logo_horizontal.png \
+  qt/res/images/trad/drkblue_downArrow.png \
+  qt/res/images/trad/drkblue_downArrow_small.png \
+  qt/res/images/trad/drkblue_upArrow_small.png \
+  qt/res/images/trad/drkblue_leftArrow_small.png \
+  qt/res/images/trad/drkblue_rightArrow_small.png \
+  qt/res/images/trad/drkblue_qtreeview_selected.png \
+  qt/res/images/trad/drkblue_walletFrame_bg.png
 
-#RES_CSS = \
-#  qt/res/css/drkblue.css \
-#  qt/res/css/crownium.css \
-#  qt/res/css/light.css
+RES_CSS = \
+  qt/res/css/drkblue.css \
+  qt/res/css/crownium.css \
+  qt/res/css/light.css
 
-#RES_MOVIES = $(wildcard qt/res/movies/spinner-*.png)
-#BITCOIN_RC = qt/res/moondex-qt-res.rc
-#BITCOIN_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
-#  -I$(builddir)/qt/forms -DQT_NO_KEYWORDS
+RES_MOVIES = $(wildcard qt/res/movies/spinner-*.png)
+BITCOIN_RC = qt/res/SMScoin-qt-res.rc
+BITCOIN_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
+  -I$(builddir)/qt/forms -DQT_NO_KEYWORDS
 
-#qt_libbitcoinqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
-#  $(QT_INCLUDES) $(QT_DBUS_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
+qt_libbitcoinqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+  $(QT_INCLUDES) $(QT_DBUS_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
 
-#qt_libbitcoinqt_a_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
-#qt_libbitcoinqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
-#  $(QT_QRC) $(QT_QRC_LOCALE) $(QT_TS) $(PROTOBUF_PROTO) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_MOVIES)
+qt_libbitcoinqt_a_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_libbitcoinqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
+  $(QT_QRC) $(QT_QRC_LOCALE) $(QT_TS) $(PROTOBUF_PROTO) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_MOVIES)
 
-#nodist_qt_libbitcoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
-#  $(PROTOBUF_H) $(QT_QRC_CPP) $(QT_QRC_LOCALE_CPP)
+nodist_qt_libbitcoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
+  $(PROTOBUF_H) $(QT_QRC_CPP) $(QT_QRC_LOCALE_CPP)
 
 
 # forms/foo.h -> forms/ui_foo.h
-#QT_FORMS_H = $(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:.ui=.h))))
+QT_FORMS_H = $(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:.ui=.h))))
 
-# moondex-qt binary #
-#qt_moondex_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
-#  $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
+# SMScoin-qt binary #
+qt_SMScoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+  $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
 
-#qt_moondex_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
-#qt_moondex_qt_SOURCES = qt/moondex.cpp \
-#	$(am__append_36) $(am__append_37)
-#qt_moondex_qt_LDADD = qt/libbitcoinqt.a \
-#	$(LIBBITCOIN_SERVER) $(am__append_38) \
-#	$(am__append_39) $(LIBBITCOIN_CLI) \
-#	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
-#	$(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) \
-#	$(LIBLEVELDB) $(LIBMEMENV) $(BOOST_LIBS) \
-#	$(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) \
-#	$(PROTOBUF_LIBS) $(BDB_LIBS) $(SSL_LIBS) \
-#	$(CRYPTO_LIBS) $(MINIUPNPC_LIBS) \
-#	$(LIBSECP256K1) $(EVENT_PTHREADS_LIBS) \
-#	$(EVENT_LIBS)
-#qt_moondex_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-#qt_moondex_qt_LIBTOOLFLAGS = --tag CXX
+qt_SMScoin_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_SMScoin_qt_SOURCES = qt/SMScoin.cpp \
+	$(am__append_36) $(am__append_37)
+qt_SMScoin_qt_LDADD = qt/libbitcoinqt.a \
+	$(LIBBITCOIN_SERVER) $(am__append_38) \
+	$(am__append_39) $(LIBBITCOIN_CLI) \
+	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
+	$(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) \
+	$(LIBLEVELDB) $(LIBMEMENV) $(BOOST_LIBS) \
+	$(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) \
+	$(PROTOBUF_LIBS) $(BDB_LIBS) $(SSL_LIBS) \
+	$(CRYPTO_LIBS) $(MINIUPNPC_LIBS) \
+	$(LIBSECP256K1) $(EVENT_PTHREADS_LIBS) \
+	$(EVENT_LIBS)
+qt_SMScoin_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_SMScoin_qt_LIBTOOLFLAGS = --tag CXX
 
 #locale/foo.ts -> locale/foo.qm
-#QT_QM = $(QT_TS:.ts=.qm)
-#CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno
+QT_QM = $(QT_TS:.ts=.qm)
+CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno
 #TEST_QT_MOC_CPP = qt/test/moc_compattests.cpp \
 #	qt/test/moc_uritests.cpp \
 #	$(am__append_43)
@@ -2870,16 +2871,16 @@ CLEAN_BITCOIN_BENCH = bench/*.gcda bench/*.gcno
 #  qt/test/paymentrequestdata.h \
 #  qt/test/paymentservertests.h
 
-#qt_test_test_moondex_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+#qt_test_test_SMScoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
 #  $(QT_INCLUDES) $(QT_TEST_INCLUDES) $(PROTOBUF_CFLAGS)
 
-#qt_test_test_moondex_qt_SOURCES =  \
+#qt_test_test_SMScoin_qt_SOURCES =  \
 #	qt/test/compattests.cpp \
 #	qt/test/test_main.cpp \
 #	qt/test/uritests.cpp $(TEST_QT_H) \
 #	$(am__append_44)
-#nodist_qt_test_test_moondex_qt_SOURCES = $(TEST_QT_MOC_CPP)
-#qt_test_test_moondex_qt_LDADD = $(LIBBITCOINQT) \
+#nodist_qt_test_test_SMScoin_qt_SOURCES = $(TEST_QT_MOC_CPP)
+#qt_test_test_SMScoin_qt_LDADD = $(LIBBITCOINQT) \
 #	$(LIBBITCOIN_SERVER) $(am__append_45) \
 #	$(am__append_46) $(LIBBITCOIN_CLI) \
 #	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
@@ -2890,8 +2891,8 @@ CLEAN_BITCOIN_BENCH = bench/*.gcda bench/*.gcno
 #	$(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) \
 #	$(MINIUPNPC_LIBS) $(LIBSECP256K1) \
 #	$(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-#qt_test_test_moondex_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-#qt_test_test_moondex_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+#qt_test_test_SMScoin_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+#qt_test_test_SMScoin_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
 #CLEAN_BITCOIN_QT_TEST = $(TEST_QT_MOC_CPP) qt/test/*.gcda qt/test/*.gcno
 all: all-recursive
 
@@ -3508,9 +3509,9 @@ qt/qt_libbitcoinqt_a-moc_walletview.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
 qt/qt_libbitcoinqt_a-paymentrequest.pb.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
-qt/qt_libbitcoinqt_a-qrc_moondex.$(OBJEXT): qt/$(am__dirstamp) \
+qt/qt_libbitcoinqt_a-qrc_SMScoin.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
-qt/qt_libbitcoinqt_a-qrc_moondex_locale.$(OBJEXT): qt/$(am__dirstamp) \
+qt/qt_libbitcoinqt_a-qrc_SMScoin_locale.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
 
 qt/libbitcoinqt.a: $(qt_libbitcoinqt_a_OBJECTS) $(qt_libbitcoinqt_a_DEPENDENCIES) $(EXTRA_qt_libbitcoinqt_a_DEPENDENCIES) qt/$(am__dirstamp)
@@ -3625,39 +3626,39 @@ clean-binPROGRAMS:
 	list=`for p in $$list; do echo "$$p"; done | sed 's/$(EXEEXT)$$//'`; \
 	echo " rm -f" $$list; \
 	rm -f $$list
+
+SMScoin-cli$(EXEEXT): $(SMScoin_cli_OBJECTS) $(SMScoin_cli_DEPENDENCIES) $(EXTRA_SMScoin_cli_DEPENDENCIES) 
+	@rm -f SMScoin-cli$(EXEEXT)
+	$(AM_V_CXXLD)$(SMScoin_cli_LINK) $(SMScoin_cli_OBJECTS) $(SMScoin_cli_LDADD) $(LIBS)
+
+SMScoin-tx$(EXEEXT): $(SMScoin_tx_OBJECTS) $(SMScoin_tx_DEPENDENCIES) $(EXTRA_SMScoin_tx_DEPENDENCIES) 
+	@rm -f SMScoin-tx$(EXEEXT)
+	$(AM_V_CXXLD)$(SMScoin_tx_LINK) $(SMScoin_tx_OBJECTS) $(SMScoin_tx_LDADD) $(LIBS)
+
+SMScoind$(EXEEXT): $(SMScoind_OBJECTS) $(SMScoind_DEPENDENCIES) $(EXTRA_SMScoind_DEPENDENCIES) 
+	@rm -f SMScoind$(EXEEXT)
+	$(AM_V_CXXLD)$(SMScoind_LINK) $(SMScoind_OBJECTS) $(SMScoind_LDADD) $(LIBS)
 bench/$(am__dirstamp):
 	@$(MKDIR_P) bench
 	@: > bench/$(am__dirstamp)
 bench/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) bench/$(DEPDIR)
 	@: > bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_moondex-bench_moondex.$(OBJEXT):  \
+bench/bench_bench_SMScoin-bench_SMScoin.$(OBJEXT):  \
 	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_moondex-bench.$(OBJEXT): bench/$(am__dirstamp) \
+bench/bench_bench_SMScoin-bench.$(OBJEXT): bench/$(am__dirstamp) \
 	bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_moondex-Examples.$(OBJEXT): bench/$(am__dirstamp) \
+bench/bench_bench_SMScoin-Examples.$(OBJEXT): bench/$(am__dirstamp) \
 	bench/$(DEPDIR)/$(am__dirstamp)
 
-bench/bench_moondex$(EXEEXT): $(bench_bench_moondex_OBJECTS) $(bench_bench_moondex_DEPENDENCIES) $(EXTRA_bench_bench_moondex_DEPENDENCIES) bench/$(am__dirstamp)
-	@rm -f bench/bench_moondex$(EXEEXT)
-	$(AM_V_CXXLD)$(bench_bench_moondex_LINK) $(bench_bench_moondex_OBJECTS) $(bench_bench_moondex_LDADD) $(LIBS)
-
-moondex-cli$(EXEEXT): $(moondex_cli_OBJECTS) $(moondex_cli_DEPENDENCIES) $(EXTRA_moondex_cli_DEPENDENCIES) 
-	@rm -f moondex-cli$(EXEEXT)
-	$(AM_V_CXXLD)$(moondex_cli_LINK) $(moondex_cli_OBJECTS) $(moondex_cli_LDADD) $(LIBS)
-
-moondex-tx$(EXEEXT): $(moondex_tx_OBJECTS) $(moondex_tx_DEPENDENCIES) $(EXTRA_moondex_tx_DEPENDENCIES) 
-	@rm -f moondex-tx$(EXEEXT)
-	$(AM_V_CXXLD)$(moondex_tx_LINK) $(moondex_tx_OBJECTS) $(moondex_tx_LDADD) $(LIBS)
-
-moondexd$(EXEEXT): $(moondexd_OBJECTS) $(moondexd_DEPENDENCIES) $(EXTRA_moondexd_DEPENDENCIES) 
-	@rm -f moondexd$(EXEEXT)
-	$(AM_V_CXXLD)$(moondexd_LINK) $(moondexd_OBJECTS) $(moondexd_LDADD) $(LIBS)
-qt/qt_moondex_qt-moondex.$(OBJEXT): qt/$(am__dirstamp) \
+bench/bench_SMScoin$(EXEEXT): $(bench_bench_SMScoin_OBJECTS) $(bench_bench_SMScoin_DEPENDENCIES) $(EXTRA_bench_bench_SMScoin_DEPENDENCIES) bench/$(am__dirstamp)
+	@rm -f bench/bench_SMScoin$(EXEEXT)
+	$(AM_V_CXXLD)$(bench_bench_SMScoin_LINK) $(bench_bench_SMScoin_OBJECTS) $(bench_bench_SMScoin_LDADD) $(LIBS)
+qt/qt_SMScoin_qt-SMScoin.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
-qt/qt_moondex_qt-macdockiconhandler.$(OBJEXT): qt/$(am__dirstamp) \
+qt/qt_SMScoin_qt-macdockiconhandler.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
-qt/qt_moondex_qt-macnotificationhandler.$(OBJEXT): qt/$(am__dirstamp) \
+qt/qt_SMScoin_qt-macnotificationhandler.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
 qt/res/$(am__dirstamp):
 	@$(MKDIR_P) qt/res
@@ -3665,153 +3666,153 @@ qt/res/$(am__dirstamp):
 qt/res/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) qt/res/$(DEPDIR)
 	@: > qt/res/$(DEPDIR)/$(am__dirstamp)
-qt/res/moondex-qt-res.$(OBJEXT): qt/res/$(am__dirstamp) \
+qt/res/SMScoin-qt-res.$(OBJEXT): qt/res/$(am__dirstamp) \
 	qt/res/$(DEPDIR)/$(am__dirstamp)
 
-qt/moondex-qt$(EXEEXT): $(qt_moondex_qt_OBJECTS) $(qt_moondex_qt_DEPENDENCIES) $(EXTRA_qt_moondex_qt_DEPENDENCIES) qt/$(am__dirstamp)
-	@rm -f qt/moondex-qt$(EXEEXT)
-	$(AM_V_OBJCXXLD)$(qt_moondex_qt_LINK) $(qt_moondex_qt_OBJECTS) $(qt_moondex_qt_LDADD) $(LIBS)
+qt/SMScoin-qt$(EXEEXT): $(qt_SMScoin_qt_OBJECTS) $(qt_SMScoin_qt_DEPENDENCIES) $(EXTRA_qt_SMScoin_qt_DEPENDENCIES) qt/$(am__dirstamp)
+	@rm -f qt/SMScoin-qt$(EXEEXT)
+	$(AM_V_OBJCXXLD)$(qt_SMScoin_qt_LINK) $(qt_SMScoin_qt_OBJECTS) $(qt_SMScoin_qt_LDADD) $(LIBS)
 qt/test/$(am__dirstamp):
 	@$(MKDIR_P) qt/test
 	@: > qt/test/$(am__dirstamp)
 qt/test/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) qt/test/$(DEPDIR)
 	@: > qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_moondex_qt-compattests.$(OBJEXT):  \
+qt/test/qt_test_test_SMScoin_qt-compattests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_moondex_qt-test_main.$(OBJEXT):  \
+qt/test/qt_test_test_SMScoin_qt-test_main.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_moondex_qt-uritests.$(OBJEXT):  \
+qt/test/qt_test_test_SMScoin_qt-uritests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_moondex_qt-paymentservertests.$(OBJEXT):  \
+qt/test/qt_test_test_SMScoin_qt-paymentservertests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_moondex_qt-moc_compattests.$(OBJEXT):  \
+qt/test/qt_test_test_SMScoin_qt-moc_compattests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_moondex_qt-moc_uritests.$(OBJEXT):  \
+qt/test/qt_test_test_SMScoin_qt-moc_uritests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_moondex_qt-moc_paymentservertests.$(OBJEXT):  \
+qt/test/qt_test_test_SMScoin_qt-moc_paymentservertests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
 
-qt/test/test_moondex-qt$(EXEEXT): $(qt_test_test_moondex_qt_OBJECTS) $(qt_test_test_moondex_qt_DEPENDENCIES) $(EXTRA_qt_test_test_moondex_qt_DEPENDENCIES) qt/test/$(am__dirstamp)
-	@rm -f qt/test/test_moondex-qt$(EXEEXT)
-	$(AM_V_CXXLD)$(qt_test_test_moondex_qt_LINK) $(qt_test_test_moondex_qt_OBJECTS) $(qt_test_test_moondex_qt_LDADD) $(LIBS)
+qt/test/test_SMScoin-qt$(EXEEXT): $(qt_test_test_SMScoin_qt_OBJECTS) $(qt_test_test_SMScoin_qt_DEPENDENCIES) $(EXTRA_qt_test_test_SMScoin_qt_DEPENDENCIES) qt/test/$(am__dirstamp)
+	@rm -f qt/test/test_SMScoin-qt$(EXEEXT)
+	$(AM_V_CXXLD)$(qt_test_test_SMScoin_qt_LINK) $(qt_test_test_SMScoin_qt_OBJECTS) $(qt_test_test_SMScoin_qt_LDADD) $(LIBS)
 test/$(am__dirstamp):
 	@$(MKDIR_P) test
 	@: > test/$(am__dirstamp)
 test/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) test/$(DEPDIR)
 	@: > test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-arith_uint256_tests.$(OBJEXT):  \
+test/test_test_SMScoin-arith_uint256_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-addrman_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-addrman_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-alert_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-alert_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-allocator_tests.$(OBJEXT):  \
+test/test_test_SMScoin-allocator_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-base32_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-base32_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-base58_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-base58_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-base64_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-base64_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-bip32_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-bip32_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-bloom_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-bloom_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-bswap_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-bswap_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-cachemap_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-cachemap_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-cachemultimap_tests.$(OBJEXT):  \
+test/test_test_SMScoin-cachemultimap_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-checkblock_tests.$(OBJEXT):  \
+test/test_test_SMScoin-checkblock_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-Checkpoints_tests.$(OBJEXT):  \
+test/test_test_SMScoin-Checkpoints_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-coins_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-coins_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-compress_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-compress_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-crypto_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-crypto_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-DoS_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-DoS_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-getarg_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-getarg_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-hash_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-hash_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-key_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-key_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-limitedmap_tests.$(OBJEXT):  \
+test/test_test_SMScoin-limitedmap_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-dbwrapper_tests.$(OBJEXT):  \
+test/test_test_SMScoin-dbwrapper_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-main_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-main_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-mempool_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-mempool_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-merkle_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-merkle_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-miner_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-miner_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-multisig_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-multisig_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-netbase_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-netbase_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-pmt_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-pmt_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-policyestimator_tests.$(OBJEXT):  \
+test/test_test_SMScoin-policyestimator_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-pow_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-pow_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-prevector_tests.$(OBJEXT):  \
+test/test_test_SMScoin-prevector_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-ratecheck_tests.$(OBJEXT):  \
+test/test_test_SMScoin-ratecheck_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-reverselock_tests.$(OBJEXT):  \
+test/test_test_SMScoin-reverselock_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-rpc_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-rpc_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-sanity_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-sanity_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-scheduler_tests.$(OBJEXT):  \
+test/test_test_SMScoin-scheduler_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-script_P2SH_tests.$(OBJEXT):  \
+test/test_test_SMScoin-script_P2SH_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-script_P2PKH_tests.$(OBJEXT):  \
+test/test_test_SMScoin-script_P2PKH_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-script_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-script_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-scriptnum_tests.$(OBJEXT):  \
+test/test_test_SMScoin-scriptnum_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-serialize_tests.$(OBJEXT):  \
+test/test_test_SMScoin-serialize_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-sighash_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-sighash_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-sigopcount_tests.$(OBJEXT):  \
+test/test_test_SMScoin-sigopcount_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-skiplist_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-skiplist_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-streams_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-streams_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-test_moondex.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-test_SMScoin.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-timedata_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-timedata_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-transaction_tests.$(OBJEXT):  \
+test/test_test_SMScoin-transaction_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-txvalidationcache_tests.$(OBJEXT):  \
+test/test_test_SMScoin-txvalidationcache_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-versionbits_tests.$(OBJEXT):  \
+test/test_test_SMScoin-versionbits_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-uint256_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-uint256_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-univalue_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-univalue_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-util_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_SMScoin-util_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-accounting_tests.$(OBJEXT):  \
+test/test_test_SMScoin-accounting_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 wallet/test/$(am__dirstamp):
 	@$(MKDIR_P) wallet/test
@@ -3819,15 +3820,15 @@ wallet/test/$(am__dirstamp):
 wallet/test/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) wallet/test/$(DEPDIR)
 	@: > wallet/test/$(DEPDIR)/$(am__dirstamp)
-wallet/test/test_test_moondex-wallet_tests.$(OBJEXT):  \
+wallet/test/test_test_SMScoin-wallet_tests.$(OBJEXT):  \
 	wallet/test/$(am__dirstamp) \
 	wallet/test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_moondex-rpc_wallet_tests.$(OBJEXT):  \
+test/test_test_SMScoin-rpc_wallet_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 
-test/test_moondex$(EXEEXT): $(test_test_moondex_OBJECTS) $(test_test_moondex_DEPENDENCIES) $(EXTRA_test_test_moondex_DEPENDENCIES) test/$(am__dirstamp)
-	@rm -f test/test_moondex$(EXEEXT)
-	$(AM_V_CXXLD)$(test_test_moondex_LINK) $(test_test_moondex_OBJECTS) $(test_test_moondex_LDADD) $(LIBS)
+test/test_SMScoin$(EXEEXT): $(test_test_SMScoin_OBJECTS) $(test_test_SMScoin_DEPENDENCIES) $(EXTRA_test_test_SMScoin_DEPENDENCIES) test/$(am__dirstamp)
+	@rm -f test/test_SMScoin$(EXEEXT)
+	$(AM_V_CXXLD)$(test_test_SMScoin_LINK) $(test_test_SMScoin_OBJECTS) $(test_test_SMScoin_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -3860,6 +3861,9 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+include ./$(DEPDIR)/SMScoin_cli-SMScoin-cli.Po
+include ./$(DEPDIR)/SMScoin_tx-SMScoin-tx.Po
+include ./$(DEPDIR)/SMScoind-SMScoind.Po
 include ./$(DEPDIR)/libbitcoin_cli_a-rpcclient.Po
 include ./$(DEPDIR)/libbitcoin_common_a-amount.Po
 include ./$(DEPDIR)/libbitcoin_common_a-arith_uint256.Po
@@ -3939,12 +3943,9 @@ include ./$(DEPDIR)/libbitcoinconsensus_la-hash.Plo
 include ./$(DEPDIR)/libbitcoinconsensus_la-pubkey.Plo
 include ./$(DEPDIR)/libbitcoinconsensus_la-uint256.Plo
 include ./$(DEPDIR)/libbitcoinconsensus_la-utilstrencodings.Plo
-include ./$(DEPDIR)/moondex_cli-moondex-cli.Po
-include ./$(DEPDIR)/moondex_tx-moondex-tx.Po
-include ./$(DEPDIR)/moondexd-moondexd.Po
-include bench/$(DEPDIR)/bench_bench_moondex-Examples.Po
-include bench/$(DEPDIR)/bench_bench_moondex-bench.Po
-include bench/$(DEPDIR)/bench_bench_moondex-bench_moondex.Po
+include bench/$(DEPDIR)/bench_bench_SMScoin-Examples.Po
+include bench/$(DEPDIR)/bench_bench_SMScoin-bench.Po
+include bench/$(DEPDIR)/bench_bench_SMScoin-bench_SMScoin.Po
 include compat/$(DEPDIR)/libbitcoin_util_a-glibc_compat.Po
 include compat/$(DEPDIR)/libbitcoin_util_a-glibc_sanity.Po
 include compat/$(DEPDIR)/libbitcoin_util_a-glibcxx_sanity.Po
@@ -4033,6 +4034,9 @@ include policy/$(DEPDIR)/libbitcoin_wallet_a-rbf.Po
 include primitives/$(DEPDIR)/libbitcoin_common_a-block.Po
 include primitives/$(DEPDIR)/libbitcoin_common_a-transaction.Po
 include primitives/$(DEPDIR)/libbitcoinconsensus_la-transaction.Plo
+include qt/$(DEPDIR)/qt_SMScoin_qt-SMScoin.Po
+include qt/$(DEPDIR)/qt_SMScoin_qt-macdockiconhandler.Po
+include qt/$(DEPDIR)/qt_SMScoin_qt-macnotificationhandler.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-addressbookpage.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-addresstablemodel.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-askpassphrasedialog.Po
@@ -4107,8 +4111,8 @@ include qt/$(DEPDIR)/qt_libbitcoinqt_a-paymentrequestplus.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-paymentserver.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-peertablemodel.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-platformstyle.Po
-include qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_moondex.Po
-include qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_moondex_locale.Po
+include qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_SMScoin.Po
+include qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_SMScoin_locale.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-qvalidatedlineedit.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-qvaluecombobox.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-receivecoinsdialog.Po
@@ -4132,16 +4136,13 @@ include qt/$(DEPDIR)/qt_libbitcoinqt_a-walletmodel.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-walletmodeltransaction.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-walletview.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-winshutdownmonitor.Po
-include qt/$(DEPDIR)/qt_moondex_qt-macdockiconhandler.Po
-include qt/$(DEPDIR)/qt_moondex_qt-macnotificationhandler.Po
-include qt/$(DEPDIR)/qt_moondex_qt-moondex.Po
-include qt/test/$(DEPDIR)/qt_test_test_moondex_qt-compattests.Po
-include qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_compattests.Po
-include qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_paymentservertests.Po
-include qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_uritests.Po
-include qt/test/$(DEPDIR)/qt_test_test_moondex_qt-paymentservertests.Po
-include qt/test/$(DEPDIR)/qt_test_test_moondex_qt-test_main.Po
-include qt/test/$(DEPDIR)/qt_test_test_moondex_qt-uritests.Po
+include qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-compattests.Po
+include qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_compattests.Po
+include qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_paymentservertests.Po
+include qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_uritests.Po
+include qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-paymentservertests.Po
+include qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-test_main.Po
+include qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-uritests.Po
 include script/$(DEPDIR)/libbitcoin_common_a-interpreter.Po
 include script/$(DEPDIR)/libbitcoin_common_a-script.Po
 include script/$(DEPDIR)/libbitcoin_common_a-script_error.Po
@@ -4153,63 +4154,63 @@ include script/$(DEPDIR)/libbitcoinconsensus_la-interpreter.Plo
 include script/$(DEPDIR)/libbitcoinconsensus_la-script.Plo
 include support/$(DEPDIR)/libbitcoin_util_a-cleanse.Po
 include support/$(DEPDIR)/libbitcoin_util_a-pagelocker.Po
-include test/$(DEPDIR)/test_test_moondex-Checkpoints_tests.Po
-include test/$(DEPDIR)/test_test_moondex-DoS_tests.Po
-include test/$(DEPDIR)/test_test_moondex-accounting_tests.Po
-include test/$(DEPDIR)/test_test_moondex-addrman_tests.Po
-include test/$(DEPDIR)/test_test_moondex-alert_tests.Po
-include test/$(DEPDIR)/test_test_moondex-allocator_tests.Po
-include test/$(DEPDIR)/test_test_moondex-arith_uint256_tests.Po
-include test/$(DEPDIR)/test_test_moondex-base32_tests.Po
-include test/$(DEPDIR)/test_test_moondex-base58_tests.Po
-include test/$(DEPDIR)/test_test_moondex-base64_tests.Po
-include test/$(DEPDIR)/test_test_moondex-bip32_tests.Po
-include test/$(DEPDIR)/test_test_moondex-bloom_tests.Po
-include test/$(DEPDIR)/test_test_moondex-bswap_tests.Po
-include test/$(DEPDIR)/test_test_moondex-cachemap_tests.Po
-include test/$(DEPDIR)/test_test_moondex-cachemultimap_tests.Po
-include test/$(DEPDIR)/test_test_moondex-checkblock_tests.Po
-include test/$(DEPDIR)/test_test_moondex-coins_tests.Po
-include test/$(DEPDIR)/test_test_moondex-compress_tests.Po
-include test/$(DEPDIR)/test_test_moondex-crypto_tests.Po
-include test/$(DEPDIR)/test_test_moondex-dbwrapper_tests.Po
-include test/$(DEPDIR)/test_test_moondex-getarg_tests.Po
-include test/$(DEPDIR)/test_test_moondex-hash_tests.Po
-include test/$(DEPDIR)/test_test_moondex-key_tests.Po
-include test/$(DEPDIR)/test_test_moondex-limitedmap_tests.Po
-include test/$(DEPDIR)/test_test_moondex-main_tests.Po
-include test/$(DEPDIR)/test_test_moondex-mempool_tests.Po
-include test/$(DEPDIR)/test_test_moondex-merkle_tests.Po
-include test/$(DEPDIR)/test_test_moondex-miner_tests.Po
-include test/$(DEPDIR)/test_test_moondex-multisig_tests.Po
-include test/$(DEPDIR)/test_test_moondex-netbase_tests.Po
-include test/$(DEPDIR)/test_test_moondex-pmt_tests.Po
-include test/$(DEPDIR)/test_test_moondex-policyestimator_tests.Po
-include test/$(DEPDIR)/test_test_moondex-pow_tests.Po
-include test/$(DEPDIR)/test_test_moondex-prevector_tests.Po
-include test/$(DEPDIR)/test_test_moondex-ratecheck_tests.Po
-include test/$(DEPDIR)/test_test_moondex-reverselock_tests.Po
-include test/$(DEPDIR)/test_test_moondex-rpc_tests.Po
-include test/$(DEPDIR)/test_test_moondex-rpc_wallet_tests.Po
-include test/$(DEPDIR)/test_test_moondex-sanity_tests.Po
-include test/$(DEPDIR)/test_test_moondex-scheduler_tests.Po
-include test/$(DEPDIR)/test_test_moondex-script_P2PKH_tests.Po
-include test/$(DEPDIR)/test_test_moondex-script_P2SH_tests.Po
-include test/$(DEPDIR)/test_test_moondex-script_tests.Po
-include test/$(DEPDIR)/test_test_moondex-scriptnum_tests.Po
-include test/$(DEPDIR)/test_test_moondex-serialize_tests.Po
-include test/$(DEPDIR)/test_test_moondex-sighash_tests.Po
-include test/$(DEPDIR)/test_test_moondex-sigopcount_tests.Po
-include test/$(DEPDIR)/test_test_moondex-skiplist_tests.Po
-include test/$(DEPDIR)/test_test_moondex-streams_tests.Po
-include test/$(DEPDIR)/test_test_moondex-test_moondex.Po
-include test/$(DEPDIR)/test_test_moondex-timedata_tests.Po
-include test/$(DEPDIR)/test_test_moondex-transaction_tests.Po
-include test/$(DEPDIR)/test_test_moondex-txvalidationcache_tests.Po
-include test/$(DEPDIR)/test_test_moondex-uint256_tests.Po
-include test/$(DEPDIR)/test_test_moondex-univalue_tests.Po
-include test/$(DEPDIR)/test_test_moondex-util_tests.Po
-include test/$(DEPDIR)/test_test_moondex-versionbits_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-Checkpoints_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-DoS_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-accounting_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-addrman_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-alert_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-allocator_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-arith_uint256_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-base32_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-base58_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-base64_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-bip32_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-bloom_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-bswap_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-cachemap_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-cachemultimap_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-checkblock_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-coins_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-compress_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-crypto_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-dbwrapper_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-getarg_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-hash_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-key_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-limitedmap_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-main_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-mempool_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-merkle_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-miner_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-multisig_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-netbase_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-pmt_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-policyestimator_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-pow_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-prevector_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-ratecheck_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-reverselock_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-rpc_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-rpc_wallet_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-sanity_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-scheduler_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-script_P2PKH_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-script_P2SH_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-script_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-scriptnum_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-serialize_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-sighash_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-sigopcount_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-skiplist_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-streams_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-test_SMScoin.Po
+include test/$(DEPDIR)/test_test_SMScoin-timedata_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-transaction_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-txvalidationcache_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-uint256_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-univalue_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-util_tests.Po
+include test/$(DEPDIR)/test_test_SMScoin-versionbits_tests.Po
 include wallet/$(DEPDIR)/libbitcoin_wallet_a-crypter.Po
 include wallet/$(DEPDIR)/libbitcoin_wallet_a-db.Po
 include wallet/$(DEPDIR)/libbitcoin_wallet_a-rpcdump.Po
@@ -4217,7 +4218,7 @@ include wallet/$(DEPDIR)/libbitcoin_wallet_a-rpcwallet.Po
 include wallet/$(DEPDIR)/libbitcoin_wallet_a-wallet.Po
 include wallet/$(DEPDIR)/libbitcoin_wallet_a-wallet_ismine.Po
 include wallet/$(DEPDIR)/libbitcoin_wallet_a-walletdb.Po
-include wallet/test/$(DEPDIR)/test_test_moondex-wallet_tests.Po
+include wallet/test/$(DEPDIR)/test_test_SMScoin-wallet_tests.Po
 include zmq/$(DEPDIR)/libbitcoin_zmq_a-zmqabstractnotifier.Po
 include zmq/$(DEPDIR)/libbitcoin_zmq_a-zmqnotificationinterface.Po
 include zmq/$(DEPDIR)/libbitcoin_zmq_a-zmqpublishnotifier.Po
@@ -8064,33 +8065,33 @@ qt/qt_libbitcoinqt_a-paymentrequest.pb.obj: qt/paymentrequest.pb.cc
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(qt_libbitcoinqt_a_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-paymentrequest.pb.obj `if test -f 'qt/paymentrequest.pb.cc'; then $(CYGPATH_W) 'qt/paymentrequest.pb.cc'; else $(CYGPATH_W) '$(srcdir)/qt/paymentrequest.pb.cc'; fi`
 
-qt/qt_libbitcoinqt_a-qrc_moondex.o: qt/qrc_moondex.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(qt_libbitcoinqt_a_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_moondex.o -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_moondex.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_moondex.o `test -f 'qt/qrc_moondex.cpp' || echo '$(srcdir)/'`qt/qrc_moondex.cpp
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_moondex.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_moondex.Po
-#	$(AM_V_CXX)source='qt/qrc_moondex.cpp' object='qt/qt_libbitcoinqt_a-qrc_moondex.o' libtool=no \
+qt/qt_libbitcoinqt_a-qrc_SMScoin.o: qt/qrc_SMScoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(qt_libbitcoinqt_a_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_SMScoin.o -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_SMScoin.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_SMScoin.o `test -f 'qt/qrc_SMScoin.cpp' || echo '$(srcdir)/'`qt/qrc_SMScoin.cpp
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_SMScoin.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_SMScoin.Po
+#	$(AM_V_CXX)source='qt/qrc_SMScoin.cpp' object='qt/qt_libbitcoinqt_a-qrc_SMScoin.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(qt_libbitcoinqt_a_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_moondex.o `test -f 'qt/qrc_moondex.cpp' || echo '$(srcdir)/'`qt/qrc_moondex.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(qt_libbitcoinqt_a_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_SMScoin.o `test -f 'qt/qrc_SMScoin.cpp' || echo '$(srcdir)/'`qt/qrc_SMScoin.cpp
 
-qt/qt_libbitcoinqt_a-qrc_moondex.obj: qt/qrc_moondex.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(qt_libbitcoinqt_a_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_moondex.obj -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_moondex.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_moondex.obj `if test -f 'qt/qrc_moondex.cpp'; then $(CYGPATH_W) 'qt/qrc_moondex.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_moondex.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_moondex.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_moondex.Po
-#	$(AM_V_CXX)source='qt/qrc_moondex.cpp' object='qt/qt_libbitcoinqt_a-qrc_moondex.obj' libtool=no \
+qt/qt_libbitcoinqt_a-qrc_SMScoin.obj: qt/qrc_SMScoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(qt_libbitcoinqt_a_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_SMScoin.obj -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_SMScoin.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_SMScoin.obj `if test -f 'qt/qrc_SMScoin.cpp'; then $(CYGPATH_W) 'qt/qrc_SMScoin.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_SMScoin.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_SMScoin.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_SMScoin.Po
+#	$(AM_V_CXX)source='qt/qrc_SMScoin.cpp' object='qt/qt_libbitcoinqt_a-qrc_SMScoin.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(qt_libbitcoinqt_a_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_moondex.obj `if test -f 'qt/qrc_moondex.cpp'; then $(CYGPATH_W) 'qt/qrc_moondex.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_moondex.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(qt_libbitcoinqt_a_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_SMScoin.obj `if test -f 'qt/qrc_SMScoin.cpp'; then $(CYGPATH_W) 'qt/qrc_SMScoin.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_SMScoin.cpp'; fi`
 
-qt/qt_libbitcoinqt_a-qrc_moondex_locale.o: qt/qrc_moondex_locale.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(qt_libbitcoinqt_a_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_moondex_locale.o -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_moondex_locale.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_moondex_locale.o `test -f 'qt/qrc_moondex_locale.cpp' || echo '$(srcdir)/'`qt/qrc_moondex_locale.cpp
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_moondex_locale.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_moondex_locale.Po
-#	$(AM_V_CXX)source='qt/qrc_moondex_locale.cpp' object='qt/qt_libbitcoinqt_a-qrc_moondex_locale.o' libtool=no \
+qt/qt_libbitcoinqt_a-qrc_SMScoin_locale.o: qt/qrc_SMScoin_locale.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(qt_libbitcoinqt_a_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_SMScoin_locale.o -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_SMScoin_locale.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_SMScoin_locale.o `test -f 'qt/qrc_SMScoin_locale.cpp' || echo '$(srcdir)/'`qt/qrc_SMScoin_locale.cpp
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_SMScoin_locale.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_SMScoin_locale.Po
+#	$(AM_V_CXX)source='qt/qrc_SMScoin_locale.cpp' object='qt/qt_libbitcoinqt_a-qrc_SMScoin_locale.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(qt_libbitcoinqt_a_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_moondex_locale.o `test -f 'qt/qrc_moondex_locale.cpp' || echo '$(srcdir)/'`qt/qrc_moondex_locale.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(qt_libbitcoinqt_a_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_SMScoin_locale.o `test -f 'qt/qrc_SMScoin_locale.cpp' || echo '$(srcdir)/'`qt/qrc_SMScoin_locale.cpp
 
-qt/qt_libbitcoinqt_a-qrc_moondex_locale.obj: qt/qrc_moondex_locale.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(qt_libbitcoinqt_a_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_moondex_locale.obj -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_moondex_locale.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_moondex_locale.obj `if test -f 'qt/qrc_moondex_locale.cpp'; then $(CYGPATH_W) 'qt/qrc_moondex_locale.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_moondex_locale.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_moondex_locale.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_moondex_locale.Po
-#	$(AM_V_CXX)source='qt/qrc_moondex_locale.cpp' object='qt/qt_libbitcoinqt_a-qrc_moondex_locale.obj' libtool=no \
+qt/qt_libbitcoinqt_a-qrc_SMScoin_locale.obj: qt/qrc_SMScoin_locale.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(qt_libbitcoinqt_a_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libbitcoinqt_a-qrc_SMScoin_locale.obj -MD -MP -MF qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_SMScoin_locale.Tpo -c -o qt/qt_libbitcoinqt_a-qrc_SMScoin_locale.obj `if test -f 'qt/qrc_SMScoin_locale.cpp'; then $(CYGPATH_W) 'qt/qrc_SMScoin_locale.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_SMScoin_locale.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_SMScoin_locale.Tpo qt/$(DEPDIR)/qt_libbitcoinqt_a-qrc_SMScoin_locale.Po
+#	$(AM_V_CXX)source='qt/qrc_SMScoin_locale.cpp' object='qt/qt_libbitcoinqt_a-qrc_SMScoin_locale.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(qt_libbitcoinqt_a_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_moondex_locale.obj `if test -f 'qt/qrc_moondex_locale.cpp'; then $(CYGPATH_W) 'qt/qrc_moondex_locale.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_moondex_locale.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libbitcoinqt_a_CPPFLAGS) $(CPPFLAGS) $(qt_libbitcoinqt_a_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libbitcoinqt_a-qrc_SMScoin_locale.obj `if test -f 'qt/qrc_SMScoin_locale.cpp'; then $(CYGPATH_W) 'qt/qrc_SMScoin_locale.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/qrc_SMScoin_locale.cpp'; fi`
 
 crypto/libbitcoinconsensus_la-hmac_sha512.lo: crypto/hmac_sha512.cpp
 	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libbitcoinconsensus_la_CPPFLAGS) $(CPPFLAGS) $(libbitcoinconsensus_la_CXXFLAGS) $(CXXFLAGS) -MT crypto/libbitcoinconsensus_la-hmac_sha512.lo -MD -MP -MF crypto/$(DEPDIR)/libbitcoinconsensus_la-hmac_sha512.Tpo -c -o crypto/libbitcoinconsensus_la-hmac_sha512.lo `test -f 'crypto/hmac_sha512.cpp' || echo '$(srcdir)/'`crypto/hmac_sha512.cpp
@@ -8190,1013 +8191,1013 @@ compat/libbitcoinconsensus_la-glibc_compat.lo: compat/glibc_compat.cpp
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libbitcoinconsensus_la_CPPFLAGS) $(CPPFLAGS) $(libbitcoinconsensus_la_CXXFLAGS) $(CXXFLAGS) -c -o compat/libbitcoinconsensus_la-glibc_compat.lo `test -f 'compat/glibc_compat.cpp' || echo '$(srcdir)/'`compat/glibc_compat.cpp
 
-bench/bench_bench_moondex-bench_moondex.o: bench/bench_moondex.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_moondex_CPPFLAGS) $(CPPFLAGS) $(bench_bench_moondex_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_moondex-bench_moondex.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_moondex-bench_moondex.Tpo -c -o bench/bench_bench_moondex-bench_moondex.o `test -f 'bench/bench_moondex.cpp' || echo '$(srcdir)/'`bench/bench_moondex.cpp
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_moondex-bench_moondex.Tpo bench/$(DEPDIR)/bench_bench_moondex-bench_moondex.Po
-#	$(AM_V_CXX)source='bench/bench_moondex.cpp' object='bench/bench_bench_moondex-bench_moondex.o' libtool=no \
+SMScoin_cli-SMScoin-cli.o: SMScoin-cli.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(SMScoin_cli_CPPFLAGS) $(CPPFLAGS) $(SMScoin_cli_CXXFLAGS) $(CXXFLAGS) -MT SMScoin_cli-SMScoin-cli.o -MD -MP -MF $(DEPDIR)/SMScoin_cli-SMScoin-cli.Tpo -c -o SMScoin_cli-SMScoin-cli.o `test -f 'SMScoin-cli.cpp' || echo '$(srcdir)/'`SMScoin-cli.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/SMScoin_cli-SMScoin-cli.Tpo $(DEPDIR)/SMScoin_cli-SMScoin-cli.Po
+#	$(AM_V_CXX)source='SMScoin-cli.cpp' object='SMScoin_cli-SMScoin-cli.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_moondex_CPPFLAGS) $(CPPFLAGS) $(bench_bench_moondex_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_moondex-bench_moondex.o `test -f 'bench/bench_moondex.cpp' || echo '$(srcdir)/'`bench/bench_moondex.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(SMScoin_cli_CPPFLAGS) $(CPPFLAGS) $(SMScoin_cli_CXXFLAGS) $(CXXFLAGS) -c -o SMScoin_cli-SMScoin-cli.o `test -f 'SMScoin-cli.cpp' || echo '$(srcdir)/'`SMScoin-cli.cpp
 
-bench/bench_bench_moondex-bench_moondex.obj: bench/bench_moondex.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_moondex_CPPFLAGS) $(CPPFLAGS) $(bench_bench_moondex_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_moondex-bench_moondex.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_moondex-bench_moondex.Tpo -c -o bench/bench_bench_moondex-bench_moondex.obj `if test -f 'bench/bench_moondex.cpp'; then $(CYGPATH_W) 'bench/bench_moondex.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/bench_moondex.cpp'; fi`
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_moondex-bench_moondex.Tpo bench/$(DEPDIR)/bench_bench_moondex-bench_moondex.Po
-#	$(AM_V_CXX)source='bench/bench_moondex.cpp' object='bench/bench_bench_moondex-bench_moondex.obj' libtool=no \
+SMScoin_cli-SMScoin-cli.obj: SMScoin-cli.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(SMScoin_cli_CPPFLAGS) $(CPPFLAGS) $(SMScoin_cli_CXXFLAGS) $(CXXFLAGS) -MT SMScoin_cli-SMScoin-cli.obj -MD -MP -MF $(DEPDIR)/SMScoin_cli-SMScoin-cli.Tpo -c -o SMScoin_cli-SMScoin-cli.obj `if test -f 'SMScoin-cli.cpp'; then $(CYGPATH_W) 'SMScoin-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/SMScoin-cli.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/SMScoin_cli-SMScoin-cli.Tpo $(DEPDIR)/SMScoin_cli-SMScoin-cli.Po
+#	$(AM_V_CXX)source='SMScoin-cli.cpp' object='SMScoin_cli-SMScoin-cli.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_moondex_CPPFLAGS) $(CPPFLAGS) $(bench_bench_moondex_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_moondex-bench_moondex.obj `if test -f 'bench/bench_moondex.cpp'; then $(CYGPATH_W) 'bench/bench_moondex.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/bench_moondex.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(SMScoin_cli_CPPFLAGS) $(CPPFLAGS) $(SMScoin_cli_CXXFLAGS) $(CXXFLAGS) -c -o SMScoin_cli-SMScoin-cli.obj `if test -f 'SMScoin-cli.cpp'; then $(CYGPATH_W) 'SMScoin-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/SMScoin-cli.cpp'; fi`
 
-bench/bench_bench_moondex-bench.o: bench/bench.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_moondex_CPPFLAGS) $(CPPFLAGS) $(bench_bench_moondex_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_moondex-bench.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_moondex-bench.Tpo -c -o bench/bench_bench_moondex-bench.o `test -f 'bench/bench.cpp' || echo '$(srcdir)/'`bench/bench.cpp
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_moondex-bench.Tpo bench/$(DEPDIR)/bench_bench_moondex-bench.Po
-#	$(AM_V_CXX)source='bench/bench.cpp' object='bench/bench_bench_moondex-bench.o' libtool=no \
+SMScoin_tx-SMScoin-tx.o: SMScoin-tx.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(SMScoin_tx_CPPFLAGS) $(CPPFLAGS) $(SMScoin_tx_CXXFLAGS) $(CXXFLAGS) -MT SMScoin_tx-SMScoin-tx.o -MD -MP -MF $(DEPDIR)/SMScoin_tx-SMScoin-tx.Tpo -c -o SMScoin_tx-SMScoin-tx.o `test -f 'SMScoin-tx.cpp' || echo '$(srcdir)/'`SMScoin-tx.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/SMScoin_tx-SMScoin-tx.Tpo $(DEPDIR)/SMScoin_tx-SMScoin-tx.Po
+#	$(AM_V_CXX)source='SMScoin-tx.cpp' object='SMScoin_tx-SMScoin-tx.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_moondex_CPPFLAGS) $(CPPFLAGS) $(bench_bench_moondex_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_moondex-bench.o `test -f 'bench/bench.cpp' || echo '$(srcdir)/'`bench/bench.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(SMScoin_tx_CPPFLAGS) $(CPPFLAGS) $(SMScoin_tx_CXXFLAGS) $(CXXFLAGS) -c -o SMScoin_tx-SMScoin-tx.o `test -f 'SMScoin-tx.cpp' || echo '$(srcdir)/'`SMScoin-tx.cpp
 
-bench/bench_bench_moondex-bench.obj: bench/bench.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_moondex_CPPFLAGS) $(CPPFLAGS) $(bench_bench_moondex_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_moondex-bench.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_moondex-bench.Tpo -c -o bench/bench_bench_moondex-bench.obj `if test -f 'bench/bench.cpp'; then $(CYGPATH_W) 'bench/bench.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/bench.cpp'; fi`
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_moondex-bench.Tpo bench/$(DEPDIR)/bench_bench_moondex-bench.Po
-#	$(AM_V_CXX)source='bench/bench.cpp' object='bench/bench_bench_moondex-bench.obj' libtool=no \
+SMScoin_tx-SMScoin-tx.obj: SMScoin-tx.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(SMScoin_tx_CPPFLAGS) $(CPPFLAGS) $(SMScoin_tx_CXXFLAGS) $(CXXFLAGS) -MT SMScoin_tx-SMScoin-tx.obj -MD -MP -MF $(DEPDIR)/SMScoin_tx-SMScoin-tx.Tpo -c -o SMScoin_tx-SMScoin-tx.obj `if test -f 'SMScoin-tx.cpp'; then $(CYGPATH_W) 'SMScoin-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/SMScoin-tx.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/SMScoin_tx-SMScoin-tx.Tpo $(DEPDIR)/SMScoin_tx-SMScoin-tx.Po
+#	$(AM_V_CXX)source='SMScoin-tx.cpp' object='SMScoin_tx-SMScoin-tx.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_moondex_CPPFLAGS) $(CPPFLAGS) $(bench_bench_moondex_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_moondex-bench.obj `if test -f 'bench/bench.cpp'; then $(CYGPATH_W) 'bench/bench.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/bench.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(SMScoin_tx_CPPFLAGS) $(CPPFLAGS) $(SMScoin_tx_CXXFLAGS) $(CXXFLAGS) -c -o SMScoin_tx-SMScoin-tx.obj `if test -f 'SMScoin-tx.cpp'; then $(CYGPATH_W) 'SMScoin-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/SMScoin-tx.cpp'; fi`
 
-bench/bench_bench_moondex-Examples.o: bench/Examples.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_moondex_CPPFLAGS) $(CPPFLAGS) $(bench_bench_moondex_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_moondex-Examples.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_moondex-Examples.Tpo -c -o bench/bench_bench_moondex-Examples.o `test -f 'bench/Examples.cpp' || echo '$(srcdir)/'`bench/Examples.cpp
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_moondex-Examples.Tpo bench/$(DEPDIR)/bench_bench_moondex-Examples.Po
-#	$(AM_V_CXX)source='bench/Examples.cpp' object='bench/bench_bench_moondex-Examples.o' libtool=no \
+SMScoind-SMScoind.o: SMScoind.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(SMScoind_CPPFLAGS) $(CPPFLAGS) $(SMScoind_CXXFLAGS) $(CXXFLAGS) -MT SMScoind-SMScoind.o -MD -MP -MF $(DEPDIR)/SMScoind-SMScoind.Tpo -c -o SMScoind-SMScoind.o `test -f 'SMScoind.cpp' || echo '$(srcdir)/'`SMScoind.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/SMScoind-SMScoind.Tpo $(DEPDIR)/SMScoind-SMScoind.Po
+#	$(AM_V_CXX)source='SMScoind.cpp' object='SMScoind-SMScoind.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_moondex_CPPFLAGS) $(CPPFLAGS) $(bench_bench_moondex_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_moondex-Examples.o `test -f 'bench/Examples.cpp' || echo '$(srcdir)/'`bench/Examples.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(SMScoind_CPPFLAGS) $(CPPFLAGS) $(SMScoind_CXXFLAGS) $(CXXFLAGS) -c -o SMScoind-SMScoind.o `test -f 'SMScoind.cpp' || echo '$(srcdir)/'`SMScoind.cpp
 
-bench/bench_bench_moondex-Examples.obj: bench/Examples.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_moondex_CPPFLAGS) $(CPPFLAGS) $(bench_bench_moondex_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_moondex-Examples.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_moondex-Examples.Tpo -c -o bench/bench_bench_moondex-Examples.obj `if test -f 'bench/Examples.cpp'; then $(CYGPATH_W) 'bench/Examples.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/Examples.cpp'; fi`
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_moondex-Examples.Tpo bench/$(DEPDIR)/bench_bench_moondex-Examples.Po
-#	$(AM_V_CXX)source='bench/Examples.cpp' object='bench/bench_bench_moondex-Examples.obj' libtool=no \
+SMScoind-SMScoind.obj: SMScoind.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(SMScoind_CPPFLAGS) $(CPPFLAGS) $(SMScoind_CXXFLAGS) $(CXXFLAGS) -MT SMScoind-SMScoind.obj -MD -MP -MF $(DEPDIR)/SMScoind-SMScoind.Tpo -c -o SMScoind-SMScoind.obj `if test -f 'SMScoind.cpp'; then $(CYGPATH_W) 'SMScoind.cpp'; else $(CYGPATH_W) '$(srcdir)/SMScoind.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/SMScoind-SMScoind.Tpo $(DEPDIR)/SMScoind-SMScoind.Po
+#	$(AM_V_CXX)source='SMScoind.cpp' object='SMScoind-SMScoind.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_moondex_CPPFLAGS) $(CPPFLAGS) $(bench_bench_moondex_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_moondex-Examples.obj `if test -f 'bench/Examples.cpp'; then $(CYGPATH_W) 'bench/Examples.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/Examples.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(SMScoind_CPPFLAGS) $(CPPFLAGS) $(SMScoind_CXXFLAGS) $(CXXFLAGS) -c -o SMScoind-SMScoind.obj `if test -f 'SMScoind.cpp'; then $(CYGPATH_W) 'SMScoind.cpp'; else $(CYGPATH_W) '$(srcdir)/SMScoind.cpp'; fi`
 
-moondex_cli-moondex-cli.o: moondex-cli.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(moondex_cli_CPPFLAGS) $(CPPFLAGS) $(moondex_cli_CXXFLAGS) $(CXXFLAGS) -MT moondex_cli-moondex-cli.o -MD -MP -MF $(DEPDIR)/moondex_cli-moondex-cli.Tpo -c -o moondex_cli-moondex-cli.o `test -f 'moondex-cli.cpp' || echo '$(srcdir)/'`moondex-cli.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/moondex_cli-moondex-cli.Tpo $(DEPDIR)/moondex_cli-moondex-cli.Po
-#	$(AM_V_CXX)source='moondex-cli.cpp' object='moondex_cli-moondex-cli.o' libtool=no \
+bench/bench_bench_SMScoin-bench_SMScoin.o: bench/bench_SMScoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_SMScoin_CPPFLAGS) $(CPPFLAGS) $(bench_bench_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_SMScoin-bench_SMScoin.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_SMScoin-bench_SMScoin.Tpo -c -o bench/bench_bench_SMScoin-bench_SMScoin.o `test -f 'bench/bench_SMScoin.cpp' || echo '$(srcdir)/'`bench/bench_SMScoin.cpp
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_SMScoin-bench_SMScoin.Tpo bench/$(DEPDIR)/bench_bench_SMScoin-bench_SMScoin.Po
+#	$(AM_V_CXX)source='bench/bench_SMScoin.cpp' object='bench/bench_bench_SMScoin-bench_SMScoin.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(moondex_cli_CPPFLAGS) $(CPPFLAGS) $(moondex_cli_CXXFLAGS) $(CXXFLAGS) -c -o moondex_cli-moondex-cli.o `test -f 'moondex-cli.cpp' || echo '$(srcdir)/'`moondex-cli.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_SMScoin_CPPFLAGS) $(CPPFLAGS) $(bench_bench_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_SMScoin-bench_SMScoin.o `test -f 'bench/bench_SMScoin.cpp' || echo '$(srcdir)/'`bench/bench_SMScoin.cpp
 
-moondex_cli-moondex-cli.obj: moondex-cli.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(moondex_cli_CPPFLAGS) $(CPPFLAGS) $(moondex_cli_CXXFLAGS) $(CXXFLAGS) -MT moondex_cli-moondex-cli.obj -MD -MP -MF $(DEPDIR)/moondex_cli-moondex-cli.Tpo -c -o moondex_cli-moondex-cli.obj `if test -f 'moondex-cli.cpp'; then $(CYGPATH_W) 'moondex-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/moondex-cli.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/moondex_cli-moondex-cli.Tpo $(DEPDIR)/moondex_cli-moondex-cli.Po
-#	$(AM_V_CXX)source='moondex-cli.cpp' object='moondex_cli-moondex-cli.obj' libtool=no \
+bench/bench_bench_SMScoin-bench_SMScoin.obj: bench/bench_SMScoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_SMScoin_CPPFLAGS) $(CPPFLAGS) $(bench_bench_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_SMScoin-bench_SMScoin.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_SMScoin-bench_SMScoin.Tpo -c -o bench/bench_bench_SMScoin-bench_SMScoin.obj `if test -f 'bench/bench_SMScoin.cpp'; then $(CYGPATH_W) 'bench/bench_SMScoin.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/bench_SMScoin.cpp'; fi`
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_SMScoin-bench_SMScoin.Tpo bench/$(DEPDIR)/bench_bench_SMScoin-bench_SMScoin.Po
+#	$(AM_V_CXX)source='bench/bench_SMScoin.cpp' object='bench/bench_bench_SMScoin-bench_SMScoin.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(moondex_cli_CPPFLAGS) $(CPPFLAGS) $(moondex_cli_CXXFLAGS) $(CXXFLAGS) -c -o moondex_cli-moondex-cli.obj `if test -f 'moondex-cli.cpp'; then $(CYGPATH_W) 'moondex-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/moondex-cli.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_SMScoin_CPPFLAGS) $(CPPFLAGS) $(bench_bench_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_SMScoin-bench_SMScoin.obj `if test -f 'bench/bench_SMScoin.cpp'; then $(CYGPATH_W) 'bench/bench_SMScoin.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/bench_SMScoin.cpp'; fi`
 
-moondex_tx-moondex-tx.o: moondex-tx.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(moondex_tx_CPPFLAGS) $(CPPFLAGS) $(moondex_tx_CXXFLAGS) $(CXXFLAGS) -MT moondex_tx-moondex-tx.o -MD -MP -MF $(DEPDIR)/moondex_tx-moondex-tx.Tpo -c -o moondex_tx-moondex-tx.o `test -f 'moondex-tx.cpp' || echo '$(srcdir)/'`moondex-tx.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/moondex_tx-moondex-tx.Tpo $(DEPDIR)/moondex_tx-moondex-tx.Po
-#	$(AM_V_CXX)source='moondex-tx.cpp' object='moondex_tx-moondex-tx.o' libtool=no \
+bench/bench_bench_SMScoin-bench.o: bench/bench.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_SMScoin_CPPFLAGS) $(CPPFLAGS) $(bench_bench_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_SMScoin-bench.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_SMScoin-bench.Tpo -c -o bench/bench_bench_SMScoin-bench.o `test -f 'bench/bench.cpp' || echo '$(srcdir)/'`bench/bench.cpp
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_SMScoin-bench.Tpo bench/$(DEPDIR)/bench_bench_SMScoin-bench.Po
+#	$(AM_V_CXX)source='bench/bench.cpp' object='bench/bench_bench_SMScoin-bench.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(moondex_tx_CPPFLAGS) $(CPPFLAGS) $(moondex_tx_CXXFLAGS) $(CXXFLAGS) -c -o moondex_tx-moondex-tx.o `test -f 'moondex-tx.cpp' || echo '$(srcdir)/'`moondex-tx.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_SMScoin_CPPFLAGS) $(CPPFLAGS) $(bench_bench_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_SMScoin-bench.o `test -f 'bench/bench.cpp' || echo '$(srcdir)/'`bench/bench.cpp
 
-moondex_tx-moondex-tx.obj: moondex-tx.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(moondex_tx_CPPFLAGS) $(CPPFLAGS) $(moondex_tx_CXXFLAGS) $(CXXFLAGS) -MT moondex_tx-moondex-tx.obj -MD -MP -MF $(DEPDIR)/moondex_tx-moondex-tx.Tpo -c -o moondex_tx-moondex-tx.obj `if test -f 'moondex-tx.cpp'; then $(CYGPATH_W) 'moondex-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/moondex-tx.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/moondex_tx-moondex-tx.Tpo $(DEPDIR)/moondex_tx-moondex-tx.Po
-#	$(AM_V_CXX)source='moondex-tx.cpp' object='moondex_tx-moondex-tx.obj' libtool=no \
+bench/bench_bench_SMScoin-bench.obj: bench/bench.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_SMScoin_CPPFLAGS) $(CPPFLAGS) $(bench_bench_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_SMScoin-bench.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_SMScoin-bench.Tpo -c -o bench/bench_bench_SMScoin-bench.obj `if test -f 'bench/bench.cpp'; then $(CYGPATH_W) 'bench/bench.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/bench.cpp'; fi`
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_SMScoin-bench.Tpo bench/$(DEPDIR)/bench_bench_SMScoin-bench.Po
+#	$(AM_V_CXX)source='bench/bench.cpp' object='bench/bench_bench_SMScoin-bench.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(moondex_tx_CPPFLAGS) $(CPPFLAGS) $(moondex_tx_CXXFLAGS) $(CXXFLAGS) -c -o moondex_tx-moondex-tx.obj `if test -f 'moondex-tx.cpp'; then $(CYGPATH_W) 'moondex-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/moondex-tx.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_SMScoin_CPPFLAGS) $(CPPFLAGS) $(bench_bench_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_SMScoin-bench.obj `if test -f 'bench/bench.cpp'; then $(CYGPATH_W) 'bench/bench.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/bench.cpp'; fi`
 
-moondexd-moondexd.o: moondexd.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(moondexd_CPPFLAGS) $(CPPFLAGS) $(moondexd_CXXFLAGS) $(CXXFLAGS) -MT moondexd-moondexd.o -MD -MP -MF $(DEPDIR)/moondexd-moondexd.Tpo -c -o moondexd-moondexd.o `test -f 'moondexd.cpp' || echo '$(srcdir)/'`moondexd.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/moondexd-moondexd.Tpo $(DEPDIR)/moondexd-moondexd.Po
-#	$(AM_V_CXX)source='moondexd.cpp' object='moondexd-moondexd.o' libtool=no \
+bench/bench_bench_SMScoin-Examples.o: bench/Examples.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_SMScoin_CPPFLAGS) $(CPPFLAGS) $(bench_bench_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_SMScoin-Examples.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_SMScoin-Examples.Tpo -c -o bench/bench_bench_SMScoin-Examples.o `test -f 'bench/Examples.cpp' || echo '$(srcdir)/'`bench/Examples.cpp
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_SMScoin-Examples.Tpo bench/$(DEPDIR)/bench_bench_SMScoin-Examples.Po
+#	$(AM_V_CXX)source='bench/Examples.cpp' object='bench/bench_bench_SMScoin-Examples.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(moondexd_CPPFLAGS) $(CPPFLAGS) $(moondexd_CXXFLAGS) $(CXXFLAGS) -c -o moondexd-moondexd.o `test -f 'moondexd.cpp' || echo '$(srcdir)/'`moondexd.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_SMScoin_CPPFLAGS) $(CPPFLAGS) $(bench_bench_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_SMScoin-Examples.o `test -f 'bench/Examples.cpp' || echo '$(srcdir)/'`bench/Examples.cpp
 
-moondexd-moondexd.obj: moondexd.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(moondexd_CPPFLAGS) $(CPPFLAGS) $(moondexd_CXXFLAGS) $(CXXFLAGS) -MT moondexd-moondexd.obj -MD -MP -MF $(DEPDIR)/moondexd-moondexd.Tpo -c -o moondexd-moondexd.obj `if test -f 'moondexd.cpp'; then $(CYGPATH_W) 'moondexd.cpp'; else $(CYGPATH_W) '$(srcdir)/moondexd.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/moondexd-moondexd.Tpo $(DEPDIR)/moondexd-moondexd.Po
-#	$(AM_V_CXX)source='moondexd.cpp' object='moondexd-moondexd.obj' libtool=no \
+bench/bench_bench_SMScoin-Examples.obj: bench/Examples.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_SMScoin_CPPFLAGS) $(CPPFLAGS) $(bench_bench_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_SMScoin-Examples.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_SMScoin-Examples.Tpo -c -o bench/bench_bench_SMScoin-Examples.obj `if test -f 'bench/Examples.cpp'; then $(CYGPATH_W) 'bench/Examples.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/Examples.cpp'; fi`
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_SMScoin-Examples.Tpo bench/$(DEPDIR)/bench_bench_SMScoin-Examples.Po
+#	$(AM_V_CXX)source='bench/Examples.cpp' object='bench/bench_bench_SMScoin-Examples.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(moondexd_CPPFLAGS) $(CPPFLAGS) $(moondexd_CXXFLAGS) $(CXXFLAGS) -c -o moondexd-moondexd.obj `if test -f 'moondexd.cpp'; then $(CYGPATH_W) 'moondexd.cpp'; else $(CYGPATH_W) '$(srcdir)/moondexd.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_SMScoin_CPPFLAGS) $(CPPFLAGS) $(bench_bench_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_SMScoin-Examples.obj `if test -f 'bench/Examples.cpp'; then $(CYGPATH_W) 'bench/Examples.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/Examples.cpp'; fi`
 
-qt/qt_moondex_qt-moondex.o: qt/moondex.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_moondex_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_moondex_qt-moondex.o -MD -MP -MF qt/$(DEPDIR)/qt_moondex_qt-moondex.Tpo -c -o qt/qt_moondex_qt-moondex.o `test -f 'qt/moondex.cpp' || echo '$(srcdir)/'`qt/moondex.cpp
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_moondex_qt-moondex.Tpo qt/$(DEPDIR)/qt_moondex_qt-moondex.Po
-#	$(AM_V_CXX)source='qt/moondex.cpp' object='qt/qt_moondex_qt-moondex.o' libtool=no \
+qt/qt_SMScoin_qt-SMScoin.o: qt/SMScoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_SMScoin_qt-SMScoin.o -MD -MP -MF qt/$(DEPDIR)/qt_SMScoin_qt-SMScoin.Tpo -c -o qt/qt_SMScoin_qt-SMScoin.o `test -f 'qt/SMScoin.cpp' || echo '$(srcdir)/'`qt/SMScoin.cpp
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_SMScoin_qt-SMScoin.Tpo qt/$(DEPDIR)/qt_SMScoin_qt-SMScoin.Po
+#	$(AM_V_CXX)source='qt/SMScoin.cpp' object='qt/qt_SMScoin_qt-SMScoin.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_moondex_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_moondex_qt-moondex.o `test -f 'qt/moondex.cpp' || echo '$(srcdir)/'`qt/moondex.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_SMScoin_qt-SMScoin.o `test -f 'qt/SMScoin.cpp' || echo '$(srcdir)/'`qt/SMScoin.cpp
 
-qt/qt_moondex_qt-moondex.obj: qt/moondex.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_moondex_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_moondex_qt-moondex.obj -MD -MP -MF qt/$(DEPDIR)/qt_moondex_qt-moondex.Tpo -c -o qt/qt_moondex_qt-moondex.obj `if test -f 'qt/moondex.cpp'; then $(CYGPATH_W) 'qt/moondex.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/moondex.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_moondex_qt-moondex.Tpo qt/$(DEPDIR)/qt_moondex_qt-moondex.Po
-#	$(AM_V_CXX)source='qt/moondex.cpp' object='qt/qt_moondex_qt-moondex.obj' libtool=no \
+qt/qt_SMScoin_qt-SMScoin.obj: qt/SMScoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_SMScoin_qt-SMScoin.obj -MD -MP -MF qt/$(DEPDIR)/qt_SMScoin_qt-SMScoin.Tpo -c -o qt/qt_SMScoin_qt-SMScoin.obj `if test -f 'qt/SMScoin.cpp'; then $(CYGPATH_W) 'qt/SMScoin.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/SMScoin.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_SMScoin_qt-SMScoin.Tpo qt/$(DEPDIR)/qt_SMScoin_qt-SMScoin.Po
+#	$(AM_V_CXX)source='qt/SMScoin.cpp' object='qt/qt_SMScoin_qt-SMScoin.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_moondex_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_moondex_qt-moondex.obj `if test -f 'qt/moondex.cpp'; then $(CYGPATH_W) 'qt/moondex.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/moondex.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_SMScoin_qt-SMScoin.obj `if test -f 'qt/SMScoin.cpp'; then $(CYGPATH_W) 'qt/SMScoin.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/SMScoin.cpp'; fi`
 
-qt/test/qt_test_test_moondex_qt-compattests.o: qt/test/compattests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_moondex_qt-compattests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_moondex_qt-compattests.Tpo -c -o qt/test/qt_test_test_moondex_qt-compattests.o `test -f 'qt/test/compattests.cpp' || echo '$(srcdir)/'`qt/test/compattests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_moondex_qt-compattests.Tpo qt/test/$(DEPDIR)/qt_test_test_moondex_qt-compattests.Po
-#	$(AM_V_CXX)source='qt/test/compattests.cpp' object='qt/test/qt_test_test_moondex_qt-compattests.o' libtool=no \
+qt/test/qt_test_test_SMScoin_qt-compattests.o: qt/test/compattests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_SMScoin_qt-compattests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-compattests.Tpo -c -o qt/test/qt_test_test_SMScoin_qt-compattests.o `test -f 'qt/test/compattests.cpp' || echo '$(srcdir)/'`qt/test/compattests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-compattests.Tpo qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-compattests.Po
+#	$(AM_V_CXX)source='qt/test/compattests.cpp' object='qt/test/qt_test_test_SMScoin_qt-compattests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_moondex_qt-compattests.o `test -f 'qt/test/compattests.cpp' || echo '$(srcdir)/'`qt/test/compattests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_SMScoin_qt-compattests.o `test -f 'qt/test/compattests.cpp' || echo '$(srcdir)/'`qt/test/compattests.cpp
 
-qt/test/qt_test_test_moondex_qt-compattests.obj: qt/test/compattests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_moondex_qt-compattests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_moondex_qt-compattests.Tpo -c -o qt/test/qt_test_test_moondex_qt-compattests.obj `if test -f 'qt/test/compattests.cpp'; then $(CYGPATH_W) 'qt/test/compattests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/compattests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_moondex_qt-compattests.Tpo qt/test/$(DEPDIR)/qt_test_test_moondex_qt-compattests.Po
-#	$(AM_V_CXX)source='qt/test/compattests.cpp' object='qt/test/qt_test_test_moondex_qt-compattests.obj' libtool=no \
+qt/test/qt_test_test_SMScoin_qt-compattests.obj: qt/test/compattests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_SMScoin_qt-compattests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-compattests.Tpo -c -o qt/test/qt_test_test_SMScoin_qt-compattests.obj `if test -f 'qt/test/compattests.cpp'; then $(CYGPATH_W) 'qt/test/compattests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/compattests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-compattests.Tpo qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-compattests.Po
+#	$(AM_V_CXX)source='qt/test/compattests.cpp' object='qt/test/qt_test_test_SMScoin_qt-compattests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_moondex_qt-compattests.obj `if test -f 'qt/test/compattests.cpp'; then $(CYGPATH_W) 'qt/test/compattests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/compattests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_SMScoin_qt-compattests.obj `if test -f 'qt/test/compattests.cpp'; then $(CYGPATH_W) 'qt/test/compattests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/compattests.cpp'; fi`
 
-qt/test/qt_test_test_moondex_qt-test_main.o: qt/test/test_main.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_moondex_qt-test_main.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_moondex_qt-test_main.Tpo -c -o qt/test/qt_test_test_moondex_qt-test_main.o `test -f 'qt/test/test_main.cpp' || echo '$(srcdir)/'`qt/test/test_main.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_moondex_qt-test_main.Tpo qt/test/$(DEPDIR)/qt_test_test_moondex_qt-test_main.Po
-#	$(AM_V_CXX)source='qt/test/test_main.cpp' object='qt/test/qt_test_test_moondex_qt-test_main.o' libtool=no \
+qt/test/qt_test_test_SMScoin_qt-test_main.o: qt/test/test_main.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_SMScoin_qt-test_main.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-test_main.Tpo -c -o qt/test/qt_test_test_SMScoin_qt-test_main.o `test -f 'qt/test/test_main.cpp' || echo '$(srcdir)/'`qt/test/test_main.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-test_main.Tpo qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-test_main.Po
+#	$(AM_V_CXX)source='qt/test/test_main.cpp' object='qt/test/qt_test_test_SMScoin_qt-test_main.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_moondex_qt-test_main.o `test -f 'qt/test/test_main.cpp' || echo '$(srcdir)/'`qt/test/test_main.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_SMScoin_qt-test_main.o `test -f 'qt/test/test_main.cpp' || echo '$(srcdir)/'`qt/test/test_main.cpp
 
-qt/test/qt_test_test_moondex_qt-test_main.obj: qt/test/test_main.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_moondex_qt-test_main.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_moondex_qt-test_main.Tpo -c -o qt/test/qt_test_test_moondex_qt-test_main.obj `if test -f 'qt/test/test_main.cpp'; then $(CYGPATH_W) 'qt/test/test_main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/test_main.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_moondex_qt-test_main.Tpo qt/test/$(DEPDIR)/qt_test_test_moondex_qt-test_main.Po
-#	$(AM_V_CXX)source='qt/test/test_main.cpp' object='qt/test/qt_test_test_moondex_qt-test_main.obj' libtool=no \
+qt/test/qt_test_test_SMScoin_qt-test_main.obj: qt/test/test_main.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_SMScoin_qt-test_main.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-test_main.Tpo -c -o qt/test/qt_test_test_SMScoin_qt-test_main.obj `if test -f 'qt/test/test_main.cpp'; then $(CYGPATH_W) 'qt/test/test_main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/test_main.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-test_main.Tpo qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-test_main.Po
+#	$(AM_V_CXX)source='qt/test/test_main.cpp' object='qt/test/qt_test_test_SMScoin_qt-test_main.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_moondex_qt-test_main.obj `if test -f 'qt/test/test_main.cpp'; then $(CYGPATH_W) 'qt/test/test_main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/test_main.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_SMScoin_qt-test_main.obj `if test -f 'qt/test/test_main.cpp'; then $(CYGPATH_W) 'qt/test/test_main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/test_main.cpp'; fi`
 
-qt/test/qt_test_test_moondex_qt-uritests.o: qt/test/uritests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_moondex_qt-uritests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_moondex_qt-uritests.Tpo -c -o qt/test/qt_test_test_moondex_qt-uritests.o `test -f 'qt/test/uritests.cpp' || echo '$(srcdir)/'`qt/test/uritests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_moondex_qt-uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_moondex_qt-uritests.Po
-#	$(AM_V_CXX)source='qt/test/uritests.cpp' object='qt/test/qt_test_test_moondex_qt-uritests.o' libtool=no \
+qt/test/qt_test_test_SMScoin_qt-uritests.o: qt/test/uritests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_SMScoin_qt-uritests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-uritests.Tpo -c -o qt/test/qt_test_test_SMScoin_qt-uritests.o `test -f 'qt/test/uritests.cpp' || echo '$(srcdir)/'`qt/test/uritests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-uritests.Po
+#	$(AM_V_CXX)source='qt/test/uritests.cpp' object='qt/test/qt_test_test_SMScoin_qt-uritests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_moondex_qt-uritests.o `test -f 'qt/test/uritests.cpp' || echo '$(srcdir)/'`qt/test/uritests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_SMScoin_qt-uritests.o `test -f 'qt/test/uritests.cpp' || echo '$(srcdir)/'`qt/test/uritests.cpp
 
-qt/test/qt_test_test_moondex_qt-uritests.obj: qt/test/uritests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_moondex_qt-uritests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_moondex_qt-uritests.Tpo -c -o qt/test/qt_test_test_moondex_qt-uritests.obj `if test -f 'qt/test/uritests.cpp'; then $(CYGPATH_W) 'qt/test/uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/uritests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_moondex_qt-uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_moondex_qt-uritests.Po
-#	$(AM_V_CXX)source='qt/test/uritests.cpp' object='qt/test/qt_test_test_moondex_qt-uritests.obj' libtool=no \
+qt/test/qt_test_test_SMScoin_qt-uritests.obj: qt/test/uritests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_SMScoin_qt-uritests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-uritests.Tpo -c -o qt/test/qt_test_test_SMScoin_qt-uritests.obj `if test -f 'qt/test/uritests.cpp'; then $(CYGPATH_W) 'qt/test/uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/uritests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-uritests.Po
+#	$(AM_V_CXX)source='qt/test/uritests.cpp' object='qt/test/qt_test_test_SMScoin_qt-uritests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_moondex_qt-uritests.obj `if test -f 'qt/test/uritests.cpp'; then $(CYGPATH_W) 'qt/test/uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/uritests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_SMScoin_qt-uritests.obj `if test -f 'qt/test/uritests.cpp'; then $(CYGPATH_W) 'qt/test/uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/uritests.cpp'; fi`
 
-qt/test/qt_test_test_moondex_qt-paymentservertests.o: qt/test/paymentservertests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_moondex_qt-paymentservertests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_moondex_qt-paymentservertests.Tpo -c -o qt/test/qt_test_test_moondex_qt-paymentservertests.o `test -f 'qt/test/paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/paymentservertests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_moondex_qt-paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_moondex_qt-paymentservertests.Po
-#	$(AM_V_CXX)source='qt/test/paymentservertests.cpp' object='qt/test/qt_test_test_moondex_qt-paymentservertests.o' libtool=no \
+qt/test/qt_test_test_SMScoin_qt-paymentservertests.o: qt/test/paymentservertests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_SMScoin_qt-paymentservertests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-paymentservertests.Tpo -c -o qt/test/qt_test_test_SMScoin_qt-paymentservertests.o `test -f 'qt/test/paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/paymentservertests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-paymentservertests.Po
+#	$(AM_V_CXX)source='qt/test/paymentservertests.cpp' object='qt/test/qt_test_test_SMScoin_qt-paymentservertests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_moondex_qt-paymentservertests.o `test -f 'qt/test/paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/paymentservertests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_SMScoin_qt-paymentservertests.o `test -f 'qt/test/paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/paymentservertests.cpp
 
-qt/test/qt_test_test_moondex_qt-paymentservertests.obj: qt/test/paymentservertests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_moondex_qt-paymentservertests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_moondex_qt-paymentservertests.Tpo -c -o qt/test/qt_test_test_moondex_qt-paymentservertests.obj `if test -f 'qt/test/paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/paymentservertests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_moondex_qt-paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_moondex_qt-paymentservertests.Po
-#	$(AM_V_CXX)source='qt/test/paymentservertests.cpp' object='qt/test/qt_test_test_moondex_qt-paymentservertests.obj' libtool=no \
+qt/test/qt_test_test_SMScoin_qt-paymentservertests.obj: qt/test/paymentservertests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_SMScoin_qt-paymentservertests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-paymentservertests.Tpo -c -o qt/test/qt_test_test_SMScoin_qt-paymentservertests.obj `if test -f 'qt/test/paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/paymentservertests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-paymentservertests.Po
+#	$(AM_V_CXX)source='qt/test/paymentservertests.cpp' object='qt/test/qt_test_test_SMScoin_qt-paymentservertests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_moondex_qt-paymentservertests.obj `if test -f 'qt/test/paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/paymentservertests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_SMScoin_qt-paymentservertests.obj `if test -f 'qt/test/paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/paymentservertests.cpp'; fi`
 
-qt/test/qt_test_test_moondex_qt-moc_compattests.o: qt/test/moc_compattests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_moondex_qt-moc_compattests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_compattests.Tpo -c -o qt/test/qt_test_test_moondex_qt-moc_compattests.o `test -f 'qt/test/moc_compattests.cpp' || echo '$(srcdir)/'`qt/test/moc_compattests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_compattests.Tpo qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_compattests.Po
-#	$(AM_V_CXX)source='qt/test/moc_compattests.cpp' object='qt/test/qt_test_test_moondex_qt-moc_compattests.o' libtool=no \
+qt/test/qt_test_test_SMScoin_qt-moc_compattests.o: qt/test/moc_compattests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_SMScoin_qt-moc_compattests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_compattests.Tpo -c -o qt/test/qt_test_test_SMScoin_qt-moc_compattests.o `test -f 'qt/test/moc_compattests.cpp' || echo '$(srcdir)/'`qt/test/moc_compattests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_compattests.Tpo qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_compattests.Po
+#	$(AM_V_CXX)source='qt/test/moc_compattests.cpp' object='qt/test/qt_test_test_SMScoin_qt-moc_compattests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_moondex_qt-moc_compattests.o `test -f 'qt/test/moc_compattests.cpp' || echo '$(srcdir)/'`qt/test/moc_compattests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_SMScoin_qt-moc_compattests.o `test -f 'qt/test/moc_compattests.cpp' || echo '$(srcdir)/'`qt/test/moc_compattests.cpp
 
-qt/test/qt_test_test_moondex_qt-moc_compattests.obj: qt/test/moc_compattests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_moondex_qt-moc_compattests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_compattests.Tpo -c -o qt/test/qt_test_test_moondex_qt-moc_compattests.obj `if test -f 'qt/test/moc_compattests.cpp'; then $(CYGPATH_W) 'qt/test/moc_compattests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_compattests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_compattests.Tpo qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_compattests.Po
-#	$(AM_V_CXX)source='qt/test/moc_compattests.cpp' object='qt/test/qt_test_test_moondex_qt-moc_compattests.obj' libtool=no \
+qt/test/qt_test_test_SMScoin_qt-moc_compattests.obj: qt/test/moc_compattests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_SMScoin_qt-moc_compattests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_compattests.Tpo -c -o qt/test/qt_test_test_SMScoin_qt-moc_compattests.obj `if test -f 'qt/test/moc_compattests.cpp'; then $(CYGPATH_W) 'qt/test/moc_compattests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_compattests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_compattests.Tpo qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_compattests.Po
+#	$(AM_V_CXX)source='qt/test/moc_compattests.cpp' object='qt/test/qt_test_test_SMScoin_qt-moc_compattests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_moondex_qt-moc_compattests.obj `if test -f 'qt/test/moc_compattests.cpp'; then $(CYGPATH_W) 'qt/test/moc_compattests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_compattests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_SMScoin_qt-moc_compattests.obj `if test -f 'qt/test/moc_compattests.cpp'; then $(CYGPATH_W) 'qt/test/moc_compattests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_compattests.cpp'; fi`
 
-qt/test/qt_test_test_moondex_qt-moc_uritests.o: qt/test/moc_uritests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_moondex_qt-moc_uritests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_uritests.Tpo -c -o qt/test/qt_test_test_moondex_qt-moc_uritests.o `test -f 'qt/test/moc_uritests.cpp' || echo '$(srcdir)/'`qt/test/moc_uritests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_uritests.Po
-#	$(AM_V_CXX)source='qt/test/moc_uritests.cpp' object='qt/test/qt_test_test_moondex_qt-moc_uritests.o' libtool=no \
+qt/test/qt_test_test_SMScoin_qt-moc_uritests.o: qt/test/moc_uritests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_SMScoin_qt-moc_uritests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_uritests.Tpo -c -o qt/test/qt_test_test_SMScoin_qt-moc_uritests.o `test -f 'qt/test/moc_uritests.cpp' || echo '$(srcdir)/'`qt/test/moc_uritests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_uritests.Po
+#	$(AM_V_CXX)source='qt/test/moc_uritests.cpp' object='qt/test/qt_test_test_SMScoin_qt-moc_uritests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_moondex_qt-moc_uritests.o `test -f 'qt/test/moc_uritests.cpp' || echo '$(srcdir)/'`qt/test/moc_uritests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_SMScoin_qt-moc_uritests.o `test -f 'qt/test/moc_uritests.cpp' || echo '$(srcdir)/'`qt/test/moc_uritests.cpp
 
-qt/test/qt_test_test_moondex_qt-moc_uritests.obj: qt/test/moc_uritests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_moondex_qt-moc_uritests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_uritests.Tpo -c -o qt/test/qt_test_test_moondex_qt-moc_uritests.obj `if test -f 'qt/test/moc_uritests.cpp'; then $(CYGPATH_W) 'qt/test/moc_uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_uritests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_uritests.Po
-#	$(AM_V_CXX)source='qt/test/moc_uritests.cpp' object='qt/test/qt_test_test_moondex_qt-moc_uritests.obj' libtool=no \
+qt/test/qt_test_test_SMScoin_qt-moc_uritests.obj: qt/test/moc_uritests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_SMScoin_qt-moc_uritests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_uritests.Tpo -c -o qt/test/qt_test_test_SMScoin_qt-moc_uritests.obj `if test -f 'qt/test/moc_uritests.cpp'; then $(CYGPATH_W) 'qt/test/moc_uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_uritests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_uritests.Po
+#	$(AM_V_CXX)source='qt/test/moc_uritests.cpp' object='qt/test/qt_test_test_SMScoin_qt-moc_uritests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_moondex_qt-moc_uritests.obj `if test -f 'qt/test/moc_uritests.cpp'; then $(CYGPATH_W) 'qt/test/moc_uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_uritests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_SMScoin_qt-moc_uritests.obj `if test -f 'qt/test/moc_uritests.cpp'; then $(CYGPATH_W) 'qt/test/moc_uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_uritests.cpp'; fi`
 
-qt/test/qt_test_test_moondex_qt-moc_paymentservertests.o: qt/test/moc_paymentservertests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_moondex_qt-moc_paymentservertests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_paymentservertests.Tpo -c -o qt/test/qt_test_test_moondex_qt-moc_paymentservertests.o `test -f 'qt/test/moc_paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/moc_paymentservertests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_paymentservertests.Po
-#	$(AM_V_CXX)source='qt/test/moc_paymentservertests.cpp' object='qt/test/qt_test_test_moondex_qt-moc_paymentservertests.o' libtool=no \
+qt/test/qt_test_test_SMScoin_qt-moc_paymentservertests.o: qt/test/moc_paymentservertests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_SMScoin_qt-moc_paymentservertests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_paymentservertests.Tpo -c -o qt/test/qt_test_test_SMScoin_qt-moc_paymentservertests.o `test -f 'qt/test/moc_paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/moc_paymentservertests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_paymentservertests.Po
+#	$(AM_V_CXX)source='qt/test/moc_paymentservertests.cpp' object='qt/test/qt_test_test_SMScoin_qt-moc_paymentservertests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_moondex_qt-moc_paymentservertests.o `test -f 'qt/test/moc_paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/moc_paymentservertests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_SMScoin_qt-moc_paymentservertests.o `test -f 'qt/test/moc_paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/moc_paymentservertests.cpp
 
-qt/test/qt_test_test_moondex_qt-moc_paymentservertests.obj: qt/test/moc_paymentservertests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_moondex_qt-moc_paymentservertests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_paymentservertests.Tpo -c -o qt/test/qt_test_test_moondex_qt-moc_paymentservertests.obj `if test -f 'qt/test/moc_paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/moc_paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_paymentservertests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_moondex_qt-moc_paymentservertests.Po
-#	$(AM_V_CXX)source='qt/test/moc_paymentservertests.cpp' object='qt/test/qt_test_test_moondex_qt-moc_paymentservertests.obj' libtool=no \
+qt/test/qt_test_test_SMScoin_qt-moc_paymentservertests.obj: qt/test/moc_paymentservertests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_SMScoin_qt-moc_paymentservertests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_paymentservertests.Tpo -c -o qt/test/qt_test_test_SMScoin_qt-moc_paymentservertests.obj `if test -f 'qt/test/moc_paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/moc_paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_paymentservertests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_SMScoin_qt-moc_paymentservertests.Po
+#	$(AM_V_CXX)source='qt/test/moc_paymentservertests.cpp' object='qt/test/qt_test_test_SMScoin_qt-moc_paymentservertests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_moondex_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_moondex_qt-moc_paymentservertests.obj `if test -f 'qt/test/moc_paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/moc_paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_paymentservertests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_SMScoin_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_SMScoin_qt-moc_paymentservertests.obj `if test -f 'qt/test/moc_paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/moc_paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_paymentservertests.cpp'; fi`
 
-test/test_test_moondex-arith_uint256_tests.o: test/arith_uint256_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-arith_uint256_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-arith_uint256_tests.Tpo -c -o test/test_test_moondex-arith_uint256_tests.o `test -f 'test/arith_uint256_tests.cpp' || echo '$(srcdir)/'`test/arith_uint256_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-arith_uint256_tests.Tpo test/$(DEPDIR)/test_test_moondex-arith_uint256_tests.Po
-#	$(AM_V_CXX)source='test/arith_uint256_tests.cpp' object='test/test_test_moondex-arith_uint256_tests.o' libtool=no \
+test/test_test_SMScoin-arith_uint256_tests.o: test/arith_uint256_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-arith_uint256_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-arith_uint256_tests.Tpo -c -o test/test_test_SMScoin-arith_uint256_tests.o `test -f 'test/arith_uint256_tests.cpp' || echo '$(srcdir)/'`test/arith_uint256_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-arith_uint256_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-arith_uint256_tests.Po
+#	$(AM_V_CXX)source='test/arith_uint256_tests.cpp' object='test/test_test_SMScoin-arith_uint256_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-arith_uint256_tests.o `test -f 'test/arith_uint256_tests.cpp' || echo '$(srcdir)/'`test/arith_uint256_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-arith_uint256_tests.o `test -f 'test/arith_uint256_tests.cpp' || echo '$(srcdir)/'`test/arith_uint256_tests.cpp
 
-test/test_test_moondex-arith_uint256_tests.obj: test/arith_uint256_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-arith_uint256_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-arith_uint256_tests.Tpo -c -o test/test_test_moondex-arith_uint256_tests.obj `if test -f 'test/arith_uint256_tests.cpp'; then $(CYGPATH_W) 'test/arith_uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/arith_uint256_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-arith_uint256_tests.Tpo test/$(DEPDIR)/test_test_moondex-arith_uint256_tests.Po
-#	$(AM_V_CXX)source='test/arith_uint256_tests.cpp' object='test/test_test_moondex-arith_uint256_tests.obj' libtool=no \
+test/test_test_SMScoin-arith_uint256_tests.obj: test/arith_uint256_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-arith_uint256_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-arith_uint256_tests.Tpo -c -o test/test_test_SMScoin-arith_uint256_tests.obj `if test -f 'test/arith_uint256_tests.cpp'; then $(CYGPATH_W) 'test/arith_uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/arith_uint256_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-arith_uint256_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-arith_uint256_tests.Po
+#	$(AM_V_CXX)source='test/arith_uint256_tests.cpp' object='test/test_test_SMScoin-arith_uint256_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-arith_uint256_tests.obj `if test -f 'test/arith_uint256_tests.cpp'; then $(CYGPATH_W) 'test/arith_uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/arith_uint256_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-arith_uint256_tests.obj `if test -f 'test/arith_uint256_tests.cpp'; then $(CYGPATH_W) 'test/arith_uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/arith_uint256_tests.cpp'; fi`
 
-test/test_test_moondex-addrman_tests.o: test/addrman_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-addrman_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-addrman_tests.Tpo -c -o test/test_test_moondex-addrman_tests.o `test -f 'test/addrman_tests.cpp' || echo '$(srcdir)/'`test/addrman_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-addrman_tests.Tpo test/$(DEPDIR)/test_test_moondex-addrman_tests.Po
-#	$(AM_V_CXX)source='test/addrman_tests.cpp' object='test/test_test_moondex-addrman_tests.o' libtool=no \
+test/test_test_SMScoin-addrman_tests.o: test/addrman_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-addrman_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-addrman_tests.Tpo -c -o test/test_test_SMScoin-addrman_tests.o `test -f 'test/addrman_tests.cpp' || echo '$(srcdir)/'`test/addrman_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-addrman_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-addrman_tests.Po
+#	$(AM_V_CXX)source='test/addrman_tests.cpp' object='test/test_test_SMScoin-addrman_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-addrman_tests.o `test -f 'test/addrman_tests.cpp' || echo '$(srcdir)/'`test/addrman_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-addrman_tests.o `test -f 'test/addrman_tests.cpp' || echo '$(srcdir)/'`test/addrman_tests.cpp
 
-test/test_test_moondex-addrman_tests.obj: test/addrman_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-addrman_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-addrman_tests.Tpo -c -o test/test_test_moondex-addrman_tests.obj `if test -f 'test/addrman_tests.cpp'; then $(CYGPATH_W) 'test/addrman_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/addrman_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-addrman_tests.Tpo test/$(DEPDIR)/test_test_moondex-addrman_tests.Po
-#	$(AM_V_CXX)source='test/addrman_tests.cpp' object='test/test_test_moondex-addrman_tests.obj' libtool=no \
+test/test_test_SMScoin-addrman_tests.obj: test/addrman_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-addrman_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-addrman_tests.Tpo -c -o test/test_test_SMScoin-addrman_tests.obj `if test -f 'test/addrman_tests.cpp'; then $(CYGPATH_W) 'test/addrman_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/addrman_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-addrman_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-addrman_tests.Po
+#	$(AM_V_CXX)source='test/addrman_tests.cpp' object='test/test_test_SMScoin-addrman_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-addrman_tests.obj `if test -f 'test/addrman_tests.cpp'; then $(CYGPATH_W) 'test/addrman_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/addrman_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-addrman_tests.obj `if test -f 'test/addrman_tests.cpp'; then $(CYGPATH_W) 'test/addrman_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/addrman_tests.cpp'; fi`
 
-test/test_test_moondex-alert_tests.o: test/alert_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-alert_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-alert_tests.Tpo -c -o test/test_test_moondex-alert_tests.o `test -f 'test/alert_tests.cpp' || echo '$(srcdir)/'`test/alert_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-alert_tests.Tpo test/$(DEPDIR)/test_test_moondex-alert_tests.Po
-#	$(AM_V_CXX)source='test/alert_tests.cpp' object='test/test_test_moondex-alert_tests.o' libtool=no \
+test/test_test_SMScoin-alert_tests.o: test/alert_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-alert_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-alert_tests.Tpo -c -o test/test_test_SMScoin-alert_tests.o `test -f 'test/alert_tests.cpp' || echo '$(srcdir)/'`test/alert_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-alert_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-alert_tests.Po
+#	$(AM_V_CXX)source='test/alert_tests.cpp' object='test/test_test_SMScoin-alert_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-alert_tests.o `test -f 'test/alert_tests.cpp' || echo '$(srcdir)/'`test/alert_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-alert_tests.o `test -f 'test/alert_tests.cpp' || echo '$(srcdir)/'`test/alert_tests.cpp
 
-test/test_test_moondex-alert_tests.obj: test/alert_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-alert_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-alert_tests.Tpo -c -o test/test_test_moondex-alert_tests.obj `if test -f 'test/alert_tests.cpp'; then $(CYGPATH_W) 'test/alert_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/alert_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-alert_tests.Tpo test/$(DEPDIR)/test_test_moondex-alert_tests.Po
-#	$(AM_V_CXX)source='test/alert_tests.cpp' object='test/test_test_moondex-alert_tests.obj' libtool=no \
+test/test_test_SMScoin-alert_tests.obj: test/alert_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-alert_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-alert_tests.Tpo -c -o test/test_test_SMScoin-alert_tests.obj `if test -f 'test/alert_tests.cpp'; then $(CYGPATH_W) 'test/alert_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/alert_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-alert_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-alert_tests.Po
+#	$(AM_V_CXX)source='test/alert_tests.cpp' object='test/test_test_SMScoin-alert_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-alert_tests.obj `if test -f 'test/alert_tests.cpp'; then $(CYGPATH_W) 'test/alert_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/alert_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-alert_tests.obj `if test -f 'test/alert_tests.cpp'; then $(CYGPATH_W) 'test/alert_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/alert_tests.cpp'; fi`
 
-test/test_test_moondex-allocator_tests.o: test/allocator_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-allocator_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-allocator_tests.Tpo -c -o test/test_test_moondex-allocator_tests.o `test -f 'test/allocator_tests.cpp' || echo '$(srcdir)/'`test/allocator_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-allocator_tests.Tpo test/$(DEPDIR)/test_test_moondex-allocator_tests.Po
-#	$(AM_V_CXX)source='test/allocator_tests.cpp' object='test/test_test_moondex-allocator_tests.o' libtool=no \
+test/test_test_SMScoin-allocator_tests.o: test/allocator_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-allocator_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-allocator_tests.Tpo -c -o test/test_test_SMScoin-allocator_tests.o `test -f 'test/allocator_tests.cpp' || echo '$(srcdir)/'`test/allocator_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-allocator_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-allocator_tests.Po
+#	$(AM_V_CXX)source='test/allocator_tests.cpp' object='test/test_test_SMScoin-allocator_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-allocator_tests.o `test -f 'test/allocator_tests.cpp' || echo '$(srcdir)/'`test/allocator_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-allocator_tests.o `test -f 'test/allocator_tests.cpp' || echo '$(srcdir)/'`test/allocator_tests.cpp
 
-test/test_test_moondex-allocator_tests.obj: test/allocator_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-allocator_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-allocator_tests.Tpo -c -o test/test_test_moondex-allocator_tests.obj `if test -f 'test/allocator_tests.cpp'; then $(CYGPATH_W) 'test/allocator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/allocator_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-allocator_tests.Tpo test/$(DEPDIR)/test_test_moondex-allocator_tests.Po
-#	$(AM_V_CXX)source='test/allocator_tests.cpp' object='test/test_test_moondex-allocator_tests.obj' libtool=no \
+test/test_test_SMScoin-allocator_tests.obj: test/allocator_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-allocator_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-allocator_tests.Tpo -c -o test/test_test_SMScoin-allocator_tests.obj `if test -f 'test/allocator_tests.cpp'; then $(CYGPATH_W) 'test/allocator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/allocator_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-allocator_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-allocator_tests.Po
+#	$(AM_V_CXX)source='test/allocator_tests.cpp' object='test/test_test_SMScoin-allocator_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-allocator_tests.obj `if test -f 'test/allocator_tests.cpp'; then $(CYGPATH_W) 'test/allocator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/allocator_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-allocator_tests.obj `if test -f 'test/allocator_tests.cpp'; then $(CYGPATH_W) 'test/allocator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/allocator_tests.cpp'; fi`
 
-test/test_test_moondex-base32_tests.o: test/base32_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-base32_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-base32_tests.Tpo -c -o test/test_test_moondex-base32_tests.o `test -f 'test/base32_tests.cpp' || echo '$(srcdir)/'`test/base32_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-base32_tests.Tpo test/$(DEPDIR)/test_test_moondex-base32_tests.Po
-#	$(AM_V_CXX)source='test/base32_tests.cpp' object='test/test_test_moondex-base32_tests.o' libtool=no \
+test/test_test_SMScoin-base32_tests.o: test/base32_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-base32_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-base32_tests.Tpo -c -o test/test_test_SMScoin-base32_tests.o `test -f 'test/base32_tests.cpp' || echo '$(srcdir)/'`test/base32_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-base32_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-base32_tests.Po
+#	$(AM_V_CXX)source='test/base32_tests.cpp' object='test/test_test_SMScoin-base32_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-base32_tests.o `test -f 'test/base32_tests.cpp' || echo '$(srcdir)/'`test/base32_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-base32_tests.o `test -f 'test/base32_tests.cpp' || echo '$(srcdir)/'`test/base32_tests.cpp
 
-test/test_test_moondex-base32_tests.obj: test/base32_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-base32_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-base32_tests.Tpo -c -o test/test_test_moondex-base32_tests.obj `if test -f 'test/base32_tests.cpp'; then $(CYGPATH_W) 'test/base32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base32_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-base32_tests.Tpo test/$(DEPDIR)/test_test_moondex-base32_tests.Po
-#	$(AM_V_CXX)source='test/base32_tests.cpp' object='test/test_test_moondex-base32_tests.obj' libtool=no \
+test/test_test_SMScoin-base32_tests.obj: test/base32_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-base32_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-base32_tests.Tpo -c -o test/test_test_SMScoin-base32_tests.obj `if test -f 'test/base32_tests.cpp'; then $(CYGPATH_W) 'test/base32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base32_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-base32_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-base32_tests.Po
+#	$(AM_V_CXX)source='test/base32_tests.cpp' object='test/test_test_SMScoin-base32_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-base32_tests.obj `if test -f 'test/base32_tests.cpp'; then $(CYGPATH_W) 'test/base32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base32_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-base32_tests.obj `if test -f 'test/base32_tests.cpp'; then $(CYGPATH_W) 'test/base32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base32_tests.cpp'; fi`
 
-test/test_test_moondex-base58_tests.o: test/base58_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-base58_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-base58_tests.Tpo -c -o test/test_test_moondex-base58_tests.o `test -f 'test/base58_tests.cpp' || echo '$(srcdir)/'`test/base58_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-base58_tests.Tpo test/$(DEPDIR)/test_test_moondex-base58_tests.Po
-#	$(AM_V_CXX)source='test/base58_tests.cpp' object='test/test_test_moondex-base58_tests.o' libtool=no \
+test/test_test_SMScoin-base58_tests.o: test/base58_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-base58_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-base58_tests.Tpo -c -o test/test_test_SMScoin-base58_tests.o `test -f 'test/base58_tests.cpp' || echo '$(srcdir)/'`test/base58_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-base58_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-base58_tests.Po
+#	$(AM_V_CXX)source='test/base58_tests.cpp' object='test/test_test_SMScoin-base58_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-base58_tests.o `test -f 'test/base58_tests.cpp' || echo '$(srcdir)/'`test/base58_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-base58_tests.o `test -f 'test/base58_tests.cpp' || echo '$(srcdir)/'`test/base58_tests.cpp
 
-test/test_test_moondex-base58_tests.obj: test/base58_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-base58_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-base58_tests.Tpo -c -o test/test_test_moondex-base58_tests.obj `if test -f 'test/base58_tests.cpp'; then $(CYGPATH_W) 'test/base58_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base58_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-base58_tests.Tpo test/$(DEPDIR)/test_test_moondex-base58_tests.Po
-#	$(AM_V_CXX)source='test/base58_tests.cpp' object='test/test_test_moondex-base58_tests.obj' libtool=no \
+test/test_test_SMScoin-base58_tests.obj: test/base58_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-base58_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-base58_tests.Tpo -c -o test/test_test_SMScoin-base58_tests.obj `if test -f 'test/base58_tests.cpp'; then $(CYGPATH_W) 'test/base58_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base58_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-base58_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-base58_tests.Po
+#	$(AM_V_CXX)source='test/base58_tests.cpp' object='test/test_test_SMScoin-base58_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-base58_tests.obj `if test -f 'test/base58_tests.cpp'; then $(CYGPATH_W) 'test/base58_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base58_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-base58_tests.obj `if test -f 'test/base58_tests.cpp'; then $(CYGPATH_W) 'test/base58_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base58_tests.cpp'; fi`
 
-test/test_test_moondex-base64_tests.o: test/base64_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-base64_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-base64_tests.Tpo -c -o test/test_test_moondex-base64_tests.o `test -f 'test/base64_tests.cpp' || echo '$(srcdir)/'`test/base64_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-base64_tests.Tpo test/$(DEPDIR)/test_test_moondex-base64_tests.Po
-#	$(AM_V_CXX)source='test/base64_tests.cpp' object='test/test_test_moondex-base64_tests.o' libtool=no \
+test/test_test_SMScoin-base64_tests.o: test/base64_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-base64_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-base64_tests.Tpo -c -o test/test_test_SMScoin-base64_tests.o `test -f 'test/base64_tests.cpp' || echo '$(srcdir)/'`test/base64_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-base64_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-base64_tests.Po
+#	$(AM_V_CXX)source='test/base64_tests.cpp' object='test/test_test_SMScoin-base64_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-base64_tests.o `test -f 'test/base64_tests.cpp' || echo '$(srcdir)/'`test/base64_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-base64_tests.o `test -f 'test/base64_tests.cpp' || echo '$(srcdir)/'`test/base64_tests.cpp
 
-test/test_test_moondex-base64_tests.obj: test/base64_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-base64_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-base64_tests.Tpo -c -o test/test_test_moondex-base64_tests.obj `if test -f 'test/base64_tests.cpp'; then $(CYGPATH_W) 'test/base64_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base64_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-base64_tests.Tpo test/$(DEPDIR)/test_test_moondex-base64_tests.Po
-#	$(AM_V_CXX)source='test/base64_tests.cpp' object='test/test_test_moondex-base64_tests.obj' libtool=no \
+test/test_test_SMScoin-base64_tests.obj: test/base64_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-base64_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-base64_tests.Tpo -c -o test/test_test_SMScoin-base64_tests.obj `if test -f 'test/base64_tests.cpp'; then $(CYGPATH_W) 'test/base64_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base64_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-base64_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-base64_tests.Po
+#	$(AM_V_CXX)source='test/base64_tests.cpp' object='test/test_test_SMScoin-base64_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-base64_tests.obj `if test -f 'test/base64_tests.cpp'; then $(CYGPATH_W) 'test/base64_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base64_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-base64_tests.obj `if test -f 'test/base64_tests.cpp'; then $(CYGPATH_W) 'test/base64_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base64_tests.cpp'; fi`
 
-test/test_test_moondex-bip32_tests.o: test/bip32_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-bip32_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-bip32_tests.Tpo -c -o test/test_test_moondex-bip32_tests.o `test -f 'test/bip32_tests.cpp' || echo '$(srcdir)/'`test/bip32_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-bip32_tests.Tpo test/$(DEPDIR)/test_test_moondex-bip32_tests.Po
-#	$(AM_V_CXX)source='test/bip32_tests.cpp' object='test/test_test_moondex-bip32_tests.o' libtool=no \
+test/test_test_SMScoin-bip32_tests.o: test/bip32_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-bip32_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-bip32_tests.Tpo -c -o test/test_test_SMScoin-bip32_tests.o `test -f 'test/bip32_tests.cpp' || echo '$(srcdir)/'`test/bip32_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-bip32_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-bip32_tests.Po
+#	$(AM_V_CXX)source='test/bip32_tests.cpp' object='test/test_test_SMScoin-bip32_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-bip32_tests.o `test -f 'test/bip32_tests.cpp' || echo '$(srcdir)/'`test/bip32_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-bip32_tests.o `test -f 'test/bip32_tests.cpp' || echo '$(srcdir)/'`test/bip32_tests.cpp
 
-test/test_test_moondex-bip32_tests.obj: test/bip32_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-bip32_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-bip32_tests.Tpo -c -o test/test_test_moondex-bip32_tests.obj `if test -f 'test/bip32_tests.cpp'; then $(CYGPATH_W) 'test/bip32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bip32_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-bip32_tests.Tpo test/$(DEPDIR)/test_test_moondex-bip32_tests.Po
-#	$(AM_V_CXX)source='test/bip32_tests.cpp' object='test/test_test_moondex-bip32_tests.obj' libtool=no \
+test/test_test_SMScoin-bip32_tests.obj: test/bip32_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-bip32_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-bip32_tests.Tpo -c -o test/test_test_SMScoin-bip32_tests.obj `if test -f 'test/bip32_tests.cpp'; then $(CYGPATH_W) 'test/bip32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bip32_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-bip32_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-bip32_tests.Po
+#	$(AM_V_CXX)source='test/bip32_tests.cpp' object='test/test_test_SMScoin-bip32_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-bip32_tests.obj `if test -f 'test/bip32_tests.cpp'; then $(CYGPATH_W) 'test/bip32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bip32_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-bip32_tests.obj `if test -f 'test/bip32_tests.cpp'; then $(CYGPATH_W) 'test/bip32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bip32_tests.cpp'; fi`
 
-test/test_test_moondex-bloom_tests.o: test/bloom_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-bloom_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-bloom_tests.Tpo -c -o test/test_test_moondex-bloom_tests.o `test -f 'test/bloom_tests.cpp' || echo '$(srcdir)/'`test/bloom_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-bloom_tests.Tpo test/$(DEPDIR)/test_test_moondex-bloom_tests.Po
-#	$(AM_V_CXX)source='test/bloom_tests.cpp' object='test/test_test_moondex-bloom_tests.o' libtool=no \
+test/test_test_SMScoin-bloom_tests.o: test/bloom_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-bloom_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-bloom_tests.Tpo -c -o test/test_test_SMScoin-bloom_tests.o `test -f 'test/bloom_tests.cpp' || echo '$(srcdir)/'`test/bloom_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-bloom_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-bloom_tests.Po
+#	$(AM_V_CXX)source='test/bloom_tests.cpp' object='test/test_test_SMScoin-bloom_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-bloom_tests.o `test -f 'test/bloom_tests.cpp' || echo '$(srcdir)/'`test/bloom_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-bloom_tests.o `test -f 'test/bloom_tests.cpp' || echo '$(srcdir)/'`test/bloom_tests.cpp
 
-test/test_test_moondex-bloom_tests.obj: test/bloom_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-bloom_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-bloom_tests.Tpo -c -o test/test_test_moondex-bloom_tests.obj `if test -f 'test/bloom_tests.cpp'; then $(CYGPATH_W) 'test/bloom_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bloom_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-bloom_tests.Tpo test/$(DEPDIR)/test_test_moondex-bloom_tests.Po
-#	$(AM_V_CXX)source='test/bloom_tests.cpp' object='test/test_test_moondex-bloom_tests.obj' libtool=no \
+test/test_test_SMScoin-bloom_tests.obj: test/bloom_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-bloom_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-bloom_tests.Tpo -c -o test/test_test_SMScoin-bloom_tests.obj `if test -f 'test/bloom_tests.cpp'; then $(CYGPATH_W) 'test/bloom_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bloom_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-bloom_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-bloom_tests.Po
+#	$(AM_V_CXX)source='test/bloom_tests.cpp' object='test/test_test_SMScoin-bloom_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-bloom_tests.obj `if test -f 'test/bloom_tests.cpp'; then $(CYGPATH_W) 'test/bloom_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bloom_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-bloom_tests.obj `if test -f 'test/bloom_tests.cpp'; then $(CYGPATH_W) 'test/bloom_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bloom_tests.cpp'; fi`
 
-test/test_test_moondex-bswap_tests.o: test/bswap_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-bswap_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-bswap_tests.Tpo -c -o test/test_test_moondex-bswap_tests.o `test -f 'test/bswap_tests.cpp' || echo '$(srcdir)/'`test/bswap_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-bswap_tests.Tpo test/$(DEPDIR)/test_test_moondex-bswap_tests.Po
-#	$(AM_V_CXX)source='test/bswap_tests.cpp' object='test/test_test_moondex-bswap_tests.o' libtool=no \
+test/test_test_SMScoin-bswap_tests.o: test/bswap_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-bswap_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-bswap_tests.Tpo -c -o test/test_test_SMScoin-bswap_tests.o `test -f 'test/bswap_tests.cpp' || echo '$(srcdir)/'`test/bswap_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-bswap_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-bswap_tests.Po
+#	$(AM_V_CXX)source='test/bswap_tests.cpp' object='test/test_test_SMScoin-bswap_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-bswap_tests.o `test -f 'test/bswap_tests.cpp' || echo '$(srcdir)/'`test/bswap_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-bswap_tests.o `test -f 'test/bswap_tests.cpp' || echo '$(srcdir)/'`test/bswap_tests.cpp
 
-test/test_test_moondex-bswap_tests.obj: test/bswap_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-bswap_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-bswap_tests.Tpo -c -o test/test_test_moondex-bswap_tests.obj `if test -f 'test/bswap_tests.cpp'; then $(CYGPATH_W) 'test/bswap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bswap_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-bswap_tests.Tpo test/$(DEPDIR)/test_test_moondex-bswap_tests.Po
-#	$(AM_V_CXX)source='test/bswap_tests.cpp' object='test/test_test_moondex-bswap_tests.obj' libtool=no \
+test/test_test_SMScoin-bswap_tests.obj: test/bswap_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-bswap_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-bswap_tests.Tpo -c -o test/test_test_SMScoin-bswap_tests.obj `if test -f 'test/bswap_tests.cpp'; then $(CYGPATH_W) 'test/bswap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bswap_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-bswap_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-bswap_tests.Po
+#	$(AM_V_CXX)source='test/bswap_tests.cpp' object='test/test_test_SMScoin-bswap_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-bswap_tests.obj `if test -f 'test/bswap_tests.cpp'; then $(CYGPATH_W) 'test/bswap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bswap_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-bswap_tests.obj `if test -f 'test/bswap_tests.cpp'; then $(CYGPATH_W) 'test/bswap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bswap_tests.cpp'; fi`
 
-test/test_test_moondex-cachemap_tests.o: test/cachemap_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-cachemap_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-cachemap_tests.Tpo -c -o test/test_test_moondex-cachemap_tests.o `test -f 'test/cachemap_tests.cpp' || echo '$(srcdir)/'`test/cachemap_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-cachemap_tests.Tpo test/$(DEPDIR)/test_test_moondex-cachemap_tests.Po
-#	$(AM_V_CXX)source='test/cachemap_tests.cpp' object='test/test_test_moondex-cachemap_tests.o' libtool=no \
+test/test_test_SMScoin-cachemap_tests.o: test/cachemap_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-cachemap_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-cachemap_tests.Tpo -c -o test/test_test_SMScoin-cachemap_tests.o `test -f 'test/cachemap_tests.cpp' || echo '$(srcdir)/'`test/cachemap_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-cachemap_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-cachemap_tests.Po
+#	$(AM_V_CXX)source='test/cachemap_tests.cpp' object='test/test_test_SMScoin-cachemap_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-cachemap_tests.o `test -f 'test/cachemap_tests.cpp' || echo '$(srcdir)/'`test/cachemap_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-cachemap_tests.o `test -f 'test/cachemap_tests.cpp' || echo '$(srcdir)/'`test/cachemap_tests.cpp
 
-test/test_test_moondex-cachemap_tests.obj: test/cachemap_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-cachemap_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-cachemap_tests.Tpo -c -o test/test_test_moondex-cachemap_tests.obj `if test -f 'test/cachemap_tests.cpp'; then $(CYGPATH_W) 'test/cachemap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/cachemap_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-cachemap_tests.Tpo test/$(DEPDIR)/test_test_moondex-cachemap_tests.Po
-#	$(AM_V_CXX)source='test/cachemap_tests.cpp' object='test/test_test_moondex-cachemap_tests.obj' libtool=no \
+test/test_test_SMScoin-cachemap_tests.obj: test/cachemap_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-cachemap_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-cachemap_tests.Tpo -c -o test/test_test_SMScoin-cachemap_tests.obj `if test -f 'test/cachemap_tests.cpp'; then $(CYGPATH_W) 'test/cachemap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/cachemap_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-cachemap_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-cachemap_tests.Po
+#	$(AM_V_CXX)source='test/cachemap_tests.cpp' object='test/test_test_SMScoin-cachemap_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-cachemap_tests.obj `if test -f 'test/cachemap_tests.cpp'; then $(CYGPATH_W) 'test/cachemap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/cachemap_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-cachemap_tests.obj `if test -f 'test/cachemap_tests.cpp'; then $(CYGPATH_W) 'test/cachemap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/cachemap_tests.cpp'; fi`
 
-test/test_test_moondex-cachemultimap_tests.o: test/cachemultimap_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-cachemultimap_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-cachemultimap_tests.Tpo -c -o test/test_test_moondex-cachemultimap_tests.o `test -f 'test/cachemultimap_tests.cpp' || echo '$(srcdir)/'`test/cachemultimap_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-cachemultimap_tests.Tpo test/$(DEPDIR)/test_test_moondex-cachemultimap_tests.Po
-#	$(AM_V_CXX)source='test/cachemultimap_tests.cpp' object='test/test_test_moondex-cachemultimap_tests.o' libtool=no \
+test/test_test_SMScoin-cachemultimap_tests.o: test/cachemultimap_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-cachemultimap_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-cachemultimap_tests.Tpo -c -o test/test_test_SMScoin-cachemultimap_tests.o `test -f 'test/cachemultimap_tests.cpp' || echo '$(srcdir)/'`test/cachemultimap_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-cachemultimap_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-cachemultimap_tests.Po
+#	$(AM_V_CXX)source='test/cachemultimap_tests.cpp' object='test/test_test_SMScoin-cachemultimap_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-cachemultimap_tests.o `test -f 'test/cachemultimap_tests.cpp' || echo '$(srcdir)/'`test/cachemultimap_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-cachemultimap_tests.o `test -f 'test/cachemultimap_tests.cpp' || echo '$(srcdir)/'`test/cachemultimap_tests.cpp
 
-test/test_test_moondex-cachemultimap_tests.obj: test/cachemultimap_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-cachemultimap_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-cachemultimap_tests.Tpo -c -o test/test_test_moondex-cachemultimap_tests.obj `if test -f 'test/cachemultimap_tests.cpp'; then $(CYGPATH_W) 'test/cachemultimap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/cachemultimap_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-cachemultimap_tests.Tpo test/$(DEPDIR)/test_test_moondex-cachemultimap_tests.Po
-#	$(AM_V_CXX)source='test/cachemultimap_tests.cpp' object='test/test_test_moondex-cachemultimap_tests.obj' libtool=no \
+test/test_test_SMScoin-cachemultimap_tests.obj: test/cachemultimap_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-cachemultimap_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-cachemultimap_tests.Tpo -c -o test/test_test_SMScoin-cachemultimap_tests.obj `if test -f 'test/cachemultimap_tests.cpp'; then $(CYGPATH_W) 'test/cachemultimap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/cachemultimap_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-cachemultimap_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-cachemultimap_tests.Po
+#	$(AM_V_CXX)source='test/cachemultimap_tests.cpp' object='test/test_test_SMScoin-cachemultimap_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-cachemultimap_tests.obj `if test -f 'test/cachemultimap_tests.cpp'; then $(CYGPATH_W) 'test/cachemultimap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/cachemultimap_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-cachemultimap_tests.obj `if test -f 'test/cachemultimap_tests.cpp'; then $(CYGPATH_W) 'test/cachemultimap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/cachemultimap_tests.cpp'; fi`
 
-test/test_test_moondex-checkblock_tests.o: test/checkblock_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-checkblock_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-checkblock_tests.Tpo -c -o test/test_test_moondex-checkblock_tests.o `test -f 'test/checkblock_tests.cpp' || echo '$(srcdir)/'`test/checkblock_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-checkblock_tests.Tpo test/$(DEPDIR)/test_test_moondex-checkblock_tests.Po
-#	$(AM_V_CXX)source='test/checkblock_tests.cpp' object='test/test_test_moondex-checkblock_tests.o' libtool=no \
+test/test_test_SMScoin-checkblock_tests.o: test/checkblock_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-checkblock_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-checkblock_tests.Tpo -c -o test/test_test_SMScoin-checkblock_tests.o `test -f 'test/checkblock_tests.cpp' || echo '$(srcdir)/'`test/checkblock_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-checkblock_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-checkblock_tests.Po
+#	$(AM_V_CXX)source='test/checkblock_tests.cpp' object='test/test_test_SMScoin-checkblock_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-checkblock_tests.o `test -f 'test/checkblock_tests.cpp' || echo '$(srcdir)/'`test/checkblock_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-checkblock_tests.o `test -f 'test/checkblock_tests.cpp' || echo '$(srcdir)/'`test/checkblock_tests.cpp
 
-test/test_test_moondex-checkblock_tests.obj: test/checkblock_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-checkblock_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-checkblock_tests.Tpo -c -o test/test_test_moondex-checkblock_tests.obj `if test -f 'test/checkblock_tests.cpp'; then $(CYGPATH_W) 'test/checkblock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/checkblock_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-checkblock_tests.Tpo test/$(DEPDIR)/test_test_moondex-checkblock_tests.Po
-#	$(AM_V_CXX)source='test/checkblock_tests.cpp' object='test/test_test_moondex-checkblock_tests.obj' libtool=no \
+test/test_test_SMScoin-checkblock_tests.obj: test/checkblock_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-checkblock_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-checkblock_tests.Tpo -c -o test/test_test_SMScoin-checkblock_tests.obj `if test -f 'test/checkblock_tests.cpp'; then $(CYGPATH_W) 'test/checkblock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/checkblock_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-checkblock_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-checkblock_tests.Po
+#	$(AM_V_CXX)source='test/checkblock_tests.cpp' object='test/test_test_SMScoin-checkblock_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-checkblock_tests.obj `if test -f 'test/checkblock_tests.cpp'; then $(CYGPATH_W) 'test/checkblock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/checkblock_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-checkblock_tests.obj `if test -f 'test/checkblock_tests.cpp'; then $(CYGPATH_W) 'test/checkblock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/checkblock_tests.cpp'; fi`
 
-test/test_test_moondex-Checkpoints_tests.o: test/Checkpoints_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-Checkpoints_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-Checkpoints_tests.Tpo -c -o test/test_test_moondex-Checkpoints_tests.o `test -f 'test/Checkpoints_tests.cpp' || echo '$(srcdir)/'`test/Checkpoints_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-Checkpoints_tests.Tpo test/$(DEPDIR)/test_test_moondex-Checkpoints_tests.Po
-#	$(AM_V_CXX)source='test/Checkpoints_tests.cpp' object='test/test_test_moondex-Checkpoints_tests.o' libtool=no \
+test/test_test_SMScoin-Checkpoints_tests.o: test/Checkpoints_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-Checkpoints_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-Checkpoints_tests.Tpo -c -o test/test_test_SMScoin-Checkpoints_tests.o `test -f 'test/Checkpoints_tests.cpp' || echo '$(srcdir)/'`test/Checkpoints_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-Checkpoints_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-Checkpoints_tests.Po
+#	$(AM_V_CXX)source='test/Checkpoints_tests.cpp' object='test/test_test_SMScoin-Checkpoints_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-Checkpoints_tests.o `test -f 'test/Checkpoints_tests.cpp' || echo '$(srcdir)/'`test/Checkpoints_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-Checkpoints_tests.o `test -f 'test/Checkpoints_tests.cpp' || echo '$(srcdir)/'`test/Checkpoints_tests.cpp
 
-test/test_test_moondex-Checkpoints_tests.obj: test/Checkpoints_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-Checkpoints_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-Checkpoints_tests.Tpo -c -o test/test_test_moondex-Checkpoints_tests.obj `if test -f 'test/Checkpoints_tests.cpp'; then $(CYGPATH_W) 'test/Checkpoints_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/Checkpoints_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-Checkpoints_tests.Tpo test/$(DEPDIR)/test_test_moondex-Checkpoints_tests.Po
-#	$(AM_V_CXX)source='test/Checkpoints_tests.cpp' object='test/test_test_moondex-Checkpoints_tests.obj' libtool=no \
+test/test_test_SMScoin-Checkpoints_tests.obj: test/Checkpoints_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-Checkpoints_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-Checkpoints_tests.Tpo -c -o test/test_test_SMScoin-Checkpoints_tests.obj `if test -f 'test/Checkpoints_tests.cpp'; then $(CYGPATH_W) 'test/Checkpoints_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/Checkpoints_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-Checkpoints_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-Checkpoints_tests.Po
+#	$(AM_V_CXX)source='test/Checkpoints_tests.cpp' object='test/test_test_SMScoin-Checkpoints_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-Checkpoints_tests.obj `if test -f 'test/Checkpoints_tests.cpp'; then $(CYGPATH_W) 'test/Checkpoints_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/Checkpoints_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-Checkpoints_tests.obj `if test -f 'test/Checkpoints_tests.cpp'; then $(CYGPATH_W) 'test/Checkpoints_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/Checkpoints_tests.cpp'; fi`
 
-test/test_test_moondex-coins_tests.o: test/coins_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-coins_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-coins_tests.Tpo -c -o test/test_test_moondex-coins_tests.o `test -f 'test/coins_tests.cpp' || echo '$(srcdir)/'`test/coins_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-coins_tests.Tpo test/$(DEPDIR)/test_test_moondex-coins_tests.Po
-#	$(AM_V_CXX)source='test/coins_tests.cpp' object='test/test_test_moondex-coins_tests.o' libtool=no \
+test/test_test_SMScoin-coins_tests.o: test/coins_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-coins_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-coins_tests.Tpo -c -o test/test_test_SMScoin-coins_tests.o `test -f 'test/coins_tests.cpp' || echo '$(srcdir)/'`test/coins_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-coins_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-coins_tests.Po
+#	$(AM_V_CXX)source='test/coins_tests.cpp' object='test/test_test_SMScoin-coins_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-coins_tests.o `test -f 'test/coins_tests.cpp' || echo '$(srcdir)/'`test/coins_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-coins_tests.o `test -f 'test/coins_tests.cpp' || echo '$(srcdir)/'`test/coins_tests.cpp
 
-test/test_test_moondex-coins_tests.obj: test/coins_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-coins_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-coins_tests.Tpo -c -o test/test_test_moondex-coins_tests.obj `if test -f 'test/coins_tests.cpp'; then $(CYGPATH_W) 'test/coins_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/coins_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-coins_tests.Tpo test/$(DEPDIR)/test_test_moondex-coins_tests.Po
-#	$(AM_V_CXX)source='test/coins_tests.cpp' object='test/test_test_moondex-coins_tests.obj' libtool=no \
+test/test_test_SMScoin-coins_tests.obj: test/coins_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-coins_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-coins_tests.Tpo -c -o test/test_test_SMScoin-coins_tests.obj `if test -f 'test/coins_tests.cpp'; then $(CYGPATH_W) 'test/coins_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/coins_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-coins_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-coins_tests.Po
+#	$(AM_V_CXX)source='test/coins_tests.cpp' object='test/test_test_SMScoin-coins_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-coins_tests.obj `if test -f 'test/coins_tests.cpp'; then $(CYGPATH_W) 'test/coins_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/coins_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-coins_tests.obj `if test -f 'test/coins_tests.cpp'; then $(CYGPATH_W) 'test/coins_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/coins_tests.cpp'; fi`
 
-test/test_test_moondex-compress_tests.o: test/compress_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-compress_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-compress_tests.Tpo -c -o test/test_test_moondex-compress_tests.o `test -f 'test/compress_tests.cpp' || echo '$(srcdir)/'`test/compress_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-compress_tests.Tpo test/$(DEPDIR)/test_test_moondex-compress_tests.Po
-#	$(AM_V_CXX)source='test/compress_tests.cpp' object='test/test_test_moondex-compress_tests.o' libtool=no \
+test/test_test_SMScoin-compress_tests.o: test/compress_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-compress_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-compress_tests.Tpo -c -o test/test_test_SMScoin-compress_tests.o `test -f 'test/compress_tests.cpp' || echo '$(srcdir)/'`test/compress_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-compress_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-compress_tests.Po
+#	$(AM_V_CXX)source='test/compress_tests.cpp' object='test/test_test_SMScoin-compress_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-compress_tests.o `test -f 'test/compress_tests.cpp' || echo '$(srcdir)/'`test/compress_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-compress_tests.o `test -f 'test/compress_tests.cpp' || echo '$(srcdir)/'`test/compress_tests.cpp
 
-test/test_test_moondex-compress_tests.obj: test/compress_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-compress_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-compress_tests.Tpo -c -o test/test_test_moondex-compress_tests.obj `if test -f 'test/compress_tests.cpp'; then $(CYGPATH_W) 'test/compress_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/compress_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-compress_tests.Tpo test/$(DEPDIR)/test_test_moondex-compress_tests.Po
-#	$(AM_V_CXX)source='test/compress_tests.cpp' object='test/test_test_moondex-compress_tests.obj' libtool=no \
+test/test_test_SMScoin-compress_tests.obj: test/compress_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-compress_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-compress_tests.Tpo -c -o test/test_test_SMScoin-compress_tests.obj `if test -f 'test/compress_tests.cpp'; then $(CYGPATH_W) 'test/compress_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/compress_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-compress_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-compress_tests.Po
+#	$(AM_V_CXX)source='test/compress_tests.cpp' object='test/test_test_SMScoin-compress_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-compress_tests.obj `if test -f 'test/compress_tests.cpp'; then $(CYGPATH_W) 'test/compress_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/compress_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-compress_tests.obj `if test -f 'test/compress_tests.cpp'; then $(CYGPATH_W) 'test/compress_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/compress_tests.cpp'; fi`
 
-test/test_test_moondex-crypto_tests.o: test/crypto_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-crypto_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-crypto_tests.Tpo -c -o test/test_test_moondex-crypto_tests.o `test -f 'test/crypto_tests.cpp' || echo '$(srcdir)/'`test/crypto_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-crypto_tests.Tpo test/$(DEPDIR)/test_test_moondex-crypto_tests.Po
-#	$(AM_V_CXX)source='test/crypto_tests.cpp' object='test/test_test_moondex-crypto_tests.o' libtool=no \
+test/test_test_SMScoin-crypto_tests.o: test/crypto_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-crypto_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-crypto_tests.Tpo -c -o test/test_test_SMScoin-crypto_tests.o `test -f 'test/crypto_tests.cpp' || echo '$(srcdir)/'`test/crypto_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-crypto_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-crypto_tests.Po
+#	$(AM_V_CXX)source='test/crypto_tests.cpp' object='test/test_test_SMScoin-crypto_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-crypto_tests.o `test -f 'test/crypto_tests.cpp' || echo '$(srcdir)/'`test/crypto_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-crypto_tests.o `test -f 'test/crypto_tests.cpp' || echo '$(srcdir)/'`test/crypto_tests.cpp
 
-test/test_test_moondex-crypto_tests.obj: test/crypto_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-crypto_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-crypto_tests.Tpo -c -o test/test_test_moondex-crypto_tests.obj `if test -f 'test/crypto_tests.cpp'; then $(CYGPATH_W) 'test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/crypto_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-crypto_tests.Tpo test/$(DEPDIR)/test_test_moondex-crypto_tests.Po
-#	$(AM_V_CXX)source='test/crypto_tests.cpp' object='test/test_test_moondex-crypto_tests.obj' libtool=no \
+test/test_test_SMScoin-crypto_tests.obj: test/crypto_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-crypto_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-crypto_tests.Tpo -c -o test/test_test_SMScoin-crypto_tests.obj `if test -f 'test/crypto_tests.cpp'; then $(CYGPATH_W) 'test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/crypto_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-crypto_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-crypto_tests.Po
+#	$(AM_V_CXX)source='test/crypto_tests.cpp' object='test/test_test_SMScoin-crypto_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-crypto_tests.obj `if test -f 'test/crypto_tests.cpp'; then $(CYGPATH_W) 'test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/crypto_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-crypto_tests.obj `if test -f 'test/crypto_tests.cpp'; then $(CYGPATH_W) 'test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/crypto_tests.cpp'; fi`
 
-test/test_test_moondex-DoS_tests.o: test/DoS_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-DoS_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-DoS_tests.Tpo -c -o test/test_test_moondex-DoS_tests.o `test -f 'test/DoS_tests.cpp' || echo '$(srcdir)/'`test/DoS_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-DoS_tests.Tpo test/$(DEPDIR)/test_test_moondex-DoS_tests.Po
-#	$(AM_V_CXX)source='test/DoS_tests.cpp' object='test/test_test_moondex-DoS_tests.o' libtool=no \
+test/test_test_SMScoin-DoS_tests.o: test/DoS_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-DoS_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-DoS_tests.Tpo -c -o test/test_test_SMScoin-DoS_tests.o `test -f 'test/DoS_tests.cpp' || echo '$(srcdir)/'`test/DoS_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-DoS_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-DoS_tests.Po
+#	$(AM_V_CXX)source='test/DoS_tests.cpp' object='test/test_test_SMScoin-DoS_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-DoS_tests.o `test -f 'test/DoS_tests.cpp' || echo '$(srcdir)/'`test/DoS_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-DoS_tests.o `test -f 'test/DoS_tests.cpp' || echo '$(srcdir)/'`test/DoS_tests.cpp
 
-test/test_test_moondex-DoS_tests.obj: test/DoS_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-DoS_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-DoS_tests.Tpo -c -o test/test_test_moondex-DoS_tests.obj `if test -f 'test/DoS_tests.cpp'; then $(CYGPATH_W) 'test/DoS_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/DoS_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-DoS_tests.Tpo test/$(DEPDIR)/test_test_moondex-DoS_tests.Po
-#	$(AM_V_CXX)source='test/DoS_tests.cpp' object='test/test_test_moondex-DoS_tests.obj' libtool=no \
+test/test_test_SMScoin-DoS_tests.obj: test/DoS_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-DoS_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-DoS_tests.Tpo -c -o test/test_test_SMScoin-DoS_tests.obj `if test -f 'test/DoS_tests.cpp'; then $(CYGPATH_W) 'test/DoS_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/DoS_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-DoS_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-DoS_tests.Po
+#	$(AM_V_CXX)source='test/DoS_tests.cpp' object='test/test_test_SMScoin-DoS_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-DoS_tests.obj `if test -f 'test/DoS_tests.cpp'; then $(CYGPATH_W) 'test/DoS_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/DoS_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-DoS_tests.obj `if test -f 'test/DoS_tests.cpp'; then $(CYGPATH_W) 'test/DoS_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/DoS_tests.cpp'; fi`
 
-test/test_test_moondex-getarg_tests.o: test/getarg_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-getarg_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-getarg_tests.Tpo -c -o test/test_test_moondex-getarg_tests.o `test -f 'test/getarg_tests.cpp' || echo '$(srcdir)/'`test/getarg_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-getarg_tests.Tpo test/$(DEPDIR)/test_test_moondex-getarg_tests.Po
-#	$(AM_V_CXX)source='test/getarg_tests.cpp' object='test/test_test_moondex-getarg_tests.o' libtool=no \
+test/test_test_SMScoin-getarg_tests.o: test/getarg_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-getarg_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-getarg_tests.Tpo -c -o test/test_test_SMScoin-getarg_tests.o `test -f 'test/getarg_tests.cpp' || echo '$(srcdir)/'`test/getarg_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-getarg_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-getarg_tests.Po
+#	$(AM_V_CXX)source='test/getarg_tests.cpp' object='test/test_test_SMScoin-getarg_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-getarg_tests.o `test -f 'test/getarg_tests.cpp' || echo '$(srcdir)/'`test/getarg_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-getarg_tests.o `test -f 'test/getarg_tests.cpp' || echo '$(srcdir)/'`test/getarg_tests.cpp
 
-test/test_test_moondex-getarg_tests.obj: test/getarg_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-getarg_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-getarg_tests.Tpo -c -o test/test_test_moondex-getarg_tests.obj `if test -f 'test/getarg_tests.cpp'; then $(CYGPATH_W) 'test/getarg_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/getarg_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-getarg_tests.Tpo test/$(DEPDIR)/test_test_moondex-getarg_tests.Po
-#	$(AM_V_CXX)source='test/getarg_tests.cpp' object='test/test_test_moondex-getarg_tests.obj' libtool=no \
+test/test_test_SMScoin-getarg_tests.obj: test/getarg_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-getarg_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-getarg_tests.Tpo -c -o test/test_test_SMScoin-getarg_tests.obj `if test -f 'test/getarg_tests.cpp'; then $(CYGPATH_W) 'test/getarg_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/getarg_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-getarg_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-getarg_tests.Po
+#	$(AM_V_CXX)source='test/getarg_tests.cpp' object='test/test_test_SMScoin-getarg_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-getarg_tests.obj `if test -f 'test/getarg_tests.cpp'; then $(CYGPATH_W) 'test/getarg_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/getarg_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-getarg_tests.obj `if test -f 'test/getarg_tests.cpp'; then $(CYGPATH_W) 'test/getarg_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/getarg_tests.cpp'; fi`
 
-test/test_test_moondex-hash_tests.o: test/hash_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-hash_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-hash_tests.Tpo -c -o test/test_test_moondex-hash_tests.o `test -f 'test/hash_tests.cpp' || echo '$(srcdir)/'`test/hash_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-hash_tests.Tpo test/$(DEPDIR)/test_test_moondex-hash_tests.Po
-#	$(AM_V_CXX)source='test/hash_tests.cpp' object='test/test_test_moondex-hash_tests.o' libtool=no \
+test/test_test_SMScoin-hash_tests.o: test/hash_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-hash_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-hash_tests.Tpo -c -o test/test_test_SMScoin-hash_tests.o `test -f 'test/hash_tests.cpp' || echo '$(srcdir)/'`test/hash_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-hash_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-hash_tests.Po
+#	$(AM_V_CXX)source='test/hash_tests.cpp' object='test/test_test_SMScoin-hash_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-hash_tests.o `test -f 'test/hash_tests.cpp' || echo '$(srcdir)/'`test/hash_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-hash_tests.o `test -f 'test/hash_tests.cpp' || echo '$(srcdir)/'`test/hash_tests.cpp
 
-test/test_test_moondex-hash_tests.obj: test/hash_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-hash_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-hash_tests.Tpo -c -o test/test_test_moondex-hash_tests.obj `if test -f 'test/hash_tests.cpp'; then $(CYGPATH_W) 'test/hash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/hash_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-hash_tests.Tpo test/$(DEPDIR)/test_test_moondex-hash_tests.Po
-#	$(AM_V_CXX)source='test/hash_tests.cpp' object='test/test_test_moondex-hash_tests.obj' libtool=no \
+test/test_test_SMScoin-hash_tests.obj: test/hash_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-hash_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-hash_tests.Tpo -c -o test/test_test_SMScoin-hash_tests.obj `if test -f 'test/hash_tests.cpp'; then $(CYGPATH_W) 'test/hash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/hash_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-hash_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-hash_tests.Po
+#	$(AM_V_CXX)source='test/hash_tests.cpp' object='test/test_test_SMScoin-hash_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-hash_tests.obj `if test -f 'test/hash_tests.cpp'; then $(CYGPATH_W) 'test/hash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/hash_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-hash_tests.obj `if test -f 'test/hash_tests.cpp'; then $(CYGPATH_W) 'test/hash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/hash_tests.cpp'; fi`
 
-test/test_test_moondex-key_tests.o: test/key_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-key_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-key_tests.Tpo -c -o test/test_test_moondex-key_tests.o `test -f 'test/key_tests.cpp' || echo '$(srcdir)/'`test/key_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-key_tests.Tpo test/$(DEPDIR)/test_test_moondex-key_tests.Po
-#	$(AM_V_CXX)source='test/key_tests.cpp' object='test/test_test_moondex-key_tests.o' libtool=no \
+test/test_test_SMScoin-key_tests.o: test/key_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-key_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-key_tests.Tpo -c -o test/test_test_SMScoin-key_tests.o `test -f 'test/key_tests.cpp' || echo '$(srcdir)/'`test/key_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-key_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-key_tests.Po
+#	$(AM_V_CXX)source='test/key_tests.cpp' object='test/test_test_SMScoin-key_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-key_tests.o `test -f 'test/key_tests.cpp' || echo '$(srcdir)/'`test/key_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-key_tests.o `test -f 'test/key_tests.cpp' || echo '$(srcdir)/'`test/key_tests.cpp
 
-test/test_test_moondex-key_tests.obj: test/key_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-key_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-key_tests.Tpo -c -o test/test_test_moondex-key_tests.obj `if test -f 'test/key_tests.cpp'; then $(CYGPATH_W) 'test/key_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/key_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-key_tests.Tpo test/$(DEPDIR)/test_test_moondex-key_tests.Po
-#	$(AM_V_CXX)source='test/key_tests.cpp' object='test/test_test_moondex-key_tests.obj' libtool=no \
+test/test_test_SMScoin-key_tests.obj: test/key_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-key_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-key_tests.Tpo -c -o test/test_test_SMScoin-key_tests.obj `if test -f 'test/key_tests.cpp'; then $(CYGPATH_W) 'test/key_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/key_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-key_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-key_tests.Po
+#	$(AM_V_CXX)source='test/key_tests.cpp' object='test/test_test_SMScoin-key_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-key_tests.obj `if test -f 'test/key_tests.cpp'; then $(CYGPATH_W) 'test/key_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/key_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-key_tests.obj `if test -f 'test/key_tests.cpp'; then $(CYGPATH_W) 'test/key_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/key_tests.cpp'; fi`
 
-test/test_test_moondex-limitedmap_tests.o: test/limitedmap_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-limitedmap_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-limitedmap_tests.Tpo -c -o test/test_test_moondex-limitedmap_tests.o `test -f 'test/limitedmap_tests.cpp' || echo '$(srcdir)/'`test/limitedmap_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-limitedmap_tests.Tpo test/$(DEPDIR)/test_test_moondex-limitedmap_tests.Po
-#	$(AM_V_CXX)source='test/limitedmap_tests.cpp' object='test/test_test_moondex-limitedmap_tests.o' libtool=no \
+test/test_test_SMScoin-limitedmap_tests.o: test/limitedmap_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-limitedmap_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-limitedmap_tests.Tpo -c -o test/test_test_SMScoin-limitedmap_tests.o `test -f 'test/limitedmap_tests.cpp' || echo '$(srcdir)/'`test/limitedmap_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-limitedmap_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-limitedmap_tests.Po
+#	$(AM_V_CXX)source='test/limitedmap_tests.cpp' object='test/test_test_SMScoin-limitedmap_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-limitedmap_tests.o `test -f 'test/limitedmap_tests.cpp' || echo '$(srcdir)/'`test/limitedmap_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-limitedmap_tests.o `test -f 'test/limitedmap_tests.cpp' || echo '$(srcdir)/'`test/limitedmap_tests.cpp
 
-test/test_test_moondex-limitedmap_tests.obj: test/limitedmap_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-limitedmap_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-limitedmap_tests.Tpo -c -o test/test_test_moondex-limitedmap_tests.obj `if test -f 'test/limitedmap_tests.cpp'; then $(CYGPATH_W) 'test/limitedmap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/limitedmap_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-limitedmap_tests.Tpo test/$(DEPDIR)/test_test_moondex-limitedmap_tests.Po
-#	$(AM_V_CXX)source='test/limitedmap_tests.cpp' object='test/test_test_moondex-limitedmap_tests.obj' libtool=no \
+test/test_test_SMScoin-limitedmap_tests.obj: test/limitedmap_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-limitedmap_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-limitedmap_tests.Tpo -c -o test/test_test_SMScoin-limitedmap_tests.obj `if test -f 'test/limitedmap_tests.cpp'; then $(CYGPATH_W) 'test/limitedmap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/limitedmap_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-limitedmap_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-limitedmap_tests.Po
+#	$(AM_V_CXX)source='test/limitedmap_tests.cpp' object='test/test_test_SMScoin-limitedmap_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-limitedmap_tests.obj `if test -f 'test/limitedmap_tests.cpp'; then $(CYGPATH_W) 'test/limitedmap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/limitedmap_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-limitedmap_tests.obj `if test -f 'test/limitedmap_tests.cpp'; then $(CYGPATH_W) 'test/limitedmap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/limitedmap_tests.cpp'; fi`
 
-test/test_test_moondex-dbwrapper_tests.o: test/dbwrapper_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-dbwrapper_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-dbwrapper_tests.Tpo -c -o test/test_test_moondex-dbwrapper_tests.o `test -f 'test/dbwrapper_tests.cpp' || echo '$(srcdir)/'`test/dbwrapper_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-dbwrapper_tests.Tpo test/$(DEPDIR)/test_test_moondex-dbwrapper_tests.Po
-#	$(AM_V_CXX)source='test/dbwrapper_tests.cpp' object='test/test_test_moondex-dbwrapper_tests.o' libtool=no \
+test/test_test_SMScoin-dbwrapper_tests.o: test/dbwrapper_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-dbwrapper_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-dbwrapper_tests.Tpo -c -o test/test_test_SMScoin-dbwrapper_tests.o `test -f 'test/dbwrapper_tests.cpp' || echo '$(srcdir)/'`test/dbwrapper_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-dbwrapper_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-dbwrapper_tests.Po
+#	$(AM_V_CXX)source='test/dbwrapper_tests.cpp' object='test/test_test_SMScoin-dbwrapper_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-dbwrapper_tests.o `test -f 'test/dbwrapper_tests.cpp' || echo '$(srcdir)/'`test/dbwrapper_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-dbwrapper_tests.o `test -f 'test/dbwrapper_tests.cpp' || echo '$(srcdir)/'`test/dbwrapper_tests.cpp
 
-test/test_test_moondex-dbwrapper_tests.obj: test/dbwrapper_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-dbwrapper_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-dbwrapper_tests.Tpo -c -o test/test_test_moondex-dbwrapper_tests.obj `if test -f 'test/dbwrapper_tests.cpp'; then $(CYGPATH_W) 'test/dbwrapper_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/dbwrapper_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-dbwrapper_tests.Tpo test/$(DEPDIR)/test_test_moondex-dbwrapper_tests.Po
-#	$(AM_V_CXX)source='test/dbwrapper_tests.cpp' object='test/test_test_moondex-dbwrapper_tests.obj' libtool=no \
+test/test_test_SMScoin-dbwrapper_tests.obj: test/dbwrapper_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-dbwrapper_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-dbwrapper_tests.Tpo -c -o test/test_test_SMScoin-dbwrapper_tests.obj `if test -f 'test/dbwrapper_tests.cpp'; then $(CYGPATH_W) 'test/dbwrapper_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/dbwrapper_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-dbwrapper_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-dbwrapper_tests.Po
+#	$(AM_V_CXX)source='test/dbwrapper_tests.cpp' object='test/test_test_SMScoin-dbwrapper_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-dbwrapper_tests.obj `if test -f 'test/dbwrapper_tests.cpp'; then $(CYGPATH_W) 'test/dbwrapper_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/dbwrapper_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-dbwrapper_tests.obj `if test -f 'test/dbwrapper_tests.cpp'; then $(CYGPATH_W) 'test/dbwrapper_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/dbwrapper_tests.cpp'; fi`
 
-test/test_test_moondex-main_tests.o: test/main_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-main_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-main_tests.Tpo -c -o test/test_test_moondex-main_tests.o `test -f 'test/main_tests.cpp' || echo '$(srcdir)/'`test/main_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-main_tests.Tpo test/$(DEPDIR)/test_test_moondex-main_tests.Po
-#	$(AM_V_CXX)source='test/main_tests.cpp' object='test/test_test_moondex-main_tests.o' libtool=no \
+test/test_test_SMScoin-main_tests.o: test/main_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-main_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-main_tests.Tpo -c -o test/test_test_SMScoin-main_tests.o `test -f 'test/main_tests.cpp' || echo '$(srcdir)/'`test/main_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-main_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-main_tests.Po
+#	$(AM_V_CXX)source='test/main_tests.cpp' object='test/test_test_SMScoin-main_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-main_tests.o `test -f 'test/main_tests.cpp' || echo '$(srcdir)/'`test/main_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-main_tests.o `test -f 'test/main_tests.cpp' || echo '$(srcdir)/'`test/main_tests.cpp
 
-test/test_test_moondex-main_tests.obj: test/main_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-main_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-main_tests.Tpo -c -o test/test_test_moondex-main_tests.obj `if test -f 'test/main_tests.cpp'; then $(CYGPATH_W) 'test/main_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/main_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-main_tests.Tpo test/$(DEPDIR)/test_test_moondex-main_tests.Po
-#	$(AM_V_CXX)source='test/main_tests.cpp' object='test/test_test_moondex-main_tests.obj' libtool=no \
+test/test_test_SMScoin-main_tests.obj: test/main_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-main_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-main_tests.Tpo -c -o test/test_test_SMScoin-main_tests.obj `if test -f 'test/main_tests.cpp'; then $(CYGPATH_W) 'test/main_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/main_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-main_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-main_tests.Po
+#	$(AM_V_CXX)source='test/main_tests.cpp' object='test/test_test_SMScoin-main_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-main_tests.obj `if test -f 'test/main_tests.cpp'; then $(CYGPATH_W) 'test/main_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/main_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-main_tests.obj `if test -f 'test/main_tests.cpp'; then $(CYGPATH_W) 'test/main_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/main_tests.cpp'; fi`
 
-test/test_test_moondex-mempool_tests.o: test/mempool_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-mempool_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-mempool_tests.Tpo -c -o test/test_test_moondex-mempool_tests.o `test -f 'test/mempool_tests.cpp' || echo '$(srcdir)/'`test/mempool_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-mempool_tests.Tpo test/$(DEPDIR)/test_test_moondex-mempool_tests.Po
-#	$(AM_V_CXX)source='test/mempool_tests.cpp' object='test/test_test_moondex-mempool_tests.o' libtool=no \
+test/test_test_SMScoin-mempool_tests.o: test/mempool_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-mempool_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-mempool_tests.Tpo -c -o test/test_test_SMScoin-mempool_tests.o `test -f 'test/mempool_tests.cpp' || echo '$(srcdir)/'`test/mempool_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-mempool_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-mempool_tests.Po
+#	$(AM_V_CXX)source='test/mempool_tests.cpp' object='test/test_test_SMScoin-mempool_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-mempool_tests.o `test -f 'test/mempool_tests.cpp' || echo '$(srcdir)/'`test/mempool_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-mempool_tests.o `test -f 'test/mempool_tests.cpp' || echo '$(srcdir)/'`test/mempool_tests.cpp
 
-test/test_test_moondex-mempool_tests.obj: test/mempool_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-mempool_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-mempool_tests.Tpo -c -o test/test_test_moondex-mempool_tests.obj `if test -f 'test/mempool_tests.cpp'; then $(CYGPATH_W) 'test/mempool_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mempool_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-mempool_tests.Tpo test/$(DEPDIR)/test_test_moondex-mempool_tests.Po
-#	$(AM_V_CXX)source='test/mempool_tests.cpp' object='test/test_test_moondex-mempool_tests.obj' libtool=no \
+test/test_test_SMScoin-mempool_tests.obj: test/mempool_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-mempool_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-mempool_tests.Tpo -c -o test/test_test_SMScoin-mempool_tests.obj `if test -f 'test/mempool_tests.cpp'; then $(CYGPATH_W) 'test/mempool_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mempool_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-mempool_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-mempool_tests.Po
+#	$(AM_V_CXX)source='test/mempool_tests.cpp' object='test/test_test_SMScoin-mempool_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-mempool_tests.obj `if test -f 'test/mempool_tests.cpp'; then $(CYGPATH_W) 'test/mempool_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mempool_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-mempool_tests.obj `if test -f 'test/mempool_tests.cpp'; then $(CYGPATH_W) 'test/mempool_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mempool_tests.cpp'; fi`
 
-test/test_test_moondex-merkle_tests.o: test/merkle_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-merkle_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-merkle_tests.Tpo -c -o test/test_test_moondex-merkle_tests.o `test -f 'test/merkle_tests.cpp' || echo '$(srcdir)/'`test/merkle_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-merkle_tests.Tpo test/$(DEPDIR)/test_test_moondex-merkle_tests.Po
-#	$(AM_V_CXX)source='test/merkle_tests.cpp' object='test/test_test_moondex-merkle_tests.o' libtool=no \
+test/test_test_SMScoin-merkle_tests.o: test/merkle_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-merkle_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-merkle_tests.Tpo -c -o test/test_test_SMScoin-merkle_tests.o `test -f 'test/merkle_tests.cpp' || echo '$(srcdir)/'`test/merkle_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-merkle_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-merkle_tests.Po
+#	$(AM_V_CXX)source='test/merkle_tests.cpp' object='test/test_test_SMScoin-merkle_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-merkle_tests.o `test -f 'test/merkle_tests.cpp' || echo '$(srcdir)/'`test/merkle_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-merkle_tests.o `test -f 'test/merkle_tests.cpp' || echo '$(srcdir)/'`test/merkle_tests.cpp
 
-test/test_test_moondex-merkle_tests.obj: test/merkle_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-merkle_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-merkle_tests.Tpo -c -o test/test_test_moondex-merkle_tests.obj `if test -f 'test/merkle_tests.cpp'; then $(CYGPATH_W) 'test/merkle_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/merkle_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-merkle_tests.Tpo test/$(DEPDIR)/test_test_moondex-merkle_tests.Po
-#	$(AM_V_CXX)source='test/merkle_tests.cpp' object='test/test_test_moondex-merkle_tests.obj' libtool=no \
+test/test_test_SMScoin-merkle_tests.obj: test/merkle_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-merkle_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-merkle_tests.Tpo -c -o test/test_test_SMScoin-merkle_tests.obj `if test -f 'test/merkle_tests.cpp'; then $(CYGPATH_W) 'test/merkle_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/merkle_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-merkle_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-merkle_tests.Po
+#	$(AM_V_CXX)source='test/merkle_tests.cpp' object='test/test_test_SMScoin-merkle_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-merkle_tests.obj `if test -f 'test/merkle_tests.cpp'; then $(CYGPATH_W) 'test/merkle_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/merkle_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-merkle_tests.obj `if test -f 'test/merkle_tests.cpp'; then $(CYGPATH_W) 'test/merkle_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/merkle_tests.cpp'; fi`
 
-test/test_test_moondex-miner_tests.o: test/miner_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-miner_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-miner_tests.Tpo -c -o test/test_test_moondex-miner_tests.o `test -f 'test/miner_tests.cpp' || echo '$(srcdir)/'`test/miner_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-miner_tests.Tpo test/$(DEPDIR)/test_test_moondex-miner_tests.Po
-#	$(AM_V_CXX)source='test/miner_tests.cpp' object='test/test_test_moondex-miner_tests.o' libtool=no \
+test/test_test_SMScoin-miner_tests.o: test/miner_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-miner_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-miner_tests.Tpo -c -o test/test_test_SMScoin-miner_tests.o `test -f 'test/miner_tests.cpp' || echo '$(srcdir)/'`test/miner_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-miner_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-miner_tests.Po
+#	$(AM_V_CXX)source='test/miner_tests.cpp' object='test/test_test_SMScoin-miner_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-miner_tests.o `test -f 'test/miner_tests.cpp' || echo '$(srcdir)/'`test/miner_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-miner_tests.o `test -f 'test/miner_tests.cpp' || echo '$(srcdir)/'`test/miner_tests.cpp
 
-test/test_test_moondex-miner_tests.obj: test/miner_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-miner_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-miner_tests.Tpo -c -o test/test_test_moondex-miner_tests.obj `if test -f 'test/miner_tests.cpp'; then $(CYGPATH_W) 'test/miner_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/miner_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-miner_tests.Tpo test/$(DEPDIR)/test_test_moondex-miner_tests.Po
-#	$(AM_V_CXX)source='test/miner_tests.cpp' object='test/test_test_moondex-miner_tests.obj' libtool=no \
+test/test_test_SMScoin-miner_tests.obj: test/miner_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-miner_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-miner_tests.Tpo -c -o test/test_test_SMScoin-miner_tests.obj `if test -f 'test/miner_tests.cpp'; then $(CYGPATH_W) 'test/miner_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/miner_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-miner_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-miner_tests.Po
+#	$(AM_V_CXX)source='test/miner_tests.cpp' object='test/test_test_SMScoin-miner_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-miner_tests.obj `if test -f 'test/miner_tests.cpp'; then $(CYGPATH_W) 'test/miner_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/miner_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-miner_tests.obj `if test -f 'test/miner_tests.cpp'; then $(CYGPATH_W) 'test/miner_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/miner_tests.cpp'; fi`
 
-test/test_test_moondex-multisig_tests.o: test/multisig_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-multisig_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-multisig_tests.Tpo -c -o test/test_test_moondex-multisig_tests.o `test -f 'test/multisig_tests.cpp' || echo '$(srcdir)/'`test/multisig_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-multisig_tests.Tpo test/$(DEPDIR)/test_test_moondex-multisig_tests.Po
-#	$(AM_V_CXX)source='test/multisig_tests.cpp' object='test/test_test_moondex-multisig_tests.o' libtool=no \
+test/test_test_SMScoin-multisig_tests.o: test/multisig_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-multisig_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-multisig_tests.Tpo -c -o test/test_test_SMScoin-multisig_tests.o `test -f 'test/multisig_tests.cpp' || echo '$(srcdir)/'`test/multisig_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-multisig_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-multisig_tests.Po
+#	$(AM_V_CXX)source='test/multisig_tests.cpp' object='test/test_test_SMScoin-multisig_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-multisig_tests.o `test -f 'test/multisig_tests.cpp' || echo '$(srcdir)/'`test/multisig_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-multisig_tests.o `test -f 'test/multisig_tests.cpp' || echo '$(srcdir)/'`test/multisig_tests.cpp
 
-test/test_test_moondex-multisig_tests.obj: test/multisig_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-multisig_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-multisig_tests.Tpo -c -o test/test_test_moondex-multisig_tests.obj `if test -f 'test/multisig_tests.cpp'; then $(CYGPATH_W) 'test/multisig_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/multisig_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-multisig_tests.Tpo test/$(DEPDIR)/test_test_moondex-multisig_tests.Po
-#	$(AM_V_CXX)source='test/multisig_tests.cpp' object='test/test_test_moondex-multisig_tests.obj' libtool=no \
+test/test_test_SMScoin-multisig_tests.obj: test/multisig_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-multisig_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-multisig_tests.Tpo -c -o test/test_test_SMScoin-multisig_tests.obj `if test -f 'test/multisig_tests.cpp'; then $(CYGPATH_W) 'test/multisig_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/multisig_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-multisig_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-multisig_tests.Po
+#	$(AM_V_CXX)source='test/multisig_tests.cpp' object='test/test_test_SMScoin-multisig_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-multisig_tests.obj `if test -f 'test/multisig_tests.cpp'; then $(CYGPATH_W) 'test/multisig_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/multisig_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-multisig_tests.obj `if test -f 'test/multisig_tests.cpp'; then $(CYGPATH_W) 'test/multisig_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/multisig_tests.cpp'; fi`
 
-test/test_test_moondex-netbase_tests.o: test/netbase_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-netbase_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-netbase_tests.Tpo -c -o test/test_test_moondex-netbase_tests.o `test -f 'test/netbase_tests.cpp' || echo '$(srcdir)/'`test/netbase_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-netbase_tests.Tpo test/$(DEPDIR)/test_test_moondex-netbase_tests.Po
-#	$(AM_V_CXX)source='test/netbase_tests.cpp' object='test/test_test_moondex-netbase_tests.o' libtool=no \
+test/test_test_SMScoin-netbase_tests.o: test/netbase_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-netbase_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-netbase_tests.Tpo -c -o test/test_test_SMScoin-netbase_tests.o `test -f 'test/netbase_tests.cpp' || echo '$(srcdir)/'`test/netbase_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-netbase_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-netbase_tests.Po
+#	$(AM_V_CXX)source='test/netbase_tests.cpp' object='test/test_test_SMScoin-netbase_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-netbase_tests.o `test -f 'test/netbase_tests.cpp' || echo '$(srcdir)/'`test/netbase_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-netbase_tests.o `test -f 'test/netbase_tests.cpp' || echo '$(srcdir)/'`test/netbase_tests.cpp
 
-test/test_test_moondex-netbase_tests.obj: test/netbase_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-netbase_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-netbase_tests.Tpo -c -o test/test_test_moondex-netbase_tests.obj `if test -f 'test/netbase_tests.cpp'; then $(CYGPATH_W) 'test/netbase_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/netbase_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-netbase_tests.Tpo test/$(DEPDIR)/test_test_moondex-netbase_tests.Po
-#	$(AM_V_CXX)source='test/netbase_tests.cpp' object='test/test_test_moondex-netbase_tests.obj' libtool=no \
+test/test_test_SMScoin-netbase_tests.obj: test/netbase_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-netbase_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-netbase_tests.Tpo -c -o test/test_test_SMScoin-netbase_tests.obj `if test -f 'test/netbase_tests.cpp'; then $(CYGPATH_W) 'test/netbase_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/netbase_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-netbase_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-netbase_tests.Po
+#	$(AM_V_CXX)source='test/netbase_tests.cpp' object='test/test_test_SMScoin-netbase_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-netbase_tests.obj `if test -f 'test/netbase_tests.cpp'; then $(CYGPATH_W) 'test/netbase_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/netbase_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-netbase_tests.obj `if test -f 'test/netbase_tests.cpp'; then $(CYGPATH_W) 'test/netbase_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/netbase_tests.cpp'; fi`
 
-test/test_test_moondex-pmt_tests.o: test/pmt_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-pmt_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-pmt_tests.Tpo -c -o test/test_test_moondex-pmt_tests.o `test -f 'test/pmt_tests.cpp' || echo '$(srcdir)/'`test/pmt_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-pmt_tests.Tpo test/$(DEPDIR)/test_test_moondex-pmt_tests.Po
-#	$(AM_V_CXX)source='test/pmt_tests.cpp' object='test/test_test_moondex-pmt_tests.o' libtool=no \
+test/test_test_SMScoin-pmt_tests.o: test/pmt_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-pmt_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-pmt_tests.Tpo -c -o test/test_test_SMScoin-pmt_tests.o `test -f 'test/pmt_tests.cpp' || echo '$(srcdir)/'`test/pmt_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-pmt_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-pmt_tests.Po
+#	$(AM_V_CXX)source='test/pmt_tests.cpp' object='test/test_test_SMScoin-pmt_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-pmt_tests.o `test -f 'test/pmt_tests.cpp' || echo '$(srcdir)/'`test/pmt_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-pmt_tests.o `test -f 'test/pmt_tests.cpp' || echo '$(srcdir)/'`test/pmt_tests.cpp
 
-test/test_test_moondex-pmt_tests.obj: test/pmt_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-pmt_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-pmt_tests.Tpo -c -o test/test_test_moondex-pmt_tests.obj `if test -f 'test/pmt_tests.cpp'; then $(CYGPATH_W) 'test/pmt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pmt_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-pmt_tests.Tpo test/$(DEPDIR)/test_test_moondex-pmt_tests.Po
-#	$(AM_V_CXX)source='test/pmt_tests.cpp' object='test/test_test_moondex-pmt_tests.obj' libtool=no \
+test/test_test_SMScoin-pmt_tests.obj: test/pmt_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-pmt_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-pmt_tests.Tpo -c -o test/test_test_SMScoin-pmt_tests.obj `if test -f 'test/pmt_tests.cpp'; then $(CYGPATH_W) 'test/pmt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pmt_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-pmt_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-pmt_tests.Po
+#	$(AM_V_CXX)source='test/pmt_tests.cpp' object='test/test_test_SMScoin-pmt_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-pmt_tests.obj `if test -f 'test/pmt_tests.cpp'; then $(CYGPATH_W) 'test/pmt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pmt_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-pmt_tests.obj `if test -f 'test/pmt_tests.cpp'; then $(CYGPATH_W) 'test/pmt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pmt_tests.cpp'; fi`
 
-test/test_test_moondex-policyestimator_tests.o: test/policyestimator_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-policyestimator_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-policyestimator_tests.Tpo -c -o test/test_test_moondex-policyestimator_tests.o `test -f 'test/policyestimator_tests.cpp' || echo '$(srcdir)/'`test/policyestimator_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-policyestimator_tests.Tpo test/$(DEPDIR)/test_test_moondex-policyestimator_tests.Po
-#	$(AM_V_CXX)source='test/policyestimator_tests.cpp' object='test/test_test_moondex-policyestimator_tests.o' libtool=no \
+test/test_test_SMScoin-policyestimator_tests.o: test/policyestimator_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-policyestimator_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-policyestimator_tests.Tpo -c -o test/test_test_SMScoin-policyestimator_tests.o `test -f 'test/policyestimator_tests.cpp' || echo '$(srcdir)/'`test/policyestimator_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-policyestimator_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-policyestimator_tests.Po
+#	$(AM_V_CXX)source='test/policyestimator_tests.cpp' object='test/test_test_SMScoin-policyestimator_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-policyestimator_tests.o `test -f 'test/policyestimator_tests.cpp' || echo '$(srcdir)/'`test/policyestimator_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-policyestimator_tests.o `test -f 'test/policyestimator_tests.cpp' || echo '$(srcdir)/'`test/policyestimator_tests.cpp
 
-test/test_test_moondex-policyestimator_tests.obj: test/policyestimator_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-policyestimator_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-policyestimator_tests.Tpo -c -o test/test_test_moondex-policyestimator_tests.obj `if test -f 'test/policyestimator_tests.cpp'; then $(CYGPATH_W) 'test/policyestimator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/policyestimator_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-policyestimator_tests.Tpo test/$(DEPDIR)/test_test_moondex-policyestimator_tests.Po
-#	$(AM_V_CXX)source='test/policyestimator_tests.cpp' object='test/test_test_moondex-policyestimator_tests.obj' libtool=no \
+test/test_test_SMScoin-policyestimator_tests.obj: test/policyestimator_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-policyestimator_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-policyestimator_tests.Tpo -c -o test/test_test_SMScoin-policyestimator_tests.obj `if test -f 'test/policyestimator_tests.cpp'; then $(CYGPATH_W) 'test/policyestimator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/policyestimator_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-policyestimator_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-policyestimator_tests.Po
+#	$(AM_V_CXX)source='test/policyestimator_tests.cpp' object='test/test_test_SMScoin-policyestimator_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-policyestimator_tests.obj `if test -f 'test/policyestimator_tests.cpp'; then $(CYGPATH_W) 'test/policyestimator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/policyestimator_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-policyestimator_tests.obj `if test -f 'test/policyestimator_tests.cpp'; then $(CYGPATH_W) 'test/policyestimator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/policyestimator_tests.cpp'; fi`
 
-test/test_test_moondex-pow_tests.o: test/pow_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-pow_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-pow_tests.Tpo -c -o test/test_test_moondex-pow_tests.o `test -f 'test/pow_tests.cpp' || echo '$(srcdir)/'`test/pow_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-pow_tests.Tpo test/$(DEPDIR)/test_test_moondex-pow_tests.Po
-#	$(AM_V_CXX)source='test/pow_tests.cpp' object='test/test_test_moondex-pow_tests.o' libtool=no \
+test/test_test_SMScoin-pow_tests.o: test/pow_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-pow_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-pow_tests.Tpo -c -o test/test_test_SMScoin-pow_tests.o `test -f 'test/pow_tests.cpp' || echo '$(srcdir)/'`test/pow_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-pow_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-pow_tests.Po
+#	$(AM_V_CXX)source='test/pow_tests.cpp' object='test/test_test_SMScoin-pow_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-pow_tests.o `test -f 'test/pow_tests.cpp' || echo '$(srcdir)/'`test/pow_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-pow_tests.o `test -f 'test/pow_tests.cpp' || echo '$(srcdir)/'`test/pow_tests.cpp
 
-test/test_test_moondex-pow_tests.obj: test/pow_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-pow_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-pow_tests.Tpo -c -o test/test_test_moondex-pow_tests.obj `if test -f 'test/pow_tests.cpp'; then $(CYGPATH_W) 'test/pow_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pow_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-pow_tests.Tpo test/$(DEPDIR)/test_test_moondex-pow_tests.Po
-#	$(AM_V_CXX)source='test/pow_tests.cpp' object='test/test_test_moondex-pow_tests.obj' libtool=no \
+test/test_test_SMScoin-pow_tests.obj: test/pow_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-pow_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-pow_tests.Tpo -c -o test/test_test_SMScoin-pow_tests.obj `if test -f 'test/pow_tests.cpp'; then $(CYGPATH_W) 'test/pow_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pow_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-pow_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-pow_tests.Po
+#	$(AM_V_CXX)source='test/pow_tests.cpp' object='test/test_test_SMScoin-pow_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-pow_tests.obj `if test -f 'test/pow_tests.cpp'; then $(CYGPATH_W) 'test/pow_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pow_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-pow_tests.obj `if test -f 'test/pow_tests.cpp'; then $(CYGPATH_W) 'test/pow_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pow_tests.cpp'; fi`
 
-test/test_test_moondex-prevector_tests.o: test/prevector_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-prevector_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-prevector_tests.Tpo -c -o test/test_test_moondex-prevector_tests.o `test -f 'test/prevector_tests.cpp' || echo '$(srcdir)/'`test/prevector_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-prevector_tests.Tpo test/$(DEPDIR)/test_test_moondex-prevector_tests.Po
-#	$(AM_V_CXX)source='test/prevector_tests.cpp' object='test/test_test_moondex-prevector_tests.o' libtool=no \
+test/test_test_SMScoin-prevector_tests.o: test/prevector_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-prevector_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-prevector_tests.Tpo -c -o test/test_test_SMScoin-prevector_tests.o `test -f 'test/prevector_tests.cpp' || echo '$(srcdir)/'`test/prevector_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-prevector_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-prevector_tests.Po
+#	$(AM_V_CXX)source='test/prevector_tests.cpp' object='test/test_test_SMScoin-prevector_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-prevector_tests.o `test -f 'test/prevector_tests.cpp' || echo '$(srcdir)/'`test/prevector_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-prevector_tests.o `test -f 'test/prevector_tests.cpp' || echo '$(srcdir)/'`test/prevector_tests.cpp
 
-test/test_test_moondex-prevector_tests.obj: test/prevector_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-prevector_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-prevector_tests.Tpo -c -o test/test_test_moondex-prevector_tests.obj `if test -f 'test/prevector_tests.cpp'; then $(CYGPATH_W) 'test/prevector_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/prevector_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-prevector_tests.Tpo test/$(DEPDIR)/test_test_moondex-prevector_tests.Po
-#	$(AM_V_CXX)source='test/prevector_tests.cpp' object='test/test_test_moondex-prevector_tests.obj' libtool=no \
+test/test_test_SMScoin-prevector_tests.obj: test/prevector_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-prevector_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-prevector_tests.Tpo -c -o test/test_test_SMScoin-prevector_tests.obj `if test -f 'test/prevector_tests.cpp'; then $(CYGPATH_W) 'test/prevector_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/prevector_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-prevector_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-prevector_tests.Po
+#	$(AM_V_CXX)source='test/prevector_tests.cpp' object='test/test_test_SMScoin-prevector_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-prevector_tests.obj `if test -f 'test/prevector_tests.cpp'; then $(CYGPATH_W) 'test/prevector_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/prevector_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-prevector_tests.obj `if test -f 'test/prevector_tests.cpp'; then $(CYGPATH_W) 'test/prevector_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/prevector_tests.cpp'; fi`
 
-test/test_test_moondex-ratecheck_tests.o: test/ratecheck_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-ratecheck_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-ratecheck_tests.Tpo -c -o test/test_test_moondex-ratecheck_tests.o `test -f 'test/ratecheck_tests.cpp' || echo '$(srcdir)/'`test/ratecheck_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-ratecheck_tests.Tpo test/$(DEPDIR)/test_test_moondex-ratecheck_tests.Po
-#	$(AM_V_CXX)source='test/ratecheck_tests.cpp' object='test/test_test_moondex-ratecheck_tests.o' libtool=no \
+test/test_test_SMScoin-ratecheck_tests.o: test/ratecheck_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-ratecheck_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-ratecheck_tests.Tpo -c -o test/test_test_SMScoin-ratecheck_tests.o `test -f 'test/ratecheck_tests.cpp' || echo '$(srcdir)/'`test/ratecheck_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-ratecheck_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-ratecheck_tests.Po
+#	$(AM_V_CXX)source='test/ratecheck_tests.cpp' object='test/test_test_SMScoin-ratecheck_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-ratecheck_tests.o `test -f 'test/ratecheck_tests.cpp' || echo '$(srcdir)/'`test/ratecheck_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-ratecheck_tests.o `test -f 'test/ratecheck_tests.cpp' || echo '$(srcdir)/'`test/ratecheck_tests.cpp
 
-test/test_test_moondex-ratecheck_tests.obj: test/ratecheck_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-ratecheck_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-ratecheck_tests.Tpo -c -o test/test_test_moondex-ratecheck_tests.obj `if test -f 'test/ratecheck_tests.cpp'; then $(CYGPATH_W) 'test/ratecheck_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/ratecheck_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-ratecheck_tests.Tpo test/$(DEPDIR)/test_test_moondex-ratecheck_tests.Po
-#	$(AM_V_CXX)source='test/ratecheck_tests.cpp' object='test/test_test_moondex-ratecheck_tests.obj' libtool=no \
+test/test_test_SMScoin-ratecheck_tests.obj: test/ratecheck_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-ratecheck_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-ratecheck_tests.Tpo -c -o test/test_test_SMScoin-ratecheck_tests.obj `if test -f 'test/ratecheck_tests.cpp'; then $(CYGPATH_W) 'test/ratecheck_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/ratecheck_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-ratecheck_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-ratecheck_tests.Po
+#	$(AM_V_CXX)source='test/ratecheck_tests.cpp' object='test/test_test_SMScoin-ratecheck_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-ratecheck_tests.obj `if test -f 'test/ratecheck_tests.cpp'; then $(CYGPATH_W) 'test/ratecheck_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/ratecheck_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-ratecheck_tests.obj `if test -f 'test/ratecheck_tests.cpp'; then $(CYGPATH_W) 'test/ratecheck_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/ratecheck_tests.cpp'; fi`
 
-test/test_test_moondex-reverselock_tests.o: test/reverselock_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-reverselock_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-reverselock_tests.Tpo -c -o test/test_test_moondex-reverselock_tests.o `test -f 'test/reverselock_tests.cpp' || echo '$(srcdir)/'`test/reverselock_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-reverselock_tests.Tpo test/$(DEPDIR)/test_test_moondex-reverselock_tests.Po
-#	$(AM_V_CXX)source='test/reverselock_tests.cpp' object='test/test_test_moondex-reverselock_tests.o' libtool=no \
+test/test_test_SMScoin-reverselock_tests.o: test/reverselock_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-reverselock_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-reverselock_tests.Tpo -c -o test/test_test_SMScoin-reverselock_tests.o `test -f 'test/reverselock_tests.cpp' || echo '$(srcdir)/'`test/reverselock_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-reverselock_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-reverselock_tests.Po
+#	$(AM_V_CXX)source='test/reverselock_tests.cpp' object='test/test_test_SMScoin-reverselock_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-reverselock_tests.o `test -f 'test/reverselock_tests.cpp' || echo '$(srcdir)/'`test/reverselock_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-reverselock_tests.o `test -f 'test/reverselock_tests.cpp' || echo '$(srcdir)/'`test/reverselock_tests.cpp
 
-test/test_test_moondex-reverselock_tests.obj: test/reverselock_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-reverselock_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-reverselock_tests.Tpo -c -o test/test_test_moondex-reverselock_tests.obj `if test -f 'test/reverselock_tests.cpp'; then $(CYGPATH_W) 'test/reverselock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/reverselock_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-reverselock_tests.Tpo test/$(DEPDIR)/test_test_moondex-reverselock_tests.Po
-#	$(AM_V_CXX)source='test/reverselock_tests.cpp' object='test/test_test_moondex-reverselock_tests.obj' libtool=no \
+test/test_test_SMScoin-reverselock_tests.obj: test/reverselock_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-reverselock_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-reverselock_tests.Tpo -c -o test/test_test_SMScoin-reverselock_tests.obj `if test -f 'test/reverselock_tests.cpp'; then $(CYGPATH_W) 'test/reverselock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/reverselock_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-reverselock_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-reverselock_tests.Po
+#	$(AM_V_CXX)source='test/reverselock_tests.cpp' object='test/test_test_SMScoin-reverselock_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-reverselock_tests.obj `if test -f 'test/reverselock_tests.cpp'; then $(CYGPATH_W) 'test/reverselock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/reverselock_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-reverselock_tests.obj `if test -f 'test/reverselock_tests.cpp'; then $(CYGPATH_W) 'test/reverselock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/reverselock_tests.cpp'; fi`
 
-test/test_test_moondex-rpc_tests.o: test/rpc_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-rpc_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-rpc_tests.Tpo -c -o test/test_test_moondex-rpc_tests.o `test -f 'test/rpc_tests.cpp' || echo '$(srcdir)/'`test/rpc_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-rpc_tests.Tpo test/$(DEPDIR)/test_test_moondex-rpc_tests.Po
-#	$(AM_V_CXX)source='test/rpc_tests.cpp' object='test/test_test_moondex-rpc_tests.o' libtool=no \
+test/test_test_SMScoin-rpc_tests.o: test/rpc_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-rpc_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-rpc_tests.Tpo -c -o test/test_test_SMScoin-rpc_tests.o `test -f 'test/rpc_tests.cpp' || echo '$(srcdir)/'`test/rpc_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-rpc_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-rpc_tests.Po
+#	$(AM_V_CXX)source='test/rpc_tests.cpp' object='test/test_test_SMScoin-rpc_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-rpc_tests.o `test -f 'test/rpc_tests.cpp' || echo '$(srcdir)/'`test/rpc_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-rpc_tests.o `test -f 'test/rpc_tests.cpp' || echo '$(srcdir)/'`test/rpc_tests.cpp
 
-test/test_test_moondex-rpc_tests.obj: test/rpc_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-rpc_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-rpc_tests.Tpo -c -o test/test_test_moondex-rpc_tests.obj `if test -f 'test/rpc_tests.cpp'; then $(CYGPATH_W) 'test/rpc_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-rpc_tests.Tpo test/$(DEPDIR)/test_test_moondex-rpc_tests.Po
-#	$(AM_V_CXX)source='test/rpc_tests.cpp' object='test/test_test_moondex-rpc_tests.obj' libtool=no \
+test/test_test_SMScoin-rpc_tests.obj: test/rpc_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-rpc_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-rpc_tests.Tpo -c -o test/test_test_SMScoin-rpc_tests.obj `if test -f 'test/rpc_tests.cpp'; then $(CYGPATH_W) 'test/rpc_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-rpc_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-rpc_tests.Po
+#	$(AM_V_CXX)source='test/rpc_tests.cpp' object='test/test_test_SMScoin-rpc_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-rpc_tests.obj `if test -f 'test/rpc_tests.cpp'; then $(CYGPATH_W) 'test/rpc_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-rpc_tests.obj `if test -f 'test/rpc_tests.cpp'; then $(CYGPATH_W) 'test/rpc_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_tests.cpp'; fi`
 
-test/test_test_moondex-sanity_tests.o: test/sanity_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-sanity_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-sanity_tests.Tpo -c -o test/test_test_moondex-sanity_tests.o `test -f 'test/sanity_tests.cpp' || echo '$(srcdir)/'`test/sanity_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-sanity_tests.Tpo test/$(DEPDIR)/test_test_moondex-sanity_tests.Po
-#	$(AM_V_CXX)source='test/sanity_tests.cpp' object='test/test_test_moondex-sanity_tests.o' libtool=no \
+test/test_test_SMScoin-sanity_tests.o: test/sanity_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-sanity_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-sanity_tests.Tpo -c -o test/test_test_SMScoin-sanity_tests.o `test -f 'test/sanity_tests.cpp' || echo '$(srcdir)/'`test/sanity_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-sanity_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-sanity_tests.Po
+#	$(AM_V_CXX)source='test/sanity_tests.cpp' object='test/test_test_SMScoin-sanity_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-sanity_tests.o `test -f 'test/sanity_tests.cpp' || echo '$(srcdir)/'`test/sanity_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-sanity_tests.o `test -f 'test/sanity_tests.cpp' || echo '$(srcdir)/'`test/sanity_tests.cpp
 
-test/test_test_moondex-sanity_tests.obj: test/sanity_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-sanity_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-sanity_tests.Tpo -c -o test/test_test_moondex-sanity_tests.obj `if test -f 'test/sanity_tests.cpp'; then $(CYGPATH_W) 'test/sanity_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sanity_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-sanity_tests.Tpo test/$(DEPDIR)/test_test_moondex-sanity_tests.Po
-#	$(AM_V_CXX)source='test/sanity_tests.cpp' object='test/test_test_moondex-sanity_tests.obj' libtool=no \
+test/test_test_SMScoin-sanity_tests.obj: test/sanity_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-sanity_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-sanity_tests.Tpo -c -o test/test_test_SMScoin-sanity_tests.obj `if test -f 'test/sanity_tests.cpp'; then $(CYGPATH_W) 'test/sanity_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sanity_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-sanity_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-sanity_tests.Po
+#	$(AM_V_CXX)source='test/sanity_tests.cpp' object='test/test_test_SMScoin-sanity_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-sanity_tests.obj `if test -f 'test/sanity_tests.cpp'; then $(CYGPATH_W) 'test/sanity_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sanity_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-sanity_tests.obj `if test -f 'test/sanity_tests.cpp'; then $(CYGPATH_W) 'test/sanity_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sanity_tests.cpp'; fi`
 
-test/test_test_moondex-scheduler_tests.o: test/scheduler_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-scheduler_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-scheduler_tests.Tpo -c -o test/test_test_moondex-scheduler_tests.o `test -f 'test/scheduler_tests.cpp' || echo '$(srcdir)/'`test/scheduler_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-scheduler_tests.Tpo test/$(DEPDIR)/test_test_moondex-scheduler_tests.Po
-#	$(AM_V_CXX)source='test/scheduler_tests.cpp' object='test/test_test_moondex-scheduler_tests.o' libtool=no \
+test/test_test_SMScoin-scheduler_tests.o: test/scheduler_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-scheduler_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-scheduler_tests.Tpo -c -o test/test_test_SMScoin-scheduler_tests.o `test -f 'test/scheduler_tests.cpp' || echo '$(srcdir)/'`test/scheduler_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-scheduler_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-scheduler_tests.Po
+#	$(AM_V_CXX)source='test/scheduler_tests.cpp' object='test/test_test_SMScoin-scheduler_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-scheduler_tests.o `test -f 'test/scheduler_tests.cpp' || echo '$(srcdir)/'`test/scheduler_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-scheduler_tests.o `test -f 'test/scheduler_tests.cpp' || echo '$(srcdir)/'`test/scheduler_tests.cpp
 
-test/test_test_moondex-scheduler_tests.obj: test/scheduler_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-scheduler_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-scheduler_tests.Tpo -c -o test/test_test_moondex-scheduler_tests.obj `if test -f 'test/scheduler_tests.cpp'; then $(CYGPATH_W) 'test/scheduler_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scheduler_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-scheduler_tests.Tpo test/$(DEPDIR)/test_test_moondex-scheduler_tests.Po
-#	$(AM_V_CXX)source='test/scheduler_tests.cpp' object='test/test_test_moondex-scheduler_tests.obj' libtool=no \
+test/test_test_SMScoin-scheduler_tests.obj: test/scheduler_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-scheduler_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-scheduler_tests.Tpo -c -o test/test_test_SMScoin-scheduler_tests.obj `if test -f 'test/scheduler_tests.cpp'; then $(CYGPATH_W) 'test/scheduler_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scheduler_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-scheduler_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-scheduler_tests.Po
+#	$(AM_V_CXX)source='test/scheduler_tests.cpp' object='test/test_test_SMScoin-scheduler_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-scheduler_tests.obj `if test -f 'test/scheduler_tests.cpp'; then $(CYGPATH_W) 'test/scheduler_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scheduler_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-scheduler_tests.obj `if test -f 'test/scheduler_tests.cpp'; then $(CYGPATH_W) 'test/scheduler_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scheduler_tests.cpp'; fi`
 
-test/test_test_moondex-script_P2SH_tests.o: test/script_P2SH_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-script_P2SH_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-script_P2SH_tests.Tpo -c -o test/test_test_moondex-script_P2SH_tests.o `test -f 'test/script_P2SH_tests.cpp' || echo '$(srcdir)/'`test/script_P2SH_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-script_P2SH_tests.Tpo test/$(DEPDIR)/test_test_moondex-script_P2SH_tests.Po
-#	$(AM_V_CXX)source='test/script_P2SH_tests.cpp' object='test/test_test_moondex-script_P2SH_tests.o' libtool=no \
+test/test_test_SMScoin-script_P2SH_tests.o: test/script_P2SH_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-script_P2SH_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-script_P2SH_tests.Tpo -c -o test/test_test_SMScoin-script_P2SH_tests.o `test -f 'test/script_P2SH_tests.cpp' || echo '$(srcdir)/'`test/script_P2SH_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-script_P2SH_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-script_P2SH_tests.Po
+#	$(AM_V_CXX)source='test/script_P2SH_tests.cpp' object='test/test_test_SMScoin-script_P2SH_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-script_P2SH_tests.o `test -f 'test/script_P2SH_tests.cpp' || echo '$(srcdir)/'`test/script_P2SH_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-script_P2SH_tests.o `test -f 'test/script_P2SH_tests.cpp' || echo '$(srcdir)/'`test/script_P2SH_tests.cpp
 
-test/test_test_moondex-script_P2SH_tests.obj: test/script_P2SH_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-script_P2SH_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-script_P2SH_tests.Tpo -c -o test/test_test_moondex-script_P2SH_tests.obj `if test -f 'test/script_P2SH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2SH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2SH_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-script_P2SH_tests.Tpo test/$(DEPDIR)/test_test_moondex-script_P2SH_tests.Po
-#	$(AM_V_CXX)source='test/script_P2SH_tests.cpp' object='test/test_test_moondex-script_P2SH_tests.obj' libtool=no \
+test/test_test_SMScoin-script_P2SH_tests.obj: test/script_P2SH_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-script_P2SH_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-script_P2SH_tests.Tpo -c -o test/test_test_SMScoin-script_P2SH_tests.obj `if test -f 'test/script_P2SH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2SH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2SH_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-script_P2SH_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-script_P2SH_tests.Po
+#	$(AM_V_CXX)source='test/script_P2SH_tests.cpp' object='test/test_test_SMScoin-script_P2SH_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-script_P2SH_tests.obj `if test -f 'test/script_P2SH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2SH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2SH_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-script_P2SH_tests.obj `if test -f 'test/script_P2SH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2SH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2SH_tests.cpp'; fi`
 
-test/test_test_moondex-script_P2PKH_tests.o: test/script_P2PKH_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-script_P2PKH_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-script_P2PKH_tests.Tpo -c -o test/test_test_moondex-script_P2PKH_tests.o `test -f 'test/script_P2PKH_tests.cpp' || echo '$(srcdir)/'`test/script_P2PKH_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-script_P2PKH_tests.Tpo test/$(DEPDIR)/test_test_moondex-script_P2PKH_tests.Po
-#	$(AM_V_CXX)source='test/script_P2PKH_tests.cpp' object='test/test_test_moondex-script_P2PKH_tests.o' libtool=no \
+test/test_test_SMScoin-script_P2PKH_tests.o: test/script_P2PKH_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-script_P2PKH_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-script_P2PKH_tests.Tpo -c -o test/test_test_SMScoin-script_P2PKH_tests.o `test -f 'test/script_P2PKH_tests.cpp' || echo '$(srcdir)/'`test/script_P2PKH_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-script_P2PKH_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-script_P2PKH_tests.Po
+#	$(AM_V_CXX)source='test/script_P2PKH_tests.cpp' object='test/test_test_SMScoin-script_P2PKH_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-script_P2PKH_tests.o `test -f 'test/script_P2PKH_tests.cpp' || echo '$(srcdir)/'`test/script_P2PKH_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-script_P2PKH_tests.o `test -f 'test/script_P2PKH_tests.cpp' || echo '$(srcdir)/'`test/script_P2PKH_tests.cpp
 
-test/test_test_moondex-script_P2PKH_tests.obj: test/script_P2PKH_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-script_P2PKH_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-script_P2PKH_tests.Tpo -c -o test/test_test_moondex-script_P2PKH_tests.obj `if test -f 'test/script_P2PKH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2PKH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2PKH_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-script_P2PKH_tests.Tpo test/$(DEPDIR)/test_test_moondex-script_P2PKH_tests.Po
-#	$(AM_V_CXX)source='test/script_P2PKH_tests.cpp' object='test/test_test_moondex-script_P2PKH_tests.obj' libtool=no \
+test/test_test_SMScoin-script_P2PKH_tests.obj: test/script_P2PKH_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-script_P2PKH_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-script_P2PKH_tests.Tpo -c -o test/test_test_SMScoin-script_P2PKH_tests.obj `if test -f 'test/script_P2PKH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2PKH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2PKH_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-script_P2PKH_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-script_P2PKH_tests.Po
+#	$(AM_V_CXX)source='test/script_P2PKH_tests.cpp' object='test/test_test_SMScoin-script_P2PKH_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-script_P2PKH_tests.obj `if test -f 'test/script_P2PKH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2PKH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2PKH_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-script_P2PKH_tests.obj `if test -f 'test/script_P2PKH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2PKH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2PKH_tests.cpp'; fi`
 
-test/test_test_moondex-script_tests.o: test/script_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-script_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-script_tests.Tpo -c -o test/test_test_moondex-script_tests.o `test -f 'test/script_tests.cpp' || echo '$(srcdir)/'`test/script_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-script_tests.Tpo test/$(DEPDIR)/test_test_moondex-script_tests.Po
-#	$(AM_V_CXX)source='test/script_tests.cpp' object='test/test_test_moondex-script_tests.o' libtool=no \
+test/test_test_SMScoin-script_tests.o: test/script_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-script_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-script_tests.Tpo -c -o test/test_test_SMScoin-script_tests.o `test -f 'test/script_tests.cpp' || echo '$(srcdir)/'`test/script_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-script_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-script_tests.Po
+#	$(AM_V_CXX)source='test/script_tests.cpp' object='test/test_test_SMScoin-script_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-script_tests.o `test -f 'test/script_tests.cpp' || echo '$(srcdir)/'`test/script_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-script_tests.o `test -f 'test/script_tests.cpp' || echo '$(srcdir)/'`test/script_tests.cpp
 
-test/test_test_moondex-script_tests.obj: test/script_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-script_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-script_tests.Tpo -c -o test/test_test_moondex-script_tests.obj `if test -f 'test/script_tests.cpp'; then $(CYGPATH_W) 'test/script_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-script_tests.Tpo test/$(DEPDIR)/test_test_moondex-script_tests.Po
-#	$(AM_V_CXX)source='test/script_tests.cpp' object='test/test_test_moondex-script_tests.obj' libtool=no \
+test/test_test_SMScoin-script_tests.obj: test/script_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-script_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-script_tests.Tpo -c -o test/test_test_SMScoin-script_tests.obj `if test -f 'test/script_tests.cpp'; then $(CYGPATH_W) 'test/script_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-script_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-script_tests.Po
+#	$(AM_V_CXX)source='test/script_tests.cpp' object='test/test_test_SMScoin-script_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-script_tests.obj `if test -f 'test/script_tests.cpp'; then $(CYGPATH_W) 'test/script_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-script_tests.obj `if test -f 'test/script_tests.cpp'; then $(CYGPATH_W) 'test/script_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_tests.cpp'; fi`
 
-test/test_test_moondex-scriptnum_tests.o: test/scriptnum_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-scriptnum_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-scriptnum_tests.Tpo -c -o test/test_test_moondex-scriptnum_tests.o `test -f 'test/scriptnum_tests.cpp' || echo '$(srcdir)/'`test/scriptnum_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-scriptnum_tests.Tpo test/$(DEPDIR)/test_test_moondex-scriptnum_tests.Po
-#	$(AM_V_CXX)source='test/scriptnum_tests.cpp' object='test/test_test_moondex-scriptnum_tests.o' libtool=no \
+test/test_test_SMScoin-scriptnum_tests.o: test/scriptnum_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-scriptnum_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-scriptnum_tests.Tpo -c -o test/test_test_SMScoin-scriptnum_tests.o `test -f 'test/scriptnum_tests.cpp' || echo '$(srcdir)/'`test/scriptnum_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-scriptnum_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-scriptnum_tests.Po
+#	$(AM_V_CXX)source='test/scriptnum_tests.cpp' object='test/test_test_SMScoin-scriptnum_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-scriptnum_tests.o `test -f 'test/scriptnum_tests.cpp' || echo '$(srcdir)/'`test/scriptnum_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-scriptnum_tests.o `test -f 'test/scriptnum_tests.cpp' || echo '$(srcdir)/'`test/scriptnum_tests.cpp
 
-test/test_test_moondex-scriptnum_tests.obj: test/scriptnum_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-scriptnum_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-scriptnum_tests.Tpo -c -o test/test_test_moondex-scriptnum_tests.obj `if test -f 'test/scriptnum_tests.cpp'; then $(CYGPATH_W) 'test/scriptnum_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scriptnum_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-scriptnum_tests.Tpo test/$(DEPDIR)/test_test_moondex-scriptnum_tests.Po
-#	$(AM_V_CXX)source='test/scriptnum_tests.cpp' object='test/test_test_moondex-scriptnum_tests.obj' libtool=no \
+test/test_test_SMScoin-scriptnum_tests.obj: test/scriptnum_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-scriptnum_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-scriptnum_tests.Tpo -c -o test/test_test_SMScoin-scriptnum_tests.obj `if test -f 'test/scriptnum_tests.cpp'; then $(CYGPATH_W) 'test/scriptnum_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scriptnum_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-scriptnum_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-scriptnum_tests.Po
+#	$(AM_V_CXX)source='test/scriptnum_tests.cpp' object='test/test_test_SMScoin-scriptnum_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-scriptnum_tests.obj `if test -f 'test/scriptnum_tests.cpp'; then $(CYGPATH_W) 'test/scriptnum_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scriptnum_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-scriptnum_tests.obj `if test -f 'test/scriptnum_tests.cpp'; then $(CYGPATH_W) 'test/scriptnum_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scriptnum_tests.cpp'; fi`
 
-test/test_test_moondex-serialize_tests.o: test/serialize_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-serialize_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-serialize_tests.Tpo -c -o test/test_test_moondex-serialize_tests.o `test -f 'test/serialize_tests.cpp' || echo '$(srcdir)/'`test/serialize_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-serialize_tests.Tpo test/$(DEPDIR)/test_test_moondex-serialize_tests.Po
-#	$(AM_V_CXX)source='test/serialize_tests.cpp' object='test/test_test_moondex-serialize_tests.o' libtool=no \
+test/test_test_SMScoin-serialize_tests.o: test/serialize_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-serialize_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-serialize_tests.Tpo -c -o test/test_test_SMScoin-serialize_tests.o `test -f 'test/serialize_tests.cpp' || echo '$(srcdir)/'`test/serialize_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-serialize_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-serialize_tests.Po
+#	$(AM_V_CXX)source='test/serialize_tests.cpp' object='test/test_test_SMScoin-serialize_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-serialize_tests.o `test -f 'test/serialize_tests.cpp' || echo '$(srcdir)/'`test/serialize_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-serialize_tests.o `test -f 'test/serialize_tests.cpp' || echo '$(srcdir)/'`test/serialize_tests.cpp
 
-test/test_test_moondex-serialize_tests.obj: test/serialize_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-serialize_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-serialize_tests.Tpo -c -o test/test_test_moondex-serialize_tests.obj `if test -f 'test/serialize_tests.cpp'; then $(CYGPATH_W) 'test/serialize_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/serialize_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-serialize_tests.Tpo test/$(DEPDIR)/test_test_moondex-serialize_tests.Po
-#	$(AM_V_CXX)source='test/serialize_tests.cpp' object='test/test_test_moondex-serialize_tests.obj' libtool=no \
+test/test_test_SMScoin-serialize_tests.obj: test/serialize_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-serialize_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-serialize_tests.Tpo -c -o test/test_test_SMScoin-serialize_tests.obj `if test -f 'test/serialize_tests.cpp'; then $(CYGPATH_W) 'test/serialize_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/serialize_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-serialize_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-serialize_tests.Po
+#	$(AM_V_CXX)source='test/serialize_tests.cpp' object='test/test_test_SMScoin-serialize_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-serialize_tests.obj `if test -f 'test/serialize_tests.cpp'; then $(CYGPATH_W) 'test/serialize_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/serialize_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-serialize_tests.obj `if test -f 'test/serialize_tests.cpp'; then $(CYGPATH_W) 'test/serialize_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/serialize_tests.cpp'; fi`
 
-test/test_test_moondex-sighash_tests.o: test/sighash_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-sighash_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-sighash_tests.Tpo -c -o test/test_test_moondex-sighash_tests.o `test -f 'test/sighash_tests.cpp' || echo '$(srcdir)/'`test/sighash_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-sighash_tests.Tpo test/$(DEPDIR)/test_test_moondex-sighash_tests.Po
-#	$(AM_V_CXX)source='test/sighash_tests.cpp' object='test/test_test_moondex-sighash_tests.o' libtool=no \
+test/test_test_SMScoin-sighash_tests.o: test/sighash_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-sighash_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-sighash_tests.Tpo -c -o test/test_test_SMScoin-sighash_tests.o `test -f 'test/sighash_tests.cpp' || echo '$(srcdir)/'`test/sighash_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-sighash_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-sighash_tests.Po
+#	$(AM_V_CXX)source='test/sighash_tests.cpp' object='test/test_test_SMScoin-sighash_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-sighash_tests.o `test -f 'test/sighash_tests.cpp' || echo '$(srcdir)/'`test/sighash_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-sighash_tests.o `test -f 'test/sighash_tests.cpp' || echo '$(srcdir)/'`test/sighash_tests.cpp
 
-test/test_test_moondex-sighash_tests.obj: test/sighash_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-sighash_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-sighash_tests.Tpo -c -o test/test_test_moondex-sighash_tests.obj `if test -f 'test/sighash_tests.cpp'; then $(CYGPATH_W) 'test/sighash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sighash_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-sighash_tests.Tpo test/$(DEPDIR)/test_test_moondex-sighash_tests.Po
-#	$(AM_V_CXX)source='test/sighash_tests.cpp' object='test/test_test_moondex-sighash_tests.obj' libtool=no \
+test/test_test_SMScoin-sighash_tests.obj: test/sighash_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-sighash_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-sighash_tests.Tpo -c -o test/test_test_SMScoin-sighash_tests.obj `if test -f 'test/sighash_tests.cpp'; then $(CYGPATH_W) 'test/sighash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sighash_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-sighash_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-sighash_tests.Po
+#	$(AM_V_CXX)source='test/sighash_tests.cpp' object='test/test_test_SMScoin-sighash_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-sighash_tests.obj `if test -f 'test/sighash_tests.cpp'; then $(CYGPATH_W) 'test/sighash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sighash_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-sighash_tests.obj `if test -f 'test/sighash_tests.cpp'; then $(CYGPATH_W) 'test/sighash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sighash_tests.cpp'; fi`
 
-test/test_test_moondex-sigopcount_tests.o: test/sigopcount_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-sigopcount_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-sigopcount_tests.Tpo -c -o test/test_test_moondex-sigopcount_tests.o `test -f 'test/sigopcount_tests.cpp' || echo '$(srcdir)/'`test/sigopcount_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-sigopcount_tests.Tpo test/$(DEPDIR)/test_test_moondex-sigopcount_tests.Po
-#	$(AM_V_CXX)source='test/sigopcount_tests.cpp' object='test/test_test_moondex-sigopcount_tests.o' libtool=no \
+test/test_test_SMScoin-sigopcount_tests.o: test/sigopcount_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-sigopcount_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-sigopcount_tests.Tpo -c -o test/test_test_SMScoin-sigopcount_tests.o `test -f 'test/sigopcount_tests.cpp' || echo '$(srcdir)/'`test/sigopcount_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-sigopcount_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-sigopcount_tests.Po
+#	$(AM_V_CXX)source='test/sigopcount_tests.cpp' object='test/test_test_SMScoin-sigopcount_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-sigopcount_tests.o `test -f 'test/sigopcount_tests.cpp' || echo '$(srcdir)/'`test/sigopcount_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-sigopcount_tests.o `test -f 'test/sigopcount_tests.cpp' || echo '$(srcdir)/'`test/sigopcount_tests.cpp
 
-test/test_test_moondex-sigopcount_tests.obj: test/sigopcount_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-sigopcount_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-sigopcount_tests.Tpo -c -o test/test_test_moondex-sigopcount_tests.obj `if test -f 'test/sigopcount_tests.cpp'; then $(CYGPATH_W) 'test/sigopcount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sigopcount_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-sigopcount_tests.Tpo test/$(DEPDIR)/test_test_moondex-sigopcount_tests.Po
-#	$(AM_V_CXX)source='test/sigopcount_tests.cpp' object='test/test_test_moondex-sigopcount_tests.obj' libtool=no \
+test/test_test_SMScoin-sigopcount_tests.obj: test/sigopcount_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-sigopcount_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-sigopcount_tests.Tpo -c -o test/test_test_SMScoin-sigopcount_tests.obj `if test -f 'test/sigopcount_tests.cpp'; then $(CYGPATH_W) 'test/sigopcount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sigopcount_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-sigopcount_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-sigopcount_tests.Po
+#	$(AM_V_CXX)source='test/sigopcount_tests.cpp' object='test/test_test_SMScoin-sigopcount_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-sigopcount_tests.obj `if test -f 'test/sigopcount_tests.cpp'; then $(CYGPATH_W) 'test/sigopcount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sigopcount_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-sigopcount_tests.obj `if test -f 'test/sigopcount_tests.cpp'; then $(CYGPATH_W) 'test/sigopcount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sigopcount_tests.cpp'; fi`
 
-test/test_test_moondex-skiplist_tests.o: test/skiplist_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-skiplist_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-skiplist_tests.Tpo -c -o test/test_test_moondex-skiplist_tests.o `test -f 'test/skiplist_tests.cpp' || echo '$(srcdir)/'`test/skiplist_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-skiplist_tests.Tpo test/$(DEPDIR)/test_test_moondex-skiplist_tests.Po
-#	$(AM_V_CXX)source='test/skiplist_tests.cpp' object='test/test_test_moondex-skiplist_tests.o' libtool=no \
+test/test_test_SMScoin-skiplist_tests.o: test/skiplist_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-skiplist_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-skiplist_tests.Tpo -c -o test/test_test_SMScoin-skiplist_tests.o `test -f 'test/skiplist_tests.cpp' || echo '$(srcdir)/'`test/skiplist_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-skiplist_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-skiplist_tests.Po
+#	$(AM_V_CXX)source='test/skiplist_tests.cpp' object='test/test_test_SMScoin-skiplist_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-skiplist_tests.o `test -f 'test/skiplist_tests.cpp' || echo '$(srcdir)/'`test/skiplist_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-skiplist_tests.o `test -f 'test/skiplist_tests.cpp' || echo '$(srcdir)/'`test/skiplist_tests.cpp
 
-test/test_test_moondex-skiplist_tests.obj: test/skiplist_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-skiplist_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-skiplist_tests.Tpo -c -o test/test_test_moondex-skiplist_tests.obj `if test -f 'test/skiplist_tests.cpp'; then $(CYGPATH_W) 'test/skiplist_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/skiplist_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-skiplist_tests.Tpo test/$(DEPDIR)/test_test_moondex-skiplist_tests.Po
-#	$(AM_V_CXX)source='test/skiplist_tests.cpp' object='test/test_test_moondex-skiplist_tests.obj' libtool=no \
+test/test_test_SMScoin-skiplist_tests.obj: test/skiplist_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-skiplist_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-skiplist_tests.Tpo -c -o test/test_test_SMScoin-skiplist_tests.obj `if test -f 'test/skiplist_tests.cpp'; then $(CYGPATH_W) 'test/skiplist_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/skiplist_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-skiplist_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-skiplist_tests.Po
+#	$(AM_V_CXX)source='test/skiplist_tests.cpp' object='test/test_test_SMScoin-skiplist_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-skiplist_tests.obj `if test -f 'test/skiplist_tests.cpp'; then $(CYGPATH_W) 'test/skiplist_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/skiplist_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-skiplist_tests.obj `if test -f 'test/skiplist_tests.cpp'; then $(CYGPATH_W) 'test/skiplist_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/skiplist_tests.cpp'; fi`
 
-test/test_test_moondex-streams_tests.o: test/streams_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-streams_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-streams_tests.Tpo -c -o test/test_test_moondex-streams_tests.o `test -f 'test/streams_tests.cpp' || echo '$(srcdir)/'`test/streams_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-streams_tests.Tpo test/$(DEPDIR)/test_test_moondex-streams_tests.Po
-#	$(AM_V_CXX)source='test/streams_tests.cpp' object='test/test_test_moondex-streams_tests.o' libtool=no \
+test/test_test_SMScoin-streams_tests.o: test/streams_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-streams_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-streams_tests.Tpo -c -o test/test_test_SMScoin-streams_tests.o `test -f 'test/streams_tests.cpp' || echo '$(srcdir)/'`test/streams_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-streams_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-streams_tests.Po
+#	$(AM_V_CXX)source='test/streams_tests.cpp' object='test/test_test_SMScoin-streams_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-streams_tests.o `test -f 'test/streams_tests.cpp' || echo '$(srcdir)/'`test/streams_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-streams_tests.o `test -f 'test/streams_tests.cpp' || echo '$(srcdir)/'`test/streams_tests.cpp
 
-test/test_test_moondex-streams_tests.obj: test/streams_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-streams_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-streams_tests.Tpo -c -o test/test_test_moondex-streams_tests.obj `if test -f 'test/streams_tests.cpp'; then $(CYGPATH_W) 'test/streams_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/streams_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-streams_tests.Tpo test/$(DEPDIR)/test_test_moondex-streams_tests.Po
-#	$(AM_V_CXX)source='test/streams_tests.cpp' object='test/test_test_moondex-streams_tests.obj' libtool=no \
+test/test_test_SMScoin-streams_tests.obj: test/streams_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-streams_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-streams_tests.Tpo -c -o test/test_test_SMScoin-streams_tests.obj `if test -f 'test/streams_tests.cpp'; then $(CYGPATH_W) 'test/streams_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/streams_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-streams_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-streams_tests.Po
+#	$(AM_V_CXX)source='test/streams_tests.cpp' object='test/test_test_SMScoin-streams_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-streams_tests.obj `if test -f 'test/streams_tests.cpp'; then $(CYGPATH_W) 'test/streams_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/streams_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-streams_tests.obj `if test -f 'test/streams_tests.cpp'; then $(CYGPATH_W) 'test/streams_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/streams_tests.cpp'; fi`
 
-test/test_test_moondex-test_moondex.o: test/test_moondex.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-test_moondex.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-test_moondex.Tpo -c -o test/test_test_moondex-test_moondex.o `test -f 'test/test_moondex.cpp' || echo '$(srcdir)/'`test/test_moondex.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-test_moondex.Tpo test/$(DEPDIR)/test_test_moondex-test_moondex.Po
-#	$(AM_V_CXX)source='test/test_moondex.cpp' object='test/test_test_moondex-test_moondex.o' libtool=no \
+test/test_test_SMScoin-test_SMScoin.o: test/test_SMScoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-test_SMScoin.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-test_SMScoin.Tpo -c -o test/test_test_SMScoin-test_SMScoin.o `test -f 'test/test_SMScoin.cpp' || echo '$(srcdir)/'`test/test_SMScoin.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-test_SMScoin.Tpo test/$(DEPDIR)/test_test_SMScoin-test_SMScoin.Po
+#	$(AM_V_CXX)source='test/test_SMScoin.cpp' object='test/test_test_SMScoin-test_SMScoin.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-test_moondex.o `test -f 'test/test_moondex.cpp' || echo '$(srcdir)/'`test/test_moondex.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-test_SMScoin.o `test -f 'test/test_SMScoin.cpp' || echo '$(srcdir)/'`test/test_SMScoin.cpp
 
-test/test_test_moondex-test_moondex.obj: test/test_moondex.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-test_moondex.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-test_moondex.Tpo -c -o test/test_test_moondex-test_moondex.obj `if test -f 'test/test_moondex.cpp'; then $(CYGPATH_W) 'test/test_moondex.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_moondex.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-test_moondex.Tpo test/$(DEPDIR)/test_test_moondex-test_moondex.Po
-#	$(AM_V_CXX)source='test/test_moondex.cpp' object='test/test_test_moondex-test_moondex.obj' libtool=no \
+test/test_test_SMScoin-test_SMScoin.obj: test/test_SMScoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-test_SMScoin.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-test_SMScoin.Tpo -c -o test/test_test_SMScoin-test_SMScoin.obj `if test -f 'test/test_SMScoin.cpp'; then $(CYGPATH_W) 'test/test_SMScoin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_SMScoin.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-test_SMScoin.Tpo test/$(DEPDIR)/test_test_SMScoin-test_SMScoin.Po
+#	$(AM_V_CXX)source='test/test_SMScoin.cpp' object='test/test_test_SMScoin-test_SMScoin.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-test_moondex.obj `if test -f 'test/test_moondex.cpp'; then $(CYGPATH_W) 'test/test_moondex.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_moondex.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-test_SMScoin.obj `if test -f 'test/test_SMScoin.cpp'; then $(CYGPATH_W) 'test/test_SMScoin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_SMScoin.cpp'; fi`
 
-test/test_test_moondex-timedata_tests.o: test/timedata_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-timedata_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-timedata_tests.Tpo -c -o test/test_test_moondex-timedata_tests.o `test -f 'test/timedata_tests.cpp' || echo '$(srcdir)/'`test/timedata_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-timedata_tests.Tpo test/$(DEPDIR)/test_test_moondex-timedata_tests.Po
-#	$(AM_V_CXX)source='test/timedata_tests.cpp' object='test/test_test_moondex-timedata_tests.o' libtool=no \
+test/test_test_SMScoin-timedata_tests.o: test/timedata_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-timedata_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-timedata_tests.Tpo -c -o test/test_test_SMScoin-timedata_tests.o `test -f 'test/timedata_tests.cpp' || echo '$(srcdir)/'`test/timedata_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-timedata_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-timedata_tests.Po
+#	$(AM_V_CXX)source='test/timedata_tests.cpp' object='test/test_test_SMScoin-timedata_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-timedata_tests.o `test -f 'test/timedata_tests.cpp' || echo '$(srcdir)/'`test/timedata_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-timedata_tests.o `test -f 'test/timedata_tests.cpp' || echo '$(srcdir)/'`test/timedata_tests.cpp
 
-test/test_test_moondex-timedata_tests.obj: test/timedata_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-timedata_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-timedata_tests.Tpo -c -o test/test_test_moondex-timedata_tests.obj `if test -f 'test/timedata_tests.cpp'; then $(CYGPATH_W) 'test/timedata_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/timedata_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-timedata_tests.Tpo test/$(DEPDIR)/test_test_moondex-timedata_tests.Po
-#	$(AM_V_CXX)source='test/timedata_tests.cpp' object='test/test_test_moondex-timedata_tests.obj' libtool=no \
+test/test_test_SMScoin-timedata_tests.obj: test/timedata_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-timedata_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-timedata_tests.Tpo -c -o test/test_test_SMScoin-timedata_tests.obj `if test -f 'test/timedata_tests.cpp'; then $(CYGPATH_W) 'test/timedata_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/timedata_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-timedata_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-timedata_tests.Po
+#	$(AM_V_CXX)source='test/timedata_tests.cpp' object='test/test_test_SMScoin-timedata_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-timedata_tests.obj `if test -f 'test/timedata_tests.cpp'; then $(CYGPATH_W) 'test/timedata_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/timedata_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-timedata_tests.obj `if test -f 'test/timedata_tests.cpp'; then $(CYGPATH_W) 'test/timedata_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/timedata_tests.cpp'; fi`
 
-test/test_test_moondex-transaction_tests.o: test/transaction_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-transaction_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-transaction_tests.Tpo -c -o test/test_test_moondex-transaction_tests.o `test -f 'test/transaction_tests.cpp' || echo '$(srcdir)/'`test/transaction_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-transaction_tests.Tpo test/$(DEPDIR)/test_test_moondex-transaction_tests.Po
-#	$(AM_V_CXX)source='test/transaction_tests.cpp' object='test/test_test_moondex-transaction_tests.o' libtool=no \
+test/test_test_SMScoin-transaction_tests.o: test/transaction_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-transaction_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-transaction_tests.Tpo -c -o test/test_test_SMScoin-transaction_tests.o `test -f 'test/transaction_tests.cpp' || echo '$(srcdir)/'`test/transaction_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-transaction_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-transaction_tests.Po
+#	$(AM_V_CXX)source='test/transaction_tests.cpp' object='test/test_test_SMScoin-transaction_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-transaction_tests.o `test -f 'test/transaction_tests.cpp' || echo '$(srcdir)/'`test/transaction_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-transaction_tests.o `test -f 'test/transaction_tests.cpp' || echo '$(srcdir)/'`test/transaction_tests.cpp
 
-test/test_test_moondex-transaction_tests.obj: test/transaction_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-transaction_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-transaction_tests.Tpo -c -o test/test_test_moondex-transaction_tests.obj `if test -f 'test/transaction_tests.cpp'; then $(CYGPATH_W) 'test/transaction_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/transaction_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-transaction_tests.Tpo test/$(DEPDIR)/test_test_moondex-transaction_tests.Po
-#	$(AM_V_CXX)source='test/transaction_tests.cpp' object='test/test_test_moondex-transaction_tests.obj' libtool=no \
+test/test_test_SMScoin-transaction_tests.obj: test/transaction_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-transaction_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-transaction_tests.Tpo -c -o test/test_test_SMScoin-transaction_tests.obj `if test -f 'test/transaction_tests.cpp'; then $(CYGPATH_W) 'test/transaction_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/transaction_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-transaction_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-transaction_tests.Po
+#	$(AM_V_CXX)source='test/transaction_tests.cpp' object='test/test_test_SMScoin-transaction_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-transaction_tests.obj `if test -f 'test/transaction_tests.cpp'; then $(CYGPATH_W) 'test/transaction_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/transaction_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-transaction_tests.obj `if test -f 'test/transaction_tests.cpp'; then $(CYGPATH_W) 'test/transaction_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/transaction_tests.cpp'; fi`
 
-test/test_test_moondex-txvalidationcache_tests.o: test/txvalidationcache_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-txvalidationcache_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-txvalidationcache_tests.Tpo -c -o test/test_test_moondex-txvalidationcache_tests.o `test -f 'test/txvalidationcache_tests.cpp' || echo '$(srcdir)/'`test/txvalidationcache_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-txvalidationcache_tests.Tpo test/$(DEPDIR)/test_test_moondex-txvalidationcache_tests.Po
-#	$(AM_V_CXX)source='test/txvalidationcache_tests.cpp' object='test/test_test_moondex-txvalidationcache_tests.o' libtool=no \
+test/test_test_SMScoin-txvalidationcache_tests.o: test/txvalidationcache_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-txvalidationcache_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-txvalidationcache_tests.Tpo -c -o test/test_test_SMScoin-txvalidationcache_tests.o `test -f 'test/txvalidationcache_tests.cpp' || echo '$(srcdir)/'`test/txvalidationcache_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-txvalidationcache_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-txvalidationcache_tests.Po
+#	$(AM_V_CXX)source='test/txvalidationcache_tests.cpp' object='test/test_test_SMScoin-txvalidationcache_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-txvalidationcache_tests.o `test -f 'test/txvalidationcache_tests.cpp' || echo '$(srcdir)/'`test/txvalidationcache_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-txvalidationcache_tests.o `test -f 'test/txvalidationcache_tests.cpp' || echo '$(srcdir)/'`test/txvalidationcache_tests.cpp
 
-test/test_test_moondex-txvalidationcache_tests.obj: test/txvalidationcache_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-txvalidationcache_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-txvalidationcache_tests.Tpo -c -o test/test_test_moondex-txvalidationcache_tests.obj `if test -f 'test/txvalidationcache_tests.cpp'; then $(CYGPATH_W) 'test/txvalidationcache_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/txvalidationcache_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-txvalidationcache_tests.Tpo test/$(DEPDIR)/test_test_moondex-txvalidationcache_tests.Po
-#	$(AM_V_CXX)source='test/txvalidationcache_tests.cpp' object='test/test_test_moondex-txvalidationcache_tests.obj' libtool=no \
+test/test_test_SMScoin-txvalidationcache_tests.obj: test/txvalidationcache_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-txvalidationcache_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-txvalidationcache_tests.Tpo -c -o test/test_test_SMScoin-txvalidationcache_tests.obj `if test -f 'test/txvalidationcache_tests.cpp'; then $(CYGPATH_W) 'test/txvalidationcache_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/txvalidationcache_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-txvalidationcache_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-txvalidationcache_tests.Po
+#	$(AM_V_CXX)source='test/txvalidationcache_tests.cpp' object='test/test_test_SMScoin-txvalidationcache_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-txvalidationcache_tests.obj `if test -f 'test/txvalidationcache_tests.cpp'; then $(CYGPATH_W) 'test/txvalidationcache_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/txvalidationcache_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-txvalidationcache_tests.obj `if test -f 'test/txvalidationcache_tests.cpp'; then $(CYGPATH_W) 'test/txvalidationcache_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/txvalidationcache_tests.cpp'; fi`
 
-test/test_test_moondex-versionbits_tests.o: test/versionbits_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-versionbits_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-versionbits_tests.Tpo -c -o test/test_test_moondex-versionbits_tests.o `test -f 'test/versionbits_tests.cpp' || echo '$(srcdir)/'`test/versionbits_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-versionbits_tests.Tpo test/$(DEPDIR)/test_test_moondex-versionbits_tests.Po
-#	$(AM_V_CXX)source='test/versionbits_tests.cpp' object='test/test_test_moondex-versionbits_tests.o' libtool=no \
+test/test_test_SMScoin-versionbits_tests.o: test/versionbits_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-versionbits_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-versionbits_tests.Tpo -c -o test/test_test_SMScoin-versionbits_tests.o `test -f 'test/versionbits_tests.cpp' || echo '$(srcdir)/'`test/versionbits_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-versionbits_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-versionbits_tests.Po
+#	$(AM_V_CXX)source='test/versionbits_tests.cpp' object='test/test_test_SMScoin-versionbits_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-versionbits_tests.o `test -f 'test/versionbits_tests.cpp' || echo '$(srcdir)/'`test/versionbits_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-versionbits_tests.o `test -f 'test/versionbits_tests.cpp' || echo '$(srcdir)/'`test/versionbits_tests.cpp
 
-test/test_test_moondex-versionbits_tests.obj: test/versionbits_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-versionbits_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-versionbits_tests.Tpo -c -o test/test_test_moondex-versionbits_tests.obj `if test -f 'test/versionbits_tests.cpp'; then $(CYGPATH_W) 'test/versionbits_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/versionbits_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-versionbits_tests.Tpo test/$(DEPDIR)/test_test_moondex-versionbits_tests.Po
-#	$(AM_V_CXX)source='test/versionbits_tests.cpp' object='test/test_test_moondex-versionbits_tests.obj' libtool=no \
+test/test_test_SMScoin-versionbits_tests.obj: test/versionbits_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-versionbits_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-versionbits_tests.Tpo -c -o test/test_test_SMScoin-versionbits_tests.obj `if test -f 'test/versionbits_tests.cpp'; then $(CYGPATH_W) 'test/versionbits_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/versionbits_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-versionbits_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-versionbits_tests.Po
+#	$(AM_V_CXX)source='test/versionbits_tests.cpp' object='test/test_test_SMScoin-versionbits_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-versionbits_tests.obj `if test -f 'test/versionbits_tests.cpp'; then $(CYGPATH_W) 'test/versionbits_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/versionbits_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-versionbits_tests.obj `if test -f 'test/versionbits_tests.cpp'; then $(CYGPATH_W) 'test/versionbits_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/versionbits_tests.cpp'; fi`
 
-test/test_test_moondex-uint256_tests.o: test/uint256_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-uint256_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-uint256_tests.Tpo -c -o test/test_test_moondex-uint256_tests.o `test -f 'test/uint256_tests.cpp' || echo '$(srcdir)/'`test/uint256_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-uint256_tests.Tpo test/$(DEPDIR)/test_test_moondex-uint256_tests.Po
-#	$(AM_V_CXX)source='test/uint256_tests.cpp' object='test/test_test_moondex-uint256_tests.o' libtool=no \
+test/test_test_SMScoin-uint256_tests.o: test/uint256_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-uint256_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-uint256_tests.Tpo -c -o test/test_test_SMScoin-uint256_tests.o `test -f 'test/uint256_tests.cpp' || echo '$(srcdir)/'`test/uint256_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-uint256_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-uint256_tests.Po
+#	$(AM_V_CXX)source='test/uint256_tests.cpp' object='test/test_test_SMScoin-uint256_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-uint256_tests.o `test -f 'test/uint256_tests.cpp' || echo '$(srcdir)/'`test/uint256_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-uint256_tests.o `test -f 'test/uint256_tests.cpp' || echo '$(srcdir)/'`test/uint256_tests.cpp
 
-test/test_test_moondex-uint256_tests.obj: test/uint256_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-uint256_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-uint256_tests.Tpo -c -o test/test_test_moondex-uint256_tests.obj `if test -f 'test/uint256_tests.cpp'; then $(CYGPATH_W) 'test/uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/uint256_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-uint256_tests.Tpo test/$(DEPDIR)/test_test_moondex-uint256_tests.Po
-#	$(AM_V_CXX)source='test/uint256_tests.cpp' object='test/test_test_moondex-uint256_tests.obj' libtool=no \
+test/test_test_SMScoin-uint256_tests.obj: test/uint256_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-uint256_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-uint256_tests.Tpo -c -o test/test_test_SMScoin-uint256_tests.obj `if test -f 'test/uint256_tests.cpp'; then $(CYGPATH_W) 'test/uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/uint256_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-uint256_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-uint256_tests.Po
+#	$(AM_V_CXX)source='test/uint256_tests.cpp' object='test/test_test_SMScoin-uint256_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-uint256_tests.obj `if test -f 'test/uint256_tests.cpp'; then $(CYGPATH_W) 'test/uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/uint256_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-uint256_tests.obj `if test -f 'test/uint256_tests.cpp'; then $(CYGPATH_W) 'test/uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/uint256_tests.cpp'; fi`
 
-test/test_test_moondex-univalue_tests.o: test/univalue_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-univalue_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-univalue_tests.Tpo -c -o test/test_test_moondex-univalue_tests.o `test -f 'test/univalue_tests.cpp' || echo '$(srcdir)/'`test/univalue_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-univalue_tests.Tpo test/$(DEPDIR)/test_test_moondex-univalue_tests.Po
-#	$(AM_V_CXX)source='test/univalue_tests.cpp' object='test/test_test_moondex-univalue_tests.o' libtool=no \
+test/test_test_SMScoin-univalue_tests.o: test/univalue_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-univalue_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-univalue_tests.Tpo -c -o test/test_test_SMScoin-univalue_tests.o `test -f 'test/univalue_tests.cpp' || echo '$(srcdir)/'`test/univalue_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-univalue_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-univalue_tests.Po
+#	$(AM_V_CXX)source='test/univalue_tests.cpp' object='test/test_test_SMScoin-univalue_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-univalue_tests.o `test -f 'test/univalue_tests.cpp' || echo '$(srcdir)/'`test/univalue_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-univalue_tests.o `test -f 'test/univalue_tests.cpp' || echo '$(srcdir)/'`test/univalue_tests.cpp
 
-test/test_test_moondex-univalue_tests.obj: test/univalue_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-univalue_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-univalue_tests.Tpo -c -o test/test_test_moondex-univalue_tests.obj `if test -f 'test/univalue_tests.cpp'; then $(CYGPATH_W) 'test/univalue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/univalue_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-univalue_tests.Tpo test/$(DEPDIR)/test_test_moondex-univalue_tests.Po
-#	$(AM_V_CXX)source='test/univalue_tests.cpp' object='test/test_test_moondex-univalue_tests.obj' libtool=no \
+test/test_test_SMScoin-univalue_tests.obj: test/univalue_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-univalue_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-univalue_tests.Tpo -c -o test/test_test_SMScoin-univalue_tests.obj `if test -f 'test/univalue_tests.cpp'; then $(CYGPATH_W) 'test/univalue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/univalue_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-univalue_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-univalue_tests.Po
+#	$(AM_V_CXX)source='test/univalue_tests.cpp' object='test/test_test_SMScoin-univalue_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-univalue_tests.obj `if test -f 'test/univalue_tests.cpp'; then $(CYGPATH_W) 'test/univalue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/univalue_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-univalue_tests.obj `if test -f 'test/univalue_tests.cpp'; then $(CYGPATH_W) 'test/univalue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/univalue_tests.cpp'; fi`
 
-test/test_test_moondex-util_tests.o: test/util_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-util_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-util_tests.Tpo -c -o test/test_test_moondex-util_tests.o `test -f 'test/util_tests.cpp' || echo '$(srcdir)/'`test/util_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-util_tests.Tpo test/$(DEPDIR)/test_test_moondex-util_tests.Po
-#	$(AM_V_CXX)source='test/util_tests.cpp' object='test/test_test_moondex-util_tests.o' libtool=no \
+test/test_test_SMScoin-util_tests.o: test/util_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-util_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-util_tests.Tpo -c -o test/test_test_SMScoin-util_tests.o `test -f 'test/util_tests.cpp' || echo '$(srcdir)/'`test/util_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-util_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-util_tests.Po
+#	$(AM_V_CXX)source='test/util_tests.cpp' object='test/test_test_SMScoin-util_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-util_tests.o `test -f 'test/util_tests.cpp' || echo '$(srcdir)/'`test/util_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-util_tests.o `test -f 'test/util_tests.cpp' || echo '$(srcdir)/'`test/util_tests.cpp
 
-test/test_test_moondex-util_tests.obj: test/util_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-util_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-util_tests.Tpo -c -o test/test_test_moondex-util_tests.obj `if test -f 'test/util_tests.cpp'; then $(CYGPATH_W) 'test/util_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/util_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-util_tests.Tpo test/$(DEPDIR)/test_test_moondex-util_tests.Po
-#	$(AM_V_CXX)source='test/util_tests.cpp' object='test/test_test_moondex-util_tests.obj' libtool=no \
+test/test_test_SMScoin-util_tests.obj: test/util_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-util_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-util_tests.Tpo -c -o test/test_test_SMScoin-util_tests.obj `if test -f 'test/util_tests.cpp'; then $(CYGPATH_W) 'test/util_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/util_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-util_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-util_tests.Po
+#	$(AM_V_CXX)source='test/util_tests.cpp' object='test/test_test_SMScoin-util_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-util_tests.obj `if test -f 'test/util_tests.cpp'; then $(CYGPATH_W) 'test/util_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/util_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-util_tests.obj `if test -f 'test/util_tests.cpp'; then $(CYGPATH_W) 'test/util_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/util_tests.cpp'; fi`
 
-test/test_test_moondex-accounting_tests.o: test/accounting_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-accounting_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-accounting_tests.Tpo -c -o test/test_test_moondex-accounting_tests.o `test -f 'test/accounting_tests.cpp' || echo '$(srcdir)/'`test/accounting_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-accounting_tests.Tpo test/$(DEPDIR)/test_test_moondex-accounting_tests.Po
-#	$(AM_V_CXX)source='test/accounting_tests.cpp' object='test/test_test_moondex-accounting_tests.o' libtool=no \
+test/test_test_SMScoin-accounting_tests.o: test/accounting_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-accounting_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-accounting_tests.Tpo -c -o test/test_test_SMScoin-accounting_tests.o `test -f 'test/accounting_tests.cpp' || echo '$(srcdir)/'`test/accounting_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-accounting_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-accounting_tests.Po
+#	$(AM_V_CXX)source='test/accounting_tests.cpp' object='test/test_test_SMScoin-accounting_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-accounting_tests.o `test -f 'test/accounting_tests.cpp' || echo '$(srcdir)/'`test/accounting_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-accounting_tests.o `test -f 'test/accounting_tests.cpp' || echo '$(srcdir)/'`test/accounting_tests.cpp
 
-test/test_test_moondex-accounting_tests.obj: test/accounting_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-accounting_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-accounting_tests.Tpo -c -o test/test_test_moondex-accounting_tests.obj `if test -f 'test/accounting_tests.cpp'; then $(CYGPATH_W) 'test/accounting_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/accounting_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-accounting_tests.Tpo test/$(DEPDIR)/test_test_moondex-accounting_tests.Po
-#	$(AM_V_CXX)source='test/accounting_tests.cpp' object='test/test_test_moondex-accounting_tests.obj' libtool=no \
+test/test_test_SMScoin-accounting_tests.obj: test/accounting_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-accounting_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-accounting_tests.Tpo -c -o test/test_test_SMScoin-accounting_tests.obj `if test -f 'test/accounting_tests.cpp'; then $(CYGPATH_W) 'test/accounting_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/accounting_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-accounting_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-accounting_tests.Po
+#	$(AM_V_CXX)source='test/accounting_tests.cpp' object='test/test_test_SMScoin-accounting_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-accounting_tests.obj `if test -f 'test/accounting_tests.cpp'; then $(CYGPATH_W) 'test/accounting_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/accounting_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-accounting_tests.obj `if test -f 'test/accounting_tests.cpp'; then $(CYGPATH_W) 'test/accounting_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/accounting_tests.cpp'; fi`
 
-wallet/test/test_test_moondex-wallet_tests.o: wallet/test/wallet_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_moondex-wallet_tests.o -MD -MP -MF wallet/test/$(DEPDIR)/test_test_moondex-wallet_tests.Tpo -c -o wallet/test/test_test_moondex-wallet_tests.o `test -f 'wallet/test/wallet_tests.cpp' || echo '$(srcdir)/'`wallet/test/wallet_tests.cpp
-	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_moondex-wallet_tests.Tpo wallet/test/$(DEPDIR)/test_test_moondex-wallet_tests.Po
-#	$(AM_V_CXX)source='wallet/test/wallet_tests.cpp' object='wallet/test/test_test_moondex-wallet_tests.o' libtool=no \
+wallet/test/test_test_SMScoin-wallet_tests.o: wallet/test/wallet_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_SMScoin-wallet_tests.o -MD -MP -MF wallet/test/$(DEPDIR)/test_test_SMScoin-wallet_tests.Tpo -c -o wallet/test/test_test_SMScoin-wallet_tests.o `test -f 'wallet/test/wallet_tests.cpp' || echo '$(srcdir)/'`wallet/test/wallet_tests.cpp
+	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_SMScoin-wallet_tests.Tpo wallet/test/$(DEPDIR)/test_test_SMScoin-wallet_tests.Po
+#	$(AM_V_CXX)source='wallet/test/wallet_tests.cpp' object='wallet/test/test_test_SMScoin-wallet_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_moondex-wallet_tests.o `test -f 'wallet/test/wallet_tests.cpp' || echo '$(srcdir)/'`wallet/test/wallet_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_SMScoin-wallet_tests.o `test -f 'wallet/test/wallet_tests.cpp' || echo '$(srcdir)/'`wallet/test/wallet_tests.cpp
 
-wallet/test/test_test_moondex-wallet_tests.obj: wallet/test/wallet_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_moondex-wallet_tests.obj -MD -MP -MF wallet/test/$(DEPDIR)/test_test_moondex-wallet_tests.Tpo -c -o wallet/test/test_test_moondex-wallet_tests.obj `if test -f 'wallet/test/wallet_tests.cpp'; then $(CYGPATH_W) 'wallet/test/wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/wallet_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_moondex-wallet_tests.Tpo wallet/test/$(DEPDIR)/test_test_moondex-wallet_tests.Po
-#	$(AM_V_CXX)source='wallet/test/wallet_tests.cpp' object='wallet/test/test_test_moondex-wallet_tests.obj' libtool=no \
+wallet/test/test_test_SMScoin-wallet_tests.obj: wallet/test/wallet_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_SMScoin-wallet_tests.obj -MD -MP -MF wallet/test/$(DEPDIR)/test_test_SMScoin-wallet_tests.Tpo -c -o wallet/test/test_test_SMScoin-wallet_tests.obj `if test -f 'wallet/test/wallet_tests.cpp'; then $(CYGPATH_W) 'wallet/test/wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/wallet_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_SMScoin-wallet_tests.Tpo wallet/test/$(DEPDIR)/test_test_SMScoin-wallet_tests.Po
+#	$(AM_V_CXX)source='wallet/test/wallet_tests.cpp' object='wallet/test/test_test_SMScoin-wallet_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_moondex-wallet_tests.obj `if test -f 'wallet/test/wallet_tests.cpp'; then $(CYGPATH_W) 'wallet/test/wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/wallet_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_SMScoin-wallet_tests.obj `if test -f 'wallet/test/wallet_tests.cpp'; then $(CYGPATH_W) 'wallet/test/wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/wallet_tests.cpp'; fi`
 
-test/test_test_moondex-rpc_wallet_tests.o: test/rpc_wallet_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-rpc_wallet_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_moondex-rpc_wallet_tests.Tpo -c -o test/test_test_moondex-rpc_wallet_tests.o `test -f 'test/rpc_wallet_tests.cpp' || echo '$(srcdir)/'`test/rpc_wallet_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-rpc_wallet_tests.Tpo test/$(DEPDIR)/test_test_moondex-rpc_wallet_tests.Po
-#	$(AM_V_CXX)source='test/rpc_wallet_tests.cpp' object='test/test_test_moondex-rpc_wallet_tests.o' libtool=no \
+test/test_test_SMScoin-rpc_wallet_tests.o: test/rpc_wallet_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-rpc_wallet_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-rpc_wallet_tests.Tpo -c -o test/test_test_SMScoin-rpc_wallet_tests.o `test -f 'test/rpc_wallet_tests.cpp' || echo '$(srcdir)/'`test/rpc_wallet_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-rpc_wallet_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-rpc_wallet_tests.Po
+#	$(AM_V_CXX)source='test/rpc_wallet_tests.cpp' object='test/test_test_SMScoin-rpc_wallet_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-rpc_wallet_tests.o `test -f 'test/rpc_wallet_tests.cpp' || echo '$(srcdir)/'`test/rpc_wallet_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-rpc_wallet_tests.o `test -f 'test/rpc_wallet_tests.cpp' || echo '$(srcdir)/'`test/rpc_wallet_tests.cpp
 
-test/test_test_moondex-rpc_wallet_tests.obj: test/rpc_wallet_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_moondex-rpc_wallet_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_moondex-rpc_wallet_tests.Tpo -c -o test/test_test_moondex-rpc_wallet_tests.obj `if test -f 'test/rpc_wallet_tests.cpp'; then $(CYGPATH_W) 'test/rpc_wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_wallet_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_moondex-rpc_wallet_tests.Tpo test/$(DEPDIR)/test_test_moondex-rpc_wallet_tests.Po
-#	$(AM_V_CXX)source='test/rpc_wallet_tests.cpp' object='test/test_test_moondex-rpc_wallet_tests.obj' libtool=no \
+test/test_test_SMScoin-rpc_wallet_tests.obj: test/rpc_wallet_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_SMScoin-rpc_wallet_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_SMScoin-rpc_wallet_tests.Tpo -c -o test/test_test_SMScoin-rpc_wallet_tests.obj `if test -f 'test/rpc_wallet_tests.cpp'; then $(CYGPATH_W) 'test/rpc_wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_wallet_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_SMScoin-rpc_wallet_tests.Tpo test/$(DEPDIR)/test_test_SMScoin-rpc_wallet_tests.Po
+#	$(AM_V_CXX)source='test/rpc_wallet_tests.cpp' object='test/test_test_SMScoin-rpc_wallet_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_moondex_CPPFLAGS) $(CPPFLAGS) $(test_test_moondex_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_moondex-rpc_wallet_tests.obj `if test -f 'test/rpc_wallet_tests.cpp'; then $(CYGPATH_W) 'test/rpc_wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_wallet_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_SMScoin_CPPFLAGS) $(CPPFLAGS) $(test_test_SMScoin_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_SMScoin-rpc_wallet_tests.obj `if test -f 'test/rpc_wallet_tests.cpp'; then $(CYGPATH_W) 'test/rpc_wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_wallet_tests.cpp'; fi`
 
 .cpp.o:
 	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -9238,33 +9239,33 @@ test/test_test_moondex-rpc_wallet_tests.obj: test/rpc_wallet_tests.cpp
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
 #	$(AM_V_OBJCXX_no)$(LTOBJCXXCOMPILE) -c -o $@ $<
 
-qt/qt_moondex_qt-macdockiconhandler.o: qt/macdockiconhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_moondex_qt-macdockiconhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_moondex_qt-macdockiconhandler.Tpo -c -o qt/qt_moondex_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_moondex_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_moondex_qt-macdockiconhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_moondex_qt-macdockiconhandler.o' libtool=no \
+qt/qt_SMScoin_qt-macdockiconhandler.o: qt/macdockiconhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_SMScoin_qt-macdockiconhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_SMScoin_qt-macdockiconhandler.Tpo -c -o qt/qt_SMScoin_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_SMScoin_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_SMScoin_qt-macdockiconhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_SMScoin_qt-macdockiconhandler.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_moondex_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_SMScoin_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
 
-qt/qt_moondex_qt-macdockiconhandler.obj: qt/macdockiconhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_moondex_qt-macdockiconhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_moondex_qt-macdockiconhandler.Tpo -c -o qt/qt_moondex_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_moondex_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_moondex_qt-macdockiconhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_moondex_qt-macdockiconhandler.obj' libtool=no \
+qt/qt_SMScoin_qt-macdockiconhandler.obj: qt/macdockiconhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_SMScoin_qt-macdockiconhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_SMScoin_qt-macdockiconhandler.Tpo -c -o qt/qt_SMScoin_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_SMScoin_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_SMScoin_qt-macdockiconhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_SMScoin_qt-macdockiconhandler.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_moondex_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_SMScoin_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
 
-qt/qt_moondex_qt-macnotificationhandler.o: qt/macnotificationhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_moondex_qt-macnotificationhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_moondex_qt-macnotificationhandler.Tpo -c -o qt/qt_moondex_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_moondex_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_moondex_qt-macnotificationhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_moondex_qt-macnotificationhandler.o' libtool=no \
+qt/qt_SMScoin_qt-macnotificationhandler.o: qt/macnotificationhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_SMScoin_qt-macnotificationhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_SMScoin_qt-macnotificationhandler.Tpo -c -o qt/qt_SMScoin_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_SMScoin_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_SMScoin_qt-macnotificationhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_SMScoin_qt-macnotificationhandler.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_moondex_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_SMScoin_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
 
-qt/qt_moondex_qt-macnotificationhandler.obj: qt/macnotificationhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_moondex_qt-macnotificationhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_moondex_qt-macnotificationhandler.Tpo -c -o qt/qt_moondex_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_moondex_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_moondex_qt-macnotificationhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_moondex_qt-macnotificationhandler.obj' libtool=no \
+qt/qt_SMScoin_qt-macnotificationhandler.obj: qt/macnotificationhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_SMScoin_qt-macnotificationhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_SMScoin_qt-macnotificationhandler.Tpo -c -o qt/qt_SMScoin_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_SMScoin_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_SMScoin_qt-macnotificationhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_SMScoin_qt-macnotificationhandler.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_moondex_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_moondex_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_SMScoin_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_SMScoin_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo
@@ -9541,16 +9542,16 @@ recheck: all
 	        am__force_recheck=am--force-recheck \
 	        TEST_LOGS="$$log_list"; \
 	exit $$?
-test/test_moondex.log: test/test_moondex$(EXEEXT)
-	@p='test/test_moondex$(EXEEXT)'; \
-	b='test/test_moondex'; \
+test/test_SMScoin.log: test/test_SMScoin$(EXEEXT)
+	@p='test/test_SMScoin$(EXEEXT)'; \
+	b='test/test_SMScoin'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
-qt/test/test_moondex-qt.log: qt/test/test_moondex-qt$(EXEEXT)
-	@p='qt/test/test_moondex-qt$(EXEEXT)'; \
-	b='qt/test/test_moondex-qt'; \
+qt/test/test_SMScoin-qt.log: qt/test/test_SMScoin-qt$(EXEEXT)
+	@p='qt/test/test_SMScoin-qt$(EXEEXT)'; \
+	b='qt/test/test_SMScoin-qt'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
@@ -9562,13 +9563,13 @@ qt/test/test_moondex-qt.log: qt/test/test_moondex-qt$(EXEEXT)
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_TEST_LOG_DRIVER_FLAGS) $(TEST_LOG_DRIVER_FLAGS) -- $(TEST_LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
-#.test$(EXEEXT).log:
-#	@p='$<'; \
-#	$(am__set_b); \
-#	$(am__check_pre) $(TEST_LOG_DRIVER) --test-name "$$f" \
-#	--log-file $$b.log --trs-file $$b.trs \
-#	$(am__common_driver_flags) $(AM_TEST_LOG_DRIVER_FLAGS) $(TEST_LOG_DRIVER_FLAGS) -- $(TEST_LOG_COMPILE) \
-#	"$$tst" $(AM_TESTS_FD_REDIRECT)
+.test$(EXEEXT).log:
+	@p='$<'; \
+	$(am__set_b); \
+	$(am__check_pre) $(TEST_LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_TEST_LOG_DRIVER_FLAGS) $(TEST_LOG_DRIVER_FLAGS) -- $(TEST_LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
 
 distdir: $(DISTFILES)
 	@srcdirstrip=`echo "$(srcdir)" | sed 's/[].[^$$\\*]/\\\\&/g'`; \
@@ -9853,13 +9854,13 @@ check-security: $(bin_PROGRAMS)
 
 #$(BITCOIN_TESTS): $(GENERATED_TEST_FILES)
 
-#moondex_test: $(TEST_BINARY)
+#SMScoin_test: $(TEST_BINARY)
 
-#moondex_test_check: $(TEST_BINARY) FORCE
+#SMScoin_test_check: $(TEST_BINARY) FORCE
 #	$(MAKE) check-TESTS TESTS=$^
 
-#moondex_test_clean : FORCE
-#	rm -f $(CLEAN_BITCOIN_TEST) $(test_test_moondex_OBJECTS) $(TEST_BINARY)
+#SMScoin_test_clean : FORCE
+#	rm -f $(CLEAN_BITCOIN_TEST) $(test_test_SMScoin_OBJECTS) $(TEST_BINARY)
 
 #check-local:
 #	@echo "Running test/bitcoin-util-test.py..."
@@ -9889,69 +9890,69 @@ bench: $(BENCH_BINARY) FORCE
 	$(BENCH_BINARY)
 
 bitcoin_bench_clean : FORCE
-	rm -f $(CLEAN_BITCOIN_BENCH) $(bench_bench_moondex_OBJECTS) $(BENCH_BINARY)
+	rm -f $(CLEAN_BITCOIN_BENCH) $(bench_bench_SMScoin_OBJECTS) $(BENCH_BINARY)
 
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
-#$(QT_MOC): $(QT_FORMS_H)
-#$(qt_libbitcoinqt_a_OBJECTS) $(qt_moondex_qt_OBJECTS) : | $(QT_MOC)
+$(QT_MOC): $(QT_FORMS_H)
+$(qt_libbitcoinqt_a_OBJECTS) $(qt_SMScoin_qt_OBJECTS) : | $(QT_MOC)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
-#$(QT_MOC): $(PROTOBUF_H)
-#$(QT_MOC_CPP): $(PROTOBUF_H)
+$(QT_MOC): $(PROTOBUF_H)
+$(QT_MOC_CPP): $(PROTOBUF_H)
 
-#SECONDARY: $(QT_QM)
+SECONDARY: $(QT_QM)
 
-#qt/moondexstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
-#	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
-#	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) ../share/qt/extract_strings_qt.py $^
+qt/SMScoinstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
+	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
+	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) ../share/qt/extract_strings_qt.py $^
 
-#translate: qt/moondexstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
-#	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-#	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/moondex_en.ts
+translate: qt/SMScoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/SMScoin_en.ts
 
-#$(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
-#	@test -f $(RCC)
-#	@test -f $(@D)/$(<F) || cp -f $< $(@D)
-#	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name moondex_locale $(@D)/$(<F) | \
-#	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
+$(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
+	@test -f $(RCC)
+	@test -f $(@D)/$(<F) || cp -f $< $(@D)
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name SMScoin_locale $(@D)/$(<F) | \
+	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
-#$(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_MOVIES) $(PROTOBUF_H)
-#	@test -f $(RCC)
-#	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name moondex $< | \
-#	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
+$(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_MOVIES) $(PROTOBUF_H)
+	@test -f $(RCC)
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name SMScoin $< | \
+	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
-#moondex_qt_clean: FORCE
-#	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_moondex_qt_OBJECTS) qt/moondex-qt$(EXEEXT) $(LIBBITCOINQT)
+SMScoin_qt_clean: FORCE
+	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_SMScoin_qt_OBJECTS) qt/SMScoin-qt$(EXEEXT) $(LIBBITCOINQT)
 
-#moondex_qt : qt/moondex-qt$(EXEEXT)
+SMScoin_qt : qt/SMScoin-qt$(EXEEXT)
 
-#ui_%.h: %.ui
-#	@test -f $(UIC)
-#	@$(MKDIR_P) $(@D)
-#	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(UIC) -o $@ $< || (echo "Error creating $@"; false)
+ui_%.h: %.ui
+	@test -f $(UIC)
+	@$(MKDIR_P) $(@D)
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(UIC) -o $@ $< || (echo "Error creating $@"; false)
 
-#%.moc: %.cpp
-#	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(MOC) $(DEFAULT_INCLUDES) $(QT_INCLUDES) $(MOC_DEFS) $< | \
-#	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
+%.moc: %.cpp
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(MOC) $(DEFAULT_INCLUDES) $(QT_INCLUDES) $(MOC_DEFS) $< | \
+	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
-#moc_%.cpp: %.h
-#	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(MOC) $(DEFAULT_INCLUDES) $(QT_INCLUDES) $(MOC_DEFS) $< | \
-#	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
+moc_%.cpp: %.h
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(MOC) $(DEFAULT_INCLUDES) $(QT_INCLUDES) $(MOC_DEFS) $< | \
+	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
-#%.qm: %.ts
-#	@test -f $(LRELEASE)
-#	@$(MKDIR_P) $(@D)
-#	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LRELEASE) -silent $< -qm $@
+%.qm: %.ts
+	@test -f $(LRELEASE)
+	@$(MKDIR_P) $(@D)
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LRELEASE) -silent $< -qm $@
 
-#test_moondex_qt : qt/test/test_moondex-qt$(EXEEXT)
+#test_SMScoin_qt : qt/test/test_SMScoin-qt$(EXEEXT)
 
-#test_moondex_qt_check : qt/test/test_moondex-qt$(EXEEXT) FORCE
+#test_SMScoin_qt_check : qt/test/test_SMScoin-qt$(EXEEXT) FORCE
 #	$(MAKE) check-TESTS TESTS=$^
 
-#test_moondex_qt_clean: FORCE
-#	rm -f $(CLEAN_BITCOIN_QT_TEST) $(qt_test_test_moondex_qt_OBJECTS)
+#test_SMScoin_qt_clean: FORCE
+#	rm -f $(CLEAN_BITCOIN_QT_TEST) $(qt_test_test_SMScoin_qt_OBJECTS)
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

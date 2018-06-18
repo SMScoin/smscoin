@@ -398,7 +398,7 @@ void static BitcoinMiner(const CChainParams& chainparams)
 {
     LogPrintf("SMScoinMiner -- started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
-    RenameThread("moondex-miner");
+    RenameThread("SMScoin-miner");
 
     unsigned int nExtraNonce = 0;
 

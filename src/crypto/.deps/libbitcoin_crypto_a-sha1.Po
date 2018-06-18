@@ -38,7 +38,7 @@ crypto/libbitcoin_crypto_a-sha1.o: crypto/sha1.cpp crypto/sha1.h \
   /usr/include/sys/_types/_u_int32_t.h \
   /usr/include/sys/_types/_u_int64_t.h /usr/include/sys/_types/_dev_t.h \
   /usr/include/sys/_types/_mode_t.h crypto/common.h \
-  ../src/config/moondex-config.h \
+  ../src/config/SMScoin-config.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string.h \
   /usr/include/string.h /usr/include/sys/_types/_ssize_t.h \
   /usr/include/strings.h compat/endian.h compat/byteswap.h \
@@ -178,7 +178,7 @@ crypto/sha1.h:
 
 crypto/common.h:
 
-../src/config/moondex-config.h:
+../src/config/SMScoin-config.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string.h:
 

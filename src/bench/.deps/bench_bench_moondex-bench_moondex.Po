@@ -1,4 +1,4 @@
-bench/bench_bench_moondex-bench_moondex.o: bench/bench_moondex.cpp \
+bench/bench_bench_SMScoin-bench_SMScoin.o: bench/bench_SMScoin.cpp \
  /usr/include/stdc-predef.h bench/bench.h /usr/include/c++/5/map \
  /usr/include/c++/5/bits/stl_tree.h \
  /usr/include/c++/5/bits/stl_algobase.h \
@@ -400,11 +400,11 @@ bench/bench_bench_moondex-bench_moondex.o: bench/bench_moondex.cpp \
  /usr/include/c++/5/bits/istream.tcc crypto/ripemd160.h crypto/sha256.h \
  prevector.h /usr/include/c++/5/iterator \
  /usr/include/c++/5/bits/stream_iterator.h serialize.h compat/endian.h \
- config/moondex-config.h compat/byteswap.h /usr/include/byteswap.h \
+ config/SMScoin-config.h compat/byteswap.h /usr/include/byteswap.h \
  /usr/include/c++/5/list /usr/include/c++/5/bits/stl_list.h \
  /usr/include/c++/5/bits/list.tcc /usr/include/c++/5/set \
  /usr/include/c++/5/bits/stl_set.h /usr/include/c++/5/bits/stl_multiset.h \
- uint256.h crypto/common.h ../src/config/moondex-config.h compat/endian.h \
+ uint256.h crypto/common.h ../src/config/SMScoin-config.h compat/endian.h \
  version.h crypto/sph_blake.h crypto/sph_types.h crypto/sph_bmw.h \
  crypto/sph_groestl.h crypto/sph_jh.h crypto/sph_keccak.h \
  crypto/sph_skein.h crypto/sph_luffa.h crypto/sph_cubehash.h \
@@ -695,7 +695,7 @@ bench/bench_bench_moondex-bench_moondex.o: bench/bench_moondex.cpp \
  /usr/include/boost/atomic/detail/atomic_template.hpp \
  /usr/include/boost/type_traits/is_signed.hpp \
  /usr/include/boost/atomic/detail/casts.hpp main.h \
- config/moondex-config.h amount.h chain.h arith_uint256.h \
+ config/SMScoin-config.h amount.h chain.h arith_uint256.h \
  primitives/block.h primitives/transaction.h amount.h script/script.h \
  crypto/common.h prevector.h serialize.h uint256.h pow.h \
  consensus/params.h tinyformat.h coins.h compressor.h \
@@ -2031,7 +2031,7 @@ serialize.h:
 
 compat/endian.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 compat/byteswap.h:
 
@@ -2053,7 +2053,7 @@ uint256.h:
 
 crypto/common.h:
 
-../src/config/moondex-config.h:
+../src/config/SMScoin-config.h:
 
 compat/endian.h:
 
@@ -2713,7 +2713,7 @@ support/cleanse.h:
 
 main.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 amount.h:
 

@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>org.moondex.moondexd</string>
+	<string>org.SMScoin.SMScoind</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/usr/local/bin/moondexd</string>
+		<string>/usr/local/bin/SMScoind</string>
 		<string>-daemon</string>
 	</array>
 	<key>RunAtLoad</key>

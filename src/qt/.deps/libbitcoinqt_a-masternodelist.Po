@@ -151,7 +151,7 @@ qt/libbitcoinqt_a-masternodelist.o: qt/masternodelist.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/bitset \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference \
   crypto/ripemd160.h crypto/sha256.h prevector.h serialize.h \
-  compat/endian.h config/moondex-config.h compat/byteswap.h \
+  compat/endian.h config/SMScoin-config.h compat/byteswap.h \
   /usr/include/libkern/OSByteOrder.h \
   /usr/include/libkern/i386/OSByteOrder.h \
   /usr/include/sys/_types/_os_inline.h /usr/include/assert.h \
@@ -1761,7 +1761,7 @@ serialize.h:
 
 compat/endian.h:
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 compat/byteswap.h:
 

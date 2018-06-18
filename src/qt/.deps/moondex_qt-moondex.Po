@@ -1,4 +1,4 @@
-qt/moondex_qt-moondex.o: qt/moondex.cpp config/moondex-config.h \
+qt/SMScoin_qt-SMScoin.o: qt/SMScoin.cpp config/SMScoin-config.h \
   qt/bitcoingui.h amount.h serialize.h compat/endian.h compat/byteswap.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stdint.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__config \
@@ -1379,9 +1379,9 @@ qt/moondex_qt-moondex.o: qt/moondex.cpp config/moondex-config.h \
   /usr/local/Cellar/qt/5.10.1/include/QtNetwork/qsslcertificate.h \
   /usr/local/Cellar/qt/5.10.1/include/QtCore/qcryptographichash.h \
   /usr/local/Cellar/qt/5.10.1/include/QtNetwork/qssl.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/QFlags qt/moondex.moc
+  /usr/local/Cellar/qt/5.10.1/include/QtCore/QFlags qt/SMScoin.moc
 
-config/moondex-config.h:
+config/SMScoin-config.h:
 
 qt/bitcoingui.h:
 
@@ -4431,4 +4431,4 @@ scheduler.h:
 
 /usr/local/Cellar/qt/5.10.1/include/QtCore/QFlags:
 
-qt/moondex.moc:
+qt/SMScoin.moc:
