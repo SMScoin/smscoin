@@ -18,7 +18,7 @@
 /* #undef ENABLE_MODULE_SCHNORR */
 
 /* Define this symbol if OpenSSL EC functions are available */
-/* #undef ENABLE_OPENSSL_TESTS */
+#define ENABLE_OPENSSL_TESTS 1
 
 /* Define this symbol if __builtin_expect is available */
 #define HAVE_BUILTIN_EXPECT 1
@@ -90,7 +90,7 @@
 #define STDC_HEADERS 1
 
 /* Define this symbol to enable x86_64 assembly optimizations */
-/* #undef USE_ASM_X86_64 */
+#define USE_ASM_X86_64 1
 
 /* Define this symbol to use a statically generated ecmult table */
 #define USE_ECMULT_STATIC_PRECOMPUTATION 1
