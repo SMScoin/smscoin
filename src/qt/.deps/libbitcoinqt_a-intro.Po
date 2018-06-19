@@ -1,204 +1,208 @@
 qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QDialog \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qdialog.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qtwidgetsglobal.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qtguiglobal.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qglobal.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/type_traits \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__config \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cstddef \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include/stddef.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include/__stddef_max_align_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__nullptr \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__tuple \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/initializer_list \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__debug \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stddef.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qconfig.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qtcore-config.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qsystemdetection.h \
-  /usr/include/TargetConditionals.h /usr/include/Availability.h \
-  /usr/include/AvailabilityInternal.h /usr/include/AvailabilityMacros.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qprocessordetection.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qcompilerdetection.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cstring \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/QDialog \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qdialog.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qtwidgetsglobal.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qtguiglobal.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qglobal.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__config \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cstddef \
+  /Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include/__stddef_max_align_t.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__nullptr \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/utility \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__tuple \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/initializer_list \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cstring \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/string.h \
   /usr/include/string.h /usr/include/_types.h /usr/include/sys/_types.h \
   /usr/include/sys/cdefs.h /usr/include/sys/_symbol_aliasing.h \
   /usr/include/sys/_posix_availability.h /usr/include/machine/_types.h \
   /usr/include/i386/_types.h /usr/include/sys/_pthread/_pthread_types.h \
+  /usr/include/Availability.h /usr/include/AvailabilityInternal.h \
   /usr/include/sys/_types/_size_t.h /usr/include/sys/_types/_null.h \
-  /usr/include/sys/_types/_ssize_t.h /usr/include/strings.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/typeinfo \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/exception \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cstdlib \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stdlib.h \
+  /usr/include/sys/_types/_ssize_t.h /usr/include/machine/types.h \
+  /usr/include/i386/types.h /usr/include/sys/_types/_int8_t.h \
+  /usr/include/sys/_types/_int16_t.h /usr/include/sys/_types/_int32_t.h \
+  /usr/include/sys/_types/_int64_t.h /usr/include/sys/_types/_u_int8_t.h \
+  /usr/include/sys/_types/_u_int16_t.h \
+  /usr/include/sys/_types/_u_int32_t.h \
+  /usr/include/sys/_types/_u_int64_t.h \
+  /usr/include/sys/_types/_intptr_t.h \
+  /usr/include/sys/_types/_uintptr_t.h /usr/include/strings.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdint \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/stdint.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include/stdint.h \
+  /usr/include/stdint.h /usr/include/_types/_uint8_t.h \
+  /usr/include/_types/_uint16_t.h /usr/include/_types/_uint32_t.h \
+  /usr/include/_types/_uint64_t.h /usr/include/_types/_intmax_t.h \
+  /usr/include/_types/_uintmax_t.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__debug \
+  /usr/include/assert.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/stdlib.h \
   /usr/include/stdlib.h /usr/include/sys/wait.h \
   /usr/include/sys/_types/_pid_t.h /usr/include/sys/_types/_id_t.h \
   /usr/include/sys/signal.h /usr/include/sys/appleapiopts.h \
   /usr/include/machine/signal.h /usr/include/i386/signal.h \
   /usr/include/machine/_mcontext.h /usr/include/i386/_mcontext.h \
-  /usr/include/mach/i386/_structs.h \
+  /usr/include/mach/machine/_structs.h /usr/include/mach/i386/_structs.h \
   /usr/include/sys/_pthread/_pthread_attr_t.h \
   /usr/include/sys/_types/_sigaltstack.h \
   /usr/include/sys/_types/_ucontext.h \
   /usr/include/sys/_types/_sigset_t.h /usr/include/sys/_types/_uid_t.h \
-  /usr/include/sys/resource.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stdint.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include/stdint.h \
-  /usr/include/stdint.h /usr/include/sys/_types/_int8_t.h \
-  /usr/include/sys/_types/_int16_t.h /usr/include/sys/_types/_int32_t.h \
-  /usr/include/sys/_types/_int64_t.h /usr/include/_types/_uint8_t.h \
-  /usr/include/_types/_uint16_t.h /usr/include/_types/_uint32_t.h \
-  /usr/include/_types/_uint64_t.h /usr/include/sys/_types/_intptr_t.h \
-  /usr/include/sys/_types/_uintptr_t.h /usr/include/_types/_intmax_t.h \
-  /usr/include/_types/_uintmax_t.h /usr/include/sys/_types/_timeval.h \
+  /usr/include/sys/resource.h /usr/include/sys/_types/_timeval.h \
   /usr/include/machine/endian.h /usr/include/i386/endian.h \
   /usr/include/sys/_endian.h /usr/include/libkern/_OSByteOrder.h \
   /usr/include/libkern/i386/_OSByteOrder.h /usr/include/alloca.h \
   /usr/include/sys/_types/_ct_rune_t.h /usr/include/sys/_types/_rune_t.h \
-  /usr/include/sys/_types/_wchar_t.h /usr/include/machine/types.h \
-  /usr/include/i386/types.h /usr/include/sys/_types/_u_int8_t.h \
-  /usr/include/sys/_types/_u_int16_t.h \
-  /usr/include/sys/_types/_u_int32_t.h \
-  /usr/include/sys/_types/_u_int64_t.h /usr/include/sys/_types/_dev_t.h \
+  /usr/include/sys/_types/_wchar_t.h /usr/include/sys/_types/_dev_t.h \
   /usr/include/sys/_types/_mode_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cstdint \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/new \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/limits \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__undef_min_max \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iterator \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iosfwd \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/wchar.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/stddef.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qconfig.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qtcore-config.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qsystemdetection.h \
+  /usr/include/TargetConditionals.h /usr/include/AvailabilityMacros.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qprocessordetection.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qcompilerdetection.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/memory \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/typeinfo \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/exception \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdlib \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/new \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/limits \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__undef_macros \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/iterator \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/iosfwd \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/wchar.h \
   /usr/include/wchar.h /usr/include/sys/_types/_mbstate_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include/stdarg.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stdio.h \
-  /usr/include/stdio.h /usr/include/sys/_types/_va_list.h \
-  /usr/include/sys/stdio.h /usr/include/sys/_types/_off_t.h \
-  /usr/include/time.h /usr/include/sys/_types/_clock_t.h \
-  /usr/include/sys/_types/_time_t.h /usr/include/sys/_types/_timespec.h \
-  /usr/include/_wctype.h /usr/include/sys/_types/_wint_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include/stdarg.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/stdio.h \
+  /usr/include/stdio.h /usr/include/_stdio.h \
+  /usr/include/sys/_types/_va_list.h /usr/include/sys/stdio.h \
+  /usr/include/sys/_types/_off_t.h /usr/include/time.h \
+  /usr/include/sys/_types/_clock_t.h /usr/include/sys/_types/_time_t.h \
+  /usr/include/sys/_types/_timespec.h /usr/include/_wctype.h \
+  /usr/include/__wctype.h /usr/include/sys/_types/_wint_t.h \
   /usr/include/_types/_wctype_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ctype.h \
-  /usr/include/ctype.h /usr/include/runetype.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__functional_base \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stdexcept \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/atomic \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qtypeinfo.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qsysinfo.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qlogging.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qflags.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qatomic.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qbasicatomic.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qatomic_cxx11.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qgenericatomic.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qglobalstatic.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qmutex.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/chrono \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ctime \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ratio \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/climits \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/limits.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include/limits.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/ctype.h \
+  /usr/include/ctype.h /usr/include/_ctype.h /usr/include/runetype.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional_base \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/tuple \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/stdexcept \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cassert \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/atomic \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qtypeinfo.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qsysinfo.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qlogging.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qflags.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qatomic.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qbasicatomic.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qatomic_cxx11.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qgenericatomic.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qglobalstatic.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qmutex.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/chrono \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/ctime \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/ratio \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/climits \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/limits.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include/limits.h \
   /usr/include/limits.h /usr/include/machine/limits.h \
   /usr/include/i386/limits.h /usr/include/i386/_limits.h \
   /usr/include/sys/syslimits.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qnumeric.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qversiontagging.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qtgui-config.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qtwidgets-config.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qwidget.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qwindowdefs.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qobjectdefs.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qnamespace.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qobjectdefs_impl.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qobject.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qstring.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qchar.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qbytearray.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qrefcount.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qarraydata.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cstdio \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cwchar \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cwctype \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cctype \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/wctype.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qnumeric.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qversiontagging.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qtgui-config.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qtwidgets-config.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qwidget.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qwindowdefs.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qobjectdefs.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qnamespace.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qobjectdefs_impl.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qobject.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qstring.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qchar.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qbytearray.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qrefcount.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qarraydata.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/string \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/string_view \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__string \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdio \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cwchar \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cwctype \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cctype \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/wctype.h \
   /usr/include/wctype.h /usr/include/_types/_wctrans_t.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qstringliteral.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qstringalgorithms.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qstringview.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qlist.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qalgorithms.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qiterator.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qhashfunctions.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qpair.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/numeric \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/list \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qbytearraylist.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qstringlist.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qregexp.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qstringmatcher.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qscopedpointer.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qmetatype.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qvarlengtharray.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qcontainerfwd.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/map \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__tree \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qobject_impl.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qmargins.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qpaintdevice.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qrect.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qsize.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qpoint.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qpalette.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qcolor.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qrgb.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qrgba64.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qbrush.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qvector.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qmatrix.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qpolygon.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qregion.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qdatastream.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qiodevice.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qline.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qtransform.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qpainterpath.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qimage.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qpixelformat.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qpixmap.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qsharedpointer.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qshareddata.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qhash.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qsharedpointer_impl.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qfont.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qfontmetrics.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qfontinfo.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qsizepolicy.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qcursor.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qkeysequence.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/QMutex \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/QThread \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qthread.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/future \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/system_error \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cerrno \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/errno.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qstringliteral.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qstringalgorithms.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qstringview.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qlist.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qalgorithms.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qiterator.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qhashfunctions.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qpair.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/numeric \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/functional \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/list \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qbytearraylist.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qstringlist.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qregexp.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qstringmatcher.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qscopedpointer.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qmetatype.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qvarlengtharray.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qcontainerfwd.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/vector \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__bit_reference \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__split_buffer \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/map \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__tree \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qobject_impl.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qmargins.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qpaintdevice.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qrect.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qsize.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qpoint.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qpalette.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qcolor.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qrgb.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qrgba64.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qbrush.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qvector.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qmatrix.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qpolygon.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qregion.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qdatastream.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qiodevice.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qline.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qtransform.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qpainterpath.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qimage.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qpixelformat.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qpixmap.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qsharedpointer.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qshareddata.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qhash.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qsharedpointer_impl.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qfont.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qfontmetrics.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qfontinfo.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qsizepolicy.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qcursor.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qkeysequence.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/QMutex \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/QThread \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qthread.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/future \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/system_error \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cerrno \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/errno.h \
   /usr/include/errno.h /usr/include/sys/errno.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/mutex \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__mutex_base \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__threading_support \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/mutex \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__mutex_base \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__threading_support \
   /usr/include/pthread.h /usr/include/pthread/pthread_impl.h \
   /usr/include/pthread/sched.h \
   /usr/include/sys/_pthread/_pthread_cond_t.h \
@@ -211,100 +215,95 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
   /usr/include/sys/_pthread/_pthread_t.h /usr/include/pthread/qos.h \
   /usr/include/sys/qos.h /usr/include/sys/_types/_mach_port_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/thread \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/thread \
   qt/forms/ui_intro.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/QVariant \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qvariant.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qmap.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QAction \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qaction.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qicon.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qactiongroup.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QApplication \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qapplication.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qcoreapplication.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qcoreevent.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qeventloop.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qguiapplication.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qinputmethod.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qlocale.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QButtonGroup \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qbuttongroup.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QDialogButtonBox \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qdialogbuttonbox.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QHBoxLayout \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qboxlayout.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qlayout.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qlayoutitem.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qgridlayout.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QHeaderView \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qheaderview.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qabstractitemview.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qabstractscrollarea.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qframe.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qabstractitemmodel.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qitemselectionmodel.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qset.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qabstractitemdelegate.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qstyleoption.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qabstractspinbox.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qvalidator.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qregularexpression.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qslider.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qabstractslider.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qstyle.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qtabbar.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qtabwidget.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qrubberband.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QLabel \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qlabel.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QLineEdit \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qlineedit.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qtextcursor.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qtextformat.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qpen.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtGui/qtextoption.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QPushButton \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qpushbutton.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qabstractbutton.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QRadioButton \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qradiobutton.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QSpacerItem \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QVBoxLayout qt/guiutil.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/QVariant \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qvariant.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qmap.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/QApplication \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qapplication.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qcoreapplication.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qcoreevent.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qeventloop.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qguiapplication.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qinputmethod.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qlocale.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/QDialogButtonBox \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qdialogbuttonbox.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/QHBoxLayout \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qboxlayout.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qlayout.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qlayoutitem.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qgridlayout.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/QLabel \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qlabel.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qframe.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/QLineEdit \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qlineedit.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qtextcursor.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qtextformat.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qpen.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qtextoption.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/QPushButton \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qpushbutton.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qabstractbutton.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qicon.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/QRadioButton \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qradiobutton.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/QSpacerItem \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/QVBoxLayout qt/guiutil.h \
   amount.h serialize.h compat/endian.h config/SMScoin-config.h \
   compat/byteswap.h /usr/include/libkern/OSByteOrder.h \
   /usr/include/libkern/i386/OSByteOrder.h \
-  /usr/include/sys/_types/_os_inline.h /usr/include/assert.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/locale.h \
+  /usr/include/sys/_types/_os_inline.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/ios \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__locale \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/locale.h \
   /usr/include/locale.h /usr/include/_locale.h /usr/include/xlocale.h \
   /usr/include/_xlocale.h /usr/include/xlocale/_ctype.h \
   /usr/include/xlocale/__wctype.h /usr/include/xlocale/_stdio.h \
   /usr/include/xlocale/_stdlib.h /usr/include/xlocale/_string.h \
   /usr/include/xlocale/_time.h /usr/include/xlocale/_wchar.h \
   /usr/include/xlocale/_wctype.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/set \
-  prevector.h /usr/local/Cellar/qt/5.10.1/include/QtCore/QEvent \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QMessageBox \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qmessagebox.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/QObject \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QProgressBar \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qprogressbar.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/QString \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QTableView \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qtableview.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/set prevector.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/QEvent \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/QHeaderView \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qheaderview.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qabstractitemview.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qabstractscrollarea.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qabstractitemmodel.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qitemselectionmodel.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qset.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qabstractitemdelegate.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qstyleoption.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qabstractspinbox.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtGui/qvalidator.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qregularexpression.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qslider.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qabstractslider.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qstyle.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qtabbar.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qtabwidget.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qrubberband.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/QMessageBox \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qmessagebox.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/QObject \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/QProgressBar \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qprogressbar.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/QString \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/QTableView \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qtableview.h \
   /usr/local/include/boost/filesystem.hpp \
   /usr/local/include/boost/filesystem/config.hpp \
   /usr/local/include/boost/config.hpp \
   /usr/local/include/boost/config/user.hpp \
-  /usr/local/include/boost/config/select_compiler_config.hpp \
+  /usr/local/include/boost/config/detail/select_compiler_config.hpp \
   /usr/local/include/boost/config/compiler/clang.hpp \
-  /usr/local/include/boost/config/select_stdlib_config.hpp \
+  /usr/local/include/boost/config/detail/select_stdlib_config.hpp \
   /usr/local/include/boost/config/stdlib/libcpp.hpp \
-  /usr/local/include/boost/config/select_platform_config.hpp \
+  /usr/local/include/boost/config/detail/select_platform_config.hpp \
   /usr/local/include/boost/config/platform/macos.hpp \
-  /usr/local/include/boost/config/posix_features.hpp \
+  /usr/local/include/boost/config/detail/posix_features.hpp \
   /usr/include/unistd.h /usr/include/sys/unistd.h \
   /usr/include/sys/_types/_posix_vdisable.h \
   /usr/include/sys/_types/_seek_set.h /usr/include/sys/_types/_gid_t.h \
@@ -316,35 +315,111 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/include/sys/_types/_fd_isset.h /usr/include/sys/_types/_fd_zero.h \
   /usr/include/sys/_types/_fd_copy.h /usr/include/sys/_select.h \
   /usr/include/sys/_types/_uuid_t.h /usr/include/gethostuuid.h \
-  /usr/local/include/boost/config/suffix.hpp \
+  /usr/local/include/boost/config/detail/suffix.hpp \
+  /usr/local/include/boost/config/helper_macros.hpp \
   /usr/local/include/boost/system/api_config.hpp \
   /usr/local/include/boost/detail/workaround.hpp \
+  /usr/local/include/boost/config/workaround.hpp \
   /usr/local/include/boost/config/auto_link.hpp \
   /usr/local/include/boost/filesystem/path.hpp \
   /usr/local/include/boost/filesystem/path_traits.hpp \
   /usr/local/include/boost/utility/enable_if.hpp \
   /usr/local/include/boost/core/enable_if.hpp \
   /usr/local/include/boost/type_traits/is_array.hpp \
-  /usr/local/include/boost/type_traits/config.hpp \
-  /usr/local/include/boost/type_traits/detail/bool_trait_def.hpp \
-  /usr/local/include/boost/type_traits/detail/template_arity_spec.hpp \
-  /usr/local/include/boost/mpl/int.hpp \
-  /usr/local/include/boost/mpl/int_fwd.hpp \
+  /usr/local/include/boost/type_traits/integral_constant.hpp \
+  /usr/local/include/boost/type_traits/decay.hpp \
+  /usr/local/include/boost/type_traits/is_function.hpp \
+  /usr/local/include/boost/type_traits/is_reference.hpp \
+  /usr/local/include/boost/type_traits/is_lvalue_reference.hpp \
+  /usr/local/include/boost/type_traits/is_rvalue_reference.hpp \
+  /usr/local/include/boost/type_traits/detail/config.hpp \
+  /usr/local/include/boost/version.hpp \
+  /usr/local/include/boost/type_traits/detail/is_function_ptr_helper.hpp \
+  /usr/local/include/boost/type_traits/remove_bounds.hpp \
+  /usr/local/include/boost/type_traits/remove_extent.hpp \
+  /usr/local/include/boost/type_traits/add_pointer.hpp \
+  /usr/local/include/boost/type_traits/remove_reference.hpp \
+  /usr/local/include/boost/type_traits/remove_cv.hpp \
+  /usr/local/include/boost/system/error_code.hpp \
+  /usr/local/include/boost/system/config.hpp \
+  /usr/local/include/boost/predef/platform.h \
+  /usr/local/include/boost/predef/platform/cloudabi.h \
+  /usr/local/include/boost/predef/version_number.h \
+  /usr/local/include/boost/predef/make.h \
+  /usr/local/include/boost/predef/detail/test.h \
+  /usr/local/include/boost/predef/platform/mingw.h \
+  /usr/local/include/boost/predef/platform/mingw32.h \
+  /usr/local/include/boost/predef/platform/mingw64.h \
+  /usr/local/include/boost/predef/platform/windows_uwp.h \
+  /usr/local/include/boost/predef/os/windows.h \
+  /usr/local/include/boost/predef/platform/windows_desktop.h \
+  /usr/local/include/boost/predef/platform/windows_phone.h \
+  /usr/local/include/boost/predef/platform/windows_server.h \
+  /usr/local/include/boost/predef/platform/windows_store.h \
+  /usr/local/include/boost/predef/platform/windows_system.h \
+  /usr/local/include/boost/predef/platform/windows_runtime.h \
+  /usr/local/include/boost/predef/platform/ios.h \
+  /usr/local/include/boost/predef/os/ios.h \
+  /usr/local/include/boost/cstdint.hpp \
+  /usr/local/include/boost/assert.hpp \
+  /usr/local/include/boost/noncopyable.hpp \
+  /usr/local/include/boost/core/noncopyable.hpp \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/ostream \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/streambuf \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/locale \
+  /usr/include/nl_types.h /usr/include/sys/types.h \
+  /usr/include/sys/_types/_u_char.h /usr/include/sys/_types/_u_short.h \
+  /usr/include/sys/_types/_u_int.h /usr/include/sys/_types/_caddr_t.h \
+  /usr/include/sys/_types/_blkcnt_t.h \
+  /usr/include/sys/_types/_blksize_t.h \
+  /usr/include/sys/_types/_in_addr_t.h \
+  /usr/include/sys/_types/_in_port_t.h /usr/include/sys/_types/_ino_t.h \
+  /usr/include/sys/_types/_ino64_t.h /usr/include/sys/_types/_key_t.h \
+  /usr/include/sys/_types/_nlink_t.h /usr/include/sys/_types/_rsize_t.h \
+  /usr/include/sys/_types/_errno_t.h \
+  /usr/include/sys/_types/_fsblkcnt_t.h \
+  /usr/include/sys/_types/_fsfilcnt_t.h /usr/include/_types/_nl_item.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__bsd_locale_defaults.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/bitset \
+  /usr/local/include/boost/cerrno.hpp \
+  /usr/local/include/boost/config/abi_prefix.hpp \
+  /usr/local/include/boost/config/abi_suffix.hpp \
+  /usr/local/include/boost/system/system_error.hpp \
+  /usr/local/include/boost/iterator/iterator_facade.hpp \
+  /usr/local/include/boost/iterator/interoperable.hpp \
+  /usr/local/include/boost/mpl/bool.hpp \
+  /usr/local/include/boost/mpl/bool_fwd.hpp \
   /usr/local/include/boost/mpl/aux_/adl_barrier.hpp \
   /usr/local/include/boost/mpl/aux_/config/adl.hpp \
   /usr/local/include/boost/mpl/aux_/config/msvc.hpp \
   /usr/local/include/boost/mpl/aux_/config/intel.hpp \
   /usr/local/include/boost/mpl/aux_/config/gcc.hpp \
   /usr/local/include/boost/mpl/aux_/config/workaround.hpp \
+  /usr/local/include/boost/mpl/integral_c_tag.hpp \
+  /usr/local/include/boost/mpl/aux_/config/static_constant.hpp \
+  /usr/local/include/boost/mpl/or.hpp \
+  /usr/local/include/boost/mpl/aux_/config/use_preprocessed.hpp \
+  /usr/local/include/boost/mpl/aux_/nested_type_wknd.hpp \
+  /usr/local/include/boost/mpl/aux_/na_spec.hpp \
+  /usr/local/include/boost/mpl/lambda_fwd.hpp \
+  /usr/local/include/boost/mpl/void_fwd.hpp \
+  /usr/local/include/boost/mpl/aux_/na.hpp \
+  /usr/local/include/boost/mpl/aux_/na_fwd.hpp \
+  /usr/local/include/boost/mpl/aux_/config/ctps.hpp \
+  /usr/local/include/boost/mpl/aux_/config/lambda.hpp \
+  /usr/local/include/boost/mpl/aux_/config/ttp.hpp \
+  /usr/local/include/boost/mpl/int.hpp \
+  /usr/local/include/boost/mpl/int_fwd.hpp \
   /usr/local/include/boost/mpl/aux_/nttp_decl.hpp \
   /usr/local/include/boost/mpl/aux_/config/nttp.hpp \
   /usr/local/include/boost/mpl/aux_/integral_wrapper.hpp \
-  /usr/local/include/boost/mpl/integral_c_tag.hpp \
-  /usr/local/include/boost/mpl/aux_/config/static_constant.hpp \
   /usr/local/include/boost/mpl/aux_/static_cast.hpp \
   /usr/local/include/boost/preprocessor/cat.hpp \
   /usr/local/include/boost/preprocessor/config/config.hpp \
+  /usr/local/include/boost/mpl/aux_/lambda_arity_param.hpp \
   /usr/local/include/boost/mpl/aux_/template_arity_fwd.hpp \
+  /usr/local/include/boost/mpl/aux_/arity.hpp \
+  /usr/local/include/boost/mpl/aux_/config/dtp.hpp \
   /usr/local/include/boost/mpl/aux_/preprocessor/params.hpp \
   /usr/local/include/boost/mpl/aux_/config/preprocessor.hpp \
   /usr/local/include/boost/preprocessor/comma_if.hpp \
@@ -361,48 +436,6 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/preprocessor/tuple/eat.hpp \
   /usr/local/include/boost/preprocessor/inc.hpp \
   /usr/local/include/boost/preprocessor/arithmetic/inc.hpp \
-  /usr/local/include/boost/mpl/aux_/config/lambda.hpp \
-  /usr/local/include/boost/mpl/aux_/config/ttp.hpp \
-  /usr/local/include/boost/mpl/aux_/config/ctps.hpp \
-  /usr/local/include/boost/mpl/aux_/config/overload_resolution.hpp \
-  /usr/local/include/boost/type_traits/integral_constant.hpp \
-  /usr/local/include/boost/mpl/bool.hpp \
-  /usr/local/include/boost/mpl/bool_fwd.hpp \
-  /usr/local/include/boost/mpl/integral_c.hpp \
-  /usr/local/include/boost/mpl/integral_c_fwd.hpp \
-  /usr/local/include/boost/mpl/aux_/lambda_support.hpp \
-  /usr/local/include/boost/type_traits/detail/bool_trait_undef.hpp \
-  /usr/local/include/boost/type_traits/decay.hpp \
-  /usr/local/include/boost/type_traits/is_function.hpp \
-  /usr/local/include/boost/type_traits/is_reference.hpp \
-  /usr/local/include/boost/type_traits/is_lvalue_reference.hpp \
-  /usr/local/include/boost/type_traits/is_rvalue_reference.hpp \
-  /usr/local/include/boost/type_traits/ice.hpp \
-  /usr/local/include/boost/type_traits/detail/yes_no_type.hpp \
-  /usr/local/include/boost/type_traits/detail/ice_or.hpp \
-  /usr/local/include/boost/type_traits/detail/ice_and.hpp \
-  /usr/local/include/boost/type_traits/detail/ice_not.hpp \
-  /usr/local/include/boost/type_traits/detail/ice_eq.hpp \
-  /usr/local/include/boost/type_traits/detail/false_result.hpp \
-  /usr/local/include/boost/type_traits/detail/is_function_ptr_helper.hpp \
-  /usr/local/include/boost/type_traits/remove_bounds.hpp \
-  /usr/local/include/boost/type_traits/detail/type_trait_def.hpp \
-  /usr/local/include/boost/type_traits/detail/type_trait_undef.hpp \
-  /usr/local/include/boost/type_traits/add_pointer.hpp \
-  /usr/local/include/boost/type_traits/remove_reference.hpp \
-  /usr/local/include/boost/mpl/eval_if.hpp \
-  /usr/local/include/boost/mpl/if.hpp \
-  /usr/local/include/boost/mpl/aux_/value_wknd.hpp \
-  /usr/local/include/boost/mpl/aux_/config/integral.hpp \
-  /usr/local/include/boost/mpl/aux_/config/eti.hpp \
-  /usr/local/include/boost/mpl/aux_/na_spec.hpp \
-  /usr/local/include/boost/mpl/lambda_fwd.hpp \
-  /usr/local/include/boost/mpl/void_fwd.hpp \
-  /usr/local/include/boost/mpl/aux_/na.hpp \
-  /usr/local/include/boost/mpl/aux_/na_fwd.hpp \
-  /usr/local/include/boost/mpl/aux_/lambda_arity_param.hpp \
-  /usr/local/include/boost/mpl/aux_/arity.hpp \
-  /usr/local/include/boost/mpl/aux_/config/dtp.hpp \
   /usr/local/include/boost/mpl/aux_/preprocessor/enum.hpp \
   /usr/local/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp \
   /usr/local/include/boost/mpl/limits/arity.hpp \
@@ -433,63 +466,27 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/preprocessor/tuple/detail/is_single_return.hpp \
   /usr/local/include/boost/preprocessor/variadic/elem.hpp \
   /usr/local/include/boost/preprocessor/arithmetic/sub.hpp \
-  /usr/local/include/boost/mpl/identity.hpp \
-  /usr/local/include/boost/system/error_code.hpp \
-  /usr/local/include/boost/system/config.hpp \
-  /usr/local/include/boost/predef/platform.h \
-  /usr/local/include/boost/predef/platform/mingw.h \
-  /usr/local/include/boost/predef/version_number.h \
-  /usr/local/include/boost/predef/make.h \
-  /usr/local/include/boost/predef/detail/test.h \
-  /usr/local/include/boost/predef/platform/windows_desktop.h \
-  /usr/local/include/boost/predef/os/windows.h \
-  /usr/local/include/boost/predef/platform/windows_store.h \
-  /usr/local/include/boost/predef/platform/windows_phone.h \
-  /usr/local/include/boost/predef/platform/windows_runtime.h \
-  /usr/local/include/boost/cstdint.hpp \
-  /usr/local/include/boost/assert.hpp \
-  /usr/local/include/boost/noncopyable.hpp \
-  /usr/local/include/boost/core/noncopyable.hpp \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ostream \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/streambuf \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/locale \
-  /usr/include/nl_types.h /usr/include/sys/types.h \
-  /usr/include/sys/_types/_blkcnt_t.h \
-  /usr/include/sys/_types/_blksize_t.h \
-  /usr/include/sys/_types/_in_addr_t.h \
-  /usr/include/sys/_types/_in_port_t.h /usr/include/sys/_types/_ino_t.h \
-  /usr/include/sys/_types/_ino64_t.h /usr/include/sys/_types/_key_t.h \
-  /usr/include/sys/_types/_nlink_t.h /usr/include/sys/_types/_rsize_t.h \
-  /usr/include/sys/_types/_errno_t.h \
-  /usr/include/sys/_types/_fsblkcnt_t.h \
-  /usr/include/sys/_types/_fsfilcnt_t.h /usr/include/_types/_nl_item.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bsd_locale_defaults.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/bitset \
-  /usr/local/include/boost/cerrno.hpp \
-  /usr/local/include/boost/config/abi_prefix.hpp \
-  /usr/local/include/boost/config/abi_suffix.hpp \
-  /usr/local/include/boost/system/system_error.hpp \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cassert \
-  /usr/local/include/boost/iterator/iterator_facade.hpp \
-  /usr/local/include/boost/iterator.hpp \
-  /usr/local/include/boost/iterator/interoperable.hpp \
-  /usr/local/include/boost/mpl/or.hpp \
-  /usr/local/include/boost/mpl/aux_/config/use_preprocessed.hpp \
-  /usr/local/include/boost/mpl/aux_/nested_type_wknd.hpp \
+  /usr/local/include/boost/mpl/aux_/config/eti.hpp \
+  /usr/local/include/boost/mpl/aux_/config/overload_resolution.hpp \
+  /usr/local/include/boost/mpl/aux_/lambda_support.hpp \
   /usr/local/include/boost/mpl/aux_/include_preprocessed.hpp \
   /usr/local/include/boost/mpl/aux_/config/compiler.hpp \
   /usr/local/include/boost/preprocessor/stringize.hpp \
   /usr/local/include/boost/mpl/aux_/preprocessed/gcc/or.hpp \
   /usr/local/include/boost/type_traits/is_convertible.hpp \
   /usr/local/include/boost/type_traits/intrinsics.hpp \
-  /usr/local/include/boost/type_traits/is_same.hpp \
-  /usr/local/include/boost/type_traits/is_volatile.hpp \
-  /usr/local/include/boost/type_traits/detail/cv_traits_impl.hpp \
+  /usr/local/include/boost/type_traits/is_complete.hpp \
+  /usr/local/include/boost/type_traits/is_void.hpp \
+  /usr/local/include/boost/static_assert.hpp \
   /usr/local/include/boost/iterator/detail/config_def.hpp \
   /usr/local/include/boost/iterator/detail/config_undef.hpp \
   /usr/local/include/boost/iterator/iterator_traits.hpp \
-  /usr/local/include/boost/detail/iterator.hpp \
   /usr/local/include/boost/iterator/iterator_categories.hpp \
+  /usr/local/include/boost/mpl/eval_if.hpp \
+  /usr/local/include/boost/mpl/if.hpp \
+  /usr/local/include/boost/mpl/aux_/value_wknd.hpp \
+  /usr/local/include/boost/mpl/aux_/config/integral.hpp \
+  /usr/local/include/boost/mpl/identity.hpp \
   /usr/local/include/boost/mpl/placeholders.hpp \
   /usr/local/include/boost/mpl/arg.hpp \
   /usr/local/include/boost/mpl/arg_fwd.hpp \
@@ -504,30 +501,31 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/mpl/aux_/arg_typedef.hpp \
   /usr/local/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp \
   /usr/local/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp \
-  /usr/local/include/boost/static_assert.hpp \
   /usr/local/include/boost/iterator/detail/facade_iterator_category.hpp \
   /usr/local/include/boost/mpl/and.hpp \
   /usr/local/include/boost/mpl/aux_/preprocessed/gcc/and.hpp \
+  /usr/local/include/boost/type_traits/is_same.hpp \
   /usr/local/include/boost/type_traits/is_const.hpp \
   /usr/local/include/boost/detail/indirect_traits.hpp \
   /usr/local/include/boost/type_traits/is_pointer.hpp \
-  /usr/local/include/boost/type_traits/is_member_pointer.hpp \
+  /usr/local/include/boost/type_traits/is_class.hpp \
+  /usr/local/include/boost/type_traits/is_volatile.hpp \
   /usr/local/include/boost/type_traits/is_member_function_pointer.hpp \
   /usr/local/include/boost/type_traits/detail/is_mem_fun_pointer_impl.hpp \
-  /usr/local/include/boost/type_traits/remove_cv.hpp \
-  /usr/local/include/boost/type_traits/is_class.hpp \
+  /usr/local/include/boost/type_traits/is_member_pointer.hpp \
   /usr/local/include/boost/type_traits/remove_pointer.hpp \
   /usr/local/include/boost/iterator/detail/enable_if.hpp \
   /usr/local/include/boost/utility/addressof.hpp \
   /usr/local/include/boost/core/addressof.hpp \
   /usr/local/include/boost/type_traits/add_const.hpp \
+  /usr/local/include/boost/type_traits/add_lvalue_reference.hpp \
+  /usr/local/include/boost/type_traits/add_reference.hpp \
   /usr/local/include/boost/type_traits/remove_const.hpp \
   /usr/local/include/boost/type_traits/is_pod.hpp \
-  /usr/local/include/boost/type_traits/is_void.hpp \
   /usr/local/include/boost/type_traits/is_scalar.hpp \
   /usr/local/include/boost/type_traits/is_arithmetic.hpp \
   /usr/local/include/boost/type_traits/is_integral.hpp \
-  /usr/local/include/boost/type_traits/is_float.hpp \
+  /usr/local/include/boost/type_traits/is_floating_point.hpp \
   /usr/local/include/boost/type_traits/is_enum.hpp \
   /usr/local/include/boost/mpl/always.hpp \
   /usr/local/include/boost/mpl/aux_/preprocessor/default_params.hpp \
@@ -586,8 +584,10 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/core/demangle.hpp /usr/include/cxxabi.h \
   /usr/include/__cxxabi_config.h \
   /usr/local/include/boost/smart_ptr/detail/sp_counted_impl.hpp \
+  /usr/local/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp \
   /usr/local/include/boost/smart_ptr/detail/sp_convertible.hpp \
   /usr/local/include/boost/smart_ptr/detail/sp_nullptr_t.hpp \
+  /usr/local/include/boost/smart_ptr/detail/sp_noexcept.hpp \
   /usr/local/include/boost/smart_ptr/detail/spinlock_pool.hpp \
   /usr/local/include/boost/smart_ptr/detail/spinlock.hpp \
   /usr/local/include/boost/smart_ptr/detail/spinlock_sync.hpp \
@@ -652,6 +652,7 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/predef/library/c.h \
   /usr/local/include/boost/predef/library/c/_prefix.h \
   /usr/local/include/boost/predef/detail/_cassert.h \
+  /usr/local/include/boost/predef/library/c/cloudabi.h \
   /usr/local/include/boost/predef/library/c/gnu.h \
   /usr/local/include/boost/predef/library/c/uc.h \
   /usr/local/include/boost/predef/library/c/vms.h \
@@ -676,7 +677,6 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/predef/os/beos.h \
   /usr/local/include/boost/predef/os/bsd.h \
   /usr/local/include/boost/predef/os/macos.h \
-  /usr/local/include/boost/predef/os/ios.h \
   /usr/local/include/boost/predef/detail/os_detected.h \
   /usr/local/include/boost/predef/os/bsd/bsdi.h \
   /usr/local/include/boost/predef/os/bsd/dragonfly.h \
@@ -684,6 +684,7 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/predef/os/bsd/open.h \
   /usr/local/include/boost/predef/os/bsd/net.h \
   /usr/local/include/boost/predef/os/cygwin.h \
+  /usr/local/include/boost/predef/os/haiku.h \
   /usr/local/include/boost/predef/os/hpux.h \
   /usr/local/include/boost/predef/os/irix.h \
   /usr/local/include/boost/predef/os/linux.h \
@@ -694,12 +695,25 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/predef/os/vms.h \
   /usr/local/include/boost/predef/other.h \
   /usr/local/include/boost/predef/other/endian.h \
+  /usr/local/include/boost/predef/hardware.h \
+  /usr/local/include/boost/predef/hardware/simd.h \
+  /usr/local/include/boost/predef/hardware/simd/x86.h \
+  /usr/local/include/boost/predef/hardware/simd/x86/versions.h \
+  /usr/local/include/boost/predef/hardware/simd/x86_amd.h \
+  /usr/local/include/boost/predef/hardware/simd/x86_amd/versions.h \
+  /usr/local/include/boost/predef/hardware/simd/arm.h \
+  /usr/local/include/boost/predef/hardware/simd/arm/versions.h \
+  /usr/local/include/boost/predef/hardware/simd/ppc.h \
+  /usr/local/include/boost/predef/hardware/simd/ppc/versions.h \
+  /usr/local/include/boost/predef/version.h \
   /usr/local/include/boost/smart_ptr/detail/operator_bool.hpp \
+  /usr/local/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
+  /usr/local/include/boost/smart_ptr/detail/local_counted_base.hpp \
   /usr/local/include/boost/io/detail/quoted_manip.hpp \
   /usr/local/include/boost/io/ios_state.hpp \
   /usr/local/include/boost/io_fwd.hpp \
   /usr/local/include/boost/functional/hash_fwd.hpp \
-  /usr/local/include/boost/functional/hash/hash_fwd.hpp \
+  /usr/local/include/boost/container_hash/hash_fwd.hpp \
   /usr/local/include/boost/filesystem/operations.hpp \
   /usr/local/include/boost/detail/scoped_enum_emulation.hpp \
   /usr/local/include/boost/core/scoped_enum.hpp \
@@ -710,10 +724,14 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/range/detail/extract_optional_type.hpp \
   /usr/local/include/boost/range/detail/msvc_has_iterator_workaround.hpp \
   /usr/local/include/boost/range/const_iterator.hpp \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stack \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/deque \
-  /usr/local/include/boost/filesystem/convenience.hpp util.h compat.h \
-  /usr/include/sys/fcntl.h /usr/include/sys/_types/_o_sync.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/stack \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/deque \
+  /usr/local/include/boost/filesystem/convenience.hpp \
+  /usr/local/include/boost/filesystem/string_file.hpp \
+  /usr/local/include/boost/filesystem/fstream.hpp \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/fstream \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/istream util.h \
+  compat.h /usr/include/sys/fcntl.h /usr/include/sys/_types/_o_sync.h \
   /usr/include/sys/_types/_o_dsync.h /usr/include/sys/_types/_s_ifmt.h \
   /usr/include/sys/_types/_filesec_t.h /usr/include/sys/mman.h \
   /usr/include/sys/socket.h /usr/include/machine/_param.h \
@@ -727,9 +745,8 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/include/netinet6/in6.h /usr/include/netinet/tcp.h \
   /usr/include/arpa/inet.h /usr/include/ifaddrs.h /usr/include/netdb.h \
   tinyformat.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/istream \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/sstream \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/iostream \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/sstream \
   utiltime.h /usr/local/include/boost/signals2/signal.hpp \
   /usr/local/include/boost/function.hpp \
   /usr/local/include/boost/preprocessor/iterate.hpp \
@@ -743,21 +760,36 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/integer_fwd.hpp \
   /usr/local/include/boost/limits.hpp \
   /usr/local/include/boost/integer_traits.hpp \
+  /usr/local/include/boost/type_index.hpp \
+  /usr/local/include/boost/type_index/stl_type_index.hpp \
+  /usr/local/include/boost/type_index/type_index_facade.hpp \
+  /usr/local/include/boost/container_hash/hash.hpp \
+  /usr/local/include/boost/container_hash/detail/hash_float.hpp \
+  /usr/local/include/boost/container_hash/detail/float_functions.hpp \
+  /usr/local/include/boost/config/no_tr1/cmath.hpp \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cmath \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/math.h \
+  /usr/include/math.h \
+  /usr/local/include/boost/container_hash/detail/limits.hpp \
+  /usr/local/include/boost/integer/static_log2.hpp \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/typeindex \
+  /usr/local/include/boost/container_hash/extensions.hpp \
+  /usr/local/include/boost/detail/container_fwd.hpp \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/complex \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/array \
   /usr/local/include/boost/type_traits/has_trivial_copy.hpp \
   /usr/local/include/boost/type_traits/is_copy_constructible.hpp \
-  /usr/local/include/boost/type_traits/is_base_and_derived.hpp \
-  /usr/local/include/boost/type_traits/add_reference.hpp \
-  /usr/local/include/boost/utility/declval.hpp \
+  /usr/local/include/boost/type_traits/is_constructible.hpp \
+  /usr/local/include/boost/type_traits/is_destructible.hpp \
+  /usr/local/include/boost/type_traits/detail/yes_no_type.hpp \
+  /usr/local/include/boost/type_traits/declval.hpp \
   /usr/local/include/boost/type_traits/add_rvalue_reference.hpp \
+  /usr/local/include/boost/type_traits/is_default_constructible.hpp \
   /usr/local/include/boost/type_traits/has_trivial_destructor.hpp \
   /usr/local/include/boost/type_traits/composite_traits.hpp \
   /usr/local/include/boost/type_traits/is_union.hpp \
   /usr/local/include/boost/ref.hpp /usr/local/include/boost/core/ref.hpp \
   /usr/local/include/boost/type_traits/alignment_of.hpp \
-  /usr/local/include/boost/type_traits/detail/size_t_trait_def.hpp \
-  /usr/local/include/boost/mpl/size_t.hpp \
-  /usr/local/include/boost/mpl/size_t_fwd.hpp \
-  /usr/local/include/boost/type_traits/detail/size_t_trait_undef.hpp \
   /usr/local/include/boost/function_equal.hpp \
   /usr/local/include/boost/function/function_fwd.hpp \
   /usr/local/include/boost/mem_fn.hpp \
@@ -777,9 +809,31 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/function/function_template.hpp \
   /usr/local/include/boost/detail/no_exceptions_support.hpp \
   /usr/local/include/boost/core/no_exceptions_support.hpp \
+  /usr/local/include/boost/move/utility_core.hpp \
+  /usr/local/include/boost/move/detail/config_begin.hpp \
+  /usr/local/include/boost/move/detail/workaround.hpp \
+  /usr/local/include/boost/move/core.hpp \
+  /usr/local/include/boost/move/detail/config_end.hpp \
+  /usr/local/include/boost/move/detail/meta_utils.hpp \
+  /usr/local/include/boost/move/detail/meta_utils_core.hpp \
   /usr/local/include/boost/signals2/connection.hpp \
+  /usr/local/include/boost/signals2/detail/auto_buffer.hpp \
+  /usr/local/include/boost/iterator/reverse_iterator.hpp \
+  /usr/local/include/boost/iterator/iterator_adaptor.hpp \
+  /usr/local/include/boost/multi_index/detail/scope_guard.hpp \
+  /usr/local/include/boost/swap.hpp \
+  /usr/local/include/boost/core/swap.hpp \
+  /usr/local/include/boost/type_traits/aligned_storage.hpp \
+  /usr/local/include/boost/type_traits/type_with_alignment.hpp \
+  /usr/local/include/boost/type_traits/conditional.hpp \
+  /usr/local/include/boost/type_traits/has_nothrow_copy.hpp \
+  /usr/local/include/boost/type_traits/has_nothrow_assign.hpp \
+  /usr/local/include/boost/type_traits/is_assignable.hpp \
+  /usr/local/include/boost/type_traits/has_trivial_assign.hpp \
+  /usr/local/include/boost/type_traits/has_trivial_constructor.hpp \
   /usr/local/include/boost/signals2/detail/null_output_iterator.hpp \
   /usr/local/include/boost/function_output_iterator.hpp \
+  /usr/local/include/boost/iterator/function_output_iterator.hpp \
   /usr/local/include/boost/signals2/detail/unique_lock.hpp \
   /usr/local/include/boost/signals2/slot.hpp \
   /usr/local/include/boost/bind.hpp \
@@ -788,8 +842,8 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/is_placeholder.hpp \
   /usr/local/include/boost/bind/arg.hpp \
   /usr/local/include/boost/visit_each.hpp \
+  /usr/local/include/boost/core/is_same.hpp \
   /usr/local/include/boost/bind/storage.hpp \
-  /usr/local/include/boost/bind/bind_template.hpp \
   /usr/local/include/boost/bind/bind_cc.hpp \
   /usr/local/include/boost/bind/bind_mf_cc.hpp \
   /usr/local/include/boost/bind/bind_mf2_cc.hpp \
@@ -797,6 +851,7 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/signals2/detail/signals_common.hpp \
   /usr/local/include/boost/signals2/signal_base.hpp \
   /usr/local/include/boost/type_traits/is_base_of.hpp \
+  /usr/local/include/boost/type_traits/is_base_and_derived.hpp \
   /usr/local/include/boost/signals2/detail/signals_common_macros.hpp \
   /usr/local/include/boost/signals2/detail/tracked_objects_visitor.hpp \
   /usr/local/include/boost/signals2/slot_base.hpp \
@@ -806,24 +861,34 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/scoped_ptr.hpp \
   /usr/local/include/boost/smart_ptr/scoped_ptr.hpp \
   /usr/local/include/boost/utility/swap.hpp \
-  /usr/local/include/boost/core/swap.hpp \
   /usr/local/include/boost/signals2/expired_slot.hpp \
   /usr/local/include/boost/variant/apply_visitor.hpp \
   /usr/local/include/boost/variant/detail/apply_visitor_unary.hpp \
   /usr/local/include/boost/variant/detail/generic_result_type.hpp \
+  /usr/local/include/boost/move/utility.hpp \
+  /usr/local/include/boost/move/traits.hpp \
+  /usr/local/include/boost/move/detail/type_traits.hpp \
   /usr/local/include/boost/variant/detail/apply_visitor_binary.hpp \
+  /usr/local/include/boost/move/move.hpp \
+  /usr/local/include/boost/move/iterator.hpp \
+  /usr/local/include/boost/move/detail/iterator_traits.hpp \
+  /usr/local/include/boost/move/detail/std_ns_begin.hpp \
+  /usr/local/include/boost/move/detail/std_ns_end.hpp \
+  /usr/local/include/boost/move/algorithm.hpp \
+  /usr/local/include/boost/move/algo/move.hpp \
+  /usr/local/include/boost/move/detail/iterator_to_raw_pointer.hpp \
+  /usr/local/include/boost/move/detail/to_raw_pointer.hpp \
+  /usr/local/include/boost/move/detail/pointer_element.hpp \
   /usr/local/include/boost/variant/detail/apply_visitor_delayed.hpp \
-  /usr/local/include/boost/variant/variant.hpp \
-  /usr/local/include/boost/type_index.hpp \
-  /usr/local/include/boost/type_index/stl_type_index.hpp \
-  /usr/local/include/boost/type_index/type_index_facade.hpp \
-  /usr/local/include/boost/variant/detail/config.hpp \
   /usr/local/include/boost/variant/variant_fwd.hpp \
+  /usr/local/include/boost/variant/detail/config.hpp \
   /usr/local/include/boost/blank_fwd.hpp \
   /usr/local/include/boost/preprocessor/enum_shifted_params.hpp \
   /usr/local/include/boost/preprocessor/repetition/enum_shifted_params.hpp \
   /usr/local/include/boost/variant/detail/substitute_fwd.hpp \
-  /usr/local/include/boost/mpl/limits/list.hpp \
+  /usr/local/include/boost/preprocessor/seq/size.hpp \
+  /usr/local/include/boost/variant/detail/has_result_type.hpp \
+  /usr/local/include/boost/variant/variant.hpp \
   /usr/local/include/boost/variant/detail/backup_holder.hpp \
   /usr/local/include/boost/variant/detail/enable_recursive_fwd.hpp \
   /usr/local/include/boost/variant/detail/forced_return.hpp \
@@ -831,25 +896,10 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/call_traits.hpp \
   /usr/local/include/boost/detail/call_traits.hpp \
   /usr/local/include/boost/detail/reference_content.hpp \
-  /usr/local/include/boost/type_traits/has_nothrow_copy.hpp \
   /usr/local/include/boost/variant/recursive_wrapper_fwd.hpp \
-  /usr/local/include/boost/variant/detail/move.hpp \
-  /usr/local/include/boost/move/move.hpp \
-  /usr/local/include/boost/move/detail/config_begin.hpp \
-  /usr/local/include/boost/move/utility.hpp \
-  /usr/local/include/boost/move/utility_core.hpp \
-  /usr/local/include/boost/move/core.hpp \
-  /usr/local/include/boost/move/detail/config_end.hpp \
-  /usr/local/include/boost/move/detail/meta_utils.hpp \
-  /usr/local/include/boost/move/traits.hpp \
   /usr/local/include/boost/type_traits/is_nothrow_move_constructible.hpp \
-  /usr/local/include/boost/type_traits/has_trivial_move_constructor.hpp \
-  /usr/local/include/boost/type_traits/is_nothrow_move_assignable.hpp \
-  /usr/local/include/boost/type_traits/has_trivial_move_assign.hpp \
-  /usr/local/include/boost/type_traits/has_nothrow_assign.hpp \
-  /usr/local/include/boost/type_traits/has_trivial_assign.hpp \
-  /usr/local/include/boost/move/iterator.hpp \
-  /usr/local/include/boost/move/algorithm.hpp \
+  /usr/local/include/boost/variant/detail/move.hpp \
+  /usr/local/include/boost/move/adl_move_swap.hpp \
   /usr/local/include/boost/mpl/iter_fold.hpp \
   /usr/local/include/boost/mpl/begin_end.hpp \
   /usr/local/include/boost/mpl/begin_end_fwd.hpp \
@@ -875,6 +925,7 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/mpl/aux_/msvc_eti_base.hpp \
   /usr/local/include/boost/variant/detail/make_variant_list.hpp \
   /usr/local/include/boost/mpl/list.hpp \
+  /usr/local/include/boost/mpl/limits/list.hpp \
   /usr/local/include/boost/mpl/list/list20.hpp \
   /usr/local/include/boost/mpl/list/list10.hpp \
   /usr/local/include/boost/mpl/list/list0.hpp \
@@ -909,22 +960,15 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/variant/detail/hash_variant.hpp \
   /usr/local/include/boost/variant/static_visitor.hpp \
   /usr/local/include/boost/aligned_storage.hpp \
-  /usr/local/include/boost/type_traits/type_with_alignment.hpp \
-  /usr/local/include/boost/preprocessor/list/for_each_i.hpp \
-  /usr/local/include/boost/preprocessor/repetition/for.hpp \
-  /usr/local/include/boost/preprocessor/repetition/detail/for.hpp \
-  /usr/local/include/boost/preprocessor/tuple/to_list.hpp \
-  /usr/local/include/boost/preprocessor/tuple/size.hpp \
-  /usr/local/include/boost/preprocessor/list/transform.hpp \
-  /usr/local/include/boost/preprocessor/list/append.hpp \
   /usr/local/include/boost/blank.hpp \
   /usr/local/include/boost/detail/templated_streams.hpp \
   /usr/local/include/boost/type_traits/is_empty.hpp \
   /usr/local/include/boost/type_traits/is_stateless.hpp \
-  /usr/local/include/boost/type_traits/has_trivial_constructor.hpp \
-  /usr/local/include/boost/math/common_factor_ct.hpp \
-  /usr/local/include/boost/math_fwd.hpp \
+  /usr/local/include/boost/integer/common_factor_ct.hpp \
   /usr/local/include/boost/type_traits/has_nothrow_constructor.hpp \
+  /usr/local/include/boost/type_traits/is_nothrow_move_assignable.hpp \
+  /usr/local/include/boost/type_traits/has_trivial_move_assign.hpp \
+  /usr/local/include/boost/utility/declval.hpp \
   /usr/local/include/boost/mpl/empty.hpp \
   /usr/local/include/boost/mpl/aux_/empty_impl.hpp \
   /usr/local/include/boost/mpl/find_if.hpp \
@@ -939,24 +983,44 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/mpl/aux_/preprocessed/gcc/fold_impl.hpp \
   /usr/local/include/boost/mpl/front.hpp \
   /usr/local/include/boost/mpl/aux_/front_impl.hpp \
-  /usr/local/include/boost/mpl/is_sequence.hpp \
+  /usr/local/include/boost/mpl/insert_range.hpp \
+  /usr/local/include/boost/mpl/insert_range_fwd.hpp \
+  /usr/local/include/boost/mpl/aux_/insert_range_impl.hpp \
+  /usr/local/include/boost/mpl/insert.hpp \
+  /usr/local/include/boost/mpl/insert_fwd.hpp \
+  /usr/local/include/boost/mpl/aux_/insert_impl.hpp \
+  /usr/local/include/boost/mpl/reverse_fold.hpp \
+  /usr/local/include/boost/mpl/aux_/reverse_fold_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/reverse_fold_impl.hpp \
   /usr/local/include/boost/mpl/iterator_range.hpp \
-  /usr/local/include/boost/mpl/max_element.hpp \
-  /usr/local/include/boost/mpl/less.hpp \
-  /usr/local/include/boost/mpl/aux_/comparison_op.hpp \
+  /usr/local/include/boost/mpl/clear.hpp \
+  /usr/local/include/boost/mpl/aux_/clear_impl.hpp \
+  /usr/local/include/boost/mpl/push_front.hpp \
+  /usr/local/include/boost/mpl/aux_/push_front_impl.hpp \
+  /usr/local/include/boost/mpl/joint_view.hpp \
+  /usr/local/include/boost/mpl/aux_/joint_iter.hpp \
+  /usr/local/include/boost/mpl/plus.hpp \
+  /usr/local/include/boost/mpl/aux_/arithmetic_op.hpp \
+  /usr/local/include/boost/mpl/integral_c.hpp \
+  /usr/local/include/boost/mpl/integral_c_fwd.hpp \
+  /usr/local/include/boost/mpl/aux_/largest_int.hpp \
   /usr/local/include/boost/mpl/aux_/numeric_op.hpp \
   /usr/local/include/boost/mpl/numeric_cast.hpp \
   /usr/local/include/boost/mpl/tag.hpp \
   /usr/local/include/boost/mpl/aux_/numeric_cast_utils.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/plus.hpp \
+  /usr/local/include/boost/mpl/aux_/iter_push_front.hpp \
+  /usr/local/include/boost/type_traits/same_traits.hpp \
+  /usr/local/include/boost/mpl/is_sequence.hpp \
+  /usr/local/include/boost/mpl/max_element.hpp \
+  /usr/local/include/boost/mpl/less.hpp \
+  /usr/local/include/boost/mpl/aux_/comparison_op.hpp \
   /usr/local/include/boost/mpl/aux_/preprocessed/gcc/less.hpp \
-  /usr/local/include/boost/mpl/push_front.hpp \
-  /usr/local/include/boost/mpl/aux_/push_front_impl.hpp \
   /usr/local/include/boost/mpl/same_as.hpp \
+  /usr/local/include/boost/mpl/size_t.hpp \
+  /usr/local/include/boost/mpl/size_t_fwd.hpp \
   /usr/local/include/boost/mpl/sizeof.hpp \
   /usr/local/include/boost/mpl/transform.hpp \
-  /usr/local/include/boost/mpl/reverse_fold.hpp \
-  /usr/local/include/boost/mpl/aux_/reverse_fold_impl.hpp \
-  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/reverse_fold_impl.hpp \
   /usr/local/include/boost/mpl/pair_view.hpp \
   /usr/local/include/boost/mpl/iterator_category.hpp \
   /usr/local/include/boost/mpl/advance.hpp \
@@ -976,8 +1040,6 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/mpl/aux_/push_back_impl.hpp \
   /usr/local/include/boost/mpl/inserter.hpp \
   /usr/local/include/boost/mpl/front_inserter.hpp \
-  /usr/local/include/boost/mpl/clear.hpp \
-  /usr/local/include/boost/mpl/aux_/clear_impl.hpp \
   /usr/local/include/boost/variant/detail/variant_io.hpp \
   /usr/local/include/boost/signals2/trackable.hpp \
   /usr/local/include/boost/signals2/variadic_slot.hpp \
@@ -992,31 +1054,15 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/optional/bad_optional_access.hpp \
   /usr/local/include/boost/none.hpp /usr/local/include/boost/none_t.hpp \
   /usr/local/include/boost/utility/compare_pointees.hpp \
-  /usr/local/include/boost/utility/in_place_factory.hpp \
-  /usr/local/include/boost/utility/detail/in_place_factory_prefix.hpp \
-  /usr/local/include/boost/preprocessor/punctuation/paren.hpp \
-  /usr/local/include/boost/preprocessor/repetition/enum_binary_params.hpp \
-  /usr/local/include/boost/utility/detail/in_place_factory_suffix.hpp \
   /usr/local/include/boost/optional/optional_fwd.hpp \
+  /usr/local/include/boost/optional/detail/optional_config.hpp \
+  /usr/local/include/boost/optional/detail/optional_factory_support.hpp \
+  /usr/local/include/boost/optional/detail/optional_aligned_storage.hpp \
+  /usr/local/include/boost/optional/detail/optional_trivially_copyable_base.hpp \
+  /usr/local/include/boost/optional/detail/optional_reference_spec.hpp \
+  /usr/local/include/boost/optional/detail/optional_relops.hpp \
+  /usr/local/include/boost/optional/detail/optional_swap.hpp \
   /usr/local/include/boost/signals2/detail/slot_call_iterator.hpp \
-  /usr/local/include/boost/signals2/detail/auto_buffer.hpp \
-  /usr/local/include/boost/iterator/reverse_iterator.hpp \
-  /usr/local/include/boost/next_prior.hpp \
-  /usr/local/include/boost/type_traits/is_unsigned.hpp \
-  /usr/local/include/boost/type_traits/integral_promotion.hpp \
-  /usr/local/include/boost/type_traits/make_signed.hpp \
-  /usr/local/include/boost/type_traits/is_signed.hpp \
-  /usr/local/include/boost/type_traits/add_volatile.hpp \
-  /usr/local/include/boost/type_traits/has_plus.hpp \
-  /usr/local/include/boost/type_traits/detail/has_binary_operator.hpp \
-  /usr/local/include/boost/type_traits/is_fundamental.hpp \
-  /usr/local/include/boost/type_traits/has_plus_assign.hpp \
-  /usr/local/include/boost/type_traits/has_minus.hpp \
-  /usr/local/include/boost/type_traits/has_minus_assign.hpp \
-  /usr/local/include/boost/iterator/iterator_adaptor.hpp \
-  /usr/local/include/boost/multi_index/detail/scope_guard.hpp \
-  /usr/local/include/boost/swap.hpp \
-  /usr/local/include/boost/type_traits/aligned_storage.hpp \
   /usr/local/include/boost/signals2/optional_last_value.hpp \
   /usr/local/include/boost/signals2/mutex.hpp \
   /usr/local/include/boost/signals2/detail/lwm_pthreads.hpp \
@@ -1029,76 +1075,49 @@ qt/libbitcoinqt_a-intro.o: qt/intro.cpp qt/intro.h \
   /usr/local/include/boost/thread/detail/config.hpp \
   /usr/local/include/boost/thread/detail/platform.hpp \
   /usr/local/include/boost/config/requires_threads.hpp \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/QFileDialog \
-  /usr/local/Cellar/qt/5.10.1/include/QtWidgets/qfiledialog.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qdir.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qfileinfo.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qfile.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qfiledevice.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qurl.h \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/QSettings \
-  /usr/local/Cellar/qt/5.10.1/include/QtCore/qsettings.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cmath \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/math.h \
-  /usr/include/math.h qt/intro.moc
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/QFileDialog \
+  /usr/local/Cellar/qt/5.11.0/include/QtWidgets/qfiledialog.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qdir.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qfileinfo.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qfile.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qfiledevice.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qurl.h \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/QSettings \
+  /usr/local/Cellar/qt/5.11.0/include/QtCore/qsettings.h qt/intro.moc
 
 qt/intro.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/QDialog:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/QDialog:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qdialog.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qdialog.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qtwidgetsglobal.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qtwidgetsglobal.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qtguiglobal.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qtguiglobal.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qglobal.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qglobal.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/type_traits:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__config:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__config:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cstddef:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/cstddef:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include/stddef.h:
+/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include/stddef.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include/__stddef_max_align_t.h:
+/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include/__stddef_max_align_t.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__nullptr:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__nullptr:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/utility:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/utility:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__tuple:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__tuple:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/initializer_list:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/initializer_list:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__debug:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/cstring:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stddef.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qconfig.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qtcore-config.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qsystemdetection.h:
-
-/usr/include/TargetConditionals.h:
-
-/usr/include/Availability.h:
-
-/usr/include/AvailabilityInternal.h:
-
-/usr/include/AvailabilityMacros.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qprocessordetection.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qcompilerdetection.h:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cstring:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string.h:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string.h:
 
 /usr/include/string.h:
 
@@ -1118,23 +1137,67 @@ qt/intro.h:
 
 /usr/include/sys/_pthread/_pthread_types.h:
 
+/usr/include/Availability.h:
+
+/usr/include/AvailabilityInternal.h:
+
 /usr/include/sys/_types/_size_t.h:
 
 /usr/include/sys/_types/_null.h:
 
 /usr/include/sys/_types/_ssize_t.h:
 
+/usr/include/machine/types.h:
+
+/usr/include/i386/types.h:
+
+/usr/include/sys/_types/_int8_t.h:
+
+/usr/include/sys/_types/_int16_t.h:
+
+/usr/include/sys/_types/_int32_t.h:
+
+/usr/include/sys/_types/_int64_t.h:
+
+/usr/include/sys/_types/_u_int8_t.h:
+
+/usr/include/sys/_types/_u_int16_t.h:
+
+/usr/include/sys/_types/_u_int32_t.h:
+
+/usr/include/sys/_types/_u_int64_t.h:
+
+/usr/include/sys/_types/_intptr_t.h:
+
+/usr/include/sys/_types/_uintptr_t.h:
+
 /usr/include/strings.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/cstdint:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/typeinfo:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/stdint.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/exception:
+/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include/stdint.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cstdlib:
+/usr/include/stdint.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stdlib.h:
+/usr/include/_types/_uint8_t.h:
+
+/usr/include/_types/_uint16_t.h:
+
+/usr/include/_types/_uint32_t.h:
+
+/usr/include/_types/_uint64_t.h:
+
+/usr/include/_types/_intmax_t.h:
+
+/usr/include/_types/_uintmax_t.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__debug:
+
+/usr/include/assert.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/stdlib.h:
 
 /usr/include/stdlib.h:
 
@@ -1156,6 +1219,8 @@ qt/intro.h:
 
 /usr/include/i386/_mcontext.h:
 
+/usr/include/mach/machine/_structs.h:
+
 /usr/include/mach/i386/_structs.h:
 
 /usr/include/sys/_pthread/_pthread_attr_t.h:
@@ -1169,36 +1234,6 @@ qt/intro.h:
 /usr/include/sys/_types/_uid_t.h:
 
 /usr/include/sys/resource.h:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stdint.h:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include/stdint.h:
-
-/usr/include/stdint.h:
-
-/usr/include/sys/_types/_int8_t.h:
-
-/usr/include/sys/_types/_int16_t.h:
-
-/usr/include/sys/_types/_int32_t.h:
-
-/usr/include/sys/_types/_int64_t.h:
-
-/usr/include/_types/_uint8_t.h:
-
-/usr/include/_types/_uint16_t.h:
-
-/usr/include/_types/_uint32_t.h:
-
-/usr/include/_types/_uint64_t.h:
-
-/usr/include/sys/_types/_intptr_t.h:
-
-/usr/include/sys/_types/_uintptr_t.h:
-
-/usr/include/_types/_intmax_t.h:
-
-/usr/include/_types/_uintmax_t.h:
 
 /usr/include/sys/_types/_timeval.h:
 
@@ -1220,45 +1255,59 @@ qt/intro.h:
 
 /usr/include/sys/_types/_wchar_t.h:
 
-/usr/include/machine/types.h:
-
-/usr/include/i386/types.h:
-
-/usr/include/sys/_types/_u_int8_t.h:
-
-/usr/include/sys/_types/_u_int16_t.h:
-
-/usr/include/sys/_types/_u_int32_t.h:
-
-/usr/include/sys/_types/_u_int64_t.h:
-
 /usr/include/sys/_types/_dev_t.h:
 
 /usr/include/sys/_types/_mode_t.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cstdint:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/stddef.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/new:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qconfig.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/limits:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qtcore-config.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__undef_min_max:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qsystemdetection.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iterator:
+/usr/include/TargetConditionals.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iosfwd:
+/usr/include/AvailabilityMacros.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/wchar.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qprocessordetection.h:
+
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qcompilerdetection.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/memory:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/typeinfo:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/exception:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/cstdlib:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/new:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/limits:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__undef_macros:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iosfwd:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/wchar.h:
 
 /usr/include/wchar.h:
 
 /usr/include/sys/_types/_mbstate_t.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include/stdarg.h:
+/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include/stdarg.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stdio.h:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/stdio.h:
 
 /usr/include/stdio.h:
+
+/usr/include/_stdio.h:
 
 /usr/include/sys/_types/_va_list.h:
 
@@ -1276,55 +1325,61 @@ qt/intro.h:
 
 /usr/include/_wctype.h:
 
+/usr/include/__wctype.h:
+
 /usr/include/sys/_types/_wint_t.h:
 
 /usr/include/_types/_wctype_t.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ctype.h:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/ctype.h:
 
 /usr/include/ctype.h:
 
+/usr/include/_ctype.h:
+
 /usr/include/runetype.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__functional_base:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__functional_base:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/tuple:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/tuple:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stdexcept:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/stdexcept:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/atomic:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/cassert:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qtypeinfo.h:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/atomic:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qsysinfo.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qtypeinfo.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qlogging.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qsysinfo.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qflags.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qlogging.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qatomic.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qflags.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qbasicatomic.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qatomic.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qatomic_cxx11.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qbasicatomic.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qgenericatomic.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qatomic_cxx11.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qglobalstatic.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qgenericatomic.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qmutex.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qglobalstatic.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/chrono:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qmutex.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ctime:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/chrono:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ratio:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/ctime:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/climits:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/ratio:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/limits.h:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/climits:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include/limits.h:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/limits.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include/limits.h:
 
 /usr/include/limits.h:
 
@@ -1336,193 +1391,193 @@ qt/intro.h:
 
 /usr/include/sys/syslimits.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qnumeric.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qnumeric.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qversiontagging.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qversiontagging.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qtgui-config.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qtgui-config.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qtwidgets-config.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qtwidgets-config.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qwidget.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qwidget.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qwindowdefs.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qwindowdefs.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qobjectdefs.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qobjectdefs.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qnamespace.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qnamespace.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qobjectdefs_impl.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qobjectdefs_impl.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qobject.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qobject.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qstring.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qstring.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qchar.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qchar.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qbytearray.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qbytearray.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qrefcount.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qrefcount.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qarraydata.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qarraydata.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string_view:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string_view:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__string:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__string:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cstdio:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/cstdio:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cwchar:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/cwchar:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cwctype:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/cwctype:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cctype:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/cctype:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/wctype.h:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/wctype.h:
 
 /usr/include/wctype.h:
 
 /usr/include/_types/_wctrans_t.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qstringliteral.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qstringliteral.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qstringalgorithms.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qstringalgorithms.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qstringview.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qstringview.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qlist.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qlist.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qalgorithms.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qalgorithms.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qiterator.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qiterator.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qhashfunctions.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qhashfunctions.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qpair.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qpair.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/numeric:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/numeric:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/list:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/functional:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qbytearraylist.h:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/list:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qstringlist.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qbytearraylist.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qregexp.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qstringlist.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qstringmatcher.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qregexp.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qscopedpointer.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qstringmatcher.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qmetatype.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qscopedpointer.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qvarlengtharray.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qmetatype.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qcontainerfwd.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qvarlengtharray.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qcontainerfwd.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bit_reference:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/vector:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__split_buffer:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__bit_reference:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/map:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__split_buffer:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__tree:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/map:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/functional:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__tree:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qobject_impl.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qobject_impl.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qmargins.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qmargins.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qpaintdevice.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qpaintdevice.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qrect.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qrect.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qsize.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qsize.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qpoint.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qpoint.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qpalette.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qpalette.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qcolor.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qcolor.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qrgb.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qrgb.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qrgba64.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qrgba64.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qbrush.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qbrush.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qvector.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qvector.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qmatrix.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qmatrix.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qpolygon.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qpolygon.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qregion.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qregion.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qdatastream.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qdatastream.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qiodevice.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qiodevice.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qline.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qline.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qtransform.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qtransform.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qpainterpath.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qpainterpath.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qimage.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qimage.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qpixelformat.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qpixelformat.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qpixmap.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qpixmap.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qsharedpointer.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qsharedpointer.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qshareddata.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qshareddata.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qhash.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qhash.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qsharedpointer_impl.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qsharedpointer_impl.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qfont.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qfont.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qfontmetrics.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qfontmetrics.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qfontinfo.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qfontinfo.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qsizepolicy.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qsizepolicy.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qcursor.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qcursor.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qkeysequence.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qkeysequence.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/QMutex:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/QMutex:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/QThread:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/QThread:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qthread.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qthread.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/future:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/future:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/system_error:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/system_error:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cerrno:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/cerrno:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/errno.h:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/errno.h:
 
 /usr/include/errno.h:
 
 /usr/include/sys/errno.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/mutex:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/mutex:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__mutex_base:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__mutex_base:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__threading_support:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__threading_support:
 
 /usr/include/pthread.h:
 
@@ -1554,125 +1609,79 @@ qt/intro.h:
 
 /usr/include/sys/_types/_mach_port_t.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/thread:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/thread:
 
 qt/forms/ui_intro.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/QVariant:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/QVariant:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qvariant.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qvariant.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qmap.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qmap.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/QAction:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/QApplication:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qaction.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qapplication.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qicon.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qcoreapplication.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qactiongroup.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qcoreevent.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/QApplication:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qeventloop.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qapplication.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qguiapplication.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qcoreapplication.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qinputmethod.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qcoreevent.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qlocale.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qeventloop.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/QDialogButtonBox:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qguiapplication.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qdialogbuttonbox.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qinputmethod.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/QHBoxLayout:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qlocale.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qboxlayout.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/QButtonGroup:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qlayout.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qbuttongroup.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qlayoutitem.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/QDialogButtonBox:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qgridlayout.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qdialogbuttonbox.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/QLabel:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/QHBoxLayout:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qlabel.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qboxlayout.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qframe.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qlayout.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/QLineEdit:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qlayoutitem.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qlineedit.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qgridlayout.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qtextcursor.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/QHeaderView:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qtextformat.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qheaderview.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qpen.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qabstractitemview.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qtextoption.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qabstractscrollarea.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/QPushButton:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qframe.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qpushbutton.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qabstractitemmodel.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qabstractbutton.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qitemselectionmodel.h:
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qicon.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qset.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/QRadioButton:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qabstractitemdelegate.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qradiobutton.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qstyleoption.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/QSpacerItem:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qabstractspinbox.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qvalidator.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qregularexpression.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qslider.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qabstractslider.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qstyle.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qtabbar.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qtabwidget.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qrubberband.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/QLabel:
-
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qlabel.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/QLineEdit:
-
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qlineedit.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qtextcursor.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qtextformat.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qpen.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtGui/qtextoption.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/QPushButton:
-
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qpushbutton.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qabstractbutton.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/QRadioButton:
-
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qradiobutton.h:
-
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/QSpacerItem:
-
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/QVBoxLayout:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/QVBoxLayout:
 
 qt/guiutil.h:
 
@@ -1692,13 +1701,11 @@ compat/byteswap.h:
 
 /usr/include/sys/_types/_os_inline.h:
 
-/usr/include/assert.h:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/ios:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ios:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__locale:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__locale:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/locale.h:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/locale.h:
 
 /usr/include/locale.h:
 
@@ -1724,27 +1731,63 @@ compat/byteswap.h:
 
 /usr/include/xlocale/_wctype.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/set:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/set:
 
 prevector.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/QEvent:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/QEvent:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/QMessageBox:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/QHeaderView:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qmessagebox.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qheaderview.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/QObject:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qabstractitemview.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/QProgressBar:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qabstractscrollarea.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qprogressbar.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qabstractitemmodel.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/QString:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qitemselectionmodel.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/QTableView:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qset.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qtableview.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qabstractitemdelegate.h:
+
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qstyleoption.h:
+
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qabstractspinbox.h:
+
+/usr/local/Cellar/qt/5.11.0/include/QtGui/qvalidator.h:
+
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qregularexpression.h:
+
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qslider.h:
+
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qabstractslider.h:
+
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qstyle.h:
+
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qtabbar.h:
+
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qtabwidget.h:
+
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qrubberband.h:
+
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/QMessageBox:
+
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qmessagebox.h:
+
+/usr/local/Cellar/qt/5.11.0/include/QtCore/QObject:
+
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/QProgressBar:
+
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qprogressbar.h:
+
+/usr/local/Cellar/qt/5.11.0/include/QtCore/QString:
+
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/QTableView:
+
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qtableview.h:
 
 /usr/local/include/boost/filesystem.hpp:
 
@@ -1754,19 +1797,19 @@ prevector.h:
 
 /usr/local/include/boost/config/user.hpp:
 
-/usr/local/include/boost/config/select_compiler_config.hpp:
+/usr/local/include/boost/config/detail/select_compiler_config.hpp:
 
 /usr/local/include/boost/config/compiler/clang.hpp:
 
-/usr/local/include/boost/config/select_stdlib_config.hpp:
+/usr/local/include/boost/config/detail/select_stdlib_config.hpp:
 
 /usr/local/include/boost/config/stdlib/libcpp.hpp:
 
-/usr/local/include/boost/config/select_platform_config.hpp:
+/usr/local/include/boost/config/detail/select_platform_config.hpp:
 
 /usr/local/include/boost/config/platform/macos.hpp:
 
-/usr/local/include/boost/config/posix_features.hpp:
+/usr/local/include/boost/config/detail/posix_features.hpp:
 
 /usr/include/unistd.h:
 
@@ -1804,11 +1847,15 @@ prevector.h:
 
 /usr/include/gethostuuid.h:
 
-/usr/local/include/boost/config/suffix.hpp:
+/usr/local/include/boost/config/detail/suffix.hpp:
+
+/usr/local/include/boost/config/helper_macros.hpp:
 
 /usr/local/include/boost/system/api_config.hpp:
 
 /usr/local/include/boost/detail/workaround.hpp:
+
+/usr/local/include/boost/config/workaround.hpp:
 
 /usr/local/include/boost/config/auto_link.hpp:
 
@@ -1822,15 +1869,145 @@ prevector.h:
 
 /usr/local/include/boost/type_traits/is_array.hpp:
 
-/usr/local/include/boost/type_traits/config.hpp:
+/usr/local/include/boost/type_traits/integral_constant.hpp:
 
-/usr/local/include/boost/type_traits/detail/bool_trait_def.hpp:
+/usr/local/include/boost/type_traits/decay.hpp:
 
-/usr/local/include/boost/type_traits/detail/template_arity_spec.hpp:
+/usr/local/include/boost/type_traits/is_function.hpp:
 
-/usr/local/include/boost/mpl/int.hpp:
+/usr/local/include/boost/type_traits/is_reference.hpp:
 
-/usr/local/include/boost/mpl/int_fwd.hpp:
+/usr/local/include/boost/type_traits/is_lvalue_reference.hpp:
+
+/usr/local/include/boost/type_traits/is_rvalue_reference.hpp:
+
+/usr/local/include/boost/type_traits/detail/config.hpp:
+
+/usr/local/include/boost/version.hpp:
+
+/usr/local/include/boost/type_traits/detail/is_function_ptr_helper.hpp:
+
+/usr/local/include/boost/type_traits/remove_bounds.hpp:
+
+/usr/local/include/boost/type_traits/remove_extent.hpp:
+
+/usr/local/include/boost/type_traits/add_pointer.hpp:
+
+/usr/local/include/boost/type_traits/remove_reference.hpp:
+
+/usr/local/include/boost/type_traits/remove_cv.hpp:
+
+/usr/local/include/boost/system/error_code.hpp:
+
+/usr/local/include/boost/system/config.hpp:
+
+/usr/local/include/boost/predef/platform.h:
+
+/usr/local/include/boost/predef/platform/cloudabi.h:
+
+/usr/local/include/boost/predef/version_number.h:
+
+/usr/local/include/boost/predef/make.h:
+
+/usr/local/include/boost/predef/detail/test.h:
+
+/usr/local/include/boost/predef/platform/mingw.h:
+
+/usr/local/include/boost/predef/platform/mingw32.h:
+
+/usr/local/include/boost/predef/platform/mingw64.h:
+
+/usr/local/include/boost/predef/platform/windows_uwp.h:
+
+/usr/local/include/boost/predef/os/windows.h:
+
+/usr/local/include/boost/predef/platform/windows_desktop.h:
+
+/usr/local/include/boost/predef/platform/windows_phone.h:
+
+/usr/local/include/boost/predef/platform/windows_server.h:
+
+/usr/local/include/boost/predef/platform/windows_store.h:
+
+/usr/local/include/boost/predef/platform/windows_system.h:
+
+/usr/local/include/boost/predef/platform/windows_runtime.h:
+
+/usr/local/include/boost/predef/platform/ios.h:
+
+/usr/local/include/boost/predef/os/ios.h:
+
+/usr/local/include/boost/cstdint.hpp:
+
+/usr/local/include/boost/assert.hpp:
+
+/usr/local/include/boost/noncopyable.hpp:
+
+/usr/local/include/boost/core/noncopyable.hpp:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/ostream:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/streambuf:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/locale:
+
+/usr/include/nl_types.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/sys/_types/_u_char.h:
+
+/usr/include/sys/_types/_u_short.h:
+
+/usr/include/sys/_types/_u_int.h:
+
+/usr/include/sys/_types/_caddr_t.h:
+
+/usr/include/sys/_types/_blkcnt_t.h:
+
+/usr/include/sys/_types/_blksize_t.h:
+
+/usr/include/sys/_types/_in_addr_t.h:
+
+/usr/include/sys/_types/_in_port_t.h:
+
+/usr/include/sys/_types/_ino_t.h:
+
+/usr/include/sys/_types/_ino64_t.h:
+
+/usr/include/sys/_types/_key_t.h:
+
+/usr/include/sys/_types/_nlink_t.h:
+
+/usr/include/sys/_types/_rsize_t.h:
+
+/usr/include/sys/_types/_errno_t.h:
+
+/usr/include/sys/_types/_fsblkcnt_t.h:
+
+/usr/include/sys/_types/_fsfilcnt_t.h:
+
+/usr/include/_types/_nl_item.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__bsd_locale_defaults.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/bitset:
+
+/usr/local/include/boost/cerrno.hpp:
+
+/usr/local/include/boost/config/abi_prefix.hpp:
+
+/usr/local/include/boost/config/abi_suffix.hpp:
+
+/usr/local/include/boost/system/system_error.hpp:
+
+/usr/local/include/boost/iterator/iterator_facade.hpp:
+
+/usr/local/include/boost/iterator/interoperable.hpp:
+
+/usr/local/include/boost/mpl/bool.hpp:
+
+/usr/local/include/boost/mpl/bool_fwd.hpp:
 
 /usr/local/include/boost/mpl/aux_/adl_barrier.hpp:
 
@@ -1844,15 +2021,41 @@ prevector.h:
 
 /usr/local/include/boost/mpl/aux_/config/workaround.hpp:
 
+/usr/local/include/boost/mpl/integral_c_tag.hpp:
+
+/usr/local/include/boost/mpl/aux_/config/static_constant.hpp:
+
+/usr/local/include/boost/mpl/or.hpp:
+
+/usr/local/include/boost/mpl/aux_/config/use_preprocessed.hpp:
+
+/usr/local/include/boost/mpl/aux_/nested_type_wknd.hpp:
+
+/usr/local/include/boost/mpl/aux_/na_spec.hpp:
+
+/usr/local/include/boost/mpl/lambda_fwd.hpp:
+
+/usr/local/include/boost/mpl/void_fwd.hpp:
+
+/usr/local/include/boost/mpl/aux_/na.hpp:
+
+/usr/local/include/boost/mpl/aux_/na_fwd.hpp:
+
+/usr/local/include/boost/mpl/aux_/config/ctps.hpp:
+
+/usr/local/include/boost/mpl/aux_/config/lambda.hpp:
+
+/usr/local/include/boost/mpl/aux_/config/ttp.hpp:
+
+/usr/local/include/boost/mpl/int.hpp:
+
+/usr/local/include/boost/mpl/int_fwd.hpp:
+
 /usr/local/include/boost/mpl/aux_/nttp_decl.hpp:
 
 /usr/local/include/boost/mpl/aux_/config/nttp.hpp:
 
 /usr/local/include/boost/mpl/aux_/integral_wrapper.hpp:
-
-/usr/local/include/boost/mpl/integral_c_tag.hpp:
-
-/usr/local/include/boost/mpl/aux_/config/static_constant.hpp:
 
 /usr/local/include/boost/mpl/aux_/static_cast.hpp:
 
@@ -1860,7 +2063,13 @@ prevector.h:
 
 /usr/local/include/boost/preprocessor/config/config.hpp:
 
+/usr/local/include/boost/mpl/aux_/lambda_arity_param.hpp:
+
 /usr/local/include/boost/mpl/aux_/template_arity_fwd.hpp:
+
+/usr/local/include/boost/mpl/aux_/arity.hpp:
+
+/usr/local/include/boost/mpl/aux_/config/dtp.hpp:
 
 /usr/local/include/boost/mpl/aux_/preprocessor/params.hpp:
 
@@ -1893,90 +2102,6 @@ prevector.h:
 /usr/local/include/boost/preprocessor/inc.hpp:
 
 /usr/local/include/boost/preprocessor/arithmetic/inc.hpp:
-
-/usr/local/include/boost/mpl/aux_/config/lambda.hpp:
-
-/usr/local/include/boost/mpl/aux_/config/ttp.hpp:
-
-/usr/local/include/boost/mpl/aux_/config/ctps.hpp:
-
-/usr/local/include/boost/mpl/aux_/config/overload_resolution.hpp:
-
-/usr/local/include/boost/type_traits/integral_constant.hpp:
-
-/usr/local/include/boost/mpl/bool.hpp:
-
-/usr/local/include/boost/mpl/bool_fwd.hpp:
-
-/usr/local/include/boost/mpl/integral_c.hpp:
-
-/usr/local/include/boost/mpl/integral_c_fwd.hpp:
-
-/usr/local/include/boost/mpl/aux_/lambda_support.hpp:
-
-/usr/local/include/boost/type_traits/detail/bool_trait_undef.hpp:
-
-/usr/local/include/boost/type_traits/decay.hpp:
-
-/usr/local/include/boost/type_traits/is_function.hpp:
-
-/usr/local/include/boost/type_traits/is_reference.hpp:
-
-/usr/local/include/boost/type_traits/is_lvalue_reference.hpp:
-
-/usr/local/include/boost/type_traits/is_rvalue_reference.hpp:
-
-/usr/local/include/boost/type_traits/ice.hpp:
-
-/usr/local/include/boost/type_traits/detail/yes_no_type.hpp:
-
-/usr/local/include/boost/type_traits/detail/ice_or.hpp:
-
-/usr/local/include/boost/type_traits/detail/ice_and.hpp:
-
-/usr/local/include/boost/type_traits/detail/ice_not.hpp:
-
-/usr/local/include/boost/type_traits/detail/ice_eq.hpp:
-
-/usr/local/include/boost/type_traits/detail/false_result.hpp:
-
-/usr/local/include/boost/type_traits/detail/is_function_ptr_helper.hpp:
-
-/usr/local/include/boost/type_traits/remove_bounds.hpp:
-
-/usr/local/include/boost/type_traits/detail/type_trait_def.hpp:
-
-/usr/local/include/boost/type_traits/detail/type_trait_undef.hpp:
-
-/usr/local/include/boost/type_traits/add_pointer.hpp:
-
-/usr/local/include/boost/type_traits/remove_reference.hpp:
-
-/usr/local/include/boost/mpl/eval_if.hpp:
-
-/usr/local/include/boost/mpl/if.hpp:
-
-/usr/local/include/boost/mpl/aux_/value_wknd.hpp:
-
-/usr/local/include/boost/mpl/aux_/config/integral.hpp:
-
-/usr/local/include/boost/mpl/aux_/config/eti.hpp:
-
-/usr/local/include/boost/mpl/aux_/na_spec.hpp:
-
-/usr/local/include/boost/mpl/lambda_fwd.hpp:
-
-/usr/local/include/boost/mpl/void_fwd.hpp:
-
-/usr/local/include/boost/mpl/aux_/na.hpp:
-
-/usr/local/include/boost/mpl/aux_/na_fwd.hpp:
-
-/usr/local/include/boost/mpl/aux_/lambda_arity_param.hpp:
-
-/usr/local/include/boost/mpl/aux_/arity.hpp:
-
-/usr/local/include/boost/mpl/aux_/config/dtp.hpp:
 
 /usr/local/include/boost/mpl/aux_/preprocessor/enum.hpp:
 
@@ -2038,101 +2163,11 @@ prevector.h:
 
 /usr/local/include/boost/preprocessor/arithmetic/sub.hpp:
 
-/usr/local/include/boost/mpl/identity.hpp:
+/usr/local/include/boost/mpl/aux_/config/eti.hpp:
 
-/usr/local/include/boost/system/error_code.hpp:
+/usr/local/include/boost/mpl/aux_/config/overload_resolution.hpp:
 
-/usr/local/include/boost/system/config.hpp:
-
-/usr/local/include/boost/predef/platform.h:
-
-/usr/local/include/boost/predef/platform/mingw.h:
-
-/usr/local/include/boost/predef/version_number.h:
-
-/usr/local/include/boost/predef/make.h:
-
-/usr/local/include/boost/predef/detail/test.h:
-
-/usr/local/include/boost/predef/platform/windows_desktop.h:
-
-/usr/local/include/boost/predef/os/windows.h:
-
-/usr/local/include/boost/predef/platform/windows_store.h:
-
-/usr/local/include/boost/predef/platform/windows_phone.h:
-
-/usr/local/include/boost/predef/platform/windows_runtime.h:
-
-/usr/local/include/boost/cstdint.hpp:
-
-/usr/local/include/boost/assert.hpp:
-
-/usr/local/include/boost/noncopyable.hpp:
-
-/usr/local/include/boost/core/noncopyable.hpp:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/ostream:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/streambuf:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/locale:
-
-/usr/include/nl_types.h:
-
-/usr/include/sys/types.h:
-
-/usr/include/sys/_types/_blkcnt_t.h:
-
-/usr/include/sys/_types/_blksize_t.h:
-
-/usr/include/sys/_types/_in_addr_t.h:
-
-/usr/include/sys/_types/_in_port_t.h:
-
-/usr/include/sys/_types/_ino_t.h:
-
-/usr/include/sys/_types/_ino64_t.h:
-
-/usr/include/sys/_types/_key_t.h:
-
-/usr/include/sys/_types/_nlink_t.h:
-
-/usr/include/sys/_types/_rsize_t.h:
-
-/usr/include/sys/_types/_errno_t.h:
-
-/usr/include/sys/_types/_fsblkcnt_t.h:
-
-/usr/include/sys/_types/_fsfilcnt_t.h:
-
-/usr/include/_types/_nl_item.h:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/__bsd_locale_defaults.h:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/bitset:
-
-/usr/local/include/boost/cerrno.hpp:
-
-/usr/local/include/boost/config/abi_prefix.hpp:
-
-/usr/local/include/boost/config/abi_suffix.hpp:
-
-/usr/local/include/boost/system/system_error.hpp:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cassert:
-
-/usr/local/include/boost/iterator/iterator_facade.hpp:
-
-/usr/local/include/boost/iterator.hpp:
-
-/usr/local/include/boost/iterator/interoperable.hpp:
-
-/usr/local/include/boost/mpl/or.hpp:
-
-/usr/local/include/boost/mpl/aux_/config/use_preprocessed.hpp:
-
-/usr/local/include/boost/mpl/aux_/nested_type_wknd.hpp:
+/usr/local/include/boost/mpl/aux_/lambda_support.hpp:
 
 /usr/local/include/boost/mpl/aux_/include_preprocessed.hpp:
 
@@ -2146,11 +2181,11 @@ prevector.h:
 
 /usr/local/include/boost/type_traits/intrinsics.hpp:
 
-/usr/local/include/boost/type_traits/is_same.hpp:
+/usr/local/include/boost/type_traits/is_complete.hpp:
 
-/usr/local/include/boost/type_traits/is_volatile.hpp:
+/usr/local/include/boost/type_traits/is_void.hpp:
 
-/usr/local/include/boost/type_traits/detail/cv_traits_impl.hpp:
+/usr/local/include/boost/static_assert.hpp:
 
 /usr/local/include/boost/iterator/detail/config_def.hpp:
 
@@ -2158,9 +2193,17 @@ prevector.h:
 
 /usr/local/include/boost/iterator/iterator_traits.hpp:
 
-/usr/local/include/boost/detail/iterator.hpp:
-
 /usr/local/include/boost/iterator/iterator_categories.hpp:
+
+/usr/local/include/boost/mpl/eval_if.hpp:
+
+/usr/local/include/boost/mpl/if.hpp:
+
+/usr/local/include/boost/mpl/aux_/value_wknd.hpp:
+
+/usr/local/include/boost/mpl/aux_/config/integral.hpp:
+
+/usr/local/include/boost/mpl/identity.hpp:
 
 /usr/local/include/boost/mpl/placeholders.hpp:
 
@@ -2190,13 +2233,13 @@ prevector.h:
 
 /usr/local/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp:
 
-/usr/local/include/boost/static_assert.hpp:
-
 /usr/local/include/boost/iterator/detail/facade_iterator_category.hpp:
 
 /usr/local/include/boost/mpl/and.hpp:
 
 /usr/local/include/boost/mpl/aux_/preprocessed/gcc/and.hpp:
+
+/usr/local/include/boost/type_traits/is_same.hpp:
 
 /usr/local/include/boost/type_traits/is_const.hpp:
 
@@ -2204,15 +2247,15 @@ prevector.h:
 
 /usr/local/include/boost/type_traits/is_pointer.hpp:
 
-/usr/local/include/boost/type_traits/is_member_pointer.hpp:
+/usr/local/include/boost/type_traits/is_class.hpp:
+
+/usr/local/include/boost/type_traits/is_volatile.hpp:
 
 /usr/local/include/boost/type_traits/is_member_function_pointer.hpp:
 
 /usr/local/include/boost/type_traits/detail/is_mem_fun_pointer_impl.hpp:
 
-/usr/local/include/boost/type_traits/remove_cv.hpp:
-
-/usr/local/include/boost/type_traits/is_class.hpp:
+/usr/local/include/boost/type_traits/is_member_pointer.hpp:
 
 /usr/local/include/boost/type_traits/remove_pointer.hpp:
 
@@ -2224,11 +2267,13 @@ prevector.h:
 
 /usr/local/include/boost/type_traits/add_const.hpp:
 
+/usr/local/include/boost/type_traits/add_lvalue_reference.hpp:
+
+/usr/local/include/boost/type_traits/add_reference.hpp:
+
 /usr/local/include/boost/type_traits/remove_const.hpp:
 
 /usr/local/include/boost/type_traits/is_pod.hpp:
-
-/usr/local/include/boost/type_traits/is_void.hpp:
 
 /usr/local/include/boost/type_traits/is_scalar.hpp:
 
@@ -2236,7 +2281,7 @@ prevector.h:
 
 /usr/local/include/boost/type_traits/is_integral.hpp:
 
-/usr/local/include/boost/type_traits/is_float.hpp:
+/usr/local/include/boost/type_traits/is_floating_point.hpp:
 
 /usr/local/include/boost/type_traits/is_enum.hpp:
 
@@ -2356,9 +2401,13 @@ prevector.h:
 
 /usr/local/include/boost/smart_ptr/detail/sp_counted_impl.hpp:
 
+/usr/local/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp:
+
 /usr/local/include/boost/smart_ptr/detail/sp_convertible.hpp:
 
 /usr/local/include/boost/smart_ptr/detail/sp_nullptr_t.hpp:
+
+/usr/local/include/boost/smart_ptr/detail/sp_noexcept.hpp:
 
 /usr/local/include/boost/smart_ptr/detail/spinlock_pool.hpp:
 
@@ -2488,6 +2537,8 @@ prevector.h:
 
 /usr/local/include/boost/predef/detail/_cassert.h:
 
+/usr/local/include/boost/predef/library/c/cloudabi.h:
+
 /usr/local/include/boost/predef/library/c/gnu.h:
 
 /usr/local/include/boost/predef/library/c/uc.h:
@@ -2536,8 +2587,6 @@ prevector.h:
 
 /usr/local/include/boost/predef/os/macos.h:
 
-/usr/local/include/boost/predef/os/ios.h:
-
 /usr/local/include/boost/predef/detail/os_detected.h:
 
 /usr/local/include/boost/predef/os/bsd/bsdi.h:
@@ -2551,6 +2600,8 @@ prevector.h:
 /usr/local/include/boost/predef/os/bsd/net.h:
 
 /usr/local/include/boost/predef/os/cygwin.h:
+
+/usr/local/include/boost/predef/os/haiku.h:
 
 /usr/local/include/boost/predef/os/hpux.h:
 
@@ -2572,7 +2623,33 @@ prevector.h:
 
 /usr/local/include/boost/predef/other/endian.h:
 
+/usr/local/include/boost/predef/hardware.h:
+
+/usr/local/include/boost/predef/hardware/simd.h:
+
+/usr/local/include/boost/predef/hardware/simd/x86.h:
+
+/usr/local/include/boost/predef/hardware/simd/x86/versions.h:
+
+/usr/local/include/boost/predef/hardware/simd/x86_amd.h:
+
+/usr/local/include/boost/predef/hardware/simd/x86_amd/versions.h:
+
+/usr/local/include/boost/predef/hardware/simd/arm.h:
+
+/usr/local/include/boost/predef/hardware/simd/arm/versions.h:
+
+/usr/local/include/boost/predef/hardware/simd/ppc.h:
+
+/usr/local/include/boost/predef/hardware/simd/ppc/versions.h:
+
+/usr/local/include/boost/predef/version.h:
+
 /usr/local/include/boost/smart_ptr/detail/operator_bool.hpp:
+
+/usr/local/include/boost/smart_ptr/detail/local_sp_deleter.hpp:
+
+/usr/local/include/boost/smart_ptr/detail/local_counted_base.hpp:
 
 /usr/local/include/boost/io/detail/quoted_manip.hpp:
 
@@ -2582,7 +2659,7 @@ prevector.h:
 
 /usr/local/include/boost/functional/hash_fwd.hpp:
 
-/usr/local/include/boost/functional/hash/hash_fwd.hpp:
+/usr/local/include/boost/container_hash/hash_fwd.hpp:
 
 /usr/local/include/boost/filesystem/operations.hpp:
 
@@ -2604,11 +2681,19 @@ prevector.h:
 
 /usr/local/include/boost/range/const_iterator.hpp:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/stack:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/stack:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/deque:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/deque:
 
 /usr/local/include/boost/filesystem/convenience.hpp:
+
+/usr/local/include/boost/filesystem/string_file.hpp:
+
+/usr/local/include/boost/filesystem/fstream.hpp:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/fstream:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/istream:
 
 util.h:
 
@@ -2666,11 +2751,9 @@ compat.h:
 
 tinyformat.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iostream:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iostream:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/istream:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/sstream:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/sstream:
 
 utiltime.h:
 
@@ -2700,17 +2783,55 @@ utiltime.h:
 
 /usr/local/include/boost/integer_traits.hpp:
 
+/usr/local/include/boost/type_index.hpp:
+
+/usr/local/include/boost/type_index/stl_type_index.hpp:
+
+/usr/local/include/boost/type_index/type_index_facade.hpp:
+
+/usr/local/include/boost/container_hash/hash.hpp:
+
+/usr/local/include/boost/container_hash/detail/hash_float.hpp:
+
+/usr/local/include/boost/container_hash/detail/float_functions.hpp:
+
+/usr/local/include/boost/config/no_tr1/cmath.hpp:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/cmath:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/math.h:
+
+/usr/include/math.h:
+
+/usr/local/include/boost/container_hash/detail/limits.hpp:
+
+/usr/local/include/boost/integer/static_log2.hpp:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/typeindex:
+
+/usr/local/include/boost/container_hash/extensions.hpp:
+
+/usr/local/include/boost/detail/container_fwd.hpp:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/complex:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/array:
+
 /usr/local/include/boost/type_traits/has_trivial_copy.hpp:
 
 /usr/local/include/boost/type_traits/is_copy_constructible.hpp:
 
-/usr/local/include/boost/type_traits/is_base_and_derived.hpp:
+/usr/local/include/boost/type_traits/is_constructible.hpp:
 
-/usr/local/include/boost/type_traits/add_reference.hpp:
+/usr/local/include/boost/type_traits/is_destructible.hpp:
 
-/usr/local/include/boost/utility/declval.hpp:
+/usr/local/include/boost/type_traits/detail/yes_no_type.hpp:
+
+/usr/local/include/boost/type_traits/declval.hpp:
 
 /usr/local/include/boost/type_traits/add_rvalue_reference.hpp:
+
+/usr/local/include/boost/type_traits/is_default_constructible.hpp:
 
 /usr/local/include/boost/type_traits/has_trivial_destructor.hpp:
 
@@ -2723,14 +2844,6 @@ utiltime.h:
 /usr/local/include/boost/core/ref.hpp:
 
 /usr/local/include/boost/type_traits/alignment_of.hpp:
-
-/usr/local/include/boost/type_traits/detail/size_t_trait_def.hpp:
-
-/usr/local/include/boost/mpl/size_t.hpp:
-
-/usr/local/include/boost/mpl/size_t_fwd.hpp:
-
-/usr/local/include/boost/type_traits/detail/size_t_trait_undef.hpp:
 
 /usr/local/include/boost/function_equal.hpp:
 
@@ -2770,11 +2883,55 @@ utiltime.h:
 
 /usr/local/include/boost/core/no_exceptions_support.hpp:
 
+/usr/local/include/boost/move/utility_core.hpp:
+
+/usr/local/include/boost/move/detail/config_begin.hpp:
+
+/usr/local/include/boost/move/detail/workaround.hpp:
+
+/usr/local/include/boost/move/core.hpp:
+
+/usr/local/include/boost/move/detail/config_end.hpp:
+
+/usr/local/include/boost/move/detail/meta_utils.hpp:
+
+/usr/local/include/boost/move/detail/meta_utils_core.hpp:
+
 /usr/local/include/boost/signals2/connection.hpp:
+
+/usr/local/include/boost/signals2/detail/auto_buffer.hpp:
+
+/usr/local/include/boost/iterator/reverse_iterator.hpp:
+
+/usr/local/include/boost/iterator/iterator_adaptor.hpp:
+
+/usr/local/include/boost/multi_index/detail/scope_guard.hpp:
+
+/usr/local/include/boost/swap.hpp:
+
+/usr/local/include/boost/core/swap.hpp:
+
+/usr/local/include/boost/type_traits/aligned_storage.hpp:
+
+/usr/local/include/boost/type_traits/type_with_alignment.hpp:
+
+/usr/local/include/boost/type_traits/conditional.hpp:
+
+/usr/local/include/boost/type_traits/has_nothrow_copy.hpp:
+
+/usr/local/include/boost/type_traits/has_nothrow_assign.hpp:
+
+/usr/local/include/boost/type_traits/is_assignable.hpp:
+
+/usr/local/include/boost/type_traits/has_trivial_assign.hpp:
+
+/usr/local/include/boost/type_traits/has_trivial_constructor.hpp:
 
 /usr/local/include/boost/signals2/detail/null_output_iterator.hpp:
 
 /usr/local/include/boost/function_output_iterator.hpp:
+
+/usr/local/include/boost/iterator/function_output_iterator.hpp:
 
 /usr/local/include/boost/signals2/detail/unique_lock.hpp:
 
@@ -2792,9 +2949,9 @@ utiltime.h:
 
 /usr/local/include/boost/visit_each.hpp:
 
-/usr/local/include/boost/bind/storage.hpp:
+/usr/local/include/boost/core/is_same.hpp:
 
-/usr/local/include/boost/bind/bind_template.hpp:
+/usr/local/include/boost/bind/storage.hpp:
 
 /usr/local/include/boost/bind/bind_cc.hpp:
 
@@ -2809,6 +2966,8 @@ utiltime.h:
 /usr/local/include/boost/signals2/signal_base.hpp:
 
 /usr/local/include/boost/type_traits/is_base_of.hpp:
+
+/usr/local/include/boost/type_traits/is_base_and_derived.hpp:
 
 /usr/local/include/boost/signals2/detail/signals_common_macros.hpp:
 
@@ -2828,8 +2987,6 @@ utiltime.h:
 
 /usr/local/include/boost/utility/swap.hpp:
 
-/usr/local/include/boost/core/swap.hpp:
-
 /usr/local/include/boost/signals2/expired_slot.hpp:
 
 /usr/local/include/boost/variant/apply_visitor.hpp:
@@ -2838,21 +2995,39 @@ utiltime.h:
 
 /usr/local/include/boost/variant/detail/generic_result_type.hpp:
 
+/usr/local/include/boost/move/utility.hpp:
+
+/usr/local/include/boost/move/traits.hpp:
+
+/usr/local/include/boost/move/detail/type_traits.hpp:
+
 /usr/local/include/boost/variant/detail/apply_visitor_binary.hpp:
+
+/usr/local/include/boost/move/move.hpp:
+
+/usr/local/include/boost/move/iterator.hpp:
+
+/usr/local/include/boost/move/detail/iterator_traits.hpp:
+
+/usr/local/include/boost/move/detail/std_ns_begin.hpp:
+
+/usr/local/include/boost/move/detail/std_ns_end.hpp:
+
+/usr/local/include/boost/move/algorithm.hpp:
+
+/usr/local/include/boost/move/algo/move.hpp:
+
+/usr/local/include/boost/move/detail/iterator_to_raw_pointer.hpp:
+
+/usr/local/include/boost/move/detail/to_raw_pointer.hpp:
+
+/usr/local/include/boost/move/detail/pointer_element.hpp:
 
 /usr/local/include/boost/variant/detail/apply_visitor_delayed.hpp:
 
-/usr/local/include/boost/variant/variant.hpp:
-
-/usr/local/include/boost/type_index.hpp:
-
-/usr/local/include/boost/type_index/stl_type_index.hpp:
-
-/usr/local/include/boost/type_index/type_index_facade.hpp:
+/usr/local/include/boost/variant/variant_fwd.hpp:
 
 /usr/local/include/boost/variant/detail/config.hpp:
-
-/usr/local/include/boost/variant/variant_fwd.hpp:
 
 /usr/local/include/boost/blank_fwd.hpp:
 
@@ -2862,7 +3037,11 @@ utiltime.h:
 
 /usr/local/include/boost/variant/detail/substitute_fwd.hpp:
 
-/usr/local/include/boost/mpl/limits/list.hpp:
+/usr/local/include/boost/preprocessor/seq/size.hpp:
+
+/usr/local/include/boost/variant/detail/has_result_type.hpp:
+
+/usr/local/include/boost/variant/variant.hpp:
 
 /usr/local/include/boost/variant/detail/backup_holder.hpp:
 
@@ -2878,43 +3057,13 @@ utiltime.h:
 
 /usr/local/include/boost/detail/reference_content.hpp:
 
-/usr/local/include/boost/type_traits/has_nothrow_copy.hpp:
-
 /usr/local/include/boost/variant/recursive_wrapper_fwd.hpp:
-
-/usr/local/include/boost/variant/detail/move.hpp:
-
-/usr/local/include/boost/move/move.hpp:
-
-/usr/local/include/boost/move/detail/config_begin.hpp:
-
-/usr/local/include/boost/move/utility.hpp:
-
-/usr/local/include/boost/move/utility_core.hpp:
-
-/usr/local/include/boost/move/core.hpp:
-
-/usr/local/include/boost/move/detail/config_end.hpp:
-
-/usr/local/include/boost/move/detail/meta_utils.hpp:
-
-/usr/local/include/boost/move/traits.hpp:
 
 /usr/local/include/boost/type_traits/is_nothrow_move_constructible.hpp:
 
-/usr/local/include/boost/type_traits/has_trivial_move_constructor.hpp:
+/usr/local/include/boost/variant/detail/move.hpp:
 
-/usr/local/include/boost/type_traits/is_nothrow_move_assignable.hpp:
-
-/usr/local/include/boost/type_traits/has_trivial_move_assign.hpp:
-
-/usr/local/include/boost/type_traits/has_nothrow_assign.hpp:
-
-/usr/local/include/boost/type_traits/has_trivial_assign.hpp:
-
-/usr/local/include/boost/move/iterator.hpp:
-
-/usr/local/include/boost/move/algorithm.hpp:
+/usr/local/include/boost/move/adl_move_swap.hpp:
 
 /usr/local/include/boost/mpl/iter_fold.hpp:
 
@@ -2965,6 +3114,8 @@ utiltime.h:
 /usr/local/include/boost/variant/detail/make_variant_list.hpp:
 
 /usr/local/include/boost/mpl/list.hpp:
+
+/usr/local/include/boost/mpl/limits/list.hpp:
 
 /usr/local/include/boost/mpl/list/list20.hpp:
 
@@ -3034,22 +3185,6 @@ utiltime.h:
 
 /usr/local/include/boost/aligned_storage.hpp:
 
-/usr/local/include/boost/type_traits/type_with_alignment.hpp:
-
-/usr/local/include/boost/preprocessor/list/for_each_i.hpp:
-
-/usr/local/include/boost/preprocessor/repetition/for.hpp:
-
-/usr/local/include/boost/preprocessor/repetition/detail/for.hpp:
-
-/usr/local/include/boost/preprocessor/tuple/to_list.hpp:
-
-/usr/local/include/boost/preprocessor/tuple/size.hpp:
-
-/usr/local/include/boost/preprocessor/list/transform.hpp:
-
-/usr/local/include/boost/preprocessor/list/append.hpp:
-
 /usr/local/include/boost/blank.hpp:
 
 /usr/local/include/boost/detail/templated_streams.hpp:
@@ -3058,13 +3193,15 @@ utiltime.h:
 
 /usr/local/include/boost/type_traits/is_stateless.hpp:
 
-/usr/local/include/boost/type_traits/has_trivial_constructor.hpp:
-
-/usr/local/include/boost/math/common_factor_ct.hpp:
-
-/usr/local/include/boost/math_fwd.hpp:
+/usr/local/include/boost/integer/common_factor_ct.hpp:
 
 /usr/local/include/boost/type_traits/has_nothrow_constructor.hpp:
+
+/usr/local/include/boost/type_traits/is_nothrow_move_assignable.hpp:
+
+/usr/local/include/boost/type_traits/has_trivial_move_assign.hpp:
+
+/usr/local/include/boost/utility/declval.hpp:
 
 /usr/local/include/boost/mpl/empty.hpp:
 
@@ -3094,15 +3231,47 @@ utiltime.h:
 
 /usr/local/include/boost/mpl/aux_/front_impl.hpp:
 
-/usr/local/include/boost/mpl/is_sequence.hpp:
+/usr/local/include/boost/mpl/insert_range.hpp:
+
+/usr/local/include/boost/mpl/insert_range_fwd.hpp:
+
+/usr/local/include/boost/mpl/aux_/insert_range_impl.hpp:
+
+/usr/local/include/boost/mpl/insert.hpp:
+
+/usr/local/include/boost/mpl/insert_fwd.hpp:
+
+/usr/local/include/boost/mpl/aux_/insert_impl.hpp:
+
+/usr/local/include/boost/mpl/reverse_fold.hpp:
+
+/usr/local/include/boost/mpl/aux_/reverse_fold_impl.hpp:
+
+/usr/local/include/boost/mpl/aux_/preprocessed/gcc/reverse_fold_impl.hpp:
 
 /usr/local/include/boost/mpl/iterator_range.hpp:
 
-/usr/local/include/boost/mpl/max_element.hpp:
+/usr/local/include/boost/mpl/clear.hpp:
 
-/usr/local/include/boost/mpl/less.hpp:
+/usr/local/include/boost/mpl/aux_/clear_impl.hpp:
 
-/usr/local/include/boost/mpl/aux_/comparison_op.hpp:
+/usr/local/include/boost/mpl/push_front.hpp:
+
+/usr/local/include/boost/mpl/aux_/push_front_impl.hpp:
+
+/usr/local/include/boost/mpl/joint_view.hpp:
+
+/usr/local/include/boost/mpl/aux_/joint_iter.hpp:
+
+/usr/local/include/boost/mpl/plus.hpp:
+
+/usr/local/include/boost/mpl/aux_/arithmetic_op.hpp:
+
+/usr/local/include/boost/mpl/integral_c.hpp:
+
+/usr/local/include/boost/mpl/integral_c_fwd.hpp:
+
+/usr/local/include/boost/mpl/aux_/largest_int.hpp:
 
 /usr/local/include/boost/mpl/aux_/numeric_op.hpp:
 
@@ -3112,23 +3281,31 @@ utiltime.h:
 
 /usr/local/include/boost/mpl/aux_/numeric_cast_utils.hpp:
 
+/usr/local/include/boost/mpl/aux_/preprocessed/gcc/plus.hpp:
+
+/usr/local/include/boost/mpl/aux_/iter_push_front.hpp:
+
+/usr/local/include/boost/type_traits/same_traits.hpp:
+
+/usr/local/include/boost/mpl/is_sequence.hpp:
+
+/usr/local/include/boost/mpl/max_element.hpp:
+
+/usr/local/include/boost/mpl/less.hpp:
+
+/usr/local/include/boost/mpl/aux_/comparison_op.hpp:
+
 /usr/local/include/boost/mpl/aux_/preprocessed/gcc/less.hpp:
 
-/usr/local/include/boost/mpl/push_front.hpp:
-
-/usr/local/include/boost/mpl/aux_/push_front_impl.hpp:
-
 /usr/local/include/boost/mpl/same_as.hpp:
+
+/usr/local/include/boost/mpl/size_t.hpp:
+
+/usr/local/include/boost/mpl/size_t_fwd.hpp:
 
 /usr/local/include/boost/mpl/sizeof.hpp:
 
 /usr/local/include/boost/mpl/transform.hpp:
-
-/usr/local/include/boost/mpl/reverse_fold.hpp:
-
-/usr/local/include/boost/mpl/aux_/reverse_fold_impl.hpp:
-
-/usr/local/include/boost/mpl/aux_/preprocessed/gcc/reverse_fold_impl.hpp:
 
 /usr/local/include/boost/mpl/pair_view.hpp:
 
@@ -3168,10 +3345,6 @@ utiltime.h:
 
 /usr/local/include/boost/mpl/front_inserter.hpp:
 
-/usr/local/include/boost/mpl/clear.hpp:
-
-/usr/local/include/boost/mpl/aux_/clear_impl.hpp:
-
 /usr/local/include/boost/variant/detail/variant_io.hpp:
 
 /usr/local/include/boost/signals2/trackable.hpp:
@@ -3202,55 +3375,23 @@ utiltime.h:
 
 /usr/local/include/boost/utility/compare_pointees.hpp:
 
-/usr/local/include/boost/utility/in_place_factory.hpp:
-
-/usr/local/include/boost/utility/detail/in_place_factory_prefix.hpp:
-
-/usr/local/include/boost/preprocessor/punctuation/paren.hpp:
-
-/usr/local/include/boost/preprocessor/repetition/enum_binary_params.hpp:
-
-/usr/local/include/boost/utility/detail/in_place_factory_suffix.hpp:
-
 /usr/local/include/boost/optional/optional_fwd.hpp:
 
+/usr/local/include/boost/optional/detail/optional_config.hpp:
+
+/usr/local/include/boost/optional/detail/optional_factory_support.hpp:
+
+/usr/local/include/boost/optional/detail/optional_aligned_storage.hpp:
+
+/usr/local/include/boost/optional/detail/optional_trivially_copyable_base.hpp:
+
+/usr/local/include/boost/optional/detail/optional_reference_spec.hpp:
+
+/usr/local/include/boost/optional/detail/optional_relops.hpp:
+
+/usr/local/include/boost/optional/detail/optional_swap.hpp:
+
 /usr/local/include/boost/signals2/detail/slot_call_iterator.hpp:
-
-/usr/local/include/boost/signals2/detail/auto_buffer.hpp:
-
-/usr/local/include/boost/iterator/reverse_iterator.hpp:
-
-/usr/local/include/boost/next_prior.hpp:
-
-/usr/local/include/boost/type_traits/is_unsigned.hpp:
-
-/usr/local/include/boost/type_traits/integral_promotion.hpp:
-
-/usr/local/include/boost/type_traits/make_signed.hpp:
-
-/usr/local/include/boost/type_traits/is_signed.hpp:
-
-/usr/local/include/boost/type_traits/add_volatile.hpp:
-
-/usr/local/include/boost/type_traits/has_plus.hpp:
-
-/usr/local/include/boost/type_traits/detail/has_binary_operator.hpp:
-
-/usr/local/include/boost/type_traits/is_fundamental.hpp:
-
-/usr/local/include/boost/type_traits/has_plus_assign.hpp:
-
-/usr/local/include/boost/type_traits/has_minus.hpp:
-
-/usr/local/include/boost/type_traits/has_minus_assign.hpp:
-
-/usr/local/include/boost/iterator/iterator_adaptor.hpp:
-
-/usr/local/include/boost/multi_index/detail/scope_guard.hpp:
-
-/usr/local/include/boost/swap.hpp:
-
-/usr/local/include/boost/type_traits/aligned_storage.hpp:
 
 /usr/local/include/boost/signals2/optional_last_value.hpp:
 
@@ -3276,28 +3417,22 @@ utiltime.h:
 
 /usr/local/include/boost/config/requires_threads.hpp:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/QFileDialog:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/QFileDialog:
 
-/usr/local/Cellar/qt/5.10.1/include/QtWidgets/qfiledialog.h:
+/usr/local/Cellar/qt/5.11.0/include/QtWidgets/qfiledialog.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qdir.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qdir.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qfileinfo.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qfileinfo.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qfile.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qfile.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qfiledevice.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qfiledevice.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qurl.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qurl.h:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/QSettings:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/QSettings:
 
-/usr/local/Cellar/qt/5.10.1/include/QtCore/qsettings.h:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cmath:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/math.h:
-
-/usr/include/math.h:
+/usr/local/Cellar/qt/5.11.0/include/QtCore/qsettings.h:
 
 qt/intro.moc:

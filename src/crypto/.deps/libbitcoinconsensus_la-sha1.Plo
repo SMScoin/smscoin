@@ -1,86 +1,201 @@
 crypto/libbitcoinconsensus_la-sha1.lo: crypto/sha1.cpp crypto/sha1.h \
- /usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/include/stdint.h \
- /usr/share/mingw-w64/include/stdint.h \
- /usr/share/mingw-w64/include/crtdefs.h \
- /usr/share/mingw-w64/include/_mingw.h \
- /usr/share/mingw-w64/include/_mingw_mac.h \
- /usr/share/mingw-w64/include/_mingw_secapi.h \
- /usr/share/mingw-w64/include/vadefs.h \
- /usr/share/mingw-w64/include/sdks/_mingw_directx.h \
- /usr/share/mingw-w64/include/sdks/_mingw_ddk.h \
- /usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/include/stddef.h \
- /usr/share/mingw-w64/include/stddef.h \
- /usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/include/c++/stdlib.h \
- /usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/include/c++/cstdlib \
- /usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/include/c++/x86_64-w64-mingw32/bits/c++config.h \
- /usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
- /usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
- /usr/share/mingw-w64/include/stdlib.h \
- /usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/include-fixed/limits.h \
- /usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/include-fixed/syslimits.h \
- /usr/share/mingw-w64/include/limits.h \
- /usr/share/mingw-w64/include/sec_api/stdlib_s.h \
- /usr/share/mingw-w64/include/malloc.h crypto/common.h \
- ../src/config/SMScoin-config.h /usr/share/mingw-w64/include/string.h \
- /usr/share/mingw-w64/include/sec_api/string_s.h compat/endian.h \
- config/SMScoin-config.h compat/byteswap.h
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/stdint.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__config \
+  /Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include/stdint.h \
+  /usr/include/stdint.h /usr/include/sys/_types/_int8_t.h \
+  /usr/include/sys/_types/_int16_t.h /usr/include/sys/_types/_int32_t.h \
+  /usr/include/sys/_types/_int64_t.h /usr/include/_types/_uint8_t.h \
+  /usr/include/_types/_uint16_t.h /usr/include/_types/_uint32_t.h \
+  /usr/include/_types/_uint64_t.h /usr/include/sys/_types.h \
+  /usr/include/sys/cdefs.h /usr/include/sys/_symbol_aliasing.h \
+  /usr/include/sys/_posix_availability.h /usr/include/machine/_types.h \
+  /usr/include/i386/_types.h /usr/include/sys/_pthread/_pthread_types.h \
+  /usr/include/sys/_types/_intptr_t.h /usr/include/machine/types.h \
+  /usr/include/i386/types.h /usr/include/sys/_types/_u_int8_t.h \
+  /usr/include/sys/_types/_u_int16_t.h \
+  /usr/include/sys/_types/_u_int32_t.h \
+  /usr/include/sys/_types/_u_int64_t.h \
+  /usr/include/sys/_types/_uintptr_t.h /usr/include/_types/_intmax_t.h \
+  /usr/include/_types/_uintmax_t.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/stdlib.h \
+  /usr/include/stdlib.h /usr/include/Availability.h \
+  /usr/include/AvailabilityInternal.h /usr/include/_types.h \
+  /usr/include/sys/wait.h /usr/include/sys/_types/_pid_t.h \
+  /usr/include/sys/_types/_id_t.h /usr/include/sys/signal.h \
+  /usr/include/sys/appleapiopts.h /usr/include/machine/signal.h \
+  /usr/include/i386/signal.h /usr/include/machine/_mcontext.h \
+  /usr/include/i386/_mcontext.h /usr/include/mach/machine/_structs.h \
+  /usr/include/mach/i386/_structs.h \
+  /usr/include/sys/_pthread/_pthread_attr_t.h \
+  /usr/include/sys/_types/_sigaltstack.h \
+  /usr/include/sys/_types/_ucontext.h \
+  /usr/include/sys/_types/_sigset_t.h /usr/include/sys/_types/_size_t.h \
+  /usr/include/sys/_types/_uid_t.h /usr/include/sys/resource.h \
+  /usr/include/sys/_types/_timeval.h /usr/include/machine/endian.h \
+  /usr/include/i386/endian.h /usr/include/sys/_endian.h \
+  /usr/include/libkern/_OSByteOrder.h \
+  /usr/include/libkern/i386/_OSByteOrder.h /usr/include/alloca.h \
+  /usr/include/sys/_types/_ct_rune_t.h /usr/include/sys/_types/_rune_t.h \
+  /usr/include/sys/_types/_wchar_t.h /usr/include/sys/_types/_null.h \
+  /usr/include/sys/_types/_dev_t.h /usr/include/sys/_types/_mode_t.h \
+  crypto/common.h ../src/config/SMScoin-config.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/string.h \
+  /usr/include/string.h /usr/include/sys/_types/_ssize_t.h \
+  /usr/include/strings.h compat/endian.h compat/byteswap.h \
+  /usr/include/libkern/OSByteOrder.h \
+  /usr/include/libkern/i386/OSByteOrder.h \
+  /usr/include/sys/_types/_os_inline.h
 
 crypto/sha1.h:
 
-/usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/include/stdint.h:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/stdint.h:
 
-/usr/share/mingw-w64/include/stdint.h:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__config:
 
-/usr/share/mingw-w64/include/crtdefs.h:
+/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include/stdint.h:
 
-/usr/share/mingw-w64/include/_mingw.h:
+/usr/include/stdint.h:
 
-/usr/share/mingw-w64/include/_mingw_mac.h:
+/usr/include/sys/_types/_int8_t.h:
 
-/usr/share/mingw-w64/include/_mingw_secapi.h:
+/usr/include/sys/_types/_int16_t.h:
 
-/usr/share/mingw-w64/include/vadefs.h:
+/usr/include/sys/_types/_int32_t.h:
 
-/usr/share/mingw-w64/include/sdks/_mingw_directx.h:
+/usr/include/sys/_types/_int64_t.h:
 
-/usr/share/mingw-w64/include/sdks/_mingw_ddk.h:
+/usr/include/_types/_uint8_t.h:
 
-/usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/include/stddef.h:
+/usr/include/_types/_uint16_t.h:
 
-/usr/share/mingw-w64/include/stddef.h:
+/usr/include/_types/_uint32_t.h:
 
-/usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/include/c++/stdlib.h:
+/usr/include/_types/_uint64_t.h:
 
-/usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/include/c++/cstdlib:
+/usr/include/sys/_types.h:
 
-/usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/include/c++/x86_64-w64-mingw32/bits/c++config.h:
+/usr/include/sys/cdefs.h:
 
-/usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/include/c++/x86_64-w64-mingw32/bits/os_defines.h:
+/usr/include/sys/_symbol_aliasing.h:
 
-/usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h:
+/usr/include/sys/_posix_availability.h:
 
-/usr/share/mingw-w64/include/stdlib.h:
+/usr/include/machine/_types.h:
 
-/usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/include-fixed/limits.h:
+/usr/include/i386/_types.h:
 
-/usr/lib/gcc/x86_64-w64-mingw32/6.3-win32/include-fixed/syslimits.h:
+/usr/include/sys/_pthread/_pthread_types.h:
 
-/usr/share/mingw-w64/include/limits.h:
+/usr/include/sys/_types/_intptr_t.h:
 
-/usr/share/mingw-w64/include/sec_api/stdlib_s.h:
+/usr/include/machine/types.h:
 
-/usr/share/mingw-w64/include/malloc.h:
+/usr/include/i386/types.h:
+
+/usr/include/sys/_types/_u_int8_t.h:
+
+/usr/include/sys/_types/_u_int16_t.h:
+
+/usr/include/sys/_types/_u_int32_t.h:
+
+/usr/include/sys/_types/_u_int64_t.h:
+
+/usr/include/sys/_types/_uintptr_t.h:
+
+/usr/include/_types/_intmax_t.h:
+
+/usr/include/_types/_uintmax_t.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/stdlib.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/Availability.h:
+
+/usr/include/AvailabilityInternal.h:
+
+/usr/include/_types.h:
+
+/usr/include/sys/wait.h:
+
+/usr/include/sys/_types/_pid_t.h:
+
+/usr/include/sys/_types/_id_t.h:
+
+/usr/include/sys/signal.h:
+
+/usr/include/sys/appleapiopts.h:
+
+/usr/include/machine/signal.h:
+
+/usr/include/i386/signal.h:
+
+/usr/include/machine/_mcontext.h:
+
+/usr/include/i386/_mcontext.h:
+
+/usr/include/mach/machine/_structs.h:
+
+/usr/include/mach/i386/_structs.h:
+
+/usr/include/sys/_pthread/_pthread_attr_t.h:
+
+/usr/include/sys/_types/_sigaltstack.h:
+
+/usr/include/sys/_types/_ucontext.h:
+
+/usr/include/sys/_types/_sigset_t.h:
+
+/usr/include/sys/_types/_size_t.h:
+
+/usr/include/sys/_types/_uid_t.h:
+
+/usr/include/sys/resource.h:
+
+/usr/include/sys/_types/_timeval.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/i386/endian.h:
+
+/usr/include/sys/_endian.h:
+
+/usr/include/libkern/_OSByteOrder.h:
+
+/usr/include/libkern/i386/_OSByteOrder.h:
+
+/usr/include/alloca.h:
+
+/usr/include/sys/_types/_ct_rune_t.h:
+
+/usr/include/sys/_types/_rune_t.h:
+
+/usr/include/sys/_types/_wchar_t.h:
+
+/usr/include/sys/_types/_null.h:
+
+/usr/include/sys/_types/_dev_t.h:
+
+/usr/include/sys/_types/_mode_t.h:
 
 crypto/common.h:
 
 ../src/config/SMScoin-config.h:
 
-/usr/share/mingw-w64/include/string.h:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string.h:
 
-/usr/share/mingw-w64/include/sec_api/string_s.h:
+/usr/include/string.h:
+
+/usr/include/sys/_types/_ssize_t.h:
+
+/usr/include/strings.h:
 
 compat/endian.h:
 
-config/SMScoin-config.h:
-
 compat/byteswap.h:
+
+/usr/include/libkern/OSByteOrder.h:
+
+/usr/include/libkern/i386/OSByteOrder.h:
+
+/usr/include/sys/_types/_os_inline.h:

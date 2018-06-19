@@ -1,4 +1,4 @@
-Name "SMScoin (64-bit)"
+Name "SMScoin (-bit)"
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
@@ -10,11 +10,11 @@ SetCompressor /SOLID lzma
 !define URL https://SMScoincoin.io/
 
 # MUI Symbol Definitions
-!define MUI_ICON "/home/wijnand/SMScoin/share/pixmaps/bitcoin.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/wijnand/SMScoin/share/pixmaps/nsis-wizard.bmp"
+!define MUI_ICON "/Users/wijnandschouten/SMScoinok/share/pixmaps/bitcoin.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "/Users/wijnandschouten/SMScoinok/share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "/home/wijnand/SMScoin/share/pixmaps/nsis-header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "/Users/wijnandschouten/SMScoinok/share/pixmaps/nsis-header.bmp"
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
@@ -22,13 +22,13 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_DEFAULTFOLDER "SMScoin"
 !define MUI_FINISHPAGE_RUN $INSTDIR\SMScoin-qt.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/wijnand/SMScoin/share/pixmaps/nsis-wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/Users/wijnandschouten/SMScoinok/share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
 
 # Included files
 !include Sections.nsh
 !include MUI2.nsh
-!if "64" == "64"
+!if "" == "64"
 !include x64.nsh
 !endif
 
@@ -48,8 +48,8 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile /home/wijnand/SMScoin/SMScoincore-${VERSION}-win64-setup.exe
-!if "64" == "64"
+OutFile /Users/wijnandschouten/SMScoinok/SMScoincore-${VERSION}-win-setup.exe
+!if "" == "64"
 InstallDir $PROGRAMFILES64\SMScoinCore
 !else
 InstallDir $PROGRAMFILES\SMScoinCore
@@ -73,14 +73,14 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File /home/wijnand/SMScoin/release/SMScoin-qt.exe
-    File /oname=COPYING.txt /home/wijnand/SMScoin/COPYING
-    File /oname=readme.txt /home/wijnand/SMScoin/doc/README_windows.txt
+    File /Users/wijnandschouten/SMScoinok/release/SMScoin-qt.exe
+    File /oname=COPYING.txt /Users/wijnandschouten/SMScoinok/COPYING
+    File /oname=readme.txt /Users/wijnandschouten/SMScoinok/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File /home/wijnand/SMScoin/release/SMScoind.exe
-    File /home/wijnand/SMScoin/release/SMScoin-cli.exe
+    File /Users/wijnandschouten/SMScoinok/release/SMScoind.exe
+    File /Users/wijnandschouten/SMScoinok/release/SMScoin-cli.exe
     SetOutPath $INSTDIR\doc
-    File /r /home/wijnand/SMScoin/doc\*.*
+    File /r /Users/wijnandschouten/SMScoinok/doc\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 
@@ -160,7 +160,7 @@ SectionEnd
 # Installer functions
 Function .onInit
     InitPluginsDir
-!if "64" == "64"
+!if "" == "64"
     ${If} ${RunningX64}
       ; disable registry redirection (enable access to 64-bit portion of registry)
       SetRegView 64

@@ -1,0 +1,1 @@
+qt/libbitcoinqt_a-qrc_SMScoin_locale.o: qt/qrc_SMScoin_locale.cpp

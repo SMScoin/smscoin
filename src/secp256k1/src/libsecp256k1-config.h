@@ -18,13 +18,13 @@
 /* #undef ENABLE_MODULE_SCHNORR */
 
 /* Define this symbol if OpenSSL EC functions are available */
-#define ENABLE_OPENSSL_TESTS 1
+/* #undef ENABLE_OPENSSL_TESTS */
 
 /* Define this symbol if __builtin_expect is available */
 #define HAVE_BUILTIN_EXPECT 1
 
 /* Define to 1 if you have the <dlfcn.h> header file. */
-/* #undef HAVE_DLFCN_H */
+#define HAVE_DLFCN_H 1
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
@@ -90,7 +90,7 @@
 #define STDC_HEADERS 1
 
 /* Define this symbol to enable x86_64 assembly optimizations */
-#define USE_ASM_X86_64 1
+/* #undef USE_ASM_X86_64 */
 
 /* Define this symbol to use a statically generated ecmult table */
 #define USE_ECMULT_STATIC_PRECOMPUTATION 1
